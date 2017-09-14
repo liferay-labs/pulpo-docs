@@ -1,0 +1,39 @@
+---
+title: Updates
+description: Check out what's new
+updates:
+ -
+  version: 0.0.1
+  major: false
+  features:
+   -
+    icon: hammer
+    title: DataSources API is out!
+    description: You can start using the Data Source API now.
+    url: /
+   
+---
+
+{namespace updatesIndex}
+
+/**
+ * @param page
+ */
+{template .render}
+	{call main.render data="all"}
+		{param content kind="html"}
+			<div>
+				<header class="header">
+					<div class="container">
+						<h1 class="header-title">{$page.title}</h1>
+						<h2 class="header-subtitle">{$page.description}</h2>
+					</div>
+				</header>
+
+				{call ElectricUpdates.render}
+					{param updates: $page.updates /}
+				{/call}
+			</div>
+		{/param}
+	{/call}
+{/template}
