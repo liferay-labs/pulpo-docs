@@ -2221,8 +2221,8 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
           'class', 'container-hybrid');
         ie_open('h1', null, null,
             'class', 'title');
-          var dyn2 = opt_data.page.title;
-          if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
+          var dyn0 = opt_data.page.title;
+          if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
           itext(' Guide');
         ie_close('h1');
       ie_close('div');
@@ -2235,8 +2235,8 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
             'class', 'docs-content col-xs-16 col-md-9');
           ie_open('div', null, null,
               'class', 'guide-content');
-            var dyn3 = opt_data.content;
-            if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
+            var dyn1 = opt_data.content;
+            if (typeof dyn1 == 'function') dyn1(); else if (dyn1 != null) itext(dyn1);
           ie_close('div');
           if (opt_data.site.githubRepo) {
             $contribute(opt_data, null, opt_ijData);
@@ -2376,8 +2376,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     ie_open('main', null, null,
         'class', 'content');
       $templateAlias1(opt_data, null, opt_ijData);
-      var dyn4 = opt_data.content;
-      if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+      var dyn2 = opt_data.content;
+      if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
     ie_close('main');
   ie_close('div');
 }
@@ -11661,7 +11661,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Znfpf", function() { return Znfpf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GEWOh", function() { return GEWOh; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11677,11 +11677,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace Znfpf.
+ * @fileoverview Templates in namespace GEWOh.
  * @public
  */
 
-goog.module('Znfpf.incrementaldom');
+goog.module('GEWOh.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11800,7 +11800,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'Znfpf.render';
+  $render.soyTemplateName = 'GEWOh.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11810,8 +11810,8 @@ return exports;
 
 });
 
-class Znfpf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Znfpf, templates);
+class GEWOh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GEWOh, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11899,23 +11899,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Znfpf = function (_Component) {
-  _inherits(Znfpf, _Component);
+var GEWOh = function (_Component) {
+  _inherits(GEWOh, _Component);
 
-  function Znfpf() {
-    _classCallCheck(this, Znfpf);
+  function GEWOh() {
+    _classCallCheck(this, GEWOh);
 
-    return _possibleConstructorReturn(this, (Znfpf.__proto__ || Object.getPrototypeOf(Znfpf)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (GEWOh.__proto__ || Object.getPrototypeOf(GEWOh)).apply(this, arguments));
   }
 
-  return Znfpf;
+  return GEWOh;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(Znfpf, _indexSoy2.default);
+_metalSoy2.default.register(GEWOh, _indexSoy2.default);
 
-exports.default = Znfpf;
+exports.default = GEWOh;
 
 /***/ })
 ],[137]);
