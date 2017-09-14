@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11656,12 +11656,14 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GEWOh", function() { return GEWOh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YPxtL", function() { return YPxtL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11673,15 +11675,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from etiam.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace GEWOh.
+ * @fileoverview Templates in namespace YPxtL.
  * @public
  */
 
-goog.module('GEWOh.incrementaldom');
+goog.module('YPxtL.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11715,77 +11717,65 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param162 = function() {
+  var param183 = function() {
     ie_open('h6');
-      var dyn12 = opt_data.page.description;
-      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+      var dyn13 = opt_data.page.description;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Navigation to obtain URLs');
+        itext('Lorem ipsum dolor sit amet');
       ie_close('h2');
       ie_open('p');
-        itext('URLs are not part of this API, they may change at any moment. URLs must be asked to the service before making any request.');
+        itext('Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque varius mattis mollis. Praesent rutrum tempor libero sit amet blandit. Integer ante nisl, rutrum ut volutpat ut, rutrum id tortor. Duis placerat ut ipsum id aliquam. Nunc venenatis sem ac urna viverra, eu euismod sapien porttitor.');
+      ie_close('p');
+      $templateAlias2({code: 'body {\n    overflow: hidden;\n}', mode: 'css'}, null, opt_ijData);
+      ie_open('p');
+        itext('Nulla a suscipit nibh. Duis tincidunt elit tellus, ut volutpat lectus pharetra at. Nulla quis nisi ante. Maecenas vulputate convallis lorem. Vestibulum at ex id sapien faucibus vehicula. Sed porta dui in velit semper blandit. Ut in commodo magna. Morbi luctus enim et lectus luctus ullamcorper. Proin tellus erat, convallis vitae metus vitae, lacinia consectetur turpis.');
       ie_close('p');
       ie_open('p');
-        itext('The URLs can be obtained making a request to the root resource of the Service "/".');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
       ie_open('p');
-        itext('The response in json HAL format will contain a "_links" object with the different links to be used. For example:');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "name": "pulpo-api",\n    "description": "API for consuming PULPO Services",\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/"\n        },\n        "data-sources": {\n            "href": "http://localhost:8084/{projectId}/data-sources",\n            "templated": true\n        }\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('The URL for managing data sources has the key "data-sources" inside the section "_links". This URL can be used to obtain the entities (GET method) and create new ones (POST method).');
-      ie_close('p');
-      ie_open('p');
-        itext('It can be paginated and sorted using the params (page, size and sort). The projectId variable must be replaced with the projectId of the current project.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of entities, the link to each entity can be found with the rel "self". That same url can be also used for delete (DELETE method) and update (PUT method).');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/data-sources?page=0&size=1');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "name": "liferay-de"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('From this response, you can obtain the total number of existing elements under the "page" block and also the links to other pages of data sources.');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('The Data Source Model');
+        itext('Lorem ipsum dolor sit amet');
       ie_close('h2');
       ie_open('p');
-        itext('DataSources support a subset of the Type [DataFeed] from Schema.org');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported:');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('author');
-        ie_close('li');
-        ie_open('li');
-          itext('dataCreated');
-        ie_close('li');
-        ie_open('li');
-          itext('dateModified');
-        ie_close('li');
-        ie_open('li');
-          itext('identifier');
-        ie_close('li');
-        ie_open('li');
-          itext('name');
-        ie_close('li');
-        ie_open('li');
-          itext('provider');
-        ie_close('li');
-        ie_open('li');
-          itext('url');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Lorem ipsum dolor sit amet');
+      ie_close('h2');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11796,11 +11786,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param162}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param183}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'GEWOh.render';
+  $render.soyTemplateName = 'YPxtL.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11810,16 +11800,14 @@ return exports;
 
 });
 
-class GEWOh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GEWOh, templates);
+class YPxtL extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(YPxtL, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 96 */,
-/* 97 */,
 /* 98 */,
 /* 99 */,
 /* 100 */,
@@ -11859,7 +11847,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GEWOh, templates);
 /* 134 */,
 /* 135 */,
 /* 136 */,
-/* 137 */
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11887,9 +11878,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(95);
+var _etiamSoy = __webpack_require__(97);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _etiamSoy2 = _interopRequireDefault(_etiamSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11899,23 +11890,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var GEWOh = function (_Component) {
-  _inherits(GEWOh, _Component);
+var YPxtL = function (_Component) {
+  _inherits(YPxtL, _Component);
 
-  function GEWOh() {
-    _classCallCheck(this, GEWOh);
+  function YPxtL() {
+    _classCallCheck(this, YPxtL);
 
-    return _possibleConstructorReturn(this, (GEWOh.__proto__ || Object.getPrototypeOf(GEWOh)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (YPxtL.__proto__ || Object.getPrototypeOf(YPxtL)).apply(this, arguments));
   }
 
-  return GEWOh;
+  return YPxtL;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(GEWOh, _indexSoy2.default);
+_metalSoy2.default.register(YPxtL, _etiamSoy2.default);
 
-exports.default = GEWOh;
+exports.default = YPxtL;
 
 /***/ })
-],[137]);
+],[140]);
