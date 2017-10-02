@@ -11858,10 +11858,16 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
                 ie_close('a');
               ie_close('li');
               ie_open('li');
-                itext('Status Dashboard');
+                ie_open('a', null, null,
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/b3b0b720-a355-11e7-8e0e-ed58f3e98e81?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1h,mode:quick,to:now))&_a=(filters:!(),options:(darkTheme:!f),panels:!((col:1,id:\'072d0520-948d-11e7-8121-971f503c6706\',panelIndex:4,row:1,size_x:10,size_y:1,type:visualization),(col:1,id:\'94d5d260-a358-11e7-8e0e-ed58f3e98e81\',panelIndex:6,row:5,size_x:6,size_y:5,type:visualization),(col:7,id:\'64256a80-a359-11e7-8e0e-ed58f3e98e81\',panelIndex:7,row:5,size_x:6,size_y:5,type:visualization),(col:1,columns:!(message),id:\'1e073380-9855-11e7-a87a-6b9ea3a428bb\',panelIndex:8,row:10,size_x:12,size_y:3,sort:!(\'@timestamp\',desc),type:search),(col:1,id:\'26cb6530-a747-11e7-bf21-b3059e49576b\',panelIndex:9,row:2,size_x:6,size_y:3,type:visualization),(col:7,id:\'3721d450-a747-11e7-bf21-b3059e49576b\',panelIndex:10,row:2,size_x:6,size_y:3,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:\'*\')),title:\'Pulpo%20Contacts%20Engine%20Dashboard%20(PRE)\',uiState:(P-6:(spy:(mode:(fill:!f,name:!n)),vis:(legendOpen:!t)),P-7:(vis:(legendOpen:!t))))');
+                  itext('Status Dashboard');
+                ie_close('a');
               ie_close('li');
               ie_open('li');
-                itext('Logs');
+                ie_open('a', null, null,
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/38f258c0-9858-11e7-9a6b-c18b98042fd7?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1h,mode:quick,to:now))&_a=(columns:!(message,source),filters:!((\'$$hashKey\':\'object:2163\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:tags,negate:!f,value:osb-pulpo-engine-contacts-pre),query:(match:(tags:(query:osb-pulpo-engine-contacts-pre,type:phrase)))),(\'$$hashKey\':\'object:2164\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:query,negate:!t,value:\'%7B%22prefix%22:%7B%22source%22:%22%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-metricbeat-%22%7D%7D\'),query:(prefix:(source:%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-metricbeat-))),(\'$$hashKey\':\'object:2165\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:query,negate:!t,value:\'%7B%22prefix%22:%7B%22source%22:%22%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-filebeat-%22%7D%7D\'),query:(prefix:(source:%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-filebeat-))),(\'$$hashKey\':\'object:2166\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:source,negate:!t,value:%2Fvar%2Flog%2Faws%2Fcfn-hup.log),query:(match:(source:(query:%2Fvar%2Flog%2Faws%2Fcfn-hup.log,type:phrase)))),(\'$$hashKey\':\'object:2167\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:source,negate:!t,value:%2Fvar%2Flog%2Faws%2Fcfn-wire.log),query:(match:(source:(query:%2Fvar%2Flog%2Faws%2Fcfn-wire.log,type:phrase)))),(\'$$hashKey\':\'object:2168\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:source,negate:!t,value:%2Fvar%2Flog%2Faws%2Feb-publish-logs.log),query:(match:(source:(query:%2Fvar%2Flog%2Faws%2Feb-publish-logs.log,type:phrase))))),index:\'filebeat-*\',interval:auto,query:(query_string:(analyze_wildcard:!t,query:\'*\')),sort:!(\'@timestamp\',desc))');
+                  itext('Logs');
+                ie_close('a');
               ie_close('li');
             ie_close('ul');
           ie_close('p');
@@ -11891,7 +11897,10 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
                 itext('Status Dashboard');
               ie_close('li');
               ie_open('li');
-                itext('Logs');
+                ie_open('a', null, null,
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/1f8c7410-993e-11e7-a4ca-11220039c65d?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1h,mode:quick,to:now))&_a=(columns:!(message,source),filters:!((\'$$hashKey\':\'object:2992\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:tags,negate:!f,value:osb-pulpo-engine-contacts-prod),query:(match:(tags:(query:osb-pulpo-engine-contacts-prod,type:phrase))))),index:\'filebeat-*\',interval:auto,query:(query_string:(analyze_wildcard:!t,query:\'*\')),sort:!(\'@timestamp\',desc))');
+                  itext('Logs');
+                ie_close('a');
               ie_close('li');
             ie_close('ul');
           ie_close('p');
