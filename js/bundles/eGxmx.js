@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11656,12 +11656,15 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RhSTC", function() { return RhSTC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eGxmx", function() { return eGxmx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11677,11 +11680,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace RhSTC.
+ * @fileoverview Templates in namespace eGxmx.
  * @public
  */
 
-goog.module('RhSTC.incrementaldom');
+goog.module('eGxmx.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11715,77 +11718,66 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param162 = function() {
+  var param199 = function() {
     ie_open('h6');
-      var dyn12 = opt_data.page.description;
-      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('Navigation to obtain URLs');
+        itext('Lorem ipsum dolor sit amet');
       ie_close('h2');
       ie_open('p');
-        itext('URLs are not part of this API, they may change at any moment. URLs must be asked to the service before making any request.');
+        itext('Mauris iaculis, lectus sagittis consequat accumsan, tellus neque blandit justo, a consectetur odio turpis a magna. In ac euismod diam. Praesent non elementum turpis. Aliquam vitae vestibulum arcu. Praesent eleifend turpis arcu.');
+      ie_close('p');
+      $templateAlias2({code: 'var hi = function() {\n    console.log(\'Hello, World!\');\n};', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '.hi:before {\n    content: \'Hello, World\';\n}', mode: 'css'}, null, opt_ijData);
+      ie_open('p');
+        itext('Nunc eros risus, scelerisque sit amet magna at, venenatis mattis metus. Pellentesque scelerisque facilisis sagittis. Integer at eleifend urna, nec vehicula nibh. Morbi a fermentum purus. Mauris augue erat, consectetur quis massa ac, commodo vehicula augue. Cras in odio volutpat, maximus nunc eleifend, scelerisque erat. In hac habitasse platea dictumst.');
       ie_close('p');
       ie_open('p');
-        itext('The URLs can be obtained making a request to the root resource of the Service "/".');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
       ie_open('p');
-        itext('The response in json HAL format will contain a "_links" object with the different links to be used. For example:');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "name": "pulpo-api",\n    "description": "API for consuming PULPO Services",\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/"\n        },\n        "data-sources": {\n            "href": "http://localhost:8084/{projectId}/data-sources",\n            "templated": true\n        }\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('The URL for managing data sources has the key "data-sources" inside the section "_links". This URL can be used to obtain the entities (GET method) and create new ones (POST method).');
-      ie_close('p');
-      ie_open('p');
-        itext('It can be paginated and sorted using the params (page, size and sort). The projectId variable must be replaced with the projectId of the current project.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of entities, the link to each entity can be found with the rel "self". That same url can be also used for delete (DELETE method) and update (PUT method).');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/data-sources?page=0&size=1');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "name": "liferay-de"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('From this response, you can obtain the total number of existing elements under the "page" block and also the links to other pages of data sources.');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('The Data Source Model');
+        itext('Lorem ipsum dolor sit amet');
       ie_close('h2');
       ie_open('p');
-        itext('DataSources support a subset of the Type [DataFeed] from Schema.org');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported:');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('author');
-        ie_close('li');
-        ie_open('li');
-          itext('dataCreated');
-        ie_close('li');
-        ie_open('li');
-          itext('dateModified');
-        ie_close('li');
-        ie_open('li');
-          itext('identifier');
-        ie_close('li');
-        ie_open('li');
-          itext('name');
-        ie_close('li');
-        ie_open('li');
-          itext('provider');
-        ie_close('li');
-        ie_open('li');
-          itext('url');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Lorem ipsum dolor sit amet');
+      ie_close('h2');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11796,11 +11788,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param162}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param199}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'RhSTC.render';
+  $render.soyTemplateName = 'eGxmx.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11810,17 +11802,14 @@ return exports;
 
 });
 
-class RhSTC extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(RhSTC, templates);
+class eGxmx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(eGxmx, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 96 */,
-/* 97 */,
-/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
@@ -11859,7 +11848,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(RhSTC, templates);
 /* 134 */,
 /* 135 */,
 /* 136 */,
-/* 137 */
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11887,7 +11880,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(95);
+var _indexSoy = __webpack_require__(98);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11899,23 +11892,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RhSTC = function (_Component) {
-  _inherits(RhSTC, _Component);
+var eGxmx = function (_Component) {
+  _inherits(eGxmx, _Component);
 
-  function RhSTC() {
-    _classCallCheck(this, RhSTC);
+  function eGxmx() {
+    _classCallCheck(this, eGxmx);
 
-    return _possibleConstructorReturn(this, (RhSTC.__proto__ || Object.getPrototypeOf(RhSTC)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (eGxmx.__proto__ || Object.getPrototypeOf(eGxmx)).apply(this, arguments));
   }
 
-  return RhSTC;
+  return eGxmx;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(RhSTC, _indexSoy2.default);
+_metalSoy2.default.register(eGxmx, _indexSoy2.default);
 
-exports.default = RhSTC;
+exports.default = eGxmx;
 
 /***/ })
-],[137]);
+],[141]);
