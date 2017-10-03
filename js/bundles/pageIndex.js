@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11721,12 +11721,12 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param87 = function() {
+  var param40 = function() {
     $header(opt_data, null, opt_ijData);
     $environments(null, null, opt_ijData);
     $footer(null, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param87}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param40}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11748,13 +11748,13 @@ function $header(opt_data, opt_ignored, opt_ijData) {
         'class', 'container');
       ie_open('h1', null, null,
           'class', 'header-title');
-        var dyn5 = opt_data.site.title;
-        if (typeof dyn5 == 'function') dyn5(); else if (dyn5 != null) itext(dyn5);
+        var dyn3 = opt_data.site.title;
+        if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
       ie_close('h1');
       ie_open('h2', null, null,
           'class', 'header-subtitle');
-        var dyn6 = opt_data.site.index.description;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.index.description;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('h2');
       ie_open('h3');
         itext('We will help you gather Contacts, Assets and Analytics from all your sites, installations or apps. Contacts is already available.');
@@ -11829,7 +11829,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1h,mode:quick,to:now))&_a=(columns:!(_source),index:\'filebeat-*\',interval:auto,query:(query_string:(analyze_wildcard:!t,query:\'*\')),sort:!(\'@timestamp\',desc))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/f35fe1a0-a81b-11e7-9d7a-bd1cf37298fe?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
@@ -11865,7 +11865,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/38f258c0-9858-11e7-9a6b-c18b98042fd7?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1h,mode:quick,to:now))&_a=(columns:!(message,source),filters:!((\'$$hashKey\':\'object:2163\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:tags,negate:!f,value:osb-pulpo-engine-contacts-pre),query:(match:(tags:(query:osb-pulpo-engine-contacts-pre,type:phrase)))),(\'$$hashKey\':\'object:2164\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:query,negate:!t,value:\'%7B%22prefix%22:%7B%22source%22:%22%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-metricbeat-%22%7D%7D\'),query:(prefix:(source:%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-metricbeat-))),(\'$$hashKey\':\'object:2165\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:query,negate:!t,value:\'%7B%22prefix%22:%7B%22source%22:%22%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-filebeat-%22%7D%7D\'),query:(prefix:(source:%2Fvar%2Flog%2Faws%2Fcontainers%2Fpulpo-filebeat-))),(\'$$hashKey\':\'object:2166\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:source,negate:!t,value:%2Fvar%2Flog%2Faws%2Fcfn-hup.log),query:(match:(source:(query:%2Fvar%2Flog%2Faws%2Fcfn-hup.log,type:phrase)))),(\'$$hashKey\':\'object:2167\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:source,negate:!t,value:%2Fvar%2Flog%2Faws%2Fcfn-wire.log),query:(match:(source:(query:%2Fvar%2Flog%2Faws%2Fcfn-wire.log,type:phrase)))),(\'$$hashKey\':\'object:2168\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:source,negate:!t,value:%2Fvar%2Flog%2Faws%2Feb-publish-logs.log),query:(match:(source:(query:%2Fvar%2Flog%2Faws%2Feb-publish-logs.log,type:phrase))))),index:\'filebeat-*\',interval:auto,query:(query_string:(analyze_wildcard:!t,query:\'*\')),sort:!(\'@timestamp\',desc))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/1e073380-9855-11e7-a87a-6b9ea3a428bb?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
@@ -11901,7 +11901,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/1f8c7410-993e-11e7-a4ca-11220039c65d?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1h,mode:quick,to:now))&_a=(columns:!(message,source),filters:!((\'$$hashKey\':\'object:2992\',\'$state\':(store:appState),meta:(alias:!n,disabled:!f,index:\'filebeat-*\',key:tags,negate:!f,value:osb-pulpo-engine-contacts-prod),query:(match:(tags:(query:osb-pulpo-engine-contacts-prod,type:phrase))))),index:\'filebeat-*\',interval:auto,query:(query_string:(analyze_wildcard:!t,query:\'*\')),sort:!(\'@timestamp\',desc))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/9caeae90-a816-11e7-8f68-bff39a8c8048?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
