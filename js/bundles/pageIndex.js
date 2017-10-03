@@ -11894,7 +11894,10 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
                 ie_close('a');
               ie_close('li');
               ie_open('li');
-                itext('Status Dashboard');
+                ie_open('a', null, null,
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/26fabc10-a817-11e7-8f68-bff39a8c8048?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1085\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
+                  itext('Status Dashboard');
+                ie_close('a');
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
