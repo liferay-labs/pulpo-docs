@@ -110,5 +110,6 @@ The following fields are currently supported:
 * name
 * provider
 * url
+* subjectOf
 
 </article>
