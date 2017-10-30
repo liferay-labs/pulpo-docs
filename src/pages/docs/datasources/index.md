@@ -103,6 +103,7 @@ the links to other pages of data sources.
 DataSources support a subset of the Type [DataFeed] from Schema.org
 
 The following fields are currently supported:
+* about
 * author
 * dataCreated
 * dateModified
