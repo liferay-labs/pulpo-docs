@@ -3,48 +3,53 @@ title: "Data Sources"
 description: "Data Sources API"
 layout: "guide"
 icon: "database"
-weight: 1
+weight: 3
 ---
 
 ###### {$page.description}
 
 <article id="1">
 
-## Navigation to obtain URLs
+## The Data Source Model
 
-URLs are not part of this API, they may change at any moment. URLs must be asked to
-the service before making any request.
+DataSources support a subset of the Type [DataFeed](http://schema.org/DataFeed) from Schema.org
 
-The URLs can be obtained making a request to the root resource of the Service "/".
+The following fields are currently supported:
+* *about*
+* *author*
+  * identifier
+  * name
+* *dateCreated*
+* *dateModified*
+* *identifier*
+* *name*
+* *provider*
+  * name
+* *url*
+* *subjectOf* - An event about this Data Source
+  * name
+  * startDate
+  * endDate
+  * location
+  * sameAs - the URL of the Event
 
-The response in json HAL format will contain a "_links" object with the different links to be used. For example: 
+</article>
 
-```json
-{
-    "name": "pulpo-api",
-    "description": "API for consuming PULPO Services",
-    "_links": {
-        "self": {
-            "href": "http://localhost:8084/"
-        },
-        "data-sources": {
-            "href": "http://localhost:8084/{projectId}/data-sources",
-            "templated": true
-        }
-    }
-}
-```
 
-The URL for managing data sources has the key "data-sources" inside the section "_links". 
-This URL can be used to obtain the entities (GET method) and create new ones (POST method).
+<article id="2">
 
-It can be paginated and sorted using the params (page, size and sort).
-The projectId variable must be replaced with the projectId of the current project.
+## DataSources Collection
 
-Navigating through the list of entities, the link to each entity can be found with the rel "self". 
-That same url can be also used for delete (DELETE method) and update (PUT method).
+As described in [Initial Navigation to obtain URLs](/docs/general#navigation),
+the `_links` section of the root resource will contain a template link labelled as `data-sources` pointing to the
+collection of Data Sources.
 
-This is an example of a response to this url: http://localhost:8084/my-project/data-sources?page=0&size=1
+This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting) and [filtering](/docs/general#filtering).
+
+The response will contain inside the `_embedded` section, a list of data sources
+under the key `data-sources`.
+
+This is an example of a response to this url: `http://localhost:8084/my-project/data-sources?page=0&size=1`
 
 ```json
 {
@@ -91,26 +96,25 @@ This is an example of a response to this url: http://localhost:8084/my-project/d
     }
 }
 ```
-From this response, you can obtain the total number of existing elements under the "page" block and also
-the links to other pages of data sources.
 
-</article>
+Creation of new Data Sources is supported making a `POST` to the Collection URL. This is
+an example of the body passed to this POST request: 
 
-<article id="2">
+```json
+{
+	"name" : "My First DataSource",
+	"projectId" : "my-project",
+	"provider" : {
+		"name" : "liferay-de"
+	},
+	"author" : {
+		"name" : "Shinn",
+		"identifier" : "ABC1234"
+	}
+}
+```
 
-## The Data Source Model
-
-DataSources support a subset of the Type [DataFeed] from Schema.org
-
-The following fields are currently supported:
-* about
-* author
-* dataCreated
-* dateModified
-* identifier
-* name
-* provider
-* url
-* subjectOf
+Navigating through the list of entities, the link to each entity can be found with the rel `self`. 
+That same url can be also used for delete (`DELETE` method) and update (`PUT` method).
 
 </article>
