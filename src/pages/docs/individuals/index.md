@@ -1,6 +1,6 @@
 ---
 title: "Individuals"
-description: "Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. A ordem dos tratores não altera o pão duris Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Ta deprimidis, eu conheço uma cachacis que pode alegrar sua vidis."
+description: "Individuals API."
 layout: "guide"
 icon: "person"
 weight: 2
@@ -10,53 +10,180 @@ weight: 2
 
 <article id="1">
 
-## Lorem ipsum dolor sit amet
+## The Individual Model
 
-Mauris iaculis, lectus sagittis consequat accumsan, tellus neque blandit justo, a consectetur odio turpis a magna. In ac euismod diam. Praesent non elementum turpis. Aliquam vitae vestibulum arcu. Praesent eleifend turpis arcu.
+Individuals are a complex entity that contain several contexts for each Person
+stored in our system. 
 
-```javascript
-var hi = function() {
-	console.log('Hello, World!');
-};
-```
-```css
-.hi:before {
-	content: 'Hello, World';
-}
-```
+Those contexts are:
+* Identity & Demographics
+* Sentiment Analysis
+* Event Attendance
+* Sales Interaction
+* Social Engagement
+* Transactions
+* Browsing Activity
+* Firmographic
+* Support Interaction
+* etc
+ 
+Only some of those contexts are available for now. Each context will contain
+certain [Fields](/docs/fields) with information. These fields will correspond to [schema.org](http://schema.org/) Properties
 
-Nunc eros risus, scelerisque sit amet magna at, venenatis mattis metus. Pellentesque scelerisque facilisis sagittis. Integer at eleifend urna, nec vehicula nibh. Morbi a fermentum purus. Mauris augue erat, consectetur quis massa ac, commodo vehicula augue. Cras in odio volutpat, maximus nunc eleifend, scelerisque erat. In hac habitasse platea dictumst.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+The following fields are currently supported as part of an Invididual:
+* *dataSourceIdentifiers* - a map with the different datasource identifiers and the
+   datasource individual identifier (the primary key of this individual in
+   the original datasource) 
+* *dateCreated*
+* *dateModified*
+* *identifier*
+* *demographics* - a Map of identity & demographic [Fields](/docs/fields) corresponding to properties of the Type [Person](http://schema.org/Person) from Schema.org
+* *sentiment* - a Map of sentiment analysis [Fields](/docs/fields)
 
 </article>
 
+
 <article id="2">
 
-## Lorem ipsum dolor sit amet
+## Individuals Collection
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+As described in [Initial Navigation to obtain URLs](/docs/general#navigation),
+the `_links` section of the root resource will contain a template link labelled as `individuals` pointing to the
+collection of Individuals.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting) and [filtering](/docs/general#filtering).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+The response will contain inside the `_embedded` section, a list of individuals
+under the key `individuals`.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+This is an example of a response to this url: `http://localhost:8084/my-project/individuals?page=0&size=20`
+
+```json
+{
+    "_embedded": {
+        "individuals": [
+            {
+                "dateCreated": "2017-11-13T11:47:43Z",
+                "dateModified": "2017-11-13T11:47:44Z",
+                "demographics": {
+                    "address": [
+                        {
+                            "context": "demographics",
+                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",
+                            "dateModified": null,
+                            "fieldType": "http://schema.org/address",
+                            "identifier": null,
+                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",
+                            "label": null,
+                            "name": "address",
+                            "projectId": "my-project",
+                            "value": "125 Main Street, Candelaria"
+                        }
+                    ],
+                    "telephone": [
+                        {
+                            "context": "demographics",
+                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",
+                            "dateModified": null,
+                            "fieldType": "http://schema.org/telephone",
+                            "identifier": null,
+                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",
+                            "label": "home",
+                            "name": "telephone",
+                            "projectId": "my-project",
+                            "value": "+34699001234"
+                        }
+                    ],
+                    "email": [
+                        {
+                            "context": "demographics",
+                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",
+                            "dateModified": null,
+                            "fieldType": "http://schema.org/email",
+                            "identifier": null,
+                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",
+                            "label": null,
+                            "name": "email",
+                            "projectId": "my-project",
+                            "value": "cris@liferay.com"
+                        }
+                    ],
+                    "age": [
+                        {
+                            "context": "demographics",
+                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",
+                            "dateModified": null,
+                            "fieldType": "http://schema.org/age",
+                            "identifier": null,
+                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",
+                            "label": null,
+                            "name": "age",
+                            "projectId": "my-project",
+                            "value": "32"
+                        }
+                    ]
+                },
+                "identifier": "AV-1NOYHDh9K2u0PkWnL",
+                "sentiment": {},
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL"
+                    },
+                    "individuals": {
+                        "href": "http://localhost:8084/my-project/individuals{?filter}",
+                        "templated": true
+                    },
+                    "individual-segments": {
+                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL/individual-segments"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project/individuals?page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+```
+
+Creation of new Individuals or Update of Individuals manually is not supported. Indivuals are automatically
+generated and updated from the Field Chunks sent by the different Connectors.
+
+Deletion of existing Individuals is not allowed for now either. 
+
+Navigating through the list of individuals, the link to each individual can be found with the rel `self`. 
 
 </article>
 
 <article id="3">
 
-## Lorem ipsum dolor sit amet
+## Filtering and Sorting Individuals Collection
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+Individuals collection can be filtered as explained in [filtering](/docs/general#filtering).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+These are some examples of filtering:
+* Individuals from Madrid: `?filter=(demographics/city/value eq 'Madrid')`
+* Individuals under 30 years old: `?filter=(demographics/age/value lt '30')` 
+* Individuals from Madrid sorted by age in descending order:`?filter=(demographics/city/value eq 'Madrid')&sort=demographics/age/value,desc` 
+* Individuals who work as Engineers from Malaga or Madrid under 40 years old:`?filter=(demographics/city/value eq 'Madrid' or demographics/city/value eq 'Malaga') and (demographics/age/value lt '30') and (demographics/jobTitle/value eq 'Engineer')`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+</article>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut egestas nec, sagittis id velit.
+
+<article id="4">
+
+## Individual Segments
+
+As part of the links of each individual, the following links can be found using these keys:
+* `individual-segments` - The collection of Individual Segments this individual belongs to
+* `individuals` - The collection of Individuals
 
 </article>
