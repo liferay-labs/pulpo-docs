@@ -162,7 +162,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ComponentRenderer = exports.ComponentRegistry = exports.ComponentDataManager = exports.Component = undefined;
 
-var _events = __webpack_require__(83);
+var _events = __webpack_require__(74);
 
 Object.keys(_events).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -174,19 +174,19 @@ Object.keys(_events).forEach(function (key) {
   });
 });
 
-var _Component = __webpack_require__(111);
+var _Component = __webpack_require__(98);
 
 var _Component2 = _interopRequireDefault(_Component);
 
-var _ComponentDataManager = __webpack_require__(81);
+var _ComponentDataManager = __webpack_require__(72);
 
 var _ComponentDataManager2 = _interopRequireDefault(_ComponentDataManager);
 
-var _ComponentRegistry = __webpack_require__(112);
+var _ComponentRegistry = __webpack_require__(99);
 
 var _ComponentRegistry2 = _interopRequireDefault(_ComponentRegistry);
 
-var _ComponentRenderer = __webpack_require__(82);
+var _ComponentRenderer = __webpack_require__(73);
 
 var _ComponentRenderer2 = _interopRequireDefault(_ComponentRenderer);
 
@@ -214,7 +214,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-__webpack_require__(126);
+__webpack_require__(117);
 
 var _metalComponent = __webpack_require__(0);
 
@@ -222,15 +222,11 @@ var _metal = __webpack_require__(2);
 
 var _metalState = __webpack_require__(8);
 
-var _html2incdom = __webpack_require__(108);
-
-var _html2incdom2 = _interopRequireDefault(_html2incdom);
-
-var _metalIncrementalDom = __webpack_require__(87);
+var _metalIncrementalDom = __webpack_require__(78);
 
 var _metalIncrementalDom2 = _interopRequireDefault(_metalIncrementalDom);
 
-var _SoyAop = __webpack_require__(127);
+var _SoyAop = __webpack_require__(118);
 
 var _SoyAop2 = _interopRequireDefault(_SoyAop);
 
@@ -492,7 +488,7 @@ var Soy = function (_IncrementalDomRender) {
 				value = value.content;
 			}
 			if ((0, _metal.isString)(value)) {
-				value = _html2incdom2.default.buildFn(value);
+				value = _metalIncrementalDom.HTML2IncDom.buildFn(value);
 			}
 			return value;
 		}
@@ -522,7 +518,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.string = exports.object = exports.Disposable = exports.async = exports.array = undefined;
 
-var _core = __webpack_require__(94);
+var _core = __webpack_require__(85);
 
 Object.keys(_core).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -536,23 +532,23 @@ Object.keys(_core).forEach(function (key) {
 
 var _core2 = _interopRequireDefault(_core);
 
-var _array = __webpack_require__(131);
+var _array = __webpack_require__(122);
 
 var _array2 = _interopRequireDefault(_array);
 
-var _async = __webpack_require__(132);
+var _async = __webpack_require__(123);
 
 var _async2 = _interopRequireDefault(_async);
 
-var _Disposable = __webpack_require__(134);
+var _Disposable = __webpack_require__(125);
 
 var _Disposable2 = _interopRequireDefault(_Disposable);
 
-var _object = __webpack_require__(135);
+var _object = __webpack_require__(126);
 
 var _object2 = _interopRequireDefault(_object);
 
-var _string = __webpack_require__(136);
+var _string = __webpack_require__(127);
 
 var _string2 = _interopRequireDefault(_string);
 
@@ -577,7 +573,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.globalEvalStyles = exports.globalEval = exports.features = exports.DomEventHandle = exports.DomEventEmitterProxy = exports.domData = undefined;
 
-var _dom = __webpack_require__(77);
+var _dom = __webpack_require__(66);
 
 Object.keys(_dom).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -591,31 +587,31 @@ Object.keys(_dom).forEach(function (key) {
 
 var _dom2 = _interopRequireDefault(_dom);
 
-var _domData = __webpack_require__(79);
+var _domData = __webpack_require__(68);
 
 var _domData2 = _interopRequireDefault(_domData);
 
-var _DomEventEmitterProxy = __webpack_require__(115);
+var _DomEventEmitterProxy = __webpack_require__(102);
 
 var _DomEventEmitterProxy2 = _interopRequireDefault(_DomEventEmitterProxy);
 
-var _DomEventHandle = __webpack_require__(84);
+var _DomEventHandle = __webpack_require__(75);
 
 var _DomEventHandle2 = _interopRequireDefault(_DomEventHandle);
 
-var _features = __webpack_require__(85);
+var _features = __webpack_require__(76);
 
 var _features2 = _interopRequireDefault(_features);
 
-var _globalEval = __webpack_require__(118);
+var _globalEval = __webpack_require__(105);
 
 var _globalEval2 = _interopRequireDefault(_globalEval);
 
-var _globalEvalStyles = __webpack_require__(119);
+var _globalEvalStyles = __webpack_require__(106);
 
 var _globalEvalStyles2 = _interopRequireDefault(_globalEvalStyles);
 
-__webpack_require__(117);
+__webpack_require__(104);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -642,19 +638,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.EventHandler = exports.EventHandle = exports.EventEmitterProxy = exports.EventEmitter = undefined;
 
-var _EventEmitter = __webpack_require__(120);
+var _EventEmitter = __webpack_require__(107);
 
 var _EventEmitter2 = _interopRequireDefault(_EventEmitter);
 
-var _EventEmitterProxy = __webpack_require__(121);
+var _EventEmitterProxy = __webpack_require__(108);
 
 var _EventEmitterProxy2 = _interopRequireDefault(_EventEmitterProxy);
 
-var _EventHandle = __webpack_require__(86);
+var _EventHandle = __webpack_require__(77);
 
 var _EventHandle2 = _interopRequireDefault(_EventHandle);
 
-var _EventHandler = __webpack_require__(122);
+var _EventHandler = __webpack_require__(109);
 
 var _EventHandler2 = _interopRequireDefault(_EventHandler);
 
@@ -678,15 +674,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.State = exports.Config = exports.validators = undefined;
 
-var _validators = __webpack_require__(93);
+var _validators = __webpack_require__(84);
 
 var _validators2 = _interopRequireDefault(_validators);
 
-var _Config = __webpack_require__(128);
+var _Config = __webpack_require__(119);
 
 var _Config2 = _interopRequireDefault(_Config);
 
-var _State = __webpack_require__(129);
+var _State = __webpack_require__(120);
 
 var _State2 = _interopRequireDefault(_State);
 
@@ -728,11 +724,11 @@ var _metalSoy = __webpack_require__(1);
 
 var _metalSoy2 = _interopRequireDefault(_metalSoy);
 
-var _metalToggler = __webpack_require__(130);
+var _metalToggler = __webpack_require__(121);
 
 var _metalToggler2 = _interopRequireDefault(_metalToggler);
 
-var _Sidebar = __webpack_require__(147);
+var _Sidebar = __webpack_require__(138);
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
@@ -824,16 +820,269 @@ exports.default = Sidebar;
 /* 63 */,
 /* 64 */,
 /* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// This file exists just for backwards compatibility, making sure that old
+// default imports for this file still work. It's best to use the named exports
+// for each function instead though, since that allows bundlers like Rollup to
+// reduce the bundle size by removing unused code.
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.dom = undefined;
+
+var _domNamed = __webpack_require__(103);
+
+Object.keys(_domNamed).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _domNamed[key];
+    }
+  });
+});
+
+var dom = _interopRequireWildcard(_domNamed);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+exports.default = dom;
+exports.dom = dom;
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.clearData = clearData;
+exports.getData = getData;
+var RENDERER_DATA = '__METAL_IC_RENDERER_DATA__';
+
+/**
+ * Removes the incremental dom renderer data object for this component.
+ * @param {!Component} component
+ */
+function clearData(component) {
+  component[RENDERER_DATA] = null;
+}
+
+/**
+ * Gets the incremental dom renderer data object for this component, creating
+ * it if it doesn't exist yet.
+ * @param {!Component} component
+ * @return {!Object}
+ */
+function getData(component) {
+  if (!component[RENDERER_DATA]) {
+    component[RENDERER_DATA] = {};
+  }
+  return component[RENDERER_DATA];
+}
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var METAL_DATA = '__metal_data__';
+
+var domData = function () {
+	function domData() {
+		_classCallCheck(this, domData);
+	}
+
+	_createClass(domData, null, [{
+		key: 'get',
+
+		/**
+   * Gets Metal.js's data for the given element.
+   * @param {!Element} element
+   * @param {string=} opt_name Optional property from the data to be returned.
+   * @param {*} opt_initialVal Optinal value to the set the requested property
+   *     to if it doesn't exist yet in the data.
+   * @return {!Object}
+   */
+		value: function get(element, opt_name, opt_initialVal) {
+			if (!element[METAL_DATA]) {
+				element[METAL_DATA] = {};
+			}
+			if (!opt_name) {
+				return element[METAL_DATA];
+			}
+			if (!element[METAL_DATA][opt_name] && opt_initialVal) {
+				element[METAL_DATA][opt_name] = opt_initialVal;
+			}
+			return element[METAL_DATA][opt_name];
+		}
+
+		/**
+   * Checks if the given element has data stored in it.
+   * @param {!Element} element
+   * @return {boolean}
+   */
+
+	}, {
+		key: 'has',
+		value: function has(element) {
+			return !!element[METAL_DATA];
+		}
+	}]);
+
+	return domData;
+}();
+
+exports.default = domData;
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.getOriginalFns = getOriginalFns;
+exports.getOriginalFn = getOriginalFn;
+exports.startInterception = startInterception;
+exports.stopInterception = stopInterception;
+
+__webpack_require__(82);
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+/**
+ * Gets the original incremental dom functions.
+ * @return {!Object}
+ */
+function getOriginalFns() {
+	return originalFns;
+}
+
+/**
+ * Gets the original incremental dom function with the given name.
+ * @param {string} name
+ * @return {!Object}
+ */
+function getOriginalFn(name) {
+	return originalFns[name];
+}
+
+/**
+ * Starts intercepting calls to incremental dom, replacing them with the given
+ * functions. Note that `elementVoid`, `elementOpenStart`, `elementOpenEnd`
+ * and `attr` are the only ones that can't be intercepted, since they'll
+ * automatically be converted into equivalent calls to `elementOpen` and
+ * `elementClose`.
+ * @param {!Object} fns Functions to be called instead of the original ones
+ *     from incremental DOM. Should be given as a map from the function name
+ *     to the function that should intercept it. All interceptors will receive
+ *     the original function as the first argument, the actual arguments from
+ *     from the original call following it.
+ */
+function startInterception(fns) {
+	fns.attr = fnAttr;
+	fns.elementOpenEnd = fnOpenEnd;
+	fns.elementOpenStart = fnOpenStart;
+	fns.elementVoid = fnVoid;
+	fnStack.push(fns);
+}
+
+/**
+ * Restores the original `elementOpen` function from incremental dom to the
+ * implementation it used before the last call to `startInterception`.
+ */
+function stopInterception() {
+	fnStack.pop();
+}
+
+var originalFns = {
+	attr: IncrementalDOM.attr,
+	attributes: IncrementalDOM.attributes[IncrementalDOM.symbols.default],
+	elementClose: IncrementalDOM.elementClose,
+	elementOpen: IncrementalDOM.elementOpen,
+	elementOpenEnd: IncrementalDOM.elementOpenEnd,
+	elementOpenStart: IncrementalDOM.elementOpenStart,
+	elementVoid: IncrementalDOM.elementVoid,
+	text: IncrementalDOM.text
+};
+
+var fnStack = [];
+
+var collectedArgs = [];
+
+function fnAttr(name, value) {
+	collectedArgs.push(name, value);
+}
+
+function fnOpenStart(tag, key, statics) {
+	collectedArgs = [tag, key, statics];
+}
+
+function fnOpenEnd() {
+	var _IncrementalDOM;
+
+	return (_IncrementalDOM = IncrementalDOM).elementOpen.apply(_IncrementalDOM, _toConsumableArray(collectedArgs));
+}
+
+function fnVoid() {
+	IncrementalDOM.elementOpen.apply(null, arguments);
+	return IncrementalDOM.elementClose.apply(null, arguments);
+}
+
+function getStack() {
+	return fnStack.length > 0 ? fnStack[fnStack.length - 1] : null;
+}
+
+function buildHandleCall(name) {
+	var data = {
+		name: name
+	};
+	var fn = handleCall.bind(data);
+	return fn;
+}
+
+function handleCall() {
+	var name = this.name; // eslint-disable-line
+	var stack = getStack();
+	var fn = stack && stack[name] || originalFns[name];
+	return fn.apply(null, arguments);
+}
+
+IncrementalDOM.attr = buildHandleCall('attr');
+IncrementalDOM.elementClose = buildHandleCall('elementClose');
+IncrementalDOM.elementOpen = buildHandleCall('elementOpen');
+IncrementalDOM.elementOpenEnd = buildHandleCall('elementOpenEnd');
+IncrementalDOM.elementOpenStart = buildHandleCall('elementOpenStart');
+IncrementalDOM.elementVoid = buildHandleCall('elementVoid');
+IncrementalDOM.text = buildHandleCall('text');
+
+IncrementalDOM.attributes[IncrementalDOM.symbols.default] = buildHandleCall('attributes');
+
+/***/ }),
+/* 70 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1023,7 +1272,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 76 */
+/* 71 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1050,269 +1299,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// This file exists just for backwards compatibility, making sure that old
-// default imports for this file still work. It's best to use the named exports
-// for each function instead though, since that allows bundlers like Rollup to
-// reduce the bundle size by removing unused code.
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.dom = undefined;
-
-var _domNamed = __webpack_require__(116);
-
-Object.keys(_domNamed).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _domNamed[key];
-    }
-  });
-});
-
-var dom = _interopRequireWildcard(_domNamed);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-exports.default = dom;
-exports.dom = dom;
-
-/***/ }),
-/* 78 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.clearData = clearData;
-exports.getData = getData;
-var RENDERER_DATA = '__METAL_IC_RENDERER_DATA__';
-
-/**
- * Removes the incremental dom renderer data object for this component.
- * @param {!Component} component
- */
-function clearData(component) {
-  component[RENDERER_DATA] = null;
-}
-
-/**
- * Gets the incremental dom renderer data object for this component, creating
- * it if it doesn't exist yet.
- * @param {!Component} component
- * @return {!Object}
- */
-function getData(component) {
-  if (!component[RENDERER_DATA]) {
-    component[RENDERER_DATA] = {};
-  }
-  return component[RENDERER_DATA];
-}
-
-/***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var METAL_DATA = '__metal_data__';
-
-var domData = function () {
-	function domData() {
-		_classCallCheck(this, domData);
-	}
-
-	_createClass(domData, null, [{
-		key: 'get',
-
-		/**
-   * Gets Metal.js's data for the given element.
-   * @param {!Element} element
-   * @param {string=} opt_name Optional property from the data to be returned.
-   * @param {*} opt_initialVal Optinal value to the set the requested property
-   *     to if it doesn't exist yet in the data.
-   * @return {!Object}
-   */
-		value: function get(element, opt_name, opt_initialVal) {
-			if (!element[METAL_DATA]) {
-				element[METAL_DATA] = {};
-			}
-			if (!opt_name) {
-				return element[METAL_DATA];
-			}
-			if (!element[METAL_DATA][opt_name] && opt_initialVal) {
-				element[METAL_DATA][opt_name] = opt_initialVal;
-			}
-			return element[METAL_DATA][opt_name];
-		}
-
-		/**
-   * Checks if the given element has data stored in it.
-   * @param {!Element} element
-   * @return {boolean}
-   */
-
-	}, {
-		key: 'has',
-		value: function has(element) {
-			return !!element[METAL_DATA];
-		}
-	}]);
-
-	return domData;
-}();
-
-exports.default = domData;
-
-/***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.getOriginalFns = getOriginalFns;
-exports.getOriginalFn = getOriginalFn;
-exports.startInterception = startInterception;
-exports.stopInterception = stopInterception;
-
-__webpack_require__(91);
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-/**
- * Gets the original incremental dom functions.
- * @return {!Object}
- */
-function getOriginalFns() {
-	return originalFns;
-}
-
-/**
- * Gets the original incremental dom function with the given name.
- * @param {string} name
- * @return {!Object}
- */
-function getOriginalFn(name) {
-	return originalFns[name];
-}
-
-/**
- * Starts intercepting calls to incremental dom, replacing them with the given
- * functions. Note that `elementVoid`, `elementOpenStart`, `elementOpenEnd`
- * and `attr` are the only ones that can't be intercepted, since they'll
- * automatically be converted into equivalent calls to `elementOpen` and
- * `elementClose`.
- * @param {!Object} fns Functions to be called instead of the original ones
- *     from incremental DOM. Should be given as a map from the function name
- *     to the function that should intercept it. All interceptors will receive
- *     the original function as the first argument, the actual arguments from
- *     from the original call following it.
- */
-function startInterception(fns) {
-	fns.attr = fnAttr;
-	fns.elementOpenEnd = fnOpenEnd;
-	fns.elementOpenStart = fnOpenStart;
-	fns.elementVoid = fnVoid;
-	fnStack.push(fns);
-}
-
-/**
- * Restores the original `elementOpen` function from incremental dom to the
- * implementation it used before the last call to `startInterception`.
- */
-function stopInterception() {
-	fnStack.pop();
-}
-
-var originalFns = {
-	attr: IncrementalDOM.attr,
-	attributes: IncrementalDOM.attributes[IncrementalDOM.symbols.default],
-	elementClose: IncrementalDOM.elementClose,
-	elementOpen: IncrementalDOM.elementOpen,
-	elementOpenEnd: IncrementalDOM.elementOpenEnd,
-	elementOpenStart: IncrementalDOM.elementOpenStart,
-	elementVoid: IncrementalDOM.elementVoid,
-	text: IncrementalDOM.text
-};
-
-var fnStack = [];
-
-var collectedArgs = [];
-
-function fnAttr(name, value) {
-	collectedArgs.push(name, value);
-}
-
-function fnOpenStart(tag, key, statics) {
-	collectedArgs = [tag, key, statics];
-}
-
-function fnOpenEnd() {
-	var _IncrementalDOM;
-
-	return (_IncrementalDOM = IncrementalDOM).elementOpen.apply(_IncrementalDOM, _toConsumableArray(collectedArgs));
-}
-
-function fnVoid() {
-	IncrementalDOM.elementOpen.apply(null, arguments);
-	return IncrementalDOM.elementClose.apply(null, arguments);
-}
-
-function getStack() {
-	return fnStack.length > 0 ? fnStack[fnStack.length - 1] : null;
-}
-
-function buildHandleCall(name) {
-	var data = {
-		name: name
-	};
-	var fn = handleCall.bind(data);
-	return fn;
-}
-
-function handleCall() {
-	var name = this.name; // eslint-disable-line
-	var stack = getStack();
-	var fn = stack && stack[name] || originalFns[name];
-	return fn.apply(null, arguments);
-}
-
-IncrementalDOM.attr = buildHandleCall('attr');
-IncrementalDOM.elementClose = buildHandleCall('elementClose');
-IncrementalDOM.elementOpen = buildHandleCall('elementOpen');
-IncrementalDOM.elementOpenEnd = buildHandleCall('elementOpenEnd');
-IncrementalDOM.elementOpenStart = buildHandleCall('elementOpenStart');
-IncrementalDOM.elementVoid = buildHandleCall('elementVoid');
-IncrementalDOM.text = buildHandleCall('text');
-
-IncrementalDOM.attributes[IncrementalDOM.symbols.default] = buildHandleCall('attributes');
-
-/***/ }),
-/* 81 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1514,7 +1501,7 @@ var ComponentDataManager = function () {
 exports.default = new ComponentDataManager();
 
 /***/ }),
-/* 82 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1607,7 +1594,7 @@ var ComponentRenderer = function () {
 exports.default = new ComponentRenderer();
 
 /***/ }),
-/* 83 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1682,7 +1669,7 @@ function getComponentFn(component, fnName) {
 }
 
 /***/ }),
-/* 84 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1746,7 +1733,7 @@ var DomEventHandle = function (_EventHandle) {
 exports.default = DomEventHandle;
 
 /***/ }),
-/* 85 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1758,7 +1745,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dom = __webpack_require__(77);
+var _dom = __webpack_require__(66);
 
 var _metal = __webpack_require__(2);
 
@@ -1803,6 +1790,9 @@ var features = function () {
 			var prefixes = ['Webkit', 'MS', 'O', ''];
 			var typeTitleCase = _metal.string.replaceInterval(type, 0, 1, type.substring(0, 1).toUpperCase());
 			var suffixes = [typeTitleCase + 'End', typeTitleCase + 'End', typeTitleCase + 'End', type + 'end'];
+			if (!features.animationElement_) {
+				features.animationElement_ = document.createElement('div');
+			}
 			for (var i = 0; i < prefixes.length; i++) {
 				if (features.animationElement_.style[prefixes[i] + typeTitleCase] !== undefined) {
 					return prefixes[i].toLowerCase() + suffixes[i];
@@ -1834,14 +1824,14 @@ var features = function () {
 	return features;
 }();
 
-features.animationElement_ = document.createElement('div');
+features.animationElement_ = undefined;
 features.animationEventName_ = undefined;
 features.attrOrderChange_ = undefined;
 
 exports.default = features;
 
 /***/ }),
-/* 86 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1937,330 +1927,32 @@ var EventHandle = function (_Disposable) {
 exports.default = EventHandle;
 
 /***/ }),
-/* 87 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
+exports.HTML2IncDom = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _HTML2IncDom = __webpack_require__(112);
 
-__webpack_require__(91);
+var _HTML2IncDom2 = _interopRequireDefault(_HTML2IncDom);
 
-var _changes = __webpack_require__(89);
+var _IncrementalDomRenderer = __webpack_require__(110);
 
-var _data = __webpack_require__(78);
+var _IncrementalDomRenderer2 = _interopRequireDefault(_IncrementalDomRenderer);
 
-var _children = __webpack_require__(90);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _patch2 = __webpack_require__(125);
-
-var _render = __webpack_require__(92);
-
-var _metalComponent = __webpack_require__(0);
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var IncrementalDomRenderer = function (_ComponentRenderer$co) {
-	_inherits(IncrementalDomRenderer, _ComponentRenderer$co);
-
-	function IncrementalDomRenderer() {
-		_classCallCheck(this, IncrementalDomRenderer);
-
-		return _possibleConstructorReturn(this, (IncrementalDomRenderer.__proto__ || Object.getPrototypeOf(IncrementalDomRenderer)).apply(this, arguments));
-	}
-
-	_createClass(IncrementalDomRenderer, [{
-		key: 'buildShouldUpdateArgs',
-
-		/**
-   * Returns an array with the args that should be passed to the component's
-   * `shouldUpdate` method. This can be overridden by sub classes to change
-   * what the method should receive.
-   * @param {Object} changes
-   * @return {!Array}
-   */
-		value: function buildShouldUpdateArgs(changes) {
-			return [changes.props];
-		}
-
-		/**
-   * @inheritDoc
-   */
-
-	}, {
-		key: 'dispose',
-		value: function dispose(component) {
-			var data = (0, _data.getData)(component);
-			var ref = data.config.ref;
-			var owner = data.owner;
-			if (owner && owner.components && owner.components[ref] === component) {
-				delete owner.components[ref];
-			}
-
-			if (data.childComponents) {
-				for (var i = 0; i < data.childComponents.length; i++) {
-					var child = data.childComponents[i];
-					if (!child.isDisposed()) {
-						child.element = null;
-						child.dispose();
-					}
-				}
-			}
-
-			(0, _data.clearData)(component);
-		}
-
-		/**
-   * Generates a key for the element currently being rendered in the given
-   * component. By default, just returns the original key. Sub classes can
-   * override this to change the behavior.
-   * @param {!Component} component
-   * @param {string} key
-   * @return {?string}
-   */
-
-	}, {
-		key: 'generateKey',
-		value: function generateKey(component, key) {
-			return key;
-		}
-
-		/**
-   * Get the component's config data.
-   * @param {!Component} component
-   * @return {!Object}
-   */
-
-	}, {
-		key: 'getConfig',
-		value: function getConfig(component) {
-			return (0, _data.getData)(component).config;
-		}
-
-		/**
-   * Get the component's incremental dom renderer data.
-   * @param {!Component} component
-   * @return {!Object}
-   */
-
-	}, {
-		key: 'getData',
-		value: function getData(component) {
-			return (0, _data.getData)(component);
-		}
-
-		/**
-   * Gets the component that triggered the current patch operation.
-   * @return {Component}
-   */
-
-	}, {
-		key: 'getPatchingComponent',
-		value: function getPatchingComponent() {
-			return (0, _patch2.getPatchingComponent)();
-		}
-
-		/**
-   * Handles a node having just been rendered. Sub classes should override this
-   * for custom behavior.
-   */
-
-	}, {
-		key: 'handleNodeRendered',
-		value: function handleNodeRendered() {}
-
-		/**
-   * Checks if the given object is an incremental dom node.
-   * @param {!Object} node
-   * @return {boolean}
-   */
-
-	}, {
-		key: 'isIncDomNode',
-		value: function isIncDomNode(node) {
-			return !!(0, _children.getOwner)(node);
-		}
-
-		/**
-   * Calls incremental dom's patch function to render the component.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'patch',
-		value: function patch(component) {
-			(0, _patch2.patch)(component);
-		}
-
-		/**
-   * Renders the renderer's component for the first time, patching its element
-   * through incremental dom function calls. If the first arg is a function
-   * instead of a component instance, creates and renders this function, which
-   * can either be a simple incremental dom function or a component constructor.
-   * @param {!Component} component
-   * @param {!Component|function()} component Can be a component instance, a
-   *     simple incremental dom function or a component constructor.
-   * @param {Object|Element=} opt_dataOrElement Optional config data for the
-   *     function, or parent for the rendered content.
-   * @param {Element=} opt_parent Optional parent for the rendered content.
-   * @return {!Component} The rendered component's instance.
-   */
-
-	}, {
-		key: 'render',
-		value: function render(component, opt_dataOrElement, opt_parent) {
-			if (component instanceof _metalComponent.Component) {
-				this.patch(component);
-			} else {
-				return (0, _render.renderFunction)(this, component, opt_dataOrElement, opt_parent);
-			}
-		}
-
-		/**
-   * Renders the given child node via its owner renderer.
-   * @param {!Object} child
-   */
-
-	}, {
-		key: 'renderChild',
-		value: function renderChild(child) {
-			(0, _render.renderChild)(child);
-		}
-
-		/**
-   * Calls functions from `IncrementalDOM` to build the component element's
-   * content. Can be overriden by subclasses (for integration with template
-   * engines for example).
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'renderIncDom',
-		value: function renderIncDom(component) {
-			if (component.render) {
-				component.render();
-			} else {
-				IncrementalDOM.elementVoid('div');
-			}
-		}
-
-		/**
-   * Runs the incremental dom functions for rendering this component, without
-   * calling `patch`. This function needs to be called inside a `patch`.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'renderInsidePatch',
-		value: function renderInsidePatch(component) {
-			var shouldRender = !component.wasRendered || this.shouldUpdate(component, (0, _changes.getChanges)(component)) || IncrementalDOM.currentPointer() !== component.element;
-			if (shouldRender) {
-				(0, _render.render)(component);
-			} else if (component.element) {
-				this.skipRender();
-			}
-		}
-
-		/**
-   * Sets up this component to be used by this renderer.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'setUp',
-		value: function setUp(component) {
-			component.context = {};
-			component.components = {};
-			component.refs = {};
-
-			var data = (0, _data.getData)(component);
-			data.config = component.getInitialConfig();
-			(0, _changes.trackChanges)(component);
-		}
-
-		/**
-   * Checks if the component should be updated with the current state changes.
-   * @param {!Component} component
-   * @param {Object} changes
-   * @return {boolean}
-   */
-
-	}, {
-		key: 'shouldUpdate',
-		value: function shouldUpdate(component, changes) {
-			if (!changes) {
-				return false;
-			}
-			if (component.shouldUpdate) {
-				return component.shouldUpdate.apply(component, _toConsumableArray(this.buildShouldUpdateArgs(changes)));
-			}
-			return true;
-		}
-
-		/**
-   * Skips the next disposal of children components, by clearing the array as
-   * if there were no children rendered the last time. This can be useful for
-   * allowing components to be reused by other parent components in separate
-   * render update cycles.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'skipNextChildrenDisposal',
-		value: function skipNextChildrenDisposal(component) {
-			(0, _data.getData)(component).childComponents = null;
-		}
-
-		/**
-   * Skips rendering the current node.
-   */
-
-	}, {
-		key: 'skipRender',
-		value: function skipRender() {
-			IncrementalDOM.skipNode();
-		}
-
-		/**
-   * Updates the renderer's component when state changes, patching its element
-   * through incremental dom function calls.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'update',
-		value: function update(component) {
-			if (this.shouldUpdate(component, (0, _changes.getChanges)(component))) {
-				this.patch(component);
-			}
-		}
-	}]);
-
-	return IncrementalDomRenderer;
-}(_metalComponent.ComponentRenderer.constructor);
-
-var renderer = new IncrementalDomRenderer();
-
-// Name of this renderer. Renderers should provide this as a way to identify
-// them via a simple string (when calling enableCompatibilityMode to add
-// support to old features for specific renderers for example).
-renderer.RENDERER_NAME = 'incremental-dom';
-
-exports.default = renderer;
+exports.HTML2IncDom = _HTML2IncDom2.default;
+exports.default = _IncrementalDomRenderer2.default;
 
 /***/ }),
-/* 88 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2308,7 +2000,7 @@ function buildCallFromConfig(tag, config) {
 }
 
 /***/ }),
-/* 89 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2321,7 +2013,7 @@ exports.clearChanges = clearChanges;
 exports.getChanges = getChanges;
 exports.trackChanges = trackChanges;
 
-var _data = __webpack_require__(78);
+var _data = __webpack_require__(67);
 
 /**
  * Clears the changes tracked so far.
@@ -2364,7 +2056,7 @@ function trackChanges(component) {
 }
 
 /***/ }),
-/* 90 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2379,11 +2071,11 @@ exports.isChildTag = isChildTag;
 exports.getOwner = getOwner;
 exports.renderChildTree = renderChildTree;
 
-var _callArgs = __webpack_require__(88);
+var _callArgs = __webpack_require__(79);
 
 var _metal = __webpack_require__(2);
 
-var _incrementalDomAop = __webpack_require__(80);
+var _incrementalDomAop = __webpack_require__(69);
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2565,17 +2257,17 @@ function handleInterceptedTextCall_() {
 }
 
 /***/ }),
-/* 91 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-var _incrementalDom = __webpack_require__(110);
+var _incrementalDom = __webpack_require__(97);
 
 var IncrementalDOM = _interopRequireWildcard(_incrementalDom);
 
-var _incrementalDomString = __webpack_require__(109);
+var _incrementalDomString = __webpack_require__(96);
 
 var IncrementalDOMString = _interopRequireWildcard(_incrementalDomString);
 
@@ -2594,10 +2286,10 @@ if ((0, _metal.isServerSide)()) {
 
 	scope.IncrementalDOM = IncrementalDOM;
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(76)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71)))
 
 /***/ }),
-/* 92 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2615,23 +2307,23 @@ exports.render = render;
 exports.renderChild = renderChild;
 exports.renderFunction = renderFunction;
 
-var _attributes = __webpack_require__(124);
+var _attributes = __webpack_require__(115);
 
-var _callArgs = __webpack_require__(88);
+var _callArgs = __webpack_require__(79);
 
-var _children = __webpack_require__(90);
+var _children = __webpack_require__(81);
 
-var _changes = __webpack_require__(89);
+var _changes = __webpack_require__(80);
 
 var _metalDom = __webpack_require__(3);
 
-var _data = __webpack_require__(78);
+var _data = __webpack_require__(67);
 
 var _metal = __webpack_require__(2);
 
-var _unused = __webpack_require__(123);
+var _unused = __webpack_require__(111);
 
-var _incrementalDomAop = __webpack_require__(80);
+var _incrementalDomAop = __webpack_require__(69);
 
 var _metalComponent = __webpack_require__(0);
 
@@ -3215,7 +2907,7 @@ function updateElementIfNotReached_(component, node) {
 }
 
 /***/ }),
-/* 93 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3231,7 +2923,7 @@ var _metal = __webpack_require__(2);
 
 var ERROR_ARRAY_OF_TYPE = 'Expected an array of single type.';
 var ERROR_OBJECT_OF_TYPE = 'Expected object of one type.';
-var ERROR_ONE_OF = 'Expected one of given values.';
+var ERROR_ONE_OF = 'Expected one of the following values:';
 var ERROR_ONE_OF_TYPE = 'Expected one of given types.';
 var ERROR_SHAPE_OF = 'Expected object with a specific shape.';
 
@@ -3314,7 +3006,7 @@ var validators = {
 			if (isInvalid(result)) {
 				return result;
 			}
-			return arrayOfValues.indexOf(value) === -1 ? composeError(ERROR_ONE_OF, name, context) : true;
+			return arrayOfValues.indexOf(value) === -1 ? composeError(composeOneOfErrorMessage(arrayOfValues), name, context) : true;
 		});
 	},
 
@@ -3410,6 +3102,15 @@ function composeError(error, name, context) {
 }
 
 /**
+ * Composes an error message for Config.oneOf validator.
+ * @param {!Array} arrayOfValues Array of values to check equality against.
+ * @return {!Error}
+ */
+function composeOneOfErrorMessage(arrayOfValues) {
+	return ERROR_ONE_OF + ' ' + JSON.stringify(arrayOfValues) + '.';
+}
+
+/**
  * Returns the type of the given value.
  * @param {*} value Any value.
  * @return {string} Type of value.
@@ -3477,7 +3178,7 @@ function validateType(expectedType, value, name, context) {
 exports.default = validators;
 
 /***/ }),
-/* 94 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3493,7 +3194,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.core = undefined;
 
-var _coreNamed = __webpack_require__(133);
+var _coreNamed = __webpack_require__(124);
 
 Object.keys(_coreNamed).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -3513,480 +3214,17 @@ exports.default = core;
 exports.core = core;
 
 /***/ }),
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
 /* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _unescape = __webpack_require__(107);
-
-var _unescape2 = _interopRequireDefault(_unescape);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var parser_;
-
-var HTML2IncDom = function () {
-	function HTML2IncDom() {
-		_classCallCheck(this, HTML2IncDom);
-	}
-
-	_createClass(HTML2IncDom, null, [{
-		key: 'buildFn',
-
-		/**
-   * Should convert the given html string to a function with calls to
-   * incremental dom methods.
-   * @param {string} html
-   * @return {!function()} Function with incremental dom calls for building
-   *     the given html string.
-   */
-		value: function buildFn(html) {
-			return function () {
-				return HTML2IncDom.run(html);
-			};
-		}
-
-		/**
-   * Gets the html parser being currently used.
-   * @return {!function()}
-   */
-
-	}, {
-		key: 'getParser',
-		value: function getParser() {
-			return parser_ || window.HTMLParser;
-		}
-
-		/**
-   * Should convert the given html string to calls to incremental dom methods.
-   * @param {string} html
-   */
-
-	}, {
-		key: 'run',
-		value: function run(html) {
-			HTML2IncDom.getParser()(html, {
-				start: function start(tag, attrs, unary) {
-					var fn = unary ? IncrementalDOM.elementVoid : IncrementalDOM.elementOpen;
-					var args = [tag, null, []];
-					for (var i = 0; i < attrs.length; i++) {
-						args.push(attrs[i].name, attrs[i].value);
-					}
-					fn.apply(null, args);
-				},
-
-				end: function end(tag) {
-					IncrementalDOM.elementClose(tag);
-				},
-
-				chars: function chars(text) {
-					IncrementalDOM.text(text, _unescape2.default);
-				}
-			});
-		}
-
-		/**
-   * Changes the function that will be used to parse html strings. By default
-   * this will use the `HTMLParser` function from
-   * https://github.com/blowsie/Pure-JavaScript-HTML5-Parser. This will accept
-   * any function that follows that same api, basically accepting the html
-   * string and an object with `start`, `end` and `chars` functions to be called
-   * during the parsing.
-   * @param {!function(string, !Object} newParser
-   */
-
-	}, {
-		key: 'setParser',
-		value: function setParser(newParser) {
-			parser_ = newParser;
-		}
-	}]);
-
-	return HTML2IncDom;
-}();
-
-exports.default = HTML2IncDom;
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* jshint ignore:start */
-
-/*
- * HTML5 Parser By Sam Blowes
- *
- * Designed for HTML5 documents
- *
- * Original code by John Resig (ejohn.org)
- * http://ejohn.org/blog/pure-javascript-html-parser/
- * Original code by Erik Arvidsson, Mozilla Public License
- * http://erik.eae.net/simplehtmlparser/simplehtmlparser.js
- *
- * ----------------------------------------------------------------------------
- * License
- * ----------------------------------------------------------------------------
- *
- * This code is triple licensed using Apache Software License 2.0,
- * Mozilla Public License or GNU Public License
- *
- * ////////////////////////////////////////////////////////////////////////////
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License.  You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * ////////////////////////////////////////////////////////////////////////////
- *
- * The contents of this file are subject to the Mozilla Public License
- * Version 1.1 (the "License"); you may not use this file except in
- * compliance with the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS"
- * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
- * License for the specific language governing rights and limitations
- * under the License.
- *
- * The Original Code is Simple HTML Parser.
- *
- * The Initial Developer of the Original Code is Erik Arvidsson.
- * Portions created by Erik Arvidssson are Copyright (C) 2004. All Rights
- * Reserved.
- *
- * ////////////////////////////////////////////////////////////////////////////
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- * @license
- */
-
-/*
- *
- * ----------------------------------------------------------------------------
- * Usage
- * ----------------------------------------------------------------------------
- *
- * // Use like so:
- * HTMLParser(htmlString, {
- *     start: function(tag, attrs, unary) {},
- *     end: function(tag) {},
- *     chars: function(text) {},
- *     comment: function(text) {}
- * });
- *
- * // or to get an XML string:
- * HTMLtoXML(htmlString);
- *
- * // or to get an XML DOM Document
- * HTMLtoDOM(htmlString);
- *
- * // or to inject into an existing document/DOM node
- * HTMLtoDOM(htmlString, document);
- * HTMLtoDOM(htmlString, document.body);
- *
- */
-
-(function () {
-	// Regular Expressions for parsing tags and attributes
-	var startTag = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/,
-	    endTag = /^<\/([-A-Za-z0-9_]+)[^>]*>/,
-	    attr = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g;
-
-	// Empty Elements - HTML 5
-	var empty = makeMap("area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr");
-
-	// Block Elements - HTML 5
-	var block = makeMap("a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video");
-
-	// Inline Elements - HTML 5
-	var inline = makeMap("abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var");
-
-	// Elements that you can, intentionally, leave open
-	// (and which close themselves)
-	var closeSelf = makeMap("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr");
-
-	// Attributes that have their values filled in disabled="disabled"
-	var fillAttrs = makeMap("checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected");
-
-	// Special Elements (can contain anything)
-	var special = makeMap("script,style");
-
-	var HTMLParser = window.HTMLParser = function (html, handler) {
-		var index,
-		    chars,
-		    match,
-		    stack = [],
-		    last = html;
-		stack.last = function () {
-			return this[this.length - 1];
-		};
-
-		while (html) {
-			chars = true;
-
-			// Make sure we're not in a script or style element
-			if (!stack.last() || !special[stack.last()]) {
-
-				// Comment
-				if (html.indexOf("<!--") == 0) {
-					index = html.indexOf("-->");
-
-					if (index >= 0) {
-						if (handler.comment) handler.comment(html.substring(4, index));
-						html = html.substring(index + 3);
-						chars = false;
-					}
-
-					// end tag
-				} else if (html.indexOf("</") == 0) {
-						match = html.match(endTag);
-
-						if (match) {
-							html = html.substring(match[0].length);
-							match[0].replace(endTag, parseEndTag);
-							chars = false;
-						}
-
-						// start tag
-					} else if (html.indexOf("<") == 0) {
-							match = html.match(startTag);
-
-							if (match) {
-								html = html.substring(match[0].length);
-								match[0].replace(startTag, parseStartTag);
-								chars = false;
-							}
-						}
-
-				if (chars) {
-					index = html.indexOf("<");
-
-					var text = index < 0 ? html : html.substring(0, index);
-					html = index < 0 ? "" : html.substring(index);
-
-					if (handler.chars) handler.chars(text);
-				}
-			} else {
-				html = html.replace(new RegExp("([\\s\\S]*?)<\/" + stack.last() + "[^>]*>"), function (all, text) {
-					text = text.replace(/<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g, "$1$2");
-					if (handler.chars) handler.chars(text);
-
-					return "";
-				});
-
-				parseEndTag("", stack.last());
-			}
-
-			if (html == last) throw "Parse Error: " + html;
-			last = html;
-		}
-
-		// Clean up any remaining tags
-		parseEndTag();
-
-		function parseStartTag(tag, tagName, rest, unary) {
-			tagName = tagName.toLowerCase();
-
-			if (block[tagName]) {
-				// Close last tag if it's inline, except if it's a "span" (since people
-				// usually add anything they want to spans, and browsers allow it).
-				// Note: this exception for "span" was added manually (i.e. it's not
-				// present in the original code).
-				while (stack.last() && inline[stack.last()] && stack.last() !== 'span') {
-					parseEndTag("", stack.last());
-				}
-			}
-
-			if (closeSelf[tagName] && stack.last() == tagName) {
-				parseEndTag("", tagName);
-			}
-
-			unary = empty[tagName] || !!unary;
-
-			if (!unary) stack.push(tagName);
-
-			if (handler.start) {
-				var attrs = [];
-
-				rest.replace(attr, function (match, name) {
-					var value = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : fillAttrs[name] ? name : "";
-
-					attrs.push({
-						name: name,
-						value: value,
-						escaped: value.replace(/(^|[^\\])"/g, '$1\\\"') //"
-					});
-				});
-
-				if (handler.start) handler.start(tagName, attrs, unary);
-			}
-		}
-
-		function parseEndTag(tag, tagName) {
-			// If no tag name is provided, clean shop
-			if (!tagName) var pos = 0;
-
-			// Find the closest opened tag of the same type
-			else for (var pos = stack.length - 1; pos >= 0; pos--) {
-					if (stack[pos] == tagName) break;
-				}if (pos >= 0) {
-				// Close all the open elements, up the stack
-				for (var i = stack.length - 1; i >= pos; i--) {
-					if (handler.end) handler.end(stack[i]);
-				} // Remove the open elements from the stack
-				stack.length = pos;
-			}
-		}
-	};
-
-	function makeMap(str) {
-		var obj = {},
-		    items = str.split(",");
-		for (var i = 0; i < items.length; i++) {
-			obj[items[i]] = true;
-		}return obj;
-	}
-}).call(undefined);
-
-/* jshint ignore:end */
-
-/***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Copyright 2006 The Closure Library Authors. All Rights Reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS-IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * Unescapes an HTML string using a DOM to resolve non-XML, non-numeric
- * entities. This function is XSS-safe and whitespace-preserving.
- * @private
- * @param {string} str The string to unescape.
- * @return {string} The unescaped {@code str} string.
- */
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-function unescape(str) {
-  /** @type {!Object<string, string>} */
-  var seen = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"' };
-  var div = document.createElement('div');
-
-  // Match as many valid entity characters as possible. If the actual entity
-  // happens to be shorter, it will still work as innerHTML will return the
-  // trailing characters unchanged. Since the entity characters do not include
-  // open angle bracket, there is no chance of XSS from the innerHTML use.
-  // Since no whitespace is passed to innerHTML, whitespace is preserved.
-  return str.replace(HTML_ENTITY_PATTERN_, function (s, entity) {
-    // Check for cached entity.
-    var value = seen[s];
-    if (value) {
-      return value;
-    }
-    // Check for numeric entity.
-    if (entity.charAt(0) === '#') {
-      // Prefix with 0 so that hex entities (e.g. &#x10) parse as hex numbers.
-      var n = Number('0' + entity.substr(1));
-      if (!isNaN(n)) {
-        value = String.fromCharCode(n);
-      }
-    }
-    // Fall back to innerHTML otherwise.
-    if (!value) {
-      // Append a non-entity character to avoid a bug in Webkit that parses
-      // an invalid entity at the end of innerHTML text as the empty string.
-      div.innerHTML = s + ' ';
-      // Then remove the trailing character from the result.
-      value = div.firstChild.nodeValue.slice(0, -1);
-    }
-    // Cache and return.
-    seen[s] = value;
-    return value;
-  });
-}
-
-exports.default = unescape;
-
-/**
- * Regular expression that matches an HTML entity.
- * @type {!RegExp}
- */
-
-var HTML_ENTITY_PATTERN_ = /&([^;\s<&]+);?/g;
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-__webpack_require__(106);
-
-var _HTML2IncDom = __webpack_require__(105);
-
-var _HTML2IncDom2 = _interopRequireDefault(_HTML2IncDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _HTML2IncDom2.default;
-
-/***/ }),
-/* 109 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function (global, factory) {
@@ -4264,7 +3502,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 
 /***/ }),
-/* 110 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5687,10 +4925,10 @@ exports.notifications = notifications;
 exports.importNode = importNode;
 
 //# sourceMappingURL=incremental-dom-cjs.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(75)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
 
 /***/ }),
-/* 111 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5704,19 +4942,19 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _events = __webpack_require__(83);
+var _events = __webpack_require__(74);
 
 var _metal = __webpack_require__(2);
 
-var _sync = __webpack_require__(113);
+var _sync = __webpack_require__(100);
 
 var _metalDom = __webpack_require__(3);
 
-var _ComponentDataManager = __webpack_require__(81);
+var _ComponentDataManager = __webpack_require__(72);
 
 var _ComponentDataManager2 = _interopRequireDefault(_ComponentDataManager);
 
-var _ComponentRenderer = __webpack_require__(82);
+var _ComponentRenderer = __webpack_require__(73);
 
 var _ComponentRenderer2 = _interopRequireDefault(_ComponentRenderer);
 
@@ -5757,7 +4995,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *   rendered() {
  *   }
  *
+ *   willAttach() {
+ *   }
+ *
  *   attached() {
+ *   }
+ *
+ *   willReceiveState() {
+ *   }
+ *
+ *   // willReceiveProps is only available in JSX components
+ *   willReceiveProps() {
+ *   }
+ *
+ *   shouldUpdate() {
+ *   }
+ *
+ *   willUpdate() {
+ *   }
+ *
+ *   willDetach() {
  *   }
  *
  *   detached() {
@@ -5811,6 +5068,13 @@ var Component = function (_EventEmitter) {
 		_this.eventsStateKeyHandler_ = null;
 
 		/**
+   * Stores the pending callback function for when `forceUpdate` is used
+   * to trigger a rerender.
+   * @type {?function}
+   */
+		_this.forceUpdateCallback_ = null;
+
+		/**
    * Whether the element is in document.
    * @type {boolean}
    */
@@ -5824,6 +5088,13 @@ var Component = function (_EventEmitter) {
 		_this.initialConfig_ = opt_config || {};
 
 		/**
+   * Whether the current environment is server side.
+   * @type {boolean}
+   * @protected
+   */
+		_this.serverSide_ = (0, _metal.isServerSide)();
+
+		/**
    * Whether the element was rendered.
    * @type {boolean}
    */
@@ -5835,7 +5106,7 @@ var Component = function (_EventEmitter) {
    * `attach`.
    * @type {!Element}
    */
-		_this.DEFAULT_ELEMENT_PARENT = document.body;
+		_this.DEFAULT_ELEMENT_PARENT = !_this.serverSide_ ? document.body : null;
 
 		_this.setShouldUseFacade(true);
 		_this.element = _this.initialConfig_.element;
@@ -5844,6 +5115,7 @@ var Component = function (_EventEmitter) {
 		_this.setUpDataManager_();
 		_this.setUpSyncUpdates_();
 
+		_this.on('stateWillChange', _this.handleStateWillChange_);
 		_this.on('stateChanged', _this.handleComponentStateChanged_);
 		_this.on('eventsChanged', _this.onEventsChanged_);
 		_this.addListenersFromObj_(_this.dataManager_.get(_this, 'events'));
@@ -5899,6 +5171,8 @@ var Component = function (_EventEmitter) {
 		key: 'attach',
 		value: function attach(opt_parentElement, opt_siblingElement) {
 			if (!this.inDocument) {
+				this.emit('willAttach');
+				this.willAttach();
 				this.attachElement(opt_parentElement, opt_siblingElement);
 				this.inDocument = true;
 				this.attachData_ = {
@@ -5980,6 +5254,8 @@ var Component = function (_EventEmitter) {
 		key: 'detach',
 		value: function detach() {
 			if (this.inDocument) {
+				this.emit('willDetach');
+				this.willDetach();
 				if (this.element && this.element.parentNode) {
 					this.element.parentNode.removeChild(this.element);
 				}
@@ -6031,6 +5307,21 @@ var Component = function (_EventEmitter) {
 			this.renderer_ = null;
 
 			_get(Component.prototype.__proto__ || Object.getPrototypeOf(Component.prototype), 'disposeInternal', this).call(this);
+		}
+
+		/**
+   * Forces an update that ignores the `shouldUpdate` lifecycle method for
+   * components whose render depends on external variables.
+   */
+
+	}, {
+		key: 'forceUpdate',
+		value: function forceUpdate(opt_callback) {
+			this.forceUpdateCallback_ = opt_callback;
+
+			this.updateRenderer_({
+				forceUpdate: true
+			});
 		}
 
 		/**
@@ -6154,6 +5445,19 @@ var Component = function (_EventEmitter) {
 		}
 
 		/**
+   * Fires before state batch changes. Provides hook point for modifying
+   *     state.
+   * @param {Event} event
+   * @protected
+   */
+
+	}, {
+		key: 'handleStateWillChange_',
+		value: function handleStateWillChange_(event) {
+			this.willReceiveState(event.changes);
+		}
+
+		/**
    * Checks if this component has sync updates enabled.
    * @return {boolean}
    */
@@ -6175,8 +5479,26 @@ var Component = function (_EventEmitter) {
 		value: function informRendered() {
 			var firstRender = !this.hasRendererRendered_;
 			this.hasRendererRendered_ = true;
+
+			if (this.forceUpdateCallback_) {
+				this.forceUpdateCallback_();
+				this.forceUpdateCallback_ = null;
+			}
+
 			this.rendered(firstRender);
 			this.emit('rendered', firstRender);
+		}
+
+		/**
+   * Informs the component that the renderer is about to update. Calls the
+   * component's `willUpdate` lifecycle method.
+   * @param {Object} changes
+   */
+
+	}, {
+		key: 'informWillUpdate',
+		value: function informWillUpdate() {
+			this.willUpdate.apply(this, arguments);
 		}
 
 		/**
@@ -6238,7 +5560,7 @@ var Component = function (_EventEmitter) {
    */
 		value: function renderComponent(opt_parentElement) {
 			if (!this.hasRendererRendered_) {
-				if (window.__METAL_DEV_TOOLS_HOOK__) {
+				if (!this.serverSide_ && window.__METAL_DEV_TOOLS_HOOK__) {
 					window.__METAL_DEV_TOOLS_HOOK__(this);
 				}
 				this.getRenderer().render(this);
@@ -6378,6 +5700,10 @@ var Component = function (_EventEmitter) {
 	}, {
 		key: 'updateRenderer_',
 		value: function updateRenderer_(data) {
+			if (!data.forceUpdate) {
+				this.forceUpdateCallback_ = null;
+			}
+
 			if (!this.skipUpdates_ && this.hasRendererRendered_) {
 				this.getRenderer().update(this, data);
 			}
@@ -6395,6 +5721,42 @@ var Component = function (_EventEmitter) {
 		value: function validatorEventsFn_(val) {
 			return !(0, _metal.isDefAndNotNull)(val) || (0, _metal.isObject)(val);
 		}
+
+		/**
+   * Lifecycle. Fires before the component has been attached to the DOM.
+   */
+
+	}, {
+		key: 'willAttach',
+		value: function willAttach() {}
+
+		/**
+   * Lifecycle. Fires before component is detached from the DOM.
+   */
+
+	}, {
+		key: 'willDetach',
+		value: function willDetach() {}
+
+		/**
+   * Lifecycle. Called when the component is about to receive state changes.
+   * Provides a hook point for modifying state that can be used in the next
+   * rerender.
+   * @param {Object} changes Changes made to this.state
+   */
+
+	}, {
+		key: 'willReceiveState',
+		value: function willReceiveState() {}
+
+		/**
+   * Lifecycle. Called when the component's renderer is about to update.
+   * @param {Object} changes
+   */
+
+	}, {
+		key: 'willUpdate',
+		value: function willUpdate() {}
 	}, {
 		key: 'element',
 		get: function get() {
@@ -6582,7 +5944,7 @@ var proxyBlackList_ = {
 exports.default = Component;
 
 /***/ }),
-/* 112 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6667,7 +6029,7 @@ ComponentRegistry.components_ = {};
 exports.default = ComponentRegistry;
 
 /***/ }),
-/* 113 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6736,7 +6098,7 @@ function syncState(component, opt_changes) {
 }
 
 /***/ }),
-/* 114 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6750,7 +6112,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _domData = __webpack_require__(79);
+var _domData = __webpack_require__(68);
 
 var _domData2 = _interopRequireDefault(_domData);
 
@@ -6817,7 +6179,7 @@ var DomDelegatedEventHandle = function (_EventHandle) {
 exports.default = DomDelegatedEventHandle;
 
 /***/ }),
-/* 115 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6831,7 +6193,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _dom = __webpack_require__(77);
+var _dom = __webpack_require__(66);
 
 var _metalEvents = __webpack_require__(7);
 
@@ -6930,7 +6292,7 @@ var DomEventEmitterProxy = function (_EventEmitterProxy) {
 exports.default = DomEventEmitterProxy;
 
 /***/ }),
-/* 116 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6946,6 +6308,7 @@ exports.append = append;
 exports.buildFragment = buildFragment;
 exports.contains = contains;
 exports.delegate = delegate;
+exports.isNodeListLike = isNodeListLike;
 exports.enterDocument = enterDocument;
 exports.exitDocument = exitDocument;
 exports.hasClass = hasClass;
@@ -6966,15 +6329,15 @@ exports.triggerEvent = triggerEvent;
 
 var _metal = __webpack_require__(2);
 
-var _domData = __webpack_require__(79);
+var _domData = __webpack_require__(68);
 
 var _domData2 = _interopRequireDefault(_domData);
 
-var _DomDelegatedEventHandle = __webpack_require__(114);
+var _DomDelegatedEventHandle = __webpack_require__(101);
 
 var _DomDelegatedEventHandle2 = _interopRequireDefault(_DomDelegatedEventHandle);
 
-var _DomEventHandle = __webpack_require__(84);
+var _DomEventHandle = __webpack_require__(75);
 
 var _DomEventHandle2 = _interopRequireDefault(_DomEventHandle);
 
@@ -7138,7 +6501,7 @@ function append(parent, child) {
 	if ((0, _metal.isString)(child)) {
 		child = buildFragment(child);
 	}
-	if (child instanceof NodeList) {
+	if (isNodeListLike(child)) {
 		var childArr = Array.prototype.slice.call(child);
 		for (var i = 0; i < childArr.length; i++) {
 			parent.appendChild(childArr[i]);
@@ -7243,6 +6606,15 @@ function isAbleToInteractWith_(node, eventName, opt_eventObj) {
 }
 
 /**
+ * Returns true if the specified value is a NodeList or like one.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is like a NodeList.
+ */
+function isNodeListLike(val) {
+	return (0, _metal.isDefAndNotNull)(val) && typeof val.length === 'number' && typeof val.item === 'function';
+}
+
+/**
  * Inserts node in document as last element.
  * @param {Element} node Element to remove children from.
  */
@@ -7305,7 +6677,7 @@ function hasClass(element, className) {
  * @private
  */
 function hasClassWithNative_(element, className) {
-	return element.classList.contains(className);
+	return className.indexOf(' ') === -1 && element.classList.contains(className);
 }
 
 /**
@@ -7316,7 +6688,7 @@ function hasClassWithNative_(element, className) {
  * @private
  */
 function hasClassWithoutNative_(element, className) {
-	return (' ' + element.className + ' ').indexOf(' ' + className + ' ') >= 0;
+	return (' ' + element.className + ' ').indexOf(' ' + className + ' ') >= 0 && className.split(' ').length === 1;
 }
 
 /**
@@ -7801,60 +7173,71 @@ function triggerSelectorListeners_(container, element, event, defaultFns) {
 }
 
 /***/ }),
-/* 117 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _dom = __webpack_require__(77);
+var _metal = __webpack_require__(2);
 
-var _features = __webpack_require__(85);
+var _dom = __webpack_require__(66);
+
+var _features = __webpack_require__(76);
 
 var _features2 = _interopRequireDefault(_features);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var mouseEventMap = {
-	mouseenter: 'mouseover',
-	mouseleave: 'mouseout',
-	pointerenter: 'pointerover',
-	pointerleave: 'pointerout'
-};
-Object.keys(mouseEventMap).forEach(function (eventName) {
-	(0, _dom.registerCustomEvent)(eventName, {
-		delegate: true,
-		handler: function handler(callback, event) {
-			var related = event.relatedTarget;
-			var target = event.delegateTarget;
-			if (!related || related !== target && !(0, _dom.contains)(target, related)) {
+/**
+ * Register custom events for event delegation.
+ */
+function registerEvents() {
+	var mouseEventMap = {
+		mouseenter: 'mouseover',
+		mouseleave: 'mouseout',
+		pointerenter: 'pointerover',
+		pointerleave: 'pointerout'
+	};
+	Object.keys(mouseEventMap).forEach(function (eventName) {
+		(0, _dom.registerCustomEvent)(eventName, {
+			delegate: true,
+			handler: function handler(callback, event) {
+				var related = event.relatedTarget;
+				var target = event.delegateTarget;
+				if (!related || related !== target && !(0, _dom.contains)(target, related)) {
+					event.customType = eventName;
+					return callback(event);
+				}
+			},
+			originalEvent: mouseEventMap[eventName]
+		});
+	});
+
+	var animationEventMap = {
+		animation: 'animationend',
+		transition: 'transitionend'
+	};
+	Object.keys(animationEventMap).forEach(function (eventType) {
+		var eventName = animationEventMap[eventType];
+		(0, _dom.registerCustomEvent)(eventName, {
+			event: true,
+			delegate: true,
+			handler: function handler(callback, event) {
 				event.customType = eventName;
 				return callback(event);
-			}
-		},
-		originalEvent: mouseEventMap[eventName]
+			},
+			originalEvent: _features2.default.checkAnimationEventName()[eventType]
+		});
 	});
-});
+}
 
-var animationEventMap = {
-	animation: 'animationend',
-	transition: 'transitionend'
-};
-Object.keys(animationEventMap).forEach(function (eventType) {
-	var eventName = animationEventMap[eventType];
-	(0, _dom.registerCustomEvent)(eventName, {
-		event: true,
-		delegate: true,
-		handler: function handler(callback, event) {
-			event.customType = eventName;
-			return callback(event);
-		},
-		originalEvent: _features2.default.checkAnimationEventName()[eventType]
-	});
-});
+if (!(0, _metal.isServerSide)()) {
+	registerEvents();
+}
 
 /***/ }),
-/* 118 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7868,7 +7251,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _dom = __webpack_require__(77);
+var _dom = __webpack_require__(66);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -8012,7 +7395,7 @@ var globalEval = function () {
 exports.default = globalEval;
 
 /***/ }),
-/* 119 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8026,7 +7409,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _dom = __webpack_require__(77);
+var _dom = __webpack_require__(66);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -8152,7 +7535,7 @@ var globalEvalStyles = function () {
 exports.default = globalEvalStyles;
 
 /***/ }),
-/* 120 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8166,7 +7549,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _EventHandle = __webpack_require__(86);
+var _EventHandle = __webpack_require__(77);
 
 var _EventHandle2 = _interopRequireDefault(_EventHandle);
 
@@ -8688,7 +8071,7 @@ function toArray(val) {
 exports.default = EventEmitter;
 
 /***/ }),
-/* 121 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8928,7 +8311,7 @@ var EventEmitterProxy = function (_Disposable) {
 exports.default = EventEmitterProxy;
 
 /***/ }),
-/* 122 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9019,7 +8402,352 @@ var EventHandler = function (_Disposable) {
 exports.default = EventHandler;
 
 /***/ }),
-/* 123 */
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(82);
+
+var _changes = __webpack_require__(80);
+
+var _data = __webpack_require__(67);
+
+var _children = __webpack_require__(81);
+
+var _patch2 = __webpack_require__(116);
+
+var _render = __webpack_require__(83);
+
+var _metalComponent = __webpack_require__(0);
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var IncrementalDomRenderer = function (_ComponentRenderer$co) {
+	_inherits(IncrementalDomRenderer, _ComponentRenderer$co);
+
+	function IncrementalDomRenderer() {
+		_classCallCheck(this, IncrementalDomRenderer);
+
+		return _possibleConstructorReturn(this, (IncrementalDomRenderer.__proto__ || Object.getPrototypeOf(IncrementalDomRenderer)).apply(this, arguments));
+	}
+
+	_createClass(IncrementalDomRenderer, [{
+		key: 'buildShouldUpdateArgs',
+
+		/**
+   * Returns an array with the args that should be passed to the component's
+   * `shouldUpdate` method. This can be overridden by sub classes to change
+   * what the method should receive.
+   * @param {Object} changes
+   * @return {!Array}
+   */
+		value: function buildShouldUpdateArgs(changes) {
+			return [changes.props];
+		}
+
+		/**
+   * @inheritDoc
+   */
+
+	}, {
+		key: 'dispose',
+		value: function dispose(component) {
+			var data = (0, _data.getData)(component);
+			var ref = data.config.ref;
+			var owner = data.owner;
+			if (owner && owner.components && owner.components[ref] === component) {
+				delete owner.components[ref];
+			}
+
+			if (data.childComponents) {
+				for (var i = 0; i < data.childComponents.length; i++) {
+					var child = data.childComponents[i];
+					if (!child.isDisposed()) {
+						child.element = null;
+						child.dispose();
+					}
+				}
+			}
+
+			(0, _data.clearData)(component);
+		}
+
+		/**
+   * Generates a key for the element currently being rendered in the given
+   * component. By default, just returns the original key. Sub classes can
+   * override this to change the behavior.
+   * @param {!Component} component
+   * @param {string} key
+   * @return {?string}
+   */
+
+	}, {
+		key: 'generateKey',
+		value: function generateKey(component, key) {
+			return key;
+		}
+
+		/**
+   * Get the component's config data.
+   * @param {!Component} component
+   * @return {!Object}
+   */
+
+	}, {
+		key: 'getConfig',
+		value: function getConfig(component) {
+			return (0, _data.getData)(component).config;
+		}
+
+		/**
+   * Get the component's incremental dom renderer data.
+   * @param {!Component} component
+   * @return {!Object}
+   */
+
+	}, {
+		key: 'getData',
+		value: function getData(component) {
+			return (0, _data.getData)(component);
+		}
+
+		/**
+   * Gets the component that triggered the current patch operation.
+   * @return {Component}
+   */
+
+	}, {
+		key: 'getPatchingComponent',
+		value: function getPatchingComponent() {
+			return (0, _patch2.getPatchingComponent)();
+		}
+
+		/**
+   * Handles a node having just been rendered. Sub classes should override this
+   * for custom behavior.
+   */
+
+	}, {
+		key: 'handleNodeRendered',
+		value: function handleNodeRendered() {}
+
+		/**
+   * Checks if the given object is an incremental dom node.
+   * @param {!Object} node
+   * @return {boolean}
+   */
+
+	}, {
+		key: 'isIncDomNode',
+		value: function isIncDomNode(node) {
+			return !!(0, _children.getOwner)(node);
+		}
+
+		/**
+   * Calls incremental dom's patch function to render the component.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'patch',
+		value: function patch(component) {
+			(0, _patch2.patch)(component);
+		}
+
+		/**
+   * Renders the renderer's component for the first time, patching its element
+   * through incremental dom function calls. If the first arg is a function
+   * instead of a component instance, creates and renders this function, which
+   * can either be a simple incremental dom function or a component constructor.
+   * @param {!Component} component
+   * @param {!Component|function()} component Can be a component instance, a
+   *     simple incremental dom function or a component constructor.
+   * @param {Object|Element=} opt_dataOrElement Optional config data for the
+   *     function, or parent for the rendered content.
+   * @param {Element=} opt_parent Optional parent for the rendered content.
+   * @return {!Component} The rendered component's instance.
+   */
+
+	}, {
+		key: 'render',
+		value: function render(component, opt_dataOrElement, opt_parent) {
+			if (component instanceof _metalComponent.Component) {
+				this.patch(component);
+			} else {
+				return (0, _render.renderFunction)(this, component, opt_dataOrElement, opt_parent);
+			}
+		}
+
+		/**
+   * Renders the given child node via its owner renderer.
+   * @param {!Object} child
+   */
+
+	}, {
+		key: 'renderChild',
+		value: function renderChild(child) {
+			(0, _render.renderChild)(child);
+		}
+
+		/**
+   * Calls functions from `IncrementalDOM` to build the component element's
+   * content. Can be overriden by subclasses (for integration with template
+   * engines for example).
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'renderIncDom',
+		value: function renderIncDom(component) {
+			if (component.render) {
+				component.render();
+			} else {
+				IncrementalDOM.elementVoid('div');
+			}
+		}
+
+		/**
+   * Runs the incremental dom functions for rendering this component, without
+   * calling `patch`. This function needs to be called inside a `patch`.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'renderInsidePatch',
+		value: function renderInsidePatch(component) {
+			var changes = (0, _changes.getChanges)(component);
+
+			var shouldRender = !component.wasRendered || this.shouldUpdate(component, changes) || IncrementalDOM.currentPointer() !== component.element;
+			if (shouldRender) {
+				this.willUpdate_(component, changes);
+
+				(0, _render.render)(component);
+			} else if (component.element) {
+				this.skipRender();
+			}
+		}
+
+		/**
+   * Sets up this component to be used by this renderer.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'setUp',
+		value: function setUp(component) {
+			component.context = {};
+			component.components = {};
+			component.refs = {};
+
+			var data = (0, _data.getData)(component);
+			data.config = component.getInitialConfig();
+			(0, _changes.trackChanges)(component);
+		}
+
+		/**
+   * Checks if the component should be updated with the current state changes.
+   * @param {!Component} component
+   * @param {Object} changes
+   * @return {boolean}
+   */
+
+	}, {
+		key: 'shouldUpdate',
+		value: function shouldUpdate(component, changes) {
+			if (!changes) {
+				return false;
+			}
+			if (component.shouldUpdate) {
+				return component.shouldUpdate.apply(component, _toConsumableArray(this.buildShouldUpdateArgs(changes)));
+			}
+			return true;
+		}
+
+		/**
+   * Skips the next disposal of children components, by clearing the array as
+   * if there were no children rendered the last time. This can be useful for
+   * allowing components to be reused by other parent components in separate
+   * render update cycles.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'skipNextChildrenDisposal',
+		value: function skipNextChildrenDisposal(component) {
+			(0, _data.getData)(component).childComponents = null;
+		}
+
+		/**
+   * Skips rendering the current node.
+   */
+
+	}, {
+		key: 'skipRender',
+		value: function skipRender() {
+			IncrementalDOM.skipNode();
+		}
+
+		/**
+   * Updates the renderer's component when state changes, patching its element
+   * through incremental dom function calls.
+   * @param {!Component} component
+   * @param {Object} data
+   */
+
+	}, {
+		key: 'update',
+		value: function update(component, data) {
+			var changes = (0, _changes.getChanges)(component);
+			if (data.forceUpdate || this.shouldUpdate(component, changes)) {
+				this.willUpdate_(component, changes);
+				this.patch(component);
+			}
+		}
+
+		/**
+   * Invokes component's "willUpdate" lifecycle method if applicable.
+   * @param {!Component} component
+   * @param {Object} changes
+   */
+
+	}, {
+		key: 'willUpdate_',
+		value: function willUpdate_(component, changes) {
+			if (!component.wasRendered || !changes) {
+				return;
+			}
+			component.informWillUpdate.apply(component, _toConsumableArray(this.buildShouldUpdateArgs(changes)));
+		}
+	}]);
+
+	return IncrementalDomRenderer;
+}(_metalComponent.ComponentRenderer.constructor);
+
+var renderer = new IncrementalDomRenderer();
+
+// Name of this renderer. Renderers should provide this as a way to identify
+// them via a simple string (when calling enableCompatibilityMode to add
+// support to old features for specific renderers for example).
+renderer.RENDERER_NAME = 'incremental-dom';
+
+exports.default = renderer;
+
+/***/ }),
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9031,7 +8759,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.disposeUnused = disposeUnused;
 exports.schedule = schedule;
 
-var _data = __webpack_require__(78);
+var _data = __webpack_require__(67);
 
 var comps_ = [];
 var disposing_ = false;
@@ -9074,7 +8802,456 @@ function schedule(comps) {
 }
 
 /***/ }),
-/* 124 */
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _HTMLParser = __webpack_require__(113);
+
+var _HTMLParser2 = _interopRequireDefault(_HTMLParser);
+
+var _unescape = __webpack_require__(114);
+
+var _unescape2 = _interopRequireDefault(_unescape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var parser_;
+
+var HTML2IncDom = function () {
+	function HTML2IncDom() {
+		_classCallCheck(this, HTML2IncDom);
+	}
+
+	_createClass(HTML2IncDom, null, [{
+		key: 'buildFn',
+
+		/**
+   * Should convert the given html string to a function with calls to
+   * incremental dom methods.
+   * @param {string} html
+   * @return {!function()} Function with incremental dom calls for building
+   *     the given html string.
+   */
+		value: function buildFn(html) {
+			return function () {
+				return HTML2IncDom.run(html);
+			};
+		}
+
+		/**
+   * Gets the html parser being currently used.
+   * @return {!function()}
+   */
+
+	}, {
+		key: 'getParser',
+		value: function getParser() {
+			return parser_ || _HTMLParser2.default;
+		}
+
+		/**
+   * Should convert the given html string to calls to incremental dom methods.
+   * @param {string} html
+   */
+
+	}, {
+		key: 'run',
+		value: function run(html) {
+			HTML2IncDom.getParser()(html, {
+				start: function start(tag, attrs, unary) {
+					var fn = unary ? IncrementalDOM.elementVoid : IncrementalDOM.elementOpen;
+					var args = [tag, null, []];
+					for (var i = 0; i < attrs.length; i++) {
+						args.push(attrs[i].name, attrs[i].value);
+					}
+					fn.apply(null, args);
+				},
+
+				end: function end(tag) {
+					IncrementalDOM.elementClose(tag);
+				},
+
+				chars: function chars(text) {
+					IncrementalDOM.text(text, _unescape2.default);
+				}
+			});
+		}
+
+		/**
+   * Changes the function that will be used to parse html strings. By default
+   * this will use the `HTMLParser` function from
+   * https://github.com/blowsie/Pure-JavaScript-HTML5-Parser. This will accept
+   * any function that follows that same api, basically accepting the html
+   * string and an object with `start`, `end` and `chars` functions to be called
+   * during the parsing.
+   * @param {!function(string, !Object} newParser
+   */
+
+	}, {
+		key: 'setParser',
+		value: function setParser(newParser) {
+			parser_ = newParser;
+		}
+	}]);
+
+	return HTML2IncDom;
+}();
+
+exports.default = HTML2IncDom;
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+/* eslint-disable */
+
+/*
+ * HTML5 Parser By Sam Blowes
+ *
+ * Designed for HTML5 documents
+ *
+ * Original code by John Resig (ejohn.org)
+ * http://ejohn.org/blog/pure-javascript-html-parser/
+ * Original code by Erik Arvidsson, Mozilla Public License
+ * http://erik.eae.net/simplehtmlparser/simplehtmlparser.js
+ *
+ * ----------------------------------------------------------------------------
+ * License
+ * ----------------------------------------------------------------------------
+ *
+ * This code is triple licensed using Apache Software License 2.0,
+ * Mozilla Public License or GNU Public License
+ *
+ * ////////////////////////////////////////////////////////////////////////////
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * ////////////////////////////////////////////////////////////////////////////
+ *
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ *
+ * The Original Code is Simple HTML Parser.
+ *
+ * The Initial Developer of the Original Code is Erik Arvidsson.
+ * Portions created by Erik Arvidssson are Copyright (C) 2004. All Rights
+ * Reserved.
+ *
+ * ////////////////////////////////////////////////////////////////////////////
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * @license
+ */
+
+/*
+ *
+ * ----------------------------------------------------------------------------
+ * Usage
+ * ----------------------------------------------------------------------------
+ *
+ * // Use like so:
+ * HTMLParser(htmlString, {
+ *     start: function(tag, attrs, unary) {},
+ *     end: function(tag) {},
+ *     chars: function(text) {},
+ *     comment: function(text) {}
+ * });
+ *
+ * // or to get an XML string:
+ * HTMLtoXML(htmlString);
+ *
+ * // or to get an XML DOM Document
+ * HTMLtoDOM(htmlString);
+ *
+ * // or to inject into an existing document/DOM node
+ * HTMLtoDOM(htmlString, document);
+ * HTMLtoDOM(htmlString, document.body);
+ *
+ */
+
+// Regular Expressions for parsing tags and attributes
+var startTag = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/,
+    endTag = /^<\/([-A-Za-z0-9_]+)[^>]*>/,
+    attr = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g;
+
+// Empty Elements - HTML 5
+var empty = makeMap("area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr");
+
+// Block Elements - HTML 5
+var block = makeMap("a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video");
+
+// Inline Elements - HTML 5
+var inline = makeMap("abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var");
+
+// Elements that you can, intentionally, leave open
+// (and which close themselves)
+var closeSelf = makeMap("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr");
+
+// Attributes that have their values filled in disabled="disabled"
+var fillAttrs = makeMap("checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected");
+
+// Special Elements (can contain anything)
+var special = makeMap("script,style");
+
+var HTMLParser = function HTMLParser(html, handler) {
+	var index,
+	    chars,
+	    match,
+	    stack = [],
+	    last = html;
+	stack.last = function () {
+		return this[this.length - 1];
+	};
+
+	while (html) {
+		chars = true;
+
+		// Make sure we're not in a script or style element
+		if (!stack.last() || !special[stack.last()]) {
+
+			// Comment
+			if (html.indexOf("<!--") == 0) {
+				index = html.indexOf("-->");
+
+				if (index >= 0) {
+					if (handler.comment) handler.comment(html.substring(4, index));
+					html = html.substring(index + 3);
+					chars = false;
+				}
+
+				// end tag
+			} else if (html.indexOf("</") == 0) {
+				match = html.match(endTag);
+
+				if (match) {
+					html = html.substring(match[0].length);
+					match[0].replace(endTag, parseEndTag);
+					chars = false;
+				}
+
+				// start tag
+			} else if (html.indexOf("<") == 0) {
+				match = html.match(startTag);
+
+				if (match) {
+					html = html.substring(match[0].length);
+					match[0].replace(startTag, parseStartTag);
+					chars = false;
+				}
+			}
+
+			if (chars) {
+				index = html.indexOf("<");
+
+				var text = index < 0 ? html : html.substring(0, index);
+				html = index < 0 ? "" : html.substring(index);
+
+				if (handler.chars) handler.chars(text);
+			}
+		} else {
+			html = html.replace(new RegExp("([\\s\\S]*?)<\/" + stack.last() + "[^>]*>"), function (all, text) {
+				text = text.replace(/<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g, "$1$2");
+				if (handler.chars) handler.chars(text);
+
+				return "";
+			});
+
+			parseEndTag("", stack.last());
+		}
+
+		if (html == last) throw "Parse Error: " + html;
+		last = html;
+	}
+
+	// Clean up any remaining tags
+	parseEndTag();
+
+	function parseStartTag(tag, tagName, rest, unary) {
+		tagName = tagName.toLowerCase();
+
+		if (block[tagName]) {
+			// Close last tag if it's inline, except if it's a "span" (since people
+			// usually add anything they want to spans, and browsers allow it).
+			// Note: this exception for "span" was added manually (i.e. it's not
+			// present in the original code).
+			while (stack.last() && inline[stack.last()] && stack.last() !== 'span') {
+				parseEndTag("", stack.last());
+			}
+		}
+
+		if (closeSelf[tagName] && stack.last() == tagName) {
+			parseEndTag("", tagName);
+		}
+
+		unary = empty[tagName] || !!unary;
+
+		if (!unary) stack.push(tagName);
+
+		if (handler.start) {
+			var attrs = [];
+
+			rest.replace(attr, function (match, name) {
+				var value = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : fillAttrs[name] ? name : "";
+
+				attrs.push({
+					name: name,
+					value: value,
+					escaped: value.replace(/(^|[^\\])"/g, '$1\\\"') //"
+				});
+			});
+
+			if (handler.start) handler.start(tagName, attrs, unary);
+		}
+	}
+
+	function parseEndTag(tag, tagName) {
+		// If no tag name is provided, clean shop
+		if (!tagName) var pos = 0;
+
+		// Find the closest opened tag of the same type
+		else for (var pos = stack.length - 1; pos >= 0; pos--) {
+				if (stack[pos] == tagName) break;
+			}if (pos >= 0) {
+			// Close all the open elements, up the stack
+			for (var i = stack.length - 1; i >= pos; i--) {
+				if (handler.end) handler.end(stack[i]);
+			} // Remove the open elements from the stack
+			stack.length = pos;
+		}
+	}
+};
+
+function makeMap(str) {
+	var obj = {},
+	    items = str.split(",");
+	for (var i = 0; i < items.length; i++) {
+		obj[items[i]] = true;
+	}return obj;
+}
+
+exports.default = HTMLParser;
+
+/* eslint-enable */
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Copyright 2006 The Closure Library Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * Unescapes an HTML string using a DOM to resolve non-XML, non-numeric
+ * entities. This function is XSS-safe and whitespace-preserving.
+ * @private
+ * @param {string} str The string to unescape.
+ * @return {string} The unescaped {@code str} string.
+ */
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function unescape(str) {
+  /** @type {!Object<string, string>} */
+  var seen = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"' };
+  var div = document.createElement('div');
+
+  // Match as many valid entity characters as possible. If the actual entity
+  // happens to be shorter, it will still work as innerHTML will return the
+  // trailing characters unchanged. Since the entity characters do not include
+  // open angle bracket, there is no chance of XSS from the innerHTML use.
+  // Since no whitespace is passed to innerHTML, whitespace is preserved.
+  return str.replace(HTML_ENTITY_PATTERN_, function (s, entity) {
+    // Check for cached entity.
+    var value = seen[s];
+    if (value) {
+      return value;
+    }
+    // Check for numeric entity.
+    if (entity.charAt(0) === '#') {
+      // Prefix with 0 so that hex entities (e.g. &#x10) parse as hex numbers.
+      var n = Number('0' + entity.substr(1));
+      if (!isNaN(n)) {
+        value = String.fromCharCode(n);
+      }
+    }
+    // Fall back to innerHTML otherwise.
+    if (!value) {
+      // Append a non-entity character to avoid a bug in Webkit that parses
+      // an invalid entity at the end of innerHTML text as the empty string.
+      div.innerHTML = s + ' ';
+      // Then remove the trailing character from the result.
+      value = div.firstChild.nodeValue.slice(0, -1);
+    }
+    // Cache and return.
+    seen[s] = value;
+    return value;
+  });
+}
+
+exports.default = unescape;
+
+/**
+ * Regular expression that matches an HTML entity.
+ * @type {!RegExp}
+ */
+
+var HTML_ENTITY_PATTERN_ = /&([^;\s<&]+);?/g;
+
+/***/ }),
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9092,7 +9269,7 @@ var _metalDom = __webpack_require__(3);
 
 var _metalComponent = __webpack_require__(0);
 
-var _incrementalDomAop = __webpack_require__(80);
+var _incrementalDomAop = __webpack_require__(69);
 
 var HANDLE_SUFFIX = '__handle__';
 var LISTENER_REGEX = /^(?:on([A-Z].+))|(?:data-on(.+))$/;
@@ -9263,7 +9440,7 @@ function setValueAttrAsProperty_(element, name, value) {
 }
 
 /***/ }),
-/* 125 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9277,9 +9454,11 @@ exports.patch = patch;
 
 var _metalDom = __webpack_require__(3);
 
-var _data = __webpack_require__(78);
+var _data = __webpack_require__(67);
 
-var _render = __webpack_require__(92);
+var _metal = __webpack_require__(2);
+
+var _render = __webpack_require__(83);
 
 var patchingComponents_ = [];
 
@@ -9292,7 +9471,10 @@ var patchingComponents_ = [];
  */
 function buildParentIfNecessary_(element) {
 	if (!element || !element.parentNode) {
-		var parent = document.createElement('div');
+		var parent = {};
+		if (!(0, _metal.isServerSide)()) {
+			parent = document.createElement('div');
+		}
 		if (element) {
 			(0, _metalDom.append)(parent, element);
 		}
@@ -9384,7 +9566,7 @@ function tryPatchWithNoParent_(component) {
 }
 
 /***/ }),
-/* 126 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9392,7 +9574,7 @@ function tryPatchWithNoParent_(component) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-__webpack_require__(87);
+__webpack_require__(78);
 
 (function () {
   this.CLOSURE_NO_DEPS = true;
@@ -14019,10 +14201,10 @@ __webpack_require__(87);
     return IncrementalDOM;
   });
 }).call(typeof exports !== 'undefined' && typeof global !== 'undefined' ? global : window);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(76)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71)))
 
 /***/ }),
-/* 127 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14112,7 +14294,7 @@ var SoyAop = {
 exports.default = SoyAop;
 
 /***/ }),
-/* 128 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14124,7 +14306,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _metal = __webpack_require__(2);
 
-var _validators = __webpack_require__(93);
+var _validators = __webpack_require__(84);
 
 var _validators2 = _interopRequireDefault(_validators);
 
@@ -14260,10 +14442,10 @@ var Config = {
   * @return {!Object} `State` configuration object.
   */
 	internal: function internal() {
-		var _internal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+		var internal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
 		return mergeConfig(this, {
-			internal: _internal
+			internal: internal
 		});
 	},
 
@@ -14274,10 +14456,10 @@ var Config = {
   * @return {!Object} `State` configuration object.
   */
 	required: function required() {
-		var _required = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+		var required = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
 		return mergeConfig(this, {
-			required: _required
+			required: required
 		});
 	},
 
@@ -14326,6 +14508,20 @@ var Config = {
 	valueFn: function valueFn(_valueFn) {
 		return mergeConfig(this, {
 			valueFn: _valueFn
+		});
+	},
+
+
+	/**
+  * Adds the `writeOnce` flag to the `State` configuration.
+  * @param {boolean} writeOnce Flag to set "writeOnce" to. False by default.
+  * @return {!Object} `State` configuration object.
+  */
+	writeOnce: function writeOnce() {
+		var writeOnce = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+		return mergeConfig(this, {
+			writeOnce: writeOnce
 		});
 	}
 };
@@ -14401,7 +14597,7 @@ function setPrimitiveValidators(name) {
 exports.default = Config;
 
 /***/ }),
-/* 129 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14716,8 +14912,6 @@ var State = function (_EventEmitter) {
 
 		/**
    * Adds state keys from super classes static hint `MyClass.STATE = {};`.
-   * @param {Object.<string, !Object>=} opt_config An object that maps all the
-   *     configurations for state keys.
    * @protected
    */
 
@@ -14728,8 +14922,12 @@ var State = function (_EventEmitter) {
 			if (ctor !== State) {
 				var defineContext = void 0;
 				if (this.obj_ === this) {
-					defineContext = ctor.hasConfiguredState_ ? false : ctor.prototype;
-					ctor.hasConfiguredState_ = true;
+					var staticKey = State.STATE_STATIC_HINT_CONFIGURED;
+
+					ctor[staticKey] = ctor[staticKey] || {};
+
+					defineContext = ctor[staticKey][ctor.name] ? false : ctor.prototype;
+					ctor[staticKey][ctor.name] = true;
 				}
 				this.configState(State.getStateStatic(ctor), defineContext);
 			}
@@ -14758,6 +14956,8 @@ var State = function (_EventEmitter) {
 		key: 'emitBatchEvent_',
 		value: function emitBatchEvent_() {
 			if (!this.isDisposed()) {
+				this.context_.emit('stateWillChange', this.scheduledBatchData_);
+
 				var data = this.scheduledBatchData_;
 				this.scheduledBatchData_ = null;
 				this.context_.emit('stateChanged', data);
@@ -14887,7 +15087,7 @@ var State = function (_EventEmitter) {
 	}, {
 		key: 'hasInitialValue_',
 		value: function hasInitialValue_(name) {
-			return this.initialValues_.hasOwnProperty(name);
+			return this.initialValues_.hasOwnProperty(name) && (0, _metal.isDef)(this.initialValues_[name]);
 		}
 
 		/**
@@ -15156,7 +15356,8 @@ var State = function (_EventEmitter) {
 	}, {
 		key: 'validateInitialValue_',
 		value: function validateInitialValue_(name) {
-			if (this.hasInitialValue_(name) && !this.callValidator_(name, this.initialValues_[name])) {
+			if (this.initialValues_.hasOwnProperty(name) && !this.callValidator_(name, this.initialValues_[name])) {
+
 				delete this.initialValues_[name];
 			}
 		}
@@ -15208,7 +15409,21 @@ var State = function (_EventEmitter) {
 	return State;
 }(_metalEvents.EventEmitter);
 
+/**
+ * Constant used as key on State instance for storing property definition.
+ * @type {!string}
+ */
+
+
 State.STATE_REF_KEY = '__METAL_STATE_REF_KEY__';
+
+/**
+ * Constant used as key on class constructors that extend from State, stores
+ * which constructors have had their static STATE configured so that
+ * configuration of STATE is not repeated.
+ * @type {!string}
+ */
+State.STATE_STATIC_HINT_CONFIGURED = '__METAL_STATE_STATIC_HINT_CONFIGURED__';
 
 /**
  * Constants that represent the states that a state key can be in.
@@ -15223,7 +15438,7 @@ State.KeyStates = {
 exports.default = State;
 
 /***/ }),
-/* 130 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15526,7 +15741,7 @@ Toggler.STATE = {
 exports.default = Toggler;
 
 /***/ }),
-/* 131 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15538,7 +15753,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _core = __webpack_require__(94);
+var _core = __webpack_require__(85);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -15669,7 +15884,7 @@ var array = function () {
 exports.default = array;
 
 /***/ }),
-/* 132 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15911,10 +16126,10 @@ async.nextTick.wrapCallback_ = function (opt_returnValue) {
 };
 
 exports.default = async;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(140).setImmediate))
 
 /***/ }),
-/* 133 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16246,10 +16461,10 @@ function isServerSide() {
  * @return {void} Nothing.
  */
 function nullFunction() {}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(75)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
 
 /***/ }),
-/* 134 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16325,7 +16540,7 @@ var Disposable = function () {
 exports.default = Disposable;
 
 /***/ }),
-/* 135 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16436,7 +16651,7 @@ var object = function () {
 exports.default = object;
 
 /***/ }),
-/* 136 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16561,17 +16776,17 @@ var string = function () {
 exports.default = string;
 
 /***/ }),
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
 /* 137 */,
-/* 138 */,
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16706,7 +16921,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Sidebar, templates);
 
 
 /***/ }),
-/* 148 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -16896,10 +17111,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Sidebar, templates);
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(76), __webpack_require__(75)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71), __webpack_require__(70)))
 
 /***/ }),
-/* 149 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -16952,7 +17167,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(148);
+__webpack_require__(139);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
