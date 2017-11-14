@@ -163,8 +163,22 @@ Navigating through the list of individuals, the link to each individual can be f
 
 </article>
 
-
 <article id="3">
+
+## Filtering and Sorting Individuals Collection
+
+Individuals collection can be filtered as explained in [filtering](/docs/general#filtering).
+
+These are some examples of filtering:
+* Individuals from Madrid: `?filter=(demographics/city/value eq 'Madrid')`
+* Individuals under 30 years old: `?filter=(demographics/age/value lt '30')` 
+* Individuals from Madrid sorted by age in descending order:`?filter=(demographics/city/value eq 'Madrid')&sort=demographics/age/value,desc` 
+* Individuals who work as Engineers from Malaga or Madrid under 40 years old:`?filter=(demographics/city/value eq 'Madrid' or demographics/city/value eq 'Malaga') and (demographics/age/value lt '30') and (demographics/jobTitle/value eq 'Engineer')`
+
+</article>
+
+
+<article id="4">
 
 ## Individual Segments
 
