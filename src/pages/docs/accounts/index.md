@@ -49,8 +49,7 @@ collection of Accounts.
 
 This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting) and [filtering](/docs/general#filtering).
 
-The response will contain inside the `_embedded` section, a list of individuals
-under the key `accounts`.
+The response will contain inside the `_embedded` section, a list of accounts under the key `accounts`.
 
 This is an example of a response to this url: `http://localhost:8084/my-project/accounts?page=0&size=1`
 
@@ -85,6 +84,9 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                     "accounts": {
                         "href": "http://localhost:8084/my-project/accounts{?filter}",
                         "templated": true
+                    },
+                    individuals: {
+                        href: "http://localhost:8084/DEMO/accounts/AV_Afi95Y3UMLZEdmkBK/individuals"
                     },
                     "account-segments": {
                         "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu/account-segments{?filter}",
@@ -134,10 +136,32 @@ These are some examples of filtering:
 
 <article id="4">
 
-## Accounts Segments
+## Accounts Links
 
 As part of the links of each account, the following links can be found using these keys:
 * `account-segments` - The collection of Account Segments this account belongs to
 * `accounts` - The collection of Accounts
+* `individuals` - The collection of Individuals who belong to this account. This collection can be filtered as explained in [filtering](/docs/general#filtering).
+
+</article>
+
+<article id="5">
+
+## Accounts Membership Collection
+
+Creation of new Individual-Account memberships is supported making a `POST` to the `memberships` Collection URL of each account . This is
+an example of the body passed to this POST request to the URL 
+`http://localhost:8084/my-project/accounts/my-account-identifier/memberships` 
+
+```json
+{
+	"projectId" : "my-project",
+	"accountIdentifier" : "my-account-identifier",
+	"individualIdentifier" : "my-individual-identifier"
+}
+```
+
+A `DELETE` request to the URL `http://localhost:8084/my-project/accounts/my-account-identifier/memberships/my-individual-identifier` removes
+an existing Individual-Account membership. 
 
 </article>
