@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([2],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11659,18 +11659,12 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDocsSearch", function() { return pageDocsSearch; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NzWmp", function() { return NzWmp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11682,15 +11676,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from search.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageDocsSearch.
+ * @fileoverview Templates in namespace NzWmp.
  * @public
  */
 
-goog.module('pageDocsSearch.incrementaldom');
+goog.module('NzWmp.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11711,11 +11705,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearch.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
 /**
@@ -11726,64 +11718,209 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param136 = function() {
-    $templateAlias2({section: opt_data.site.index.children['docs']}, null, opt_ijData);
-    ie_open('div', null, null,
-        'class', 'sidebar-offset');
-      ie_open('div', null, null,
-          'class', 'container-hybrid docs-home-top');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-xs-16');
-            ie_open('h1', null, null,
-                'class', 'docs-home-top-title');
-              ie_open('span');
-                itext('Electric');
-              ie_close('span');
-              itext(' Docs');
-            ie_close('h1');
-            ie_open('p', null, null,
-                'class', 'docs-home-top-description');
-              itext('Start learning how to leverage the power of ');
-              var dyn9 = opt_data.site.title;
-              if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
-              itext('.');
-            ie_close('p');
-          ie_close('div');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'container-hybrid');
-            $templateAlias3({action: '/docs/search.html', path: '/docs/', placeholder: 'Search Docs'}, null, opt_ijData);
-          ie_close('div');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
+  var param246 = function() {
+    ie_open('h6');
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+    ie_close('h6');
+    ie_open('article', null, null,
+        'id', '1');
+      ie_open('h2');
+        itext('The Field Mapping Model');
+      ie_close('h2');
+      ie_open('p');
+        itext('Field Mappings allow us to map the fields from the different ');
+        ie_open('a', null, null,
+            'href', '/docs/datasources');
+          itext('datasources');
+        ie_close('a');
+        itext(' to the');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('fields');
+        ie_close('a');
+        itext(' in our entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', Accounts... etc)');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported in a field mapping:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('context');
+            ie_close('em');
+            itext(' - the context of the field (demographics, sentiment... etc)');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dataSourceFieldNames');
+            ie_close('em');
+            itext(' - a map with the name of the original field for each Data Source.');
+          ie_close('p');
+          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dateCreated');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dateModified');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldName');
+            ie_close('em');
+            itext(' - the name of the field on our model');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldType');
+            ie_close('em');
+            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('identifier');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Field Mappings Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('field-mappings');
+        ie_close('code');
+        itext(' pointing to the collection of Field Mappings.');
+      ie_close('p');
+      ie_open('p');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of fields under the key ');
+        ie_open('code');
+          itext('field-mappings');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Field Mappings is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'docs', content: param136}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param246}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageDocsSearch.render';
+  $render.soyTemplateName = 'NzWmp.render';
 }
 
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageDocsSearch extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearch, templates);
+class NzWmp extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NzWmp, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -11821,13 +11958,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearch, templ
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11855,9 +11986,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _searchSoy = __webpack_require__(104);
+var _indexSoy = __webpack_require__(98);
 
-var _searchSoy2 = _interopRequireDefault(_searchSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11867,23 +11998,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageDocsSearch = function (_Component) {
-  _inherits(pageDocsSearch, _Component);
+var NzWmp = function (_Component) {
+  _inherits(NzWmp, _Component);
 
-  function pageDocsSearch() {
-    _classCallCheck(this, pageDocsSearch);
+  function NzWmp() {
+    _classCallCheck(this, NzWmp);
 
-    return _possibleConstructorReturn(this, (pageDocsSearch.__proto__ || Object.getPrototypeOf(pageDocsSearch)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NzWmp.__proto__ || Object.getPrototypeOf(NzWmp)).apply(this, arguments));
   }
 
-  return pageDocsSearch;
+  return NzWmp;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageDocsSearch, _searchSoy2.default);
+_metalSoy2.default.register(NzWmp, _indexSoy2.default);
 
-exports.default = pageDocsSearch;
+exports.default = NzWmp;
 
 /***/ })
-],[148]);
+],[142]);
