@@ -3,7 +3,7 @@ title: "Data Sources"
 description: "Data Sources API"
 layout: "guide"
 icon: "database"
-weight: 3
+weight: 2
 ---
 
 ###### {$page.description}
@@ -102,15 +102,14 @@ an example of the body passed to this POST request:
 
 ```json
 {
-	"name" : "My First DataSource",
-	"projectId" : "my-project",
-	"provider" : {
-		"name" : "liferay-de"
-	},
-	"author" : {
-		"name" : "Shinn",
-		"identifier" : "ABC1234"
-	}
+    "name" : "My First DataSource",
+    "provider" : {
+        "name" : "liferay-de"
+    },
+    "author" : {
+        "name" : "Shinn",
+        "identifier" : "ABC1234"
+    }
 }
 ```
 
