@@ -2,7 +2,7 @@
 title: "Account Segments"
 description: "Account Segments API."
 layout: "guide"
-icon: "persons"
+icon: "person-card"
 weight: 8
 ---
 
@@ -12,7 +12,7 @@ weight: 8
 
 ## The Account Segment Model
 
-Account Segments are a complex entity that defines aggregations of Accounts. 
+Account Segments are aggregations of Accounts. 
 
 These aggregations can be:
 * Dynamic: A Variable set of accounts matching a certain condition (filter) belong to the Account Segment. 
@@ -46,50 +46,42 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
 
 ```json
 {
-   "account-segments":[
-      {
-         "dateCreated":"2017-11-15T16:23:35Z",
-         "dateModified":"2017-11-15T16:23:35Z",
-         "filter":null,
-         "identifier":"AV_Afi6-Y3UMLZEdmkBE",
-         "name":"Partners",
-         "segmentType":"STATIC",
-         "_links":{
-            "self":{
-               "href":"http://localhost:8084/DEMO/account-segments/AV_Afi6-Y3UMLZEdmkBE"
-            },
-            "account-segments":{
-               "href":"http://localhost:8084/DEMO/account-segments{?filter}",
-               "templated":true
-            },
-            "accounts":{
-               "href":"http://localhost:8084/DEMO/account-segments/AV_Afi6-Y3UMLZEdmkBE/accounts{?filter}",
-               "templated":true
+    "_embedded": {
+        "account-segments":[
+            {
+                 "dateCreated":"2017-11-15T16:23:35Z",
+                 "dateModified":"2017-11-15T16:23:35Z",
+                 "filter":null,
+                 "identifier":"AV_Afi6-Y3UMLZEdmkBE",
+                 "name":"Partners",
+                 "segmentType":"STATIC",
+                 "_links":{
+                    "self":{
+                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE"
+                    },
+                    "account-segments":{
+                       "href":"http://localhost:8084/my-project/account-segments{?filter}",
+                       "templated":true
+                    },
+                    "accounts":{
+                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE/accounts{?filter}",
+                       "templated":true
+                    }
+                 }
             }
-         }
-      },
-      {
-         "dateCreated":"2017-11-15T16:23:35Z",
-         "dateModified":"2017-11-15T16:23:35Z",
-         "filter":null,
-         "identifier":"AV_Afi4cY3UMLZEdmkA-",
-         "name":"foes",
-         "segmentType":"STATIC",
-         "_links":{
-            "self":{
-               "href":"http://localhost:8084/DEMO/account-segments/AV_Afi4cY3UMLZEdmkA-"
-            },
-            "account-segments":{
-               "href":"http://localhost:8084/DEMO/account-segments{?filter}",
-               "templated":true
-            },
-            "accounts":{
-               "href":"http://localhost:8084/DEMO/account-segments/AV_Afi4cY3UMLZEdmkA-/accounts{?filter}",
-               "templated":true
-            }
-         }
-      }
-   ]
+           ]
+       },
+    "_links":{
+       "self":{
+           "href":"http://localhost:8084/my-project/account-segments?page=0&size=20"
+       }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
 }
 ```
 
@@ -98,10 +90,9 @@ an example of the body passed to this POST request:
 
 ```json
 {
-	"name" : "My First AccountSegment",
-	"projectId" : "my-project",
-	"filter" : "(organization/employees/value eq '30')",
-	"segmentType" : "DYNAMIC"
+    "name" : "My First AccountSegment",
+    "filter" : "(organization/employees/value eq '30')",
+    "segmentType" : "DYNAMIC"
 }
 ```
 
@@ -130,9 +121,8 @@ a `POST` to the `memberships` Collection URL of each account segment . This is a
 
 ```json
 {
-	"projectId" : "my-project",
-	"accountSegmentIdentifier" : "my-account-segment-identifier",
-	"accountIdentifier" : "my-account-identifier"
+    "accountSegmentIdentifier" : "my-account-segment-identifier",
+    "accountIdentifier" : "my-account-identifier"
 }
 ```
 

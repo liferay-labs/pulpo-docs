@@ -2,7 +2,7 @@
 title: "Accounts"
 description: "Accounts API."
 layout: "guide"
-icon: "people"
+icon: "org_chart"
 weight: 7
 ---
 
@@ -85,8 +85,8 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                         "href": "http://localhost:8084/my-project/accounts{?filter}",
                         "templated": true
                     },
-                    individuals: {
-                        href: "http://localhost:8084/DEMO/accounts/AV_Afi95Y3UMLZEdmkBK/individuals"
+                    "individuals": {
+                        "href": "http://localhost:8084/my-project/accounts/AV_Afi95Y3UMLZEdmkBK/individuals{?filter}"
                     },
                     "account-segments": {
                         "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu/account-segments{?filter}",
@@ -155,9 +155,8 @@ an example of the body passed to this POST request to the URL
 
 ```json
 {
-	"projectId" : "my-project",
-	"accountIdentifier" : "my-account-identifier",
-	"individualIdentifier" : "my-individual-identifier"
+    "accountIdentifier" : "my-account-identifier",
+    "individualIdentifier" : "my-individual-identifier"
 }
 ```
 

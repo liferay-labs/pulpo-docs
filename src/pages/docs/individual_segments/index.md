@@ -12,7 +12,7 @@ weight: 6
 
 ## The Individual Segment Model
 
-Individual Segments are a complex entity that defines aggregations of Individuals. 
+Individual Segments are aggregations of Individuals. 
 
 These aggregations can be:
 * Dynamic: A Variable set of individuals matching a certain condition (filter) belong to the Individual Segment. 
@@ -46,50 +46,42 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
 
 ```json
 {
-   "individual-segments":[
-      {
-         "dateCreated":"2017-11-15T16:23:35Z",
-         "dateModified":"2017-11-15T16:23:35Z",
-         "filter":null,
-         "identifier":"AV_Afi6-Y3UMLZEdmkBE",
-         "name":"Friends",
-         "segmentType":"STATIC",
-         "_links":{
-            "self":{
-               "href":"http://localhost:8084/DEMO/individual-segments/AV_Afi6-Y3UMLZEdmkBE"
-            },
-            "individual-segments":{
-               "href":"http://localhost:8084/DEMO/individual-segments{?filter}",
-               "templated":true
-            },
-            "individuals":{
-               "href":"http://localhost:8084/DEMO/individual-segments/AV_Afi6-Y3UMLZEdmkBE/individuals{?filter}",
-               "templated":true
-            }
-         }
-      },
-      {
-         "dateCreated":"2017-11-15T16:23:35Z",
-         "dateModified":"2017-11-15T16:23:35Z",
-         "filter":null,
-         "identifier":"AV_Afi4cY3UMLZEdmkA-",
-         "name":"foes",
-         "segmentType":"STATIC",
-         "_links":{
-            "self":{
-               "href":"http://localhost:8084/DEMO/individual-segments/AV_Afi4cY3UMLZEdmkA-"
-            },
-            "individual-segments":{
-               "href":"http://localhost:8084/DEMO/individual-segments{?filter}",
-               "templated":true
-            },
-            "individuals":{
-               "href":"http://localhost:8084/DEMO/individual-segments/AV_Afi4cY3UMLZEdmkA-/individuals{?filter}",
-               "templated":true
-            }
-         }
-      }
-   ]
+    "_embedded": {
+        "individual-segments":[
+          {
+             "dateCreated":"2017-11-15T16:23:35Z",
+             "dateModified":"2017-11-15T16:23:35Z",
+             "filter":null,
+             "identifier":"AV_Afi6-Y3UMLZEdmkBE",
+             "name":"Friends",
+             "segmentType":"STATIC",
+             "_links":{
+                "self":{
+                   "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE"
+                },
+                "individual-segments":{
+                   "href":"http://localhost:8084/my-project/individual-segments{?filter}",
+                   "templated":true
+                },
+                "individuals":{
+                   "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE/individuals{?filter}",
+                   "templated":true
+                }
+             }
+          }
+        ]
+    },
+    "_links":{
+       "self":{
+           "href":"http://localhost:8084/my-project/individual-segments?page=0&size=20"
+       }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
 }
 ```
 
@@ -98,10 +90,9 @@ an example of the body passed to this POST request:
 
 ```json
 {
-	"name" : "My First IndividualSegment",
-	"projectId" : "my-project",
-	"filter" : "(demographics/age/value eq '30')",
-	"segmentType" : "DYNAMIC"
+    "name" : "My First IndividualSegment",
+    "filter" : "(demographics/age/value eq '30')",
+    "segmentType" : "DYNAMIC"
 }
 ```
 
@@ -130,9 +121,8 @@ a `POST` to the `memberships` Collection URL of each individual segment . This i
 
 ```json
 {
-	"projectId" : "my-project",
-	"individualSegmentIdentifier" : "my-individual-segment-identifier",
-	"individualIdentifier" : "my-individual-identifier"
+    "individualSegmentIdentifier" : "my-individual-segment-identifier",
+    "individualIdentifier" : "my-individual-identifier"
 }
 ```
 

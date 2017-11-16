@@ -3,7 +3,7 @@ title: "Fields"
 description: "Fields API"
 layout: "guide"
 icon: "menu"
-weight: 4
+weight: 3
 ---
 
 ###### {$page.description}

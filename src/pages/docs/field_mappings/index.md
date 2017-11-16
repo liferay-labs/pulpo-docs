@@ -3,7 +3,7 @@ title: "Field Mappings"
 description: "Field Mappings API"
 layout: "guide"
 icon: "download"
-weight: 5
+weight: 4
 ---
 
 ###### {$page.description}
