@@ -28,23 +28,23 @@ The response in `json HAL` format will contain a `_links` object with the differ
             "href": "http://localhost:8084/"
         },
         "data-sources": {
-            "href": "http://localhost:8084/{projectId}/data-sources{lb}?filter{rb}",
+            "href": "http://localhost:8084/{projectId}/data-sources{?filter}",
             "templated": true
         },
         "field-mappings": {
-            "href": "http://localhost:8084/{projectId}/field-mappings{lb}?filter{rb}",
+            "href": "http://localhost:8084/{projectId}/field-mappings{?filter}",
             "templated": true
         },
         "fields": {
-            "href": "http://localhost:8084/{projectId}/fields{lb}?filter{rb}",
+            "href": "http://localhost:8084/{projectId}/fields{?filter}",
             "templated": true
         },
         "individuals": {
-            "href": "http://localhost:8084/{projectId}/individuals{lb}?filter{rb}",
+            "href": "http://localhost:8084/{projectId}/individuals{?filter}",
             "templated": true
         },
         "individual-segments": {
-            "href": "http://localhost:8084/{projectId}/individual-segments{lb}?filter{rb}",
+            "href": "http://localhost:8084/{projectId}/individual-segments{?filter}",
             "templated": true
         }
     }
@@ -61,12 +61,12 @@ new objects. e.g. Individuals API doesn't allow to create individuals directly).
 
 These template URLs need certain items to be replaced in order
 to have a valid URL:
-* Mandatory params: `{lb}parameterName{rb}` e.g. The {lb}projectId{rb} item must be replaced with the projectId of the current project.
-* Optional params: `{lb}?parameterName{rb}` e.g. The {lb}?filter{rb} item must be replaced with a valid oData filter or with an empty string.
+* variables: `{lb}parameterName{rb}` They should be replaced with a value. e.g. The {lb}projectId{rb} item must be replaced with the projectId of the current proje`ct (such as "my-project").
+* parameters: `{lb}?parameterName{rb}` They should be replaced with a param and a value. e.g. The {lb}?filter{rb} item must be replaced with a filter parameter and as value a valid oData filter or with an empty string. (e.g. `&filter=(name eq 'Jon')`)
 
 Important: Optional parameters can be added at any time to these APIs, therefore, clients must
-consider that the templates may change with additional optional parameter names (never with
-mandatory parameter names). 
+consider that the templates may change with additional optional parameters (never with
+mandatory parameters). 
 
 Navigating through a collection of entities, the link to each entity can be found with the rel `self`. 
 That same url can be also used for delete (`DELETE` method) and update (`PUT` method).
