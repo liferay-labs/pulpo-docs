@@ -88,6 +88,9 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                     "individuals": {
                         "href": "http://localhost:8084/my-project/accounts/AV_Afi95Y3UMLZEdmkBK/individuals{?filter}"
                     },
+                    "memberships": {
+                        "href": "http://localhost:8084/my-project/accounts/AV_81uhW7IU2hIVahEU2/memberships"
+                     },
                     "account-segments": {
                         "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu/account-segments{?filter}",
                         "templated": true
@@ -142,6 +145,7 @@ As part of the links of each account, the following links can be found using the
 * `account-segments` - The collection of Account Segments this account belongs to
 * `accounts` - The collection of Accounts
 * `individuals` - The collection of Individuals who belong to this account. This collection can be filtered as explained in [filtering](/docs/general#filtering).
+* `memberships` - The collection of Memberships of this account. This collection can be used to add new members to this account manually, as described in #5.
 
 </article>
 
@@ -155,7 +159,6 @@ an example of the body passed to this POST request to the URL
 
 ```json
 {
-    "accountIdentifier" : "my-account-identifier",
     "individualIdentifier" : "my-individual-identifier"
 }
 ```

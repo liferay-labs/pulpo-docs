@@ -66,6 +66,9 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                 "individuals":{
                    "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE/individuals{?filter}",
                    "templated":true
+                },
+                "memberships": {
+                    "href": "http://localhost:8084/my-project/individual-segments/AV_81ueo7IU2hIVahEUv/memberships"
                 }
              }
           }
@@ -108,6 +111,7 @@ That same url can be also used for delete (`DELETE` method) and update (`PUT` me
 As part of the links of each individual, the following links can be found using these keys:
 * `individual-segments` - The collection of Individual Segments
 * `individuals` - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in [filtering](/docs/general#filtering).
+* `memberships` - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in #4.
 
 </article>
 
@@ -121,7 +125,6 @@ a `POST` to the `memberships` Collection URL of each individual segment . This i
 
 ```json
 {
-    "individualSegmentIdentifier" : "my-individual-segment-identifier",
     "individualIdentifier" : "my-individual-identifier"
 }
 ```
