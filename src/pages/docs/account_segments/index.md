@@ -66,6 +66,9 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                     "accounts":{
                        "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE/accounts{?filter}",
                        "templated":true
+                    },
+                    "memberships": {
+                        "href":"http://localhost:8084/my-project/account-segments/AV_81uji7IU2hIVahEU6/memberships"
                     }
                  }
             }
@@ -108,6 +111,7 @@ That same url can be also used for delete (`DELETE` method) and update (`PUT` me
 As part of the links of each account, the following links can be found using these keys:
 * `account-segments` - The collection of Account Segments
 * `accounts` - The collection of Accounts who belong to this Account Segment. This collection can be filtered as explained in [filtering](/docs/general#filtering).
+* `memberships` - The collection of Memberships of this Account Segment. This collection can be used to add new members to this account segment manually, as described in #4.
 
 </article>
 
@@ -121,7 +125,6 @@ a `POST` to the `memberships` Collection URL of each account segment . This is a
 
 ```json
 {
-    "accountSegmentIdentifier" : "my-account-segment-identifier",
     "accountIdentifier" : "my-account-identifier"
 }
 ```
