@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,12 +11658,13 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */
+/* 97 */,
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tIvyx", function() { return tIvyx; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nRdgZ", function() { return nRdgZ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11679,11 +11680,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace tIvyx.
+ * @fileoverview Templates in namespace nRdgZ.
  * @public
  */
 
-goog.module('tIvyx.incrementaldom');
+goog.module('nRdgZ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11717,110 +11718,98 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param188 = function() {
+  var param230 = function() {
     ie_open('h6');
-      var dyn13 = opt_data.page.description;
-      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+      var dyn15 = opt_data.page.description;
+      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Data Source Model');
+        itext('The Field Mapping Model');
       ie_close('h2');
       ie_open('p');
-        itext('DataSources support a subset of the Type ');
+        itext('Field Mappings allow us to map the fields from the different ');
         ie_open('a', null, null,
-            'href', 'http://schema.org/DataFeed');
-          itext('DataFeed');
+            'href', '/docs/datasources');
+          itext('datasources');
         ie_close('a');
-        itext(' from Schema.org');
+        itext(' to the');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('fields');
+        ie_close('a');
+        itext(' in our entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', Accounts... etc)');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported:');
+        itext('The following fields are currently supported in a field mapping:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('about');
-          ie_close('em');
+          ie_open('p');
+            ie_open('em');
+              itext('context');
+            ie_close('em');
+            itext(' - the context of the field (demographics, sentiment... etc)');
+          ie_close('p');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('author');
-          ie_close('em');
-          ie_open('ul');
-            ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dataSourceFieldNames');
+            ie_close('em');
+            itext(' - a map with the name of the original field for each Data Source.');
+          ie_close('p');
+          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dateCreated');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dateModified');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldName');
+            ie_close('em');
+            itext(' - the name of the field on our model');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldType');
+            ie_close('em');
+            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
               itext('identifier');
-            ie_close('li');
-            ie_open('li');
-              itext('name');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateCreated');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateModified');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('name');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('provider');
-          ie_close('em');
-          ie_open('ul');
-            ie_open('li');
-              itext('name');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('url');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('subjectOf');
-          ie_close('em');
-          itext(' - An event about this Data Source');
-          ie_open('ul');
-            ie_open('li');
-              itext('name');
-            ie_close('li');
-            ie_open('li');
-              itext('startDate');
-            ie_close('li');
-            ie_open('li');
-              itext('endDate');
-            ie_close('li');
-            ie_open('li');
-              itext('location');
-            ie_close('li');
-            ie_open('li');
-              itext('sameAs - the URL of the Event');
-            ie_close('li');
-          ie_close('ul');
+            ie_close('em');
+          ie_close('p');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('DataSources Collection');
+        itext('Field Mappings Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11834,9 +11823,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('data-sources');
+          itext('field-mappings');
         ie_close('code');
-        itext(' pointing to the collection of Data Sources.');
+        itext(' pointing to the collection of Field Mappings.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11861,27 +11850,24 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of data sources under the key ');
+        itext(' section, a list of fields under the key ');
         ie_open('code');
-          itext('data-sources');
+          itext('field-mappings');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/data-sources?page=0&size=1');
-        ie_close('code');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "name": "liferay-de"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Data Sources is supported making a ');
+        itext('Creation of new Field Mappings is supported making a ');
         ie_open('code');
           itext('POST');
         ie_close('code');
         itext(' to the Collection URL. This is an example of the body passed to this POST request:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "name" : "My First DataSource",\n    "provider" : {\n        "name" : "liferay-de"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
         itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
         ie_open('code');
@@ -11907,11 +11893,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param188}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param230}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'tIvyx.render';
+  $render.soyTemplateName = 'nRdgZ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11921,15 +11907,14 @@ return exports;
 
 });
 
-class tIvyx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tIvyx, templates);
+class nRdgZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nRdgZ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
@@ -11972,7 +11957,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tIvyx, templates);
 /* 138 */,
 /* 139 */,
 /* 140 */,
-/* 141 */
+/* 141 */,
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12000,7 +11986,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(97);
+var _indexSoy = __webpack_require__(98);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12012,23 +11998,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var tIvyx = function (_Component) {
-  _inherits(tIvyx, _Component);
+var nRdgZ = function (_Component) {
+  _inherits(nRdgZ, _Component);
 
-  function tIvyx() {
-    _classCallCheck(this, tIvyx);
+  function nRdgZ() {
+    _classCallCheck(this, nRdgZ);
 
-    return _possibleConstructorReturn(this, (tIvyx.__proto__ || Object.getPrototypeOf(tIvyx)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (nRdgZ.__proto__ || Object.getPrototypeOf(nRdgZ)).apply(this, arguments));
   }
 
-  return tIvyx;
+  return nRdgZ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(tIvyx, _indexSoy2.default);
+_metalSoy2.default.register(nRdgZ, _indexSoy2.default);
 
-exports.default = tIvyx;
+exports.default = nRdgZ;
 
 /***/ })
-],[141]);
+],[142]);

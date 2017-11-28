@@ -11662,7 +11662,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LRtfd", function() { return LRtfd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "yEyJD", function() { return yEyJD; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11678,11 +11678,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace LRtfd.
+ * @fileoverview Templates in namespace yEyJD.
  * @public
  */
 
-goog.module('LRtfd.incrementaldom');
+goog.module('yEyJD.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11716,10 +11716,10 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param209 = function() {
+  var param188 = function() {
     ie_open('h6');
-      var dyn14 = opt_data.page.description;
-      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+      var dyn13 = opt_data.page.description;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
@@ -11867,7 +11867,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
           itext('http://localhost:8084/my-project/accounts?page=0&size=1');
         ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "accounts": [\n            {\n                "dateCreated": "2017-11-14T15:32:06Z",\n                "dateModified": "2017-11-14T15:32:07Z",\n                "identifier": "AV-7KK2z2uFXwMzLKdBu",\n                "organization": {\n                    "ISIC": [\n                        {\n                            "context": "organization",\n                            "dataSourceIdentifier": null,\n                            "dateModified": "2017-11-14T15:32:07Z",\n                            "fieldType": "http://schema.org/isicV4",\n                            "label": null,\n                            "name": "Economic Activity",\n                            "ownerIdentifier": "AV-7KK2z2uFXwMzLKdBu",\n                            "ownerType": "account",\n                            "projectId": "DEMO",\n                            "value": "G762"\n                        }\n                    ]\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu"\n                    },\n                    "accounts": {\n                        "href": "http://localhost:8084/my-project/accounts{?filter}",\n                        "templated": true\n                    },\n                    "individuals": {\n                        "href": "http://localhost:8084/my-project/accounts/AV_Afi95Y3UMLZEdmkBK/individuals{?filter}"\n                    },\n                    "account-segments": {\n                        "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu/account-segments{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/accounts?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "accounts": [\n            {\n                "dateCreated": "2017-11-14T15:32:06Z",\n                "dateModified": "2017-11-14T15:32:07Z",\n                "identifier": "AV-7KK2z2uFXwMzLKdBu",\n                "organization": {\n                    "ISIC": [\n                        {\n                            "context": "organization",\n                            "dataSourceIdentifier": null,\n                            "dateModified": "2017-11-14T15:32:07Z",\n                            "fieldType": "http://schema.org/isicV4",\n                            "label": null,\n                            "name": "Economic Activity",\n                            "ownerIdentifier": "AV-7KK2z2uFXwMzLKdBu",\n                            "ownerType": "account",\n                            "projectId": "DEMO",\n                            "value": "G762"\n                        }\n                    ]\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu"\n                    },\n                    "accounts": {\n                        "href": "http://localhost:8084/my-project/accounts{?filter}",\n                        "templated": true\n                    },\n                    "individuals": {\n                        "href": "http://localhost:8084/my-project/accounts/AV_Afi95Y3UMLZEdmkBK/individuals{?filter}"\n                    },\n                    "memberships": {\n                        "href": "http://localhost:8084/my-project/accounts/AV_81uhW7IU2hIVahEU2/memberships"\n                     },\n                    "account-segments": {\n                        "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu/account-segments{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/accounts?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
         itext('Creation of new Accounts or Update of Accounts manually is not supported. Accounts are automatically generated and updated from the Field Chunks sent by the different Connectors.');
       ie_close('p');
@@ -11957,6 +11957,12 @@ function $render(opt_data, opt_ignored, opt_ijData) {
           ie_close('a');
           itext('.');
         ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('memberships');
+          ie_close('code');
+          itext(' - The collection of Memberships of this account. This collection can be used to add new members to this account manually, as described in #5.');
+        ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
@@ -11978,7 +11984,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
           itext('http://localhost:8084/my-project/accounts/my-account-identifier/memberships');
         ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "accountIdentifier" : "my-account-identifier",\n    "individualIdentifier" : "my-individual-identifier"\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "individualIdentifier" : "my-individual-identifier"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
         itext('A ');
         ie_open('code');
@@ -12000,11 +12006,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param188}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'LRtfd.render';
+  $render.soyTemplateName = 'yEyJD.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12014,8 +12020,8 @@ return exports;
 
 });
 
-class LRtfd extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(LRtfd, templates);
+class yEyJD extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(yEyJD, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12105,23 +12111,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LRtfd = function (_Component) {
-  _inherits(LRtfd, _Component);
+var yEyJD = function (_Component) {
+  _inherits(yEyJD, _Component);
 
-  function LRtfd() {
-    _classCallCheck(this, LRtfd);
+  function yEyJD() {
+    _classCallCheck(this, yEyJD);
 
-    return _possibleConstructorReturn(this, (LRtfd.__proto__ || Object.getPrototypeOf(LRtfd)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (yEyJD.__proto__ || Object.getPrototypeOf(yEyJD)).apply(this, arguments));
   }
 
-  return LRtfd;
+  return yEyJD;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(LRtfd, _indexSoy2.default);
+_metalSoy2.default.register(yEyJD, _indexSoy2.default);
 
-exports.default = LRtfd;
+exports.default = yEyJD;
 
 /***/ })
 ],[140]);
