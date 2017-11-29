@@ -203,9 +203,9 @@ can use the optional parameter filter following a subset of the oData standard.
 
 | Function  | Description | Example                      |
 |---------- |------------ |------------------------------|
-| contains        | Contains       |    contains(Address/City,'edmon') |
-|startswith|Starts with|startswith(Address/City,'Red')|
-|endswith |Ends with|endswith(Address/City,'mond')|
+| contains  | Contains    |contains(Address/City,'edmon')|
+|startswith |Starts with  |startswith(Address/City,'Red')|
+|endswith   |Ends with    |endswith(Address/City,'mond') |
 
 e.g. We could append this to a URL that returns a collection of Data Sources
 to filter the DataSource by an author name and a name.
