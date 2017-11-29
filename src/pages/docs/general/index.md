@@ -170,19 +170,20 @@ Not all collectons allow filtering. The ones that support it will contain the
 optional parameter `{lb}?filter{rb}` in their template.
 
 In order to filter a collection based on the value of one or more fields, you
-can use the optional parameter filter following a subste of the oData standard.
+can use the optional parameter filter following a subset of the oData standard.
 
 #### Comparison Operators
 
-| Operator  | Description | Example                      |
-|---------- |------------ |------------------------------|
-| eq        | Equal       |    Address/City eq 'Redmond' |
-|ne|Not equal|Address/City ne 'London'|
-|gt |Greater than |Price gt 20|
-|ge |Greater than or equal|Price ge 10|
-|lt|Less than |Price lt 20|
-|le |Less than or equal |Price le 100|
-
+| Operator  | Description          | Example                      |
+|---------- |--------------------- |------------------------------|
+| eq        | Equal                | Address/City eq 'Redmond'    |
+|           | Equal null           | Address/City eq null         |
+| ne        | Not equal            | Address/City ne 'London'     |
+|           | Not null             | Address/City ne null         |
+| gt        | Greater than         | Price gt 20                  |
+| ge        | Greater than or equal| Price ge 10                  |
+| lt        | Less than            | Price lt 20                  |
+| le        | Less than or equal   | Price le 100                 |
 
 #### Logical Operators
 
@@ -198,6 +199,13 @@ can use the optional parameter filter following a subste of the oData standard.
 |---------- |------------ |------------------------------|
 |( ) |Precedence grouping |(Price eq 5) or (Address/City eq 'London')  |
 
+#### String functions
+
+| Function  | Description | Example                      |
+|---------- |------------ |------------------------------|
+| contains        | Contains       |    contains(Address/City,'edmon') |
+|startswith|Starts with|startswith(Address/City,'Red')|
+|endswith |Ends with|endswith(Address/City,'mond')|
 
 e.g. We could append this to a URL that returns a collection of Data Sources
 to filter the DataSource by an author name and a name.
