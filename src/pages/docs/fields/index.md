@@ -19,6 +19,7 @@ Therefore, if the field Address for an Individual changed 5 times, we will have
 5 fields for the Address for that particular Individual.
 
 The entity field contains the following fields:
+* *identifier*
 * *context*
 * *dataSourceIdentifier*
 * *dateModified*
