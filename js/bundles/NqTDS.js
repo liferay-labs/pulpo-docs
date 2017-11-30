@@ -11663,7 +11663,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mSrLf", function() { return mSrLf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NqTDS", function() { return NqTDS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11679,11 +11679,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace mSrLf.
+ * @fileoverview Templates in namespace NqTDS.
  * @public
  */
 
-goog.module('mSrLf.incrementaldom');
+goog.module('NqTDS.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11717,10 +11717,10 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param235 = function() {
+  var param209 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
@@ -11907,11 +11907,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param235}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'mSrLf.render';
+  $render.soyTemplateName = 'NqTDS.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11921,8 +11921,8 @@ return exports;
 
 });
 
-class mSrLf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mSrLf, templates);
+class NqTDS extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NqTDS, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12012,23 +12012,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var mSrLf = function (_Component) {
-  _inherits(mSrLf, _Component);
+var NqTDS = function (_Component) {
+  _inherits(NqTDS, _Component);
 
-  function mSrLf() {
-    _classCallCheck(this, mSrLf);
+  function NqTDS() {
+    _classCallCheck(this, NqTDS);
 
-    return _possibleConstructorReturn(this, (mSrLf.__proto__ || Object.getPrototypeOf(mSrLf)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NqTDS.__proto__ || Object.getPrototypeOf(NqTDS)).apply(this, arguments));
   }
 
-  return mSrLf;
+  return NqTDS;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(mSrLf, _indexSoy2.default);
+_metalSoy2.default.register(NqTDS, _indexSoy2.default);
 
-exports.default = mSrLf;
+exports.default = NqTDS;
 
 /***/ })
 ],[141]);
