@@ -19,13 +19,19 @@ These aggregations can be:
 * Static: A fixed set of individuals have been manually associated to the Individual Segment. 
  
 The following fields are currently supported as part of an Individual Segment:
+* *author*
+  * identifier
+  * name
 * *dateCreated*
 * *dateModified*
+* *fields* - a Map of [Fields](/docs/fields) corresponding to properties of the Individual Segment
 * *filter* - an oData filter that defines, for Individual Segments with `segmentType=DYNAMIC`, which Individuals
    belong to this Individual Segment 
+* *filterMetadata* - a placeholder for extra information about the filter
 * *identifier*
 * *name* - The name of the Individual Segment
 * *segmentType* - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are `Type.STATIC` and `Type.DYNAMIC`
+* *status* - defines if the Individual Segment accepts memberships or not. The accepted values are `Status.ACTIVE` and `Status.INACTIVE`
 
 </article>
 
@@ -52,9 +58,17 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
              "dateCreated":"2017-11-15T16:23:35Z",
              "dateModified":"2017-11-15T16:23:35Z",
              "filter":null,
+             "filterMetadata":null,
              "identifier":"AV_Afi6-Y3UMLZEdmkBE",
              "name":"Friends",
              "segmentType":"STATIC",
+             "status":"ACTIVE"
+             "author": {
+                 "name":"John Doe",
+                 "identifier":"12345"
+              },
+             "fields": {                   
+             }, 
              "_links":{
                 "self":{
                    "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE"
@@ -119,8 +133,9 @@ As part of the links of each individual, the following links can be found using 
 
 ## Individual Segment Membership Collection
 
-Creation of new Individual-Individual Segment memberships is supported only for Individual Segments with `segmentType=STATIC` by making 
-a `POST` to the `memberships` Collection URL of each individual segment . This is an example of the body passed to this POST request to the URL 
+Creation of new Individual-Individual Segment memberships is supported only for Individual Segments with `status=ACTIVE`
+and `segmentType=STATIC` by making a `POST` to the `memberships` Collection URL of each individual segment . 
+This is an example of the body passed to this POST request to the URL 
 `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships` 
 
 ```json
@@ -130,6 +145,18 @@ a `POST` to the `memberships` Collection URL of each individual segment . This i
 ```
 
 A `DELETE` request to the URL `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/my-individual-identifier` removes
-an existing Individual-Individual Segment membership. 
+an existing Individual-Individual Segment membership.
+
+## Individual Segment Membership Count
+
+The current value of the count of Individuals that are members of an Individual Segment can be obtained from 
+the `totalElements` field of the `individuals` collection.
+
+The historical values of the count of Individuals that are members of an Individual Segment are stored as 
+[Fields](/docs/fields) with the name `individualCount` and associated to the Individual Segment through 
+the `ownerType` and `ownerIdentifier` properties. For example, using the oData filter
+`(name eq 'individualCount') and (ownerype eq 'individual-segment') and (ownerIdentifier eq 'AV_Afi6-Y3UMLZEdmkBE')`
+returns a collection of fields with the historical count values for the Individual Segment with 
+identifier `AV_Afi6-Y3UMLZEdmkBE`. 
 
 </article>
