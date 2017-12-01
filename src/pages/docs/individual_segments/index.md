@@ -30,8 +30,8 @@ The following fields are currently supported as part of an Individual Segment:
 * *filterMetadata* - a placeholder for extra information about the filter
 * *identifier*
 * *name* - The name of the Individual Segment
-* *segmentType* - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are `Type.STATIC` and `Type.DYNAMIC`
-* *status* - defines if the Individual Segment accepts memberships or not. The accepted values are `Status.ACTIVE` and `Status.INACTIVE`
+* *segmentType* - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are `STATIC` and `DYNAMIC`
+* *status* - defines if the Individual Segment accepts memberships or not. The accepted values are `ACTIVE` and `INACTIVE`
 
 </article>
 
@@ -62,7 +62,7 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
              "identifier":"AV_Afi6-Y3UMLZEdmkBE",
              "name":"Friends",
              "segmentType":"STATIC",
-             "status":"ACTIVE"
+             "status":"ACTIVE",
              "author": {
                  "name":"John Doe",
                  "identifier":"12345"
