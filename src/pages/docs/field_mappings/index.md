@@ -30,7 +30,8 @@ The following fields are currently supported in a field mapping:
 * *fieldName* - the name of the field on our model
 * *fieldType* - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)
 * *identifier*
-
+* *strategy* - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or 
+give preference to the value from a specific data source. See more details below.
 
 </article>
 
@@ -108,5 +109,36 @@ an example of the body passed to this POST request:
 
 Navigating through the list of entities, the link to each entity can be found with the rel `self`. 
 That same url can be also used for delete (`DELETE` method) and update (`PUT` method).
+
+</article>
+
+<article id="2">
+
+## Field Mappings Strategies
+
+Field Mapping Strategies have the following fields:
+
+* *key* - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITAL_DATASOURCE"
+* *configuration* - A map with the specific configuration for the strategy. e.g. Most Recent doesn't need
+any configuration. However, Priorital DataSource requires the value dataSourceIdentifier.
+
+This is an example of valid strategies passed in JSON when creating or udpating a
+field mapping: 
+
+```json
+{
+    "key": "MOST_RECENT"
+}
+```
+
+```json
+{
+    "key": "PRIORITAL_DATASOURCE",
+    "configuration": {
+        "dataSourceIdentifier": "ABCDEFG"
+    }
+}
+```
+
 
 </article>
