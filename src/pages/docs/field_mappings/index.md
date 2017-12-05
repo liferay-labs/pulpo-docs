@@ -120,7 +120,6 @@ This is an example of the body to patch an existing Field Mapping in order to ad
 another data source field name:
 
 ```json
-
 {
 	"dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",
 	"fieldName" : "years-old"	
@@ -134,18 +133,41 @@ another data source field name:
 
 Field Mapping Strategies have the following fields:
 
-* *key* - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITAL_DATASOURCE"
+* *key* - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITY_DATASOURCE"
 * *configuration* - A map with the specific configuration for the strategy. e.g. Most Recent doesn't need
-any configuration. However, Priorital DataSource requires the value dataSourceIdentifier.
+any configuration. However, Priority DataSource requires the value dataSourceIdentifier.
 
-This is an example of valid strategies passed in JSON when creating or udpating a
-field mapping: 
+#### Most Recent Strategy
+
+This strategy will add to the user fields the most recent field coming from any
+data source. For example, if we have two data sources set up and a field 
+mapping configured to obtain the email address from both. If we only receive the
+email from one of them, that is the field that will be added to the individual profile.
+However, if we receive both, then the one which we received the latest will be the
+one added to the individual profile.  
+
+This is an example of a valid strategy passed in JSON when creating or updating a
+field mapping to use the most recent field: 
 
 ```json
 {
     "key": "MOST_RECENT"
 }
 ```
+
+#### Priority Data Source Strategy
+
+This strategy will give preference to the information coming from a particular 
+data source. In order to be configured, the configuration must include the
+dataSourceIdentifier. For example, if we have three data sources set up (A, B and C), and
+a field mapping configured to obtain the telephone from all of them. When we set 
+A as the priority data source, if we receive a telephone field from A, then that 
+will be the field added to the inidividual profile. In case we don't receive any
+telephone from A, but we do receive it from B and C, then the most recent strategy
+applies.
+
+And this is an example setting the data source with identifier ABCEDFG as the 
+priority data source.
 
 ```json
 {
