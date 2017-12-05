@@ -110,6 +110,22 @@ an example of the body passed to this POST request:
 Navigating through the list of entities, the link to each entity can be found with the rel `self`. 
 That same url can be also used for delete (`DELETE` method) and update (`PUT` method).
 
+Adding new data Source Field Names without having to update the full field mapping
+is also supported using the `PATCH` method to an entity link.
+The body must contain a Data Source Field Name object, wich contains the following fields:
+* dataSourceIdentifier - the identifier of an existing datasource.
+* fieldName - the name of this field in the existing data source
+
+This is an example of the body to patch an existing Field Mapping in order to add
+another data source field name:
+
+```json
+
+{
+	"dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",
+	"fieldName" : "years-old"	
+}
+```
 </article>
 
 <article id="2">
@@ -133,12 +149,10 @@ field mapping:
 
 ```json
 {
-    "key": "PRIORITAL_DATASOURCE",
+    "key": "PRIORITY_DATASOURCE",
     "configuration": {
         "dataSourceIdentifier": "ABCDEFG"
     }
 }
 ```
-
-
 </article>
