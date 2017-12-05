@@ -3,7 +3,7 @@ title: "Individuals"
 description: "Individuals API."
 layout: "guide"
 icon: "person"
-weight: 5
+weight: 6
 ---
 
 ###### {$page.description}

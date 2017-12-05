@@ -3,7 +3,7 @@ title: "Account Segments"
 description: "Account Segments API."
 layout: "guide"
 icon: "person-card"
-weight: 8
+weight: 9
 ---
 
 ###### {$page.description}

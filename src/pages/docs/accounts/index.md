@@ -3,7 +3,7 @@ title: "Accounts"
 description: "Accounts API."
 layout: "guide"
 icon: "org_chart"
-weight: 7
+weight: 8
 ---
 
 ###### {$page.description}
