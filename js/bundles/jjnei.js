@@ -11668,7 +11668,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PviMQ", function() { return PviMQ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jjnei", function() { return jjnei; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11684,11 +11684,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace PviMQ.
+ * @fileoverview Templates in namespace jjnei.
  * @public
  */
 
-goog.module('PviMQ.incrementaldom');
+goog.module('jjnei.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11722,7 +11722,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param298 = function() {
+  var param312 = function() {
     ie_open('h6');
       var dyn18 = opt_data.page.description;
       if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
@@ -12040,11 +12040,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param298}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param312}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'PviMQ.render';
+  $render.soyTemplateName = 'jjnei.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12054,8 +12054,8 @@ return exports;
 
 });
 
-class PviMQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(PviMQ, templates);
+class jjnei extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(jjnei, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12144,23 +12144,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PviMQ = function (_Component) {
-  _inherits(PviMQ, _Component);
+var jjnei = function (_Component) {
+  _inherits(jjnei, _Component);
 
-  function PviMQ() {
-    _classCallCheck(this, PviMQ);
+  function jjnei() {
+    _classCallCheck(this, jjnei);
 
-    return _possibleConstructorReturn(this, (PviMQ.__proto__ || Object.getPrototypeOf(PviMQ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (jjnei.__proto__ || Object.getPrototypeOf(jjnei)).apply(this, arguments));
   }
 
-  return PviMQ;
+  return jjnei;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(PviMQ, _indexSoy2.default);
+_metalSoy2.default.register(jjnei, _indexSoy2.default);
 
-exports.default = PviMQ;
+exports.default = jjnei;
 
 /***/ })
 ],[145]);

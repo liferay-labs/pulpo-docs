@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,18 +11658,12 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XWqzH", function() { return XWqzH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uCUVK", function() { return uCUVK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11685,11 +11679,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace XWqzH.
+ * @fileoverview Templates in namespace uCUVK.
  * @public
  */
 
-goog.module('XWqzH.incrementaldom');
+goog.module('uCUVK.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11723,76 +11717,45 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param324 = function() {
+  var param249 = function() {
     ie_open('h6');
-      var dyn19 = opt_data.page.description;
-      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+      var dyn15 = opt_data.page.description;
+      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Individual Model');
+        itext('The Data Source Model');
       ie_close('h2');
       ie_open('p');
-        itext('Individuals are a complex entity that contain several contexts for each Person stored in our system.');
-      ie_close('p');
-      ie_open('p');
-        itext('Those contexts are:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Identity & Demographics');
-        ie_close('li');
-        ie_open('li');
-          itext('Sentiment Analysis');
-        ie_close('li');
-        ie_open('li');
-          itext('Event Attendance');
-        ie_close('li');
-        ie_open('li');
-          itext('Sales Interaction');
-        ie_close('li');
-        ie_open('li');
-          itext('Social Engagement');
-        ie_close('li');
-        ie_open('li');
-          itext('Transactions');
-        ie_close('li');
-        ie_open('li');
-          itext('Browsing Activity');
-        ie_close('li');
-        ie_open('li');
-          itext('Firmographic');
-        ie_close('li');
-        ie_open('li');
-          itext('Support Interaction');
-        ie_close('li');
-        ie_open('li');
-          itext('etc');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Only some of those contexts are available for now. Each context will contain certain ');
+        itext('DataSources support a subset of the Type ');
         ie_open('a', null, null,
-            'href', '/docs/fields');
-          itext('Fields');
+            'href', 'http://schema.org/DataFeed');
+          itext('DataFeed');
         ie_close('a');
-        itext(' with information. These fields will correspond to ');
-        ie_open('a', null, null,
-            'href', 'http://schema.org/');
-          itext('schema.org');
-        ie_close('a');
-        itext(' Properties');
+        itext(' from Schema.org');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported as part of an Invididual:');
+        itext('The following fields are currently supported:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('dataSourceIdentifiers');
+            itext('about');
           ie_close('em');
-          itext(' - a map with the different datasource identifiers and the datasource individual identifier (the primary key of this individual in the original datasource)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('author');
+          ie_close('em');
+          ie_open('ul');
+            ie_open('li');
+              itext('identifier');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
           ie_open('em');
@@ -11811,36 +11774,53 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('demographics');
+            itext('name');
           ie_close('em');
-          itext(' - a Map of identity & demographic ');
-          ie_open('a', null, null,
-              'href', '/docs/fields');
-            itext('Fields');
-          ie_close('a');
-          itext(' corresponding to properties of the Type ');
-          ie_open('a', null, null,
-              'href', 'http://schema.org/Person');
-            itext('Person');
-          ie_close('a');
-          itext(' from Schema.org');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('sentiment');
+            itext('provider');
           ie_close('em');
-          itext(' - a Map of sentiment analysis ');
-          ie_open('a', null, null,
-              'href', '/docs/fields');
-            itext('Fields');
-          ie_close('a');
+          ie_open('ul');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('url');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('subjectOf');
+          ie_close('em');
+          itext(' - An event about this Data Source');
+          ie_open('ul');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+            ie_open('li');
+              itext('startDate');
+            ie_close('li');
+            ie_open('li');
+              itext('endDate');
+            ie_close('li');
+            ie_open('li');
+              itext('location');
+            ie_close('li');
+            ie_open('li');
+              itext('sameAs - the URL of the Event');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Individuals Collection');
+        itext('DataSources Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11854,9 +11834,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('individuals');
+          itext('data-sources');
         ie_close('code');
-        itext(' pointing to the collection of Individuals.');
+        itext(' pointing to the collection of Data Sources.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11881,98 +11861,42 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of individuals under the key ');
+        itext(' section, a list of data sources under the key ');
         ie_open('code');
-          itext('individuals');
+          itext('data-sources');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
         itext('This is an example of a response to this url: ');
         ie_open('code');
-          itext('http://localhost:8084/my-project/individuals?page=0&size=20');
+          itext('http://localhost:8084/my-project/data-sources?page=0&size=1');
         ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "individuals": [\n            {\n                "dateCreated": "2017-11-13T11:47:43Z",\n                "dateModified": "2017-11-13T11:47:44Z",\n                "demographics": {\n                    "address": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/address",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "address",\n                            "projectId": "my-project",\n                            "value": "125 Main Street, Candelaria"\n                        }\n                    ],\n                    "telephone": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/telephone",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": "home",\n                            "name": "telephone",\n                            "projectId": "my-project",\n                            "value": "+34699001234"\n                        }\n                    ],\n                    "email": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/email",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "email",\n                            "projectId": "my-project",\n                            "value": "cris@liferay.com"\n                        }\n                    ],\n                    "age": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/age",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "age",\n                            "projectId": "my-project",\n                            "value": "32"\n                        }\n                    ]\n                },\n                "identifier": "AV-1NOYHDh9K2u0PkWnL",\n                "sentiment": {},\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL"\n                    },\n                    "individuals": {\n                        "href": "http://localhost:8084/my-project/individuals{?filter}",\n                        "templated": true\n                    },\n                    "individual-segments": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL/individual-segments"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/individuals?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "name": "liferay-de"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Individuals or Update of Individuals manually is not supported. Indivuals are automatically generated and updated from the Field Chunks sent by the different Connectors.');
+        itext('Creation of new Data Sources is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
       ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "My First DataSource",\n    "provider" : {\n        "name" : "liferay-de"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Deletion of existing Individuals is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of individuals, the link to each individual can be found with the rel ');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
-        itext('.');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Filtering and Sorting Individuals Collection');
-      ie_close('h2');
-      ie_open('p');
-        itext('Individuals collection can be filtered as explained in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('These are some examples of filtering:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Individuals from Madrid: ');
-          ie_open('code');
-            itext('?filter=(demographics/city/value eq \'Madrid\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals under 30 years old: ');
-          ie_open('code');
-            itext('?filter=(demographics/age/value lt \'30\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals from Madrid sorted by age in descending order:');
-          ie_open('code');
-            itext('?filter=(demographics/city/value eq \'Madrid\')&sort=demographics/age/value,desc');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals who work as Engineers from Malaga or Madrid under 40 years old:');
-          ie_open('code');
-            itext('?filter=(demographics/city/value eq \'Madrid\' or demographics/city/value eq \'Malaga\') and (demographics/age/value lt \'30\') and (demographics/jobTitle/value eq \'Engineer\')');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '4');
-      ie_open('h2');
-        itext('Individual Segments');
-      ie_close('h2');
-      ie_open('p');
-        itext('As part of the links of each individual, the following links can be found using these keys:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('code');
-            itext('individual-segments');
-          ie_close('code');
-          itext(' - The collection of Individual Segments this individual belongs to');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('individuals');
-          ie_close('code');
-          itext(' - The collection of Individuals');
-        ie_close('li');
-      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11983,11 +11907,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param324}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param249}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'XWqzH.render';
+  $render.soyTemplateName = 'uCUVK.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11997,14 +11921,20 @@ return exports;
 
 });
 
-class XWqzH extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XWqzH, templates);
+class uCUVK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(uCUVK, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -12042,12 +11972,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XWqzH, templates);
 /* 138 */,
 /* 139 */,
 /* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12075,7 +12000,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(103);
+var _indexSoy = __webpack_require__(97);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12087,23 +12012,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var XWqzH = function (_Component) {
-  _inherits(XWqzH, _Component);
+var uCUVK = function (_Component) {
+  _inherits(uCUVK, _Component);
 
-  function XWqzH() {
-    _classCallCheck(this, XWqzH);
+  function uCUVK() {
+    _classCallCheck(this, uCUVK);
 
-    return _possibleConstructorReturn(this, (XWqzH.__proto__ || Object.getPrototypeOf(XWqzH)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (uCUVK.__proto__ || Object.getPrototypeOf(uCUVK)).apply(this, arguments));
   }
 
-  return XWqzH;
+  return uCUVK;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(XWqzH, _indexSoy2.default);
+_metalSoy2.default.register(uCUVK, _indexSoy2.default);
 
-exports.default = XWqzH;
+exports.default = uCUVK;
 
 /***/ })
-],[146]);
+],[141]);
