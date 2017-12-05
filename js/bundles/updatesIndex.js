@@ -11726,7 +11726,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param150 = function() {
+  var param104 = function() {
     ie_open('div');
       ie_open('header', null, null,
           'class', 'header');
@@ -11734,20 +11734,20 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             'class', 'container');
           ie_open('h1', null, null,
               'class', 'header-title');
-            var dyn10 = opt_data.page.title;
-            if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
+            var dyn7 = opt_data.page.title;
+            if (typeof dyn7 == 'function') dyn7(); else if (dyn7 != null) itext(dyn7);
           ie_close('h1');
           ie_open('h2', null, null,
               'class', 'header-subtitle');
-            var dyn11 = opt_data.page.description;
-            if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+            var dyn8 = opt_data.page.description;
+            if (typeof dyn8 == 'function') dyn8(); else if (dyn8 != null) itext(dyn8);
           ie_close('h2');
         ie_close('div');
       ie_close('header');
       $templateAlias2({updates: opt_data.page.updates}, null, opt_ijData);
     ie_close('div');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param150}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param104}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {

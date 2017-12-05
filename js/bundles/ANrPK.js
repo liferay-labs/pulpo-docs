@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11659,12 +11659,13 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OYHir", function() { return OYHir; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ANrPK", function() { return ANrPK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,11 +11681,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace OYHir.
+ * @fileoverview Templates in namespace ANrPK.
  * @public
  */
 
-goog.module('OYHir.incrementaldom');
+goog.module('ANrPK.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,106 +11719,90 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param209 = function() {
+  var param271 = function() {
     ie_open('h6');
-      var dyn14 = opt_data.page.description;
-      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Mapping Model');
+        itext('The Field Model');
       ie_close('h2');
       ie_open('p');
-        itext('Field Mappings allow us to map the fields from the different ');
-        ie_open('a', null, null,
-            'href', '/docs/datasources');
-          itext('datasources');
-        ie_close('a');
-        itext(' to the');
-        ie_open('a', null, null,
-            'href', '/docs/fields');
-          itext('fields');
-        ie_close('a');
-        itext(' in our entities (');
+        itext('Fields contain information about different entities (');
         ie_open('a', null, null,
             'href', '/docs/individuals');
           itext('individuals');
         ie_close('a');
-        itext(', Accounts... etc)');
+        itext(', accounts, individual segments... etc).');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported in a field mapping:');
+        itext('All the different values in time for a field are stored as fields themeshelves. Therefore, if the field Address for an Individual changed 5 times, we will have 5 fields for the Address for that particular Individual.');
+      ie_close('p');
+      ie_open('p');
+        itext('The entity field contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('context');
-            ie_close('em');
-            itext(' - the context of the field (demographics, sentiment... etc)');
-          ie_close('p');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dataSourceFieldNames');
-            ie_close('em');
-            itext(' - a map with the name of the original field for each Data Source.');
-          ie_close('p');
-          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
+          ie_open('em');
+            itext('context');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dateCreated');
-            ie_close('em');
-          ie_close('p');
+          ie_open('em');
+            itext('dataSourceIdentifier');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dateModified');
-            ie_close('em');
-          ie_close('p');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('fieldName');
-            ie_close('em');
-            itext(' - the name of the field on our model');
-          ie_close('p');
+          ie_open('em');
+            itext('fieldType');
+          ie_close('em');
+          itext(' - A schema.org property');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('fieldType');
-            ie_close('em');
-            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
-          ie_close('p');
+          ie_open('em');
+            itext('label');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('identifier');
-            ie_close('em');
-          ie_close('p');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('strategy');
-            ie_close('em');
-            itext(' - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or give preference to the value from a specific data source. See more details below.');
-          ie_close('p');
+          ie_open('em');
+            itext('value');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerType');
+          ie_close('em');
+          itext(' - The entity that owns this field (e.g. an Individual, an Individual Identifier...)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerIdentifier');
+          ie_close('em');
+          itext(' - The Identifier of the entity that owns this field.');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Field Mappings Collection');
+        itext('Fields Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11831,9 +11816,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('field-mappings');
+          itext('fields');
         ie_close('code');
-        itext(' pointing to the collection of Field Mappings.');
+        itext(' pointing to the collection of Fields.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11860,84 +11845,27 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section, a list of fields under the key ');
         ie_open('code');
-          itext('field-mappings');
+          itext('fields');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/fields?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "fields": [\n            {\n                "context": "demographics",\n                "dataSourceIdentifier": "AV-0-c1_4MMBozrmZ0T_",\n                "dateModified": "2017-11-13T10:43:13Z",\n                "fieldType": "http://schema.org/telephone",\n                "identifier": "AV-0-deU4MMBozrmZ0UO",\n                "label": "home",\n                "name": "telephone",\n                "ownerIdentifier": "AV-0-dcI4MMBozrmZ0UM",\n                "ownerType": "individual",\n                "value": "+34699001234",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/fields/AV-0-deU4MMBozrmZ0UO"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-0-dcI4MMBozrmZ0UM"\n                    },\n                    "fields": {\n                        "href": "http://localhost:8084/my-project/fields{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/fields?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Field Mappings is supported making a ');
-        ie_open('code');
-          itext('POST');
-        ie_close('code');
-        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+        itext('Creation of new Fields or Update of Fields manually is not supported. Fields are automatically generated and updated from the Field Chunks sent by the different Connectors.');
       ie_close('p');
-      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        itext('Deletion of existing Fields is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of fields, the link to each field can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
-        itext('. That same url can be also used for delete (');
-        ie_open('code');
-          itext('DELETE');
-        ie_close('code');
-        itext(' method) and update (');
-        ie_open('code');
-          itext('PUT');
-        ie_close('code');
-        itext(' method).');
+        itext('.');
       ie_close('p');
-      ie_open('p');
-        itext('Adding new data Source Field Names without having to update the full field mapping is also supported using the ');
-        ie_open('code');
-          itext('PATCH');
-        ie_close('code');
-        itext(' method to an entity link. The body must contain a Data Source Field Name object, wich contains the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('dataSourceIdentifier - the identifier of an existing datasource.');
-        ie_close('li');
-        ie_open('li');
-          itext('fieldName - the name of this field in the existing data source');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of the body to patch an existing Field Mapping in order to add another data source field name:');
-      ie_close('p');
-      $templateAlias2({code: '\n{\n    "dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",\n    "fieldName" : "years-old"   \n}', mode: 'json'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
-      ie_open('h2');
-        itext('Field Mappings Strategies');
-      ie_close('h2');
-      ie_open('p');
-        itext('Field Mapping Strategies have the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('key');
-          ie_close('em');
-          itext(' - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITAL_DATASOURCE"');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('configuration');
-          ie_close('em');
-          itext(' - A map with the specific configuration for the strategy. e.g. Most Recent doesn\'t need any configuration. However, Priorital DataSource requires the value dataSourceIdentifier.');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of valid strategies passed in JSON when creating or udpating a field mapping:');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "key": "MOST_RECENT"\n}', mode: 'json'}, null, opt_ijData);
-      $templateAlias2({code: '{\n    "key": "PRIORITY_DATASOURCE",\n    "configuration": {\n        "dataSourceIdentifier": "ABCDEFG"\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11948,11 +11876,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param271}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'OYHir.render';
+  $render.soyTemplateName = 'ANrPK.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11962,15 +11890,14 @@ return exports;
 
 });
 
-class OYHir extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(OYHir, templates);
+class ANrPK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ANrPK, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -12013,7 +11940,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(OYHir, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */
+/* 142 */,
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12041,7 +11969,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(99);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12053,23 +11981,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var OYHir = function (_Component) {
-  _inherits(OYHir, _Component);
+var ANrPK = function (_Component) {
+  _inherits(ANrPK, _Component);
 
-  function OYHir() {
-    _classCallCheck(this, OYHir);
+  function ANrPK() {
+    _classCallCheck(this, ANrPK);
 
-    return _possibleConstructorReturn(this, (OYHir.__proto__ || Object.getPrototypeOf(OYHir)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ANrPK.__proto__ || Object.getPrototypeOf(ANrPK)).apply(this, arguments));
   }
 
-  return OYHir;
+  return ANrPK;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(OYHir, _indexSoy2.default);
+_metalSoy2.default.register(ANrPK, _indexSoy2.default);
 
-exports.default = OYHir;
+exports.default = ANrPK;
 
 /***/ })
-],[142]);
+],[143]);
