@@ -2,7 +2,7 @@
 title: "Field Names"
 description: "Field Names API"
 layout: "guide"
-icon: "menu"
+icon: "filter"
 weight: 4
 ---
 
