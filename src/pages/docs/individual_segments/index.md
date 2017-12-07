@@ -3,7 +3,7 @@ title: "Individual Segments"
 description: "Individual Segments API."
 layout: "guide"
 icon: "persons"
-weight: 6
+weight: 7
 ---
 
 ###### {$page.description}
