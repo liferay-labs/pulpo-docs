@@ -15,7 +15,7 @@ weight: 4
 Sometimes, in order to choose an existing field mapping to map your own data, 
 you may want to find the most appropriate field considering the information you
 have. This service will help you with that considering the following information:
-* Existing fields with the same or very name of your label
+* Existing fields with the same or similar name of your label
 * Previous field mappings from your label to other fields
 * Fields with values similar to your new values
 
@@ -32,7 +32,7 @@ endpoint for obtaining the field names.
 
 This endpoint accepts the `GET`	method with the following parameters:
  * label - the label from your field (e.g. telephone, email addres... etc)
- * ownerType - the type of entity your are mapping (individual, account... )
+ * ownerType - the type of entity your are mapping (individual, account...)
  * values - array of sample values from your field
    
 
