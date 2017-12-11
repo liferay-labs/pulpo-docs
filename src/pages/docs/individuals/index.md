@@ -195,7 +195,7 @@ As part of the links of each individual, the following links can be found using 
 
 Individuals are not created using the REST API. They are created using the 
 LCS message bus. There are several destinations in the LCS message bus 
-available, to create individuals:
+available to create individuals:
 * `liferay_pulpo/individual_chunk_add_<environment_name>` - The queue to write
 messages to when creating individuals via CSV import. `<environment_name>` may
 be one of `dev`, `pre` or `prod`.
