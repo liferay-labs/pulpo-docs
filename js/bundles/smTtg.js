@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,14 +11658,12 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OMXwA", function() { return OMXwA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "smTtg", function() { return smTtg; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11681,11 +11679,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace OMXwA.
+ * @fileoverview Templates in namespace smTtg.
  * @public
  */
 
-goog.module('OMXwA.incrementaldom');
+goog.module('smTtg.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11719,35 +11717,110 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param287 = function() {
+  var param188 = function() {
     ie_open('h6');
-      var dyn17 = opt_data.page.description;
-      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+      var dyn13 = opt_data.page.description;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Names');
+        itext('The Data Source Model');
       ie_close('h2');
       ie_open('p');
-        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
+        itext('DataSources support a subset of the Type ');
+        ie_open('a', null, null,
+            'href', 'http://schema.org/DataFeed');
+          itext('DataFeed');
+        ie_close('a');
+        itext(' from Schema.org');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('Existing fields with the same or similar name of your label');
+          ie_open('em');
+            itext('about');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          itext('Previous field mappings from your label to other fields');
+          ie_open('em');
+            itext('author');
+          ie_close('em');
+          ie_open('ul');
+            ie_open('li');
+              itext('identifier');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
-          itext('Fields with values similar to your new values');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('provider');
+          ie_close('em');
+          ie_open('ul');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('url');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('subjectOf');
+          ie_close('em');
+          itext(' - An event about this Data Source');
+          ie_open('ul');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+            ie_open('li');
+              itext('startDate');
+            ie_close('li');
+            ie_open('li');
+              itext('endDate');
+            ie_close('li');
+            ie_open('li');
+              itext('location');
+            ie_close('li');
+            ie_open('li');
+              itext('sameAs - the URL of the Event');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Fields Names Service');
+        itext('DataSources Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11761,35 +11834,69 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('field-names');
+          itext('data-sources');
         ie_close('code');
-        itext(' pointing to the endpoint for obtaining the field names.');
+        itext(' pointing to the collection of Data Sources.');
       ie_close('p');
       ie_open('p');
-        itext('This endpoint accepts the ');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
         ie_open('code');
-          itext('GET');
+          itext('_embedded');
         ie_close('code');
-        itext(' method with the following parameters:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('label - the label from your field (e.g. telephone, email addres... etc)');
-        ie_close('li');
-        ie_open('li');
-          itext('ownerType - the type of entity your are mapping (individual, account...)');
-        ie_close('li');
-        ie_open('li');
-          itext('values - array of sample values from your field');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The response will contain a list of existing field names ordered by relevance.');
+        itext(' section, a list of data sources under the key ');
+        ie_open('code');
+          itext('data-sources');
+        ie_close('code');
+        itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/data-sources?page=0&size=1');
+        ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "name": "liferay-de"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Data Sources is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "My First DataSource",\n    "provider" : {\n        "name" : "liferay-de"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11800,11 +11907,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param287}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param188}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'OMXwA.render';
+  $render.soyTemplateName = 'smTtg.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11814,14 +11921,16 @@ return exports;
 
 });
 
-class OMXwA extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(OMXwA, templates);
+class smTtg extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(smTtg, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 98 */,
+/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -11864,9 +11973,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(OMXwA, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11894,7 +12001,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(99);
+var _indexSoy = __webpack_require__(97);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11906,23 +12013,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var OMXwA = function (_Component) {
-  _inherits(OMXwA, _Component);
+var smTtg = function (_Component) {
+  _inherits(smTtg, _Component);
 
-  function OMXwA() {
-    _classCallCheck(this, OMXwA);
+  function smTtg() {
+    _classCallCheck(this, smTtg);
 
-    return _possibleConstructorReturn(this, (OMXwA.__proto__ || Object.getPrototypeOf(OMXwA)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (smTtg.__proto__ || Object.getPrototypeOf(smTtg)).apply(this, arguments));
   }
 
-  return OMXwA;
+  return smTtg;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(OMXwA, _indexSoy2.default);
+_metalSoy2.default.register(smTtg, _indexSoy2.default);
 
-exports.default = OMXwA;
+exports.default = smTtg;
 
 /***/ })
-],[144]);
+],[142]);
