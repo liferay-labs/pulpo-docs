@@ -133,3 +133,27 @@ A `DELETE` request to the URL `http://localhost:8084/my-project/account-segments
 an existing Account-Account Segment membership. 
 
 </article>
+
+<article id="5">
+
+## Account Segment Membership Count
+
+The current value of the count of Accounts that are members of an Account Segment can be obtained from 
+the `totalElements` field of the `accounts` collection.
+
+The historical values of the count of Accounts that are members of an Account Segment are stored as 
+[Fields](/docs/fields) with the name `accountCount` and associated to the Individual Segment through 
+the `ownerType` and `ownerIdentifier` properties. For example, using the oData filter
+`(name eq 'accountCount') and (ownerype eq 'account-segment') and (ownerIdentifier eq 'AV_Afi6-Y3UMLZEdmkBE')`
+returns a collection of fields with the historical count values for the Account Segment with 
+identifier `AV_Afi6-Y3UMLZEdmkBE`.
+
+The latest value of the count is also stored in the fields of the Account Segment and therefore it
+can be used to filter and sort the collection of Account Segments.
+ 
+For example, this URL would obtain the
+the collection of Account segments sorted by number of members.
+`http://localhost:8084/my-project/account-segments?sort=fields/accountCount/value` 
+ 
+
+</article>

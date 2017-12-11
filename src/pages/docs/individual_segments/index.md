@@ -147,6 +147,11 @@ This is an example of the body passed to this POST request to the URL
 A `DELETE` request to the URL `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/my-individual-identifier` removes
 an existing Individual-Individual Segment membership.
 
+
+</article>
+
+<article id="5">
+
 ## Individual Segment Membership Count
 
 The current value of the count of Individuals that are members of an Individual Segment can be obtained from 
@@ -157,6 +162,14 @@ The historical values of the count of Individuals that are members of an Individ
 the `ownerType` and `ownerIdentifier` properties. For example, using the oData filter
 `(name eq 'individualCount') and (ownerype eq 'individual-segment') and (ownerIdentifier eq 'AV_Afi6-Y3UMLZEdmkBE')`
 returns a collection of fields with the historical count values for the Individual Segment with 
-identifier `AV_Afi6-Y3UMLZEdmkBE`. 
+identifier `AV_Afi6-Y3UMLZEdmkBE`.
+
+The latest value of the count is also stored in the fields of the Individual Segment and therefore it
+can be used to filter and sort the collection of Individual Segments.
+ 
+For example, this URL would obtain the
+the collection of Individual segments sorted by number of members.
+`http://localhost:8084/my-project/individual-segments?sort=fields/individualCount/value` 
+ 
 
 </article>
