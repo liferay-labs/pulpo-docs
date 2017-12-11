@@ -157,8 +157,8 @@ an existing Individual-Individual Segment membership.
 The current value of the count of Individuals that are members of an Individual Segment can be obtained from 
 the `totalElements` field of the `individuals` collection.
 
-The historical values of the count of Individuals that are members of an Individual Segment are stored as 
-[Fields](/docs/fields) with the name `individualCount` and associated to the Individual Segment through 
+The historical values of the count of Individuals that are members of an Individual Segment are stored
+as [Fields](/docs/fields) with the name `individualCount` and associated to the Individual Segment through 
 the `ownerType` and `ownerIdentifier` properties. For example, using the oData filter
 `(name eq 'individualCount') and (ownerype eq 'individual-segment') and (ownerIdentifier eq 'AV_Afi6-Y3UMLZEdmkBE')`
 returns a collection of fields with the historical count values for the Individual Segment with 

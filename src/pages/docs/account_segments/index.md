@@ -141,8 +141,8 @@ an existing Account-Account Segment membership.
 The current value of the count of Accounts that are members of an Account Segment can be obtained from 
 the `totalElements` field of the `accounts` collection.
 
-The historical values of the count of Accounts that are members of an Account Segment are stored as 
-[Fields](/docs/fields) with the name `accountCount` and associated to the Individual Segment through 
+The historical values of the count of Accounts that are members of an Account Segment are stored 
+as [Fields](/docs/fields) with the name `accountCount` and associated to the Individual Segment through 
 the `ownerType` and `ownerIdentifier` properties. For example, using the oData filter
 `(name eq 'accountCount') and (ownerype eq 'account-segment') and (ownerIdentifier eq 'AV_Afi6-Y3UMLZEdmkBE')`
 returns a collection of fields with the historical count values for the Account Segment with 
