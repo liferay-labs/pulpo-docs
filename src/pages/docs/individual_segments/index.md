@@ -165,7 +165,10 @@ returns a collection of fields with the historical count values for the Individu
 identifier `AV_Afi6-Y3UMLZEdmkBE`.
 
 The latest value of the count is also stored in the fields of the Individual Segment and therefore it
-can be used to filter and sort the collection of Individual Segments.
+can be used to filter and sort the collection of Individual Segments.  However, it is 
+very important to know that *this value may be outdated* since this is just the latest
+historical value that is updated once a day. For the accurate number of members, the
+totalElements field from the collection should be retrieved.
  
 For example, this URL would obtain the
 the collection of Individual segments sorted by number of members.
