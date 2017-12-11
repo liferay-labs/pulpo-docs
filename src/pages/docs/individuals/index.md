@@ -187,3 +187,33 @@ As part of the links of each individual, the following links can be found using 
 * `individuals` - The collection of Individuals
 
 </article>
+
+
+<article id="5">
+
+## Creating Individuals
+
+Individuals are not created using the REST API. They are created using the 
+LCS message bus. There are several destinations in the LCS message bus 
+available, to create individuals:
+* `liferay_pulpo/individual_chunk_add_<environment_name>` - The queue to write
+messages to when creating individuals via CSV import. `<environment_name>` may
+be one of `dev`, `pre` or `prod`.
+
+The messages written to this queue, are expected to have the following format:
+
+```
+{
+	"projectId" : "<projectId>"
+	"dataSourceIdentifier" : "<dataSourceIdentifier>"
+	"emailAddress" : "<emailAddress>",
+	"individualSegmentIdentifiers" : "<individualSegmentIdentifiers>"
+	...
+}
+```
+
+The `emailAddress` value is used to determine the individual to which the
+message contributes information. If there is no individual yet for the value of
+the email address a new individual is created.
+
+</article>
