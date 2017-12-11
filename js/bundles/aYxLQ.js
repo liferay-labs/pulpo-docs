@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11660,12 +11660,17 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YXMoV", function() { return YXMoV; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "aYxLQ", function() { return aYxLQ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11681,11 +11686,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace YXMoV.
+ * @fileoverview Templates in namespace aYxLQ.
  * @public
  */
 
-goog.module('YXMoV.incrementaldom');
+goog.module('aYxLQ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11719,35 +11724,124 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param271 = function() {
+  var param355 = function() {
     ie_open('h6');
-      var dyn16 = opt_data.page.description;
-      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Names');
+        itext('The Individual Model');
       ie_close('h2');
       ie_open('p');
-        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
+        itext('Individuals are a complex entity that contain several contexts for each Person stored in our system.');
+      ie_close('p');
+      ie_open('p');
+        itext('Those contexts are:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('Existing fields with the same or similar name of your label');
+          itext('Identity & Demographics');
         ie_close('li');
         ie_open('li');
-          itext('Previous field mappings from your label to other fields');
+          itext('Sentiment Analysis');
         ie_close('li');
         ie_open('li');
-          itext('Fields with values similar to your new values');
+          itext('Event Attendance');
+        ie_close('li');
+        ie_open('li');
+          itext('Sales Interaction');
+        ie_close('li');
+        ie_open('li');
+          itext('Social Engagement');
+        ie_close('li');
+        ie_open('li');
+          itext('Transactions');
+        ie_close('li');
+        ie_open('li');
+          itext('Browsing Activity');
+        ie_close('li');
+        ie_open('li');
+          itext('Firmographic');
+        ie_close('li');
+        ie_open('li');
+          itext('Support Interaction');
+        ie_close('li');
+        ie_open('li');
+          itext('etc');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Only some of those contexts are available for now. Each context will contain certain ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' with information. These fields will correspond to ');
+        ie_open('a', null, null,
+            'href', 'http://schema.org/');
+          itext('schema.org');
+        ie_close('a');
+        itext(' Properties');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Invididual:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('dataSourceIdentifiers');
+          ie_close('em');
+          itext(' - a map with the different datasource identifiers and the datasource individual identifier (the primary key of this individual in the original datasource)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('demographics');
+          ie_close('em');
+          itext(' - a Map of identity & demographic ');
+          ie_open('a', null, null,
+              'href', '/docs/fields');
+            itext('Fields');
+          ie_close('a');
+          itext(' corresponding to properties of the Type ');
+          ie_open('a', null, null,
+              'href', 'http://schema.org/Person');
+            itext('Person');
+          ie_close('a');
+          itext(' from Schema.org');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('sentiment');
+          ie_close('em');
+          itext(' - a Map of sentiment analysis ');
+          ie_open('a', null, null,
+              'href', '/docs/fields');
+            itext('Fields');
+          ie_close('a');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Fields Names Service');
+        itext('Individuals Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11761,35 +11855,125 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('field-names');
+          itext('individuals');
         ie_close('code');
-        itext(' pointing to the endpoint for obtaining the field names.');
+        itext(' pointing to the collection of Individuals.');
       ie_close('p');
       ie_open('p');
-        itext('This endpoint accepts the ');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
         ie_open('code');
-          itext('GET');
+          itext('_embedded');
         ie_close('code');
-        itext(' method with the following parameters:');
+        itext(' section, a list of individuals under the key ');
+        ie_open('code');
+          itext('individuals');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individuals?page=0&size=20');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "individuals": [\n            {\n                "dateCreated": "2017-11-13T11:47:43Z",\n                "dateModified": "2017-11-13T11:47:44Z",\n                "demographics": {\n                    "address": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/address",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "address",\n                            "projectId": "my-project",\n                            "value": "125 Main Street, Candelaria"\n                        }\n                    ],\n                    "telephone": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/telephone",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": "home",\n                            "name": "telephone",\n                            "projectId": "my-project",\n                            "value": "+34699001234"\n                        }\n                    ],\n                    "email": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/email",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "email",\n                            "projectId": "my-project",\n                            "value": "cris@liferay.com"\n                        }\n                    ],\n                    "age": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/age",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "age",\n                            "projectId": "my-project",\n                            "value": "32"\n                        }\n                    ]\n                },\n                "identifier": "AV-1NOYHDh9K2u0PkWnL",\n                "sentiment": {},\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL"\n                    },\n                    "individuals": {\n                        "href": "http://localhost:8084/my-project/individuals{?filter}",\n                        "templated": true\n                    },\n                    "individual-segments": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL/individual-segments"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/individuals?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Individuals or Update of Individuals manually is not supported. Indivuals are automatically generated and updated from the Field Chunks sent by the different Connectors.');
+      ie_close('p');
+      ie_open('p');
+        itext('Deletion of existing Individuals is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of individuals, the link to each individual can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Filtering and Sorting Individuals Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('Individuals collection can be filtered as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('These are some examples of filtering:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('label - the label from your field (e.g. telephone, email addres... etc)');
+          itext('Individuals from Madrid: ');
+          ie_open('code');
+            itext('?filter=(demographics/city/value eq \'Madrid\')');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
-          itext('ownerType - the type of entity your are mapping (individual, account...)');
+          itext('Individuals under 30 years old: ');
+          ie_open('code');
+            itext('?filter=(demographics/age/value lt \'30\')');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
-          itext('values - array of sample values from your field');
+          itext('Individuals from Madrid sorted by age in descending order:');
+          ie_open('code');
+            itext('?filter=(demographics/city/value eq \'Madrid\')&sort=demographics/age/value,desc');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Individuals who work as Engineers from Malaga or Madrid under 40 years old:');
+          ie_open('code');
+            itext('?filter=(demographics/city/value eq \'Madrid\' or demographics/city/value eq \'Malaga\') and (demographics/age/value lt \'30\') and (demographics/jobTitle/value eq \'Engineer\')');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Individual Segments');
+      ie_close('h2');
       ie_open('p');
-        itext('The response will contain a list of existing field names ordered by relevance.');
+        itext('As part of the links of each individual, the following links can be found using these keys:');
       ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
-      ie_close('p');
-      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('individual-segments');
+          ie_close('code');
+          itext(' - The collection of Individual Segments this individual belongs to');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('individuals');
+          ie_close('code');
+          itext(' - The collection of Individuals');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11800,11 +11984,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param271}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param355}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'YXMoV.render';
+  $render.soyTemplateName = 'aYxLQ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11814,19 +11998,14 @@ return exports;
 
 });
 
-class YXMoV extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(YXMoV, templates);
+class aYxLQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(aYxLQ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -11866,7 +12045,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(YXMoV, templates);
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11894,7 +12077,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(99);
+var _indexSoy = __webpack_require__(104);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11906,23 +12089,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var YXMoV = function (_Component) {
-  _inherits(YXMoV, _Component);
+var aYxLQ = function (_Component) {
+  _inherits(aYxLQ, _Component);
 
-  function YXMoV() {
-    _classCallCheck(this, YXMoV);
+  function aYxLQ() {
+    _classCallCheck(this, aYxLQ);
 
-    return _possibleConstructorReturn(this, (YXMoV.__proto__ || Object.getPrototypeOf(YXMoV)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (aYxLQ.__proto__ || Object.getPrototypeOf(aYxLQ)).apply(this, arguments));
   }
 
-  return YXMoV;
+  return aYxLQ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(YXMoV, _indexSoy2.default);
+_metalSoy2.default.register(aYxLQ, _indexSoy2.default);
 
-exports.default = YXMoV;
+exports.default = aYxLQ;
 
 /***/ })
-],[144]);
+],[148]);
