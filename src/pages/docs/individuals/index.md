@@ -198,7 +198,7 @@ the individuals should be created differently:
 
 ### Creating Individuals from Liferay DataSource
 
-To send Users from a Liferay Server to Pulpo, you need to have a [LCS configured environment](https://web.liferay.com/c/portal/saml/sso) and also you should install the following OSGi modules to your Liferay Server:
+To send Users from a Liferay Server to Pulpo, you need to have a [LCS configured environment](https://customer.liferay.com/documentation/7.0/deploy/-/official_documentation/deployment/using-lcs) and also you should install the following OSGi modules to your Liferay Server:
 
 - `com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.api`
 - `com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.impl`
