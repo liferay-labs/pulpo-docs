@@ -206,6 +206,44 @@ To send Users from a Liferay Server to Pulpo, you need to have a [LCS configured
 If the installation is OK, every time a User is stored/changed in the DB, all the information 
 related with this User will be sent to the Pulpo engine.
 
+#### How to add extra information to the User
+
+To Serialize custom fields of the User, you just need to register a CustomFieldSerializer OSGI service. Where:
+* `getCustomField`: in this method you should return the object that contains the extra information of the user.
+* `getCustomFieldClass`: in this method you should return the class of the object returned by `getCustomField`. 
+* `getCustomFieldName`: name that will be used to serialize the object returned by `getCustomField`.
+* `writeAsString`: serialization of the object return by `getCustomField` as a valid JSON Object.
+
+This is an example of a implementation of CustomFieldSerializer.
+
+```java
+@Component(immediate = true, service = CustomFieldSerializer.class)
+public class CustomFieldExampleSerializer
+    implements CustomFieldSerializer<CustomFieldExample> {
+
+    @Override
+    public CustomFieldExample getCustomField(User user) {
+        ...
+    }
+
+    @Override
+    public Class getCustomFieldClass() {
+        ...
+    }
+
+    @Override
+    public String getCustomFieldName(){
+        ...
+    }
+
+    @Override
+    public String writeAsString(T object){
+        ...
+    }
+
+	}
+```
+
 ### Creating Individuals from a CSV DataSource
 * `csv_pulpo/individual_chunk_add_<environment_name>` - The queue to write
 messages to when creating individuals via CSV import. `<environment_name>` may
