@@ -193,27 +193,80 @@ As part of the links of each individual, the following links can be found using 
 
 ## Creating Individuals
 
-Individuals are not created using the REST API. They are created using the 
-LCS message bus. There are several destinations in the LCS message bus 
-available to create individuals:
-* `liferay_pulpo/individual_chunk_add_<environment_name>` - The queue to write
+Individuals are not created using the REST API. Dependending on the data source, 
+the individuals should be created differently:
+
+### Creating Individuals from Liferay DataSource
+
+To send Users from a Liferay Server to Pulpo, you need to have a [LCS configured environment](https://customer.liferay.com/documentation/7.0/deploy/-/official_documentation/deployment/using-lcs) and also you should install the following OSGi modules to your Liferay Server:
+
+- `com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.api`
+- `com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.impl`
+
+If the installation is OK, every time a User is stored/changed in the DB, all the information 
+related with this User will be sent to the Pulpo engine.
+
+#### How to add extra information to the User
+
+To Serialize custom fields of the User, you just need to register a CustomFieldSerializer OSGI service. Where:
+* `getCustomField`: in this method you should return the object that contains the extra information of the user.
+* `getCustomFieldClass`: in this method you should return the class of the object returned by `getCustomField`. 
+* `getCustomFieldName`: name that will be used to serialize the object returned by `getCustomField`.
+* `writeAsString`: serialization of the object return by `getCustomField` as a valid JSON Object.
+
+This is an example of a implementation of CustomFieldSerializer.
+
+```java
+@Component(immediate = true, service = CustomFieldSerializer.class)
+public class CustomFieldExampleSerializer
+    implements CustomFieldSerializer<CustomFieldExample> {
+
+    @Override
+    public CustomFieldExample getCustomField(User user) {
+        ...
+    }
+
+    @Override
+    public Class getCustomFieldClass() {
+        ...
+    }
+
+    @Override
+    public String getCustomFieldName(){
+        ...
+    }
+
+    @Override
+    public String writeAsString(T object){
+        ...
+    }
+
+	}
+```
+
+### Creating Individuals from a CSV DataSource
+* `csv_pulpo/individual_chunk_add_<environment_name>` - The queue to write
 messages to when creating individuals via CSV import. `<environment_name>` may
 be one of `dev`, `pre` or `prod`.
 
 The messages written to this queue, are expected to have the following format:
 
-```
+```json
 {
 	"projectId" : "<projectId>"
 	"dataSourceIdentifier" : "<dataSourceIdentifier>"
-	"emailAddress" : "<emailAddress>",
 	"individualSegmentIdentifiers" : "<individualSegmentIdentifiers>"
-	...
+	"fields" : {
+		"name" : "value"
+		...
+	}
 }
 ```
 
-The `emailAddress` value is used to determine the individual to which the
-message contributes information. If there is no individual yet for the value of
-the email address a new individual is created.
+Where:
+- `projectId` is your LCS projectId.
+- `dataSourceIdentifier` is your DataSource identifier.
+- `individualSegmentIdentifiers` is a optional field and should be a JSON array of one or several individualSegmentIdentifiers.
+- `fields` is a optional field and should be a JSON object where each pair name/value should be mapped as columnName/columnValue.
 
 </article>
