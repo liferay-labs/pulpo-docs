@@ -178,6 +178,63 @@ These are some examples of filtering:
 
 <article id="4">
 
+## Transformations on Individuals Collection
+
+Transformations can be applied on Individuals collection as explained in [transformations](/docs/general#transformations).
+
+These are some examples of transformations:
+* Individuals count by address: `?apply=groupby((demographics/address/value))`
+
+This is an example of a response to this url: `http://localhost:8084/my-project/individuals?page=0&size=20`
+
+```json
+{
+  "_embedded": {
+    "individual-transformations": [
+      {
+        "totalElements": 1,
+        "terms": {
+          "demographics/address/value": "candelaria"
+        },
+        "_links": {
+          "individuals": {
+            "href": "http://localhost:8084/DEMO/individuals?filter=(demographics/address/value%20eq%20%27candelaria%27){&page,size,sort*}"
+          }
+        }
+      },
+      {
+        "totalElements": 2,
+        "terms": {
+          "demographics/address/value": "malaga"
+        },
+        "_links": {
+          "individuals": {
+            "href": "http://localhost:8084/DEMO/individuals?filter=(demographics/address/value%20eq%20%27malaga%27){&page,size,sort*}"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8084/DEMO/individuals?apply=groupby((demographics/address/value))&page=0&size=20"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 2,
+    "totalPages": 1,
+    "number": 0
+  }
+}
+
+```
+
+</article>
+
+
+<article id="5">
+
 ## Individual Segments
 
 As part of the links of each individual, the following links can be found using these keys:
@@ -187,7 +244,7 @@ As part of the links of each individual, the following links can be found using 
 </article>
 
 
-<article id="5">
+<article id="6">
 
 ## Creating Individuals
 
