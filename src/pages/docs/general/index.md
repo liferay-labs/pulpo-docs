@@ -166,7 +166,7 @@ used separated parameters in this way:
 
 ## Filtering
 
-Not all collectons allow filtering. The ones that support it will contain the 
+Not all collections allow filtering. The ones that support it will contain the 
 optional parameter `{lb}?filter{rb}` in their template.
 
 In order to filter a collection based on the value of one or more fields, you
@@ -212,6 +212,27 @@ to filter the DataSource by an author name and a name.
 ```
 ?filter=(author/name eq 'Julio') and (name ne 'datasource-name')
 ```
+</article>
+
+<article id="transformations">
+
+## Transformations
+
+Not all collections support transformations. The ones that support them will 
+contain the optional parameter `{lb}?apply{rb}` in their template.
+
+In order to perform a transformation on a collection, you can use the optional 
+parameter `apply` following a subset of the oData standard.
+
+Currently, the only supported transformation is `groupby` and within it, only 
+`Simple grouping` on a *single field* is allowed, with no further 
+transformations applied is supported.
+
+#### Supported Transformations
+
+| Tranformation | Description   | Example                               |
+|---------------|---------------|---------------------------------------|
+| groupby       | Group by      | groupby((demographics/address/value)) |
 
 </article>
 

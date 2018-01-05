@@ -124,7 +124,7 @@ That same url can be also used for delete (`DELETE` method) and update (`PUT` me
 
 As part of the links of each individual, the following links can be found using these keys:
 * `individual-segments` - The collection of Individual Segments
-* `individuals` - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in [filtering](/docs/general#filtering).
+* `individuals` - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in [filtering](/docs/general#filtering), and transformations can be applied on it as explained in [transformations](/docs/general#transformations).
 * `memberships` - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in #4.
 
 </article>
