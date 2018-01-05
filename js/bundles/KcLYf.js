@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11659,12 +11659,17 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Glstt", function() { return Glstt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KcLYf", function() { return KcLYf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,11 +11685,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace Glstt.
+ * @fileoverview Templates in namespace KcLYf.
  * @public
  */
 
-goog.module('Glstt.incrementaldom');
+goog.module('KcLYf.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,106 +11723,127 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param230 = function() {
+  var param329 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn19 = opt_data.page.description;
+      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Mapping Model');
+        itext('The Individual Segment Model');
       ie_close('h2');
       ie_open('p');
-        itext('Field Mappings allow us to map the fields from the different ');
-        ie_open('a', null, null,
-            'href', '/docs/datasources');
-          itext('datasources');
-        ie_close('a');
-        itext(' to the');
-        ie_open('a', null, null,
-            'href', '/docs/fields');
-          itext('fields');
-        ie_close('a');
-        itext(' in our entities (');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
-        ie_close('a');
-        itext(', Accounts... etc)');
+        itext('Individual Segments are aggregations of Individuals.');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported in a field mapping:');
+        itext('These aggregations can be:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('context');
-            ie_close('em');
-            itext(' - the context of the field (demographics, sentiment... etc)');
-          ie_close('p');
+          itext('Dynamic: A Variable set of individuals matching a certain condition (filter) belong to the Individual Segment.');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dataSourceFieldNames');
-            ie_close('em');
-            itext(' - a map with the name of the original field for each Data Source.');
-          ie_close('p');
-          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
+          itext('Static: A fixed set of individuals have been manually associated to the Individual Segment.');
         ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Individual Segment:');
+      ie_close('p');
+      ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dateCreated');
-            ie_close('em');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dateModified');
-            ie_close('em');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('fieldName');
-            ie_close('em');
-            itext(' - the name of the field on our model');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('fieldType');
-            ie_close('em');
-            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
+          ie_open('em');
+            itext('author');
+          ie_close('em');
+          ie_open('ul');
+            ie_open('li');
               itext('identifier');
-            ie_close('em');
-          ie_close('p');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('strategy');
-            ie_close('em');
-            itext(' - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or give preference to the value from a specific data source. See more details below.');
-          ie_close('p');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('fields');
+          ie_close('em');
+          itext(' - a Map of ');
+          ie_open('a', null, null,
+              'href', '/docs/fields');
+            itext('Fields');
+          ie_close('a');
+          itext(' corresponding to properties of the Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('filter');
+          ie_close('em');
+          itext(' - an oData filter that defines, for Individual Segments with ');
+          ie_open('code');
+            itext('segmentType=DYNAMIC');
+          ie_close('code');
+          itext(', which Individuals belong to this Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('filterMetadata');
+          ie_close('em');
+          itext(' - a placeholder for extra information about the filter');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+          itext(' - The name of the Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('segmentType');
+          ie_close('em');
+          itext(' - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are ');
+          ie_open('code');
+            itext('STATIC');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('DYNAMIC');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('status');
+          ie_close('em');
+          itext(' - defines if the Individual Segment accepts memberships or not. The accepted values are ');
+          ie_open('code');
+            itext('ACTIVE');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('INACTIVE');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Field Mappings Collection');
+        itext('Individual Segment Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11831,9 +11857,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('field-mappings');
+          itext('individual-segments');
         ie_close('code');
-        itext(' pointing to the collection of Field Mappings.');
+        itext(' pointing to the collection of Individual Segments.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11841,15 +11867,10 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             'href', '/docs/general#pagination');
           itext('pagination');
         ie_close('a');
-        itext(', ');
+        itext(' and ');
         ie_open('a', null, null,
             'href', '/docs/general#sorting');
           itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11858,24 +11879,27 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of fields under the key ');
+        itext(' section, a list of individual segments under the key ');
         ie_open('code');
-          itext('field-mappings');
+          itext('individual-segments');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments?page=0&size=20');
+        ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "individual-segments":[\n          {\n             "dateCreated":"2017-11-15T16:23:35Z",\n             "dateModified":"2017-11-15T16:23:35Z",\n             "filter":null,\n             "filterMetadata":null,\n             "identifier":"AV_Afi6-Y3UMLZEdmkBE",\n             "name":"Friends",\n             "segmentType":"STATIC",\n             "status":"ACTIVE",\n             "author": {\n                 "name":"John Doe",\n                 "identifier":"12345"\n              },\n             "fields": {                   \n             }, \n             "_links":{\n                "self":{\n                   "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE"\n                },\n                "individual-segments":{\n                   "href":"http://localhost:8084/my-project/individual-segments{?filter}",\n                   "templated":true\n                },\n                "individuals":{\n                   "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE/individuals{?filter}",\n                   "templated":true\n                },\n                "memberships": {\n                    "href": "http://localhost:8084/my-project/individual-segments/AV_81ueo7IU2hIVahEUv/memberships"\n                }\n             }\n          }\n        ]\n    },\n    "_links":{\n       "self":{\n           "href":"http://localhost:8084/my-project/individual-segments?page=0&size=20"\n       }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Field Mappings is supported making a ');
+        itext('Creation of new Individual Segments is supported making a ');
         ie_open('code');
           itext('POST');
         ie_close('code');
         itext(' to the Collection URL. This is an example of the body passed to this POST request:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "name" : "My First IndividualSegment",\n    "filter" : "(demographics/age/value eq \'30\')",\n    "segmentType" : "DYNAMIC"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
         itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
         ie_open('code');
@@ -11891,68 +11915,138 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' method).');
       ie_close('p');
-      ie_open('p');
-        itext('Adding new data Source Field Names without having to update the full field mapping is also supported using the ');
-        ie_open('code');
-          itext('PATCH');
-        ie_close('code');
-        itext(' method to an entity link. The body must contain a Data Source Field Name object, wich contains the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('dataSourceIdentifier - the identifier of an existing datasource.');
-        ie_close('li');
-        ie_open('li');
-          itext('fieldName - the name of this field in the existing data source');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of the body to patch an existing Field Mapping in order to add another data source field name:');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",\n    "fieldName" : "years-old"   \n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', '3');
       ie_open('h2');
-        itext('Field Mappings Strategies');
+        itext('Individual Segment Links');
       ie_close('h2');
       ie_open('p');
-        itext('Field Mapping Strategies have the following fields:');
+        itext('As part of the links of each individual, the following links can be found using these keys:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('key');
-          ie_close('em');
-          itext(' - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITY_DATASOURCE"');
+          ie_open('code');
+            itext('individual-segments');
+          ie_close('code');
+          itext(' - The collection of Individual Segments');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('configuration');
-          ie_close('em');
-          itext(' - A map with the specific configuration for the strategy. e.g. Most Recent doesn\'t need any configuration. However, Priority DataSource requires the value dataSourceIdentifier.');
+          ie_open('code');
+            itext('individuals');
+          ie_close('code');
+          itext(' - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in ');
+          ie_open('a', null, null,
+              'href', '/docs/general#filtering');
+            itext('filtering');
+          ie_close('a');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('memberships');
+          ie_close('code');
+          itext(' - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in #4.');
         ie_close('li');
       ie_close('ul');
-      ie_open('h4');
-        itext('Most Recent Strategy');
-      ie_close('h4');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Individual Segment Membership Collection');
+      ie_close('h2');
       ie_open('p');
-        itext('This strategy will add to the user fields the most recent field coming from any data source. For example, if we have two data sources set up and a field mapping configured to obtain the email address from both. If we only receive the email from one of them, that is the field that will be added to the individual profile. However, if we receive both, then the one which we received the latest will be the one added to the individual profile.');
+        itext('Creation of new Individual-Individual Segment memberships is supported only for Individual Segments with ');
+        ie_open('code');
+          itext('status=ACTIVE');
+        ie_close('code');
+        itext('and ');
+        ie_open('code');
+          itext('segmentType=STATIC');
+        ie_close('code');
+        itext(' by making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the ');
+        ie_open('code');
+          itext('memberships');
+        ie_close('code');
+        itext(' Collection URL of each individual segment . This is an example of the body passed to this POST request to the URL');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "individualIdentifier" : "my-individual-identifier"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('A ');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' request to the URL ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/my-individual-identifier');
+        ie_close('code');
+        itext(' removes an existing Individual-Individual Segment membership.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '5');
+      ie_open('h2');
+        itext('Individual Segment Membership Count');
+      ie_close('h2');
+      ie_open('p');
+        itext('The current value of the count of Individuals that are members of an Individual Segment can be obtained from the ');
+        ie_open('code');
+          itext('totalElements');
+        ie_close('code');
+        itext(' field of the ');
+        ie_open('code');
+          itext('individuals');
+        ie_close('code');
+        itext(' collection.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a valid strategy passed in JSON when creating or updating a field mapping to use the most recent field:');
+        itext('The historical values of the count of Individuals that are members of an Individual Segment are stored as ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' with the name ');
+        ie_open('code');
+          itext('individualCount');
+        ie_close('code');
+        itext(' and associated to the Individual Segment through the ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext(' properties. For example, using the oData filter');
+        ie_open('code');
+          itext('(name eq \'individualCount\') and (ownerype eq \'individual-segment\') and (ownerIdentifier eq \'AV_Afi6-Y3UMLZEdmkBE\')');
+        ie_close('code');
+        itext('returns a collection of fields with the historical count values for the Individual Segment with identifier ');
+        ie_open('code');
+          itext('AV_Afi6-Y3UMLZEdmkBE');
+        ie_close('code');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: '{\n    "key": "MOST_RECENT"\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('h4');
-        itext('Priority Data Source Strategy');
-      ie_close('h4');
       ie_open('p');
-        itext('This strategy will give preference to the information coming from a particular data source. In order to be configured, the configuration must include the dataSourceIdentifier. For example, if we have three data sources set up (A, B and C), and a field mapping configured to obtain the telephone from all of them. When we set A as the priority data source, if we receive a telephone field from A, then that will be the field added to the inidividual profile. In case we don\'t receive any telephone from A, but we do receive it from B and C, then the most recent strategy applies.');
+        itext('The latest value of the count is also stored in the fields of the Individual Segment and therefore it can be used to filter and sort the collection of Individual Segments.  However, it is very important to know that ');
+        ie_open('em');
+          itext('this value may be outdated');
+        ie_close('em');
+        itext(' since this is just the latest historical value that is updated once a day. For the accurate number of members, the totalElements field from the collection should be retrieved.');
       ie_close('p');
       ie_open('p');
-        itext('And this is an example setting the data source with identifier ABCEDFG as the priority data source.');
+        itext('For example, this URL would obtain the the collection of Individual segments sorted by number of members.');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments?sort=fields/individualCount/value');
+        ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "key": "PRIORITY_DATASOURCE",\n    "configuration": {\n        "dataSourceIdentifier": "ABCDEFG"\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11963,11 +12057,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param230}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param329}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'Glstt.render';
+  $render.soyTemplateName = 'KcLYf.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11977,19 +12071,14 @@ return exports;
 
 });
 
-class Glstt extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Glstt, templates);
+class KcLYf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(KcLYf, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -12029,7 +12118,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Glstt, templates);
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12057,7 +12150,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(103);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12069,23 +12162,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Glstt = function (_Component) {
-  _inherits(Glstt, _Component);
+var KcLYf = function (_Component) {
+  _inherits(KcLYf, _Component);
 
-  function Glstt() {
-    _classCallCheck(this, Glstt);
+  function KcLYf() {
+    _classCallCheck(this, KcLYf);
 
-    return _possibleConstructorReturn(this, (Glstt.__proto__ || Object.getPrototypeOf(Glstt)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (KcLYf.__proto__ || Object.getPrototypeOf(KcLYf)).apply(this, arguments));
   }
 
-  return Glstt;
+  return KcLYf;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(Glstt, _indexSoy2.default);
+_metalSoy2.default.register(KcLYf, _indexSoy2.default);
 
-exports.default = Glstt;
+exports.default = KcLYf;
 
 /***/ })
-],[143]);
+],[147]);

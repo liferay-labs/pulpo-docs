@@ -11892,7 +11892,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_open('ul');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://contacts.liferay.com/');
+                    'href', 'https://contacts-prod.liferay.com/');
                   itext('Engine');
                 ie_close('a');
               ie_close('li');
