@@ -31,9 +31,7 @@ Only some of those contexts are available for now. Each context will contain
 certain [Fields](/docs/fields) with information. These fields will correspond to [schema.org](http://schema.org/) Properties
 
 The following fields are currently supported as part of an Invididual:
-* *dataSourceIdentifiers* - a map with the different datasource identifiers and the
-   datasource individual identifier (the primary key of this individual in
-   the original datasource) 
+* *dataSourceIndividualPKs* - a map with the different datasource identifiers as keys and the primary keys of this individual in each datasource. Potentially, an individual could be the aggregation of several users in one datasource. 
 * *dateCreated*
 * *dateModified*
 * *identifier*
