@@ -11670,7 +11670,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "soqha", function() { return soqha; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uxGPh", function() { return uxGPh; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11686,11 +11686,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace soqha.
+ * @fileoverview Templates in namespace uxGPh.
  * @public
  */
 
-goog.module('soqha.incrementaldom');
+goog.module('uxGPh.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11791,9 +11791,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('dataSourceIdentifiers');
+            itext('dataSourceIndividualPKs');
           ie_close('em');
-          itext(' - a map with the different datasource identifiers and the datasource individual identifier (the primary key of this individual in the original datasource)');
+          itext(' - a map with the different datasource identifiers as keys and the primary keys of this individual in each datasource. Potentially, an individual could be the aggregation of several users in one datasource.');
         ie_close('li');
         ie_open('li');
           ie_open('em');
@@ -11981,12 +11981,89 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         itext('Creating Individuals');
       ie_close('h2');
       ie_open('p');
-        itext('Individuals are not created using the REST API. They are created using the LCS message bus. There are several destinations in the LCS message bus available to create individuals:');
+        itext('Individuals are not created using the REST API. Dependending on the data source, the individuals should be created differently:');
+      ie_close('p');
+      ie_open('h3');
+        itext('Creating Individuals from Liferay DataSource');
+      ie_close('h3');
+      ie_open('p');
+        itext('To send Users from a Liferay Server to Pulpo, you need to have a ');
+        ie_open('a', null, null,
+            'href', 'https://customer.liferay.com/documentation/7.0/deploy/-/official_documentation/deployment/using-lcs');
+          itext('LCS configured environment');
+        ie_close('a');
+        itext(' and also you should install the following OSGi modules to your Liferay Server:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('code');
-            itext('liferay_pulpo/individual_chunk_add_<environment_name>');
+            itext('com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.api');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.impl');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('If the installation is OK, every time a User is stored/changed in the DB, all the information related with this User will be sent to the Pulpo engine.');
+      ie_close('p');
+      ie_open('h4');
+        itext('How to add extra information to the User');
+      ie_close('h4');
+      ie_open('p');
+        itext('To Serialize custom fields of the User, you just need to register a CustomFieldSerializer OSGI service. Where:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext(': in this method you should return the object that contains the extra information of the user.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('getCustomFieldClass');
+          ie_close('code');
+          itext(': in this method you should return the class of the object returned by ');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('getCustomFieldName');
+          ie_close('code');
+          itext(': name that will be used to serialize the object returned by ');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('writeAsString');
+          ie_close('code');
+          itext(': serialization of the object return by ');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext(' as a valid JSON Object.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a implementation of CustomFieldSerializer.');
+      ie_close('p');
+      $templateAlias2({code: '@Component(immediate = true, service = CustomFieldSerializer.class)\npublic class CustomFieldExampleSerializer\n    implements CustomFieldSerializer<CustomFieldExample> {\n\n    @Override\n    public CustomFieldExample getCustomField(User user) {\n        ...\n    }\n\n    @Override\n    public Class getCustomFieldClass() {\n        ...\n    }\n\n    @Override\n    public String getCustomFieldName(){\n        ...\n    }\n\n    @Override\n    public String writeAsString(T object){\n        ...\n    }\n\n    }', mode: 'java'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Creating Individuals from a CSV DataSource');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('csv_pulpo/individual_chunk_add_<environment_name>');
           ie_close('code');
           itext(' - The queue to write messages to when creating individuals via CSV import. ');
           ie_open('code');
@@ -12010,14 +12087,36 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_open('p');
         itext('The messages written to this queue, are expected to have the following format:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "projectId" : "<projectId>"\n    "dataSourceIdentifier" : "<dataSourceIdentifier>"\n    "emailAddress" : "<emailAddress>",\n    "individualSegmentIdentifiers" : "<individualSegmentIdentifiers>"\n    ...\n}', mode: 'text'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "projectId" : "<projectId>"\n    "dataSourceIdentifier" : "<dataSourceIdentifier>"\n    "individualSegmentIdentifiers" : "<individualSegmentIdentifiers>"\n    "fields" : {\n        "name" : "value"\n        ...\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('The ');
-        ie_open('code');
-          itext('emailAddress');
-        ie_close('code');
-        itext(' value is used to determine the individual to which the message contributes information. If there is no individual yet for the value of the email address a new individual is created.');
+        itext('Where:');
       ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('projectId');
+          ie_close('code');
+          itext(' is your LCS projectId.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('dataSourceIdentifier');
+          ie_close('code');
+          itext(' is your DataSource identifier.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('individualSegmentIdentifiers');
+          ie_close('code');
+          itext(' is a optional field and should be a JSON array of one or several individualSegmentIdentifiers.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('fields');
+          ie_close('code');
+          itext(' is a optional field and should be a JSON object where each pair name/value should be mapped as columnName/columnValue.');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -12032,7 +12131,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'soqha.render';
+  $render.soyTemplateName = 'uxGPh.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12042,8 +12141,8 @@ return exports;
 
 });
 
-class soqha extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(soqha, templates);
+class uxGPh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(uxGPh, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12133,23 +12232,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var soqha = function (_Component) {
-  _inherits(soqha, _Component);
+var uxGPh = function (_Component) {
+  _inherits(uxGPh, _Component);
 
-  function soqha() {
-    _classCallCheck(this, soqha);
+  function uxGPh() {
+    _classCallCheck(this, uxGPh);
 
-    return _possibleConstructorReturn(this, (soqha.__proto__ || Object.getPrototypeOf(soqha)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (uxGPh.__proto__ || Object.getPrototypeOf(uxGPh)).apply(this, arguments));
   }
 
-  return soqha;
+  return uxGPh;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(soqha, _indexSoy2.default);
+_metalSoy2.default.register(uxGPh, _indexSoy2.default);
 
-exports.default = soqha;
+exports.default = uxGPh;
 
 /***/ })
 ],[148]);

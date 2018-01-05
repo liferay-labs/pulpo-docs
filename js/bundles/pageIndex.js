@@ -11820,7 +11820,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_open('ul');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'http://contacts-dev.liferay.com');
+                    'href', 'https://contacts-dev.liferay.com');
                   itext('Engine');
                 ie_close('a');
               ie_close('li');
@@ -11856,7 +11856,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_open('ul');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'http://contacts-pre.liferay.com');
+                    'href', 'https://contacts-pre.liferay.com');
                   itext('Engine');
                 ie_close('a');
               ie_close('li');
@@ -11892,7 +11892,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_open('ul');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'http://contacts.liferay.com/');
+                    'href', 'https://contacts.liferay.com/');
                   itext('Engine');
                 ie_close('a');
               ie_close('li');
