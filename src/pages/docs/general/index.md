@@ -14,7 +14,7 @@ weight: 1
 
 Any request to this API will require a valid oAuth2 token. Therefore, in order to make any request, you will first need to obtain the token.
 
-Client tokens can be obtained at the endpoint: `oauth/token?grant_type=client_credentials`. This endpoint has Basic Authentication, therefore you will need to pass the basic authentication header with some valid credentials (they are different in each environment.) If you don't have these credentials and you need them, please ask someone from the Pulpo Team.
+Client tokens can be obtained making a `POST` request at the endpoint: `oauth/token?grant_type=client_credentials`. This endpoint has Basic Authentication, therefore you will need to pass the basic authentication header with some valid credentials (they are different in each environment.) If you don't have these credentials and you need them, please ask someone from the Pulpo Team.
 
 This endpoint will return a valid token in a format similar to this:
 
