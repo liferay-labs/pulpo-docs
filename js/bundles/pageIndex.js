@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11724,12 +11724,12 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param40 = function() {
+  var param87 = function() {
     $header(opt_data, null, opt_ijData);
     $environments(null, null, opt_ijData);
     $footer(null, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param40}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param87}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11751,13 +11751,13 @@ function $header(opt_data, opt_ignored, opt_ijData) {
         'class', 'container');
       ie_open('h1', null, null,
           'class', 'header-title');
-        var dyn3 = opt_data.site.title;
-        if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
+        var dyn5 = opt_data.site.title;
+        if (typeof dyn5 == 'function') dyn5(); else if (dyn5 != null) itext(dyn5);
       ie_close('h1');
       ie_open('h2', null, null,
           'class', 'header-subtitle');
-        var dyn4 = opt_data.site.index.description;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.index.description;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('h2');
       ie_open('h3');
         itext('We will help you gather Contacts, Assets and Analytics from all your sites, installations or apps. Contacts is already available.');
@@ -11911,54 +11911,57 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_close('ul');
           ie_close('p');
         ie_close('section');
+        ie_open('p', null, null,
+            'class', 'col-md-12');
+          itext('* The environments are secured using oAuth, you will need a valid token to make requests. If you need to use this API, please ask someone from the Pulpo Team for the credentials to obtain a valid token.');
+        ie_close('div');
       ie_close('div');
     ie_close('div');
-  ie_close('div');
-}
-exports.environments = $environments;
-if (goog.DEBUG) {
-  $environments.soyTemplateName = 'pageIndex.environments';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $footer(opt_data, opt_ignored, opt_ijData) {
-  ie_open('footer', null, null,
-      'class', 'footer');
-    ie_open('div', null, null,
-        'class', 'container');
+  }
+  exports.environments = $environments;
+  if (goog.DEBUG) {
+    $environments.soyTemplateName = 'pageIndex.environments';
+  }
+  
+  
+  /**
+   * @param {Object<string, *>=} opt_data
+   * @param {(null|undefined)=} opt_ignored
+   * @param {Object<string, *>=} opt_ijData
+   * @return {void}
+   * @suppress {checkTypes}
+   */
+  function $footer(opt_data, opt_ignored, opt_ijData) {
+    ie_open('footer', null, null,
+        'class', 'footer');
       ie_open('div', null, null,
-          'class', 'row');
-        ie_open('p', null, null,
-            'class', 'footer-description col-md-6 col-md-offset-2');
-          itext('Copyright \u00A9 2017 ');
-          ie_open('a', null, null,
-              'href', 'https://liferay.com');
-            itext('Liferay, Inc');
-          ie_close('a');
-        ie_close('p');
-        ie_open('p', null, null,
-            'class', 'footer-description col-md-6');
-          itext('Powered by ');
-          ie_open('a', null, null,
-              'href', 'http://wedeploy.com');
-            itext('WeDeploy\u2122');
-          ie_close('a');
-        ie_close('p');
+          'class', 'container');
+        ie_open('div', null, null,
+            'class', 'row');
+          ie_open('p', null, null,
+              'class', 'footer-description col-md-6 col-md-offset-2');
+            itext('Copyright \u00A9 2017 ');
+            ie_open('a', null, null,
+                'href', 'https://liferay.com');
+              itext('Liferay, Inc');
+            ie_close('a');
+          ie_close('p');
+          ie_open('p', null, null,
+              'class', 'footer-description col-md-6');
+            itext('Powered by ');
+            ie_open('a', null, null,
+                'href', 'http://wedeploy.com');
+              itext('WeDeploy\u2122');
+            ie_close('a');
+          ie_close('p');
+        ie_close('div');
       ie_close('div');
-    ie_close('div');
-  ie_close('footer');
-}
-exports.footer = $footer;
-if (goog.DEBUG) {
-  $footer.soyTemplateName = 'pageIndex.footer';
-}
+    ie_close('footer');
+  }
+  exports.footer = $footer;
+  if (goog.DEBUG) {
+    $footer.soyTemplateName = 'pageIndex.footer';
+  }
 
 exports.render.params = ["site"];
 exports.render.types = {"site":"any"};
