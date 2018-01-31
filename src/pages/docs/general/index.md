@@ -12,7 +12,7 @@ weight: 1
 
 ## Authentication
 
-Any request to this API will have to be signed, otherwise you will receive a 401 error response. Learn more about how to [authenticate your requests](/docs/general/authentication) . 
+Any request to this API will have to be signed, otherwise you will receive a 401 error response. Learn more about how to [authenticate your requests](/docs/general/authentication.html) . 
 
 </article>
 
