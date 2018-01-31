@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([1],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11660,21 +11660,12 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageIndex", function() { return pageIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TBmsh", function() { return TBmsh; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11690,11 +11681,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageIndex.
+ * @fileoverview Templates in namespace TBmsh.
  * @public
  */
 
-goog.module('pageIndex.incrementaldom');
+goog.module('TBmsh.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11715,7 +11706,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
 /**
@@ -11726,267 +11719,118 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param40 = function() {
-    $header(opt_data, null, opt_ijData);
-    $environments(null, null, opt_ijData);
-    $footer(null, null, opt_ijData);
+  var param271 = function() {
+    ie_open('h6');
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+    ie_close('h6');
+    ie_open('article', null, null,
+        'id', '1');
+      ie_open('h2');
+        itext('The Field Names');
+      ie_close('h2');
+      ie_open('p');
+        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Existing fields with the same or similar name of your label');
+        ie_close('li');
+        ie_open('li');
+          itext('Previous field mappings from your label to other fields');
+        ie_close('li');
+        ie_open('li');
+          itext('Fields with values similar to your new values');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Fields Names Service');
+      ie_close('h2');
+      ie_open('p');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('field-names');
+        ie_close('code');
+        itext(' pointing to the endpoint for obtaining the field names.');
+      ie_close('p');
+      ie_open('p');
+        itext('This endpoint accepts the ');
+        ie_open('code');
+          itext('GET');
+        ie_close('code');
+        itext(' method with the following parameters:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('label - the label from your field (e.g. telephone, email addres... etc)');
+        ie_close('li');
+        ie_open('li');
+          itext('ownerType - the type of entity your are mapping (individual, account...)');
+        ie_close('li');
+        ie_open('li');
+          itext('values - array of sample values from your field');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The response will contain a list of existing field names ordered by relevance.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
+      ie_close('p');
+      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param40}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param271}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageIndex.render';
+  $render.soyTemplateName = 'TBmsh.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $header(opt_data, opt_ignored, opt_ijData) {
-  ie_open('header', null, null,
-      'class', 'header header-hero');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('h1', null, null,
-          'class', 'header-title');
-        var dyn3 = opt_data.site.title;
-        if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
-      ie_close('h1');
-      ie_open('h2', null, null,
-          'class', 'header-subtitle');
-        var dyn4 = opt_data.site.index.description;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
-      ie_close('h2');
-      ie_open('h3');
-        itext('We will help you gather Contacts, Assets and Analytics from all your sites, installations or apps. Contacts is already available.');
-      ie_close('h3');
-      ie_open('div', null, null,
-          'class', 'header-cta');
-        ie_open('a', null, null,
-            'href', '/docs',
-            'class', 'btn btn-primary');
-          itext('GET STARTED');
-        ie_close('a');
-        ie_open('a', null, null,
-            'href', '#environments',
-            'class', 'btn btn-default');
-          itext('ENVIRONMENTS');
-        ie_close('a');
-      ie_close('div');
-    ie_close('div');
-  ie_close('header');
-}
-exports.header = $header;
-if (goog.DEBUG) {
-  $header.soyTemplateName = 'pageIndex.header';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $environments(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'features',
-      'id', 'environments');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('h3', null, null,
-            'class', 'features-title feature-title');
-          itext('These environments are already available for the Contacts Engine:');
-        ie_close('h3');
-        ie_open('section', null, null,
-            'class', 'feature col-md-4 col-md-offset-2');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-minus');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('DEV');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Devevlopment Environment. May be unstable some times.');
-            ie_open('ul');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://contacts-dev.liferay.com');
-                  itext('Engine');
-                ie_close('a');
-              ie_close('li');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/8e963e40-93ee-11e7-88a1-35460e78d288?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1285\'%2Cdisplay%3A\'1%20minute\'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-1h%2Cmode%3Arelative%2Cto%3Anow))');
-                  itext('Status Dashboard');
-                ie_close('a');
-              ie_close('li');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/f35fe1a0-a81b-11e7-9d7a-bd1cf37298fe?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
-                  itext('Logs');
-                ie_close('a');
-              ie_close('li');
-            ie_close('ul');
-          ie_close('p');
-        ie_close('section');
-        ie_open('section', null, null,
-            'class', 'feature col-md-4');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-pause');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('PRE');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Pre-production environment. Stable, but with fake data.');
-            ie_open('ul');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://contacts-pre.liferay.com');
-                  itext('Engine');
-                ie_close('a');
-              ie_close('li');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/b3b0b720-a355-11e7-8e0e-ed58f3e98e81?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1085\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
-                  itext('Status Dashboard');
-                ie_close('a');
-              ie_close('li');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/1e073380-9855-11e7-a87a-6b9ea3a428bb?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
-                  itext('Logs');
-                ie_close('a');
-              ie_close('li');
-            ie_close('ul');
-          ie_close('p');
-        ie_close('section');
-        ie_open('section', null, null,
-            'class', 'feature col-md-4');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-play');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('PRO');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Production environment. This is the real thing.');
-            ie_open('ul');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://contacts-prod.liferay.com/');
-                  itext('Engine');
-                ie_close('a');
-              ie_close('li');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/26fabc10-a817-11e7-8f68-bff39a8c8048?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1085\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
-                  itext('Status Dashboard');
-                ie_close('a');
-              ie_close('li');
-              ie_open('li');
-                ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/9caeae90-a816-11e7-8f68-bff39a8c8048?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
-                  itext('Logs');
-                ie_close('a');
-              ie_close('li');
-            ie_close('ul');
-          ie_close('p');
-        ie_close('section');
-        ie_open('p', null, null,
-            'class', 'col-md-12');
-          itext('* The environments are secured using an API Key. You will need an access key and a secret key to sign your requests. If you need to use this API, please ask someone from the Pulpo Team for these keys.');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.environments = $environments;
-if (goog.DEBUG) {
-  $environments.soyTemplateName = 'pageIndex.environments';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $footer(opt_data, opt_ignored, opt_ijData) {
-  ie_open('footer', null, null,
-      'class', 'footer');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('p', null, null,
-            'class', 'footer-description col-md-6 col-md-offset-2');
-          itext('Copyright \u00A9 2017 ');
-          ie_open('a', null, null,
-              'href', 'https://liferay.com');
-            itext('Liferay, Inc');
-          ie_close('a');
-        ie_close('p');
-        ie_open('p', null, null,
-            'class', 'footer-description col-md-6');
-          itext('Powered by ');
-          ie_open('a', null, null,
-              'href', 'http://wedeploy.com');
-            itext('WeDeploy\u2122');
-          ie_close('a');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('footer');
-}
-exports.footer = $footer;
-if (goog.DEBUG) {
-  $footer.soyTemplateName = 'pageIndex.footer';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.header.params = ["site"];
-exports.header.types = {"site":"any"};
-exports.environments.params = [];
-exports.environments.types = {};
-exports.footer.params = [];
-exports.footer.types = {};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageIndex extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates);
+class TBmsh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(TBmsh, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -12024,16 +11868,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates)
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12061,7 +11896,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(108);
+var _indexSoy = __webpack_require__(99);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12073,23 +11908,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageIndex = function (_Component) {
-  _inherits(pageIndex, _Component);
+var TBmsh = function (_Component) {
+  _inherits(TBmsh, _Component);
 
-  function pageIndex() {
-    _classCallCheck(this, pageIndex);
+  function TBmsh() {
+    _classCallCheck(this, TBmsh);
 
-    return _possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (TBmsh.__proto__ || Object.getPrototypeOf(TBmsh)).apply(this, arguments));
   }
 
-  return pageIndex;
+  return TBmsh;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageIndex, _indexSoy2.default);
+_metalSoy2.default.register(TBmsh, _indexSoy2.default);
 
-exports.default = pageIndex;
+exports.default = TBmsh;
 
 /***/ })
-],[155]);
+],[146]);
