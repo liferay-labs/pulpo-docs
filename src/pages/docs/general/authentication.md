@@ -54,7 +54,7 @@ Signatures are unique to each combination of url, params and headers, therefore 
 
 This is an example of how to generate the signature for a POST request:
 
-*1) Include the api key Heade in your request
+*1) Include the api key Header in your request
  ```
  header: "apikey: MY-API-KEY"
  ```
