@@ -12,24 +12,8 @@ weight: 1
 
 ## Authentication
 
-Any request to this API will require a valid oAuth2 token. Therefore, in order to make any request, you will first need to obtain the token.
+Any request to this API will have to be signed, otherwise you will receive a 401 error response. Learn more about how to [authenticate your requests](/docs/general/authentication) . 
 
-Client tokens can be obtained making a `POST` request at the endpoint: `oauth/token?grant_type=client_credentials`. This endpoint has Basic Authentication, therefore you will need to pass the basic authentication header with some valid credentials (they are different in each environment.) If you don't have these credentials and you need them, please ask someone from the Pulpo Team.
-
-This endpoint will return a valid token in a format similar to this:
-
-```json
-{
-    "access_token": "a3269e8e-1564-456b-99e9-18d9bd17ab2b",
-    "token_type": "bearer",
-    "expires_in": 42843,
-    "scope": "read write"
-}
-
-```
-
-From this point, you must add the oAuth2 header in all your requests including the token you just obtained.
-(`Authorization: Bearer a3269e8e-1564-456b-99e9-18d9bd17ab2b`) 
 </article>
 
 <article id="navigation">
