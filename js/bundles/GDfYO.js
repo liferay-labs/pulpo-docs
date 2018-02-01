@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11662,12 +11662,13 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */
+/* 101 */,
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tuWtG", function() { return tuWtG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GDfYO", function() { return GDfYO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11679,15 +11680,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from authentication.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace tuWtG.
+ * @fileoverview Templates in namespace GDfYO.
  * @public
  */
 
-goog.module('tuWtG.incrementaldom');
+goog.module('GDfYO.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11721,178 +11722,522 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param303 = function() {
+  var param354 = function() {
     ie_open('h6');
-      var dyn18 = opt_data.page.description;
-      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+      var dyn19 = opt_data.page.description;
+      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'intro');
+        'id', 'authentication');
       ie_open('h2');
-        itext('Authentication Headers');
+        itext('Authentication');
       ie_close('h2');
       ie_open('p');
-        itext('In order to have a signed request, it must contain the following http headers:');
+        itext('Any request to this API will have to be signed, otherwise you will receive a 401 error response. Learn more about how to ');
+        ie_open('a', null, null,
+            'href', '/docs/general/authentication.html');
+          itext('authenticate your requests');
+        ie_close('a');
+        itext(' .');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('timestamp');
-          ie_close('em');
-          itext(': the timestamp of the request in milliseconds');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('apikey');
-          ie_close('em');
-          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('signature');
-          ie_close('em');
-          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
-        ie_close('li');
-      ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'signature');
+        'id', 'navigation');
       ie_open('h2');
-        itext('Signature Generation');
+        itext('Initial Navigation to obtain URLs');
       ie_close('h2');
       ie_open('p');
-        itext('You can use the following gradle dependency to use the ');
-        ie_open('code');
-          itext('SignatureValidator.java');
-        ie_close('code');
-        itext(' utility:');
+        itext('URLs are not part of this API, they may change at any moment. URLs must be asked to the service before making any request.');
       ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180131.153601-1"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('In order to obtain the signature for your request, you can use one of the following methods:');
+        itext('The URLs can be obtained making a request to the root resource of the Service ');
+        ie_open('code');
+          itext('/');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response in ');
+        ie_open('code');
+          itext('json HAL');
+        ie_close('code');
+        itext(' format will contain a ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' object with the different template links to be used. For example:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name": "pulpo-api",\n    "description": "API for consuming PULPO Services",\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/"\n        },\n        "data-sources": {\n            "href": "http://localhost:8084/{projectId}/data-sources{?filter}",\n            "templated": true\n        },\n        "field-mappings": {\n            "href": "http://localhost:8084/{projectId}/field-mappings{?filter}",\n            "templated": true\n        },\n        "fields": {\n            "href": "http://localhost:8084/{projectId}/fields{?filter}",\n            "templated": true\n        },\n        "individuals": {\n            "href": "http://localhost:8084/{projectId}/individuals{?filter}",\n            "templated": true\n        },\n        "individual-segments": {\n            "href": "http://localhost:8084/{projectId}/individual-segments{?filter}",\n            "templated": true\n        }\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('The template URLs for managing collections such as Data Sources or Individuals can be found inside the section ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' with the keys ');
+        ie_open('code');
+          itext('data-sources');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('individuals');
+        ie_close('code');
+        itext('. (These keys are our API and they will never change).');
+      ie_close('p');
+      ie_open('p');
+        itext('These template URLs allow us to build ULRs that can always be used to obtain the entities (');
+        ie_open('code');
+          itext('GET');
+        ie_close('code');
+        itext(' method) and create new ones (');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' method). (Note that not all collections support creation of new objects. e.g. Individuals API doesn\'t allow to create individuals directly).');
+      ie_close('p');
+      ie_open('p');
+        itext('These template URLs need certain items to be replaced in order to have a valid URL:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
-            ie_close('li');
-          ie_close('ul');
+          itext('variables: ');
+          ie_open('code');
+            itext('{parameterName}');
+          ie_close('code');
+          itext(' They should be replaced with a value. e.g. The {projectId} item must be replaced with the projectId of the current proje`ct (such as "my-project").');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
-            ie_close('li');
-            ie_open('li');
-              itext('The parameters map must contain the parameters of the body of your request (if any)');
-            ie_close('li');
-            ie_open('li');
-              itext('The timestamp must match the value in your timestamp header');
-            ie_close('li');
-            ie_open('li');
-              itext('The api key must match your api key header too.');
-            ie_close('li');
-          ie_close('ul');
+          itext('parameters: ');
+          ie_open('code');
+            itext('{?parameterName}');
+          ie_close('code');
+          itext(' They should be replaced with a param and a value. e.g. The {?filter} item must be replaced with a filter parameter and as value a valid oData filter or with an empty string. (e.g. ');
+          ie_open('code');
+            itext('&filter=(name eq \'Jon\')');
+          ie_close('code');
+          itext(')');
         ie_close('li');
       ie_close('ul');
       ie_open('p');
-        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
+        itext('Important: Optional parameters can be added at any time to these APIs, therefore, clients must consider that the templates may change with additional optional parameters (never with mandatory parameters).');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through a collection of entities, the link to each entity can be found with the rel ');
         ie_open('code');
-          itext('PULPO_PRIVATE_KEY');
+          itext('self');
         ie_close('code');
-        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how the request headers could look like:');
-      ie_close('p');
-      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how to generate the signature for a POST request:');
-      ie_close('p');
-      ie_open('p');
-        itext('*1) Include the api key Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*2) Include the timestamp Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('(e.g. ');
+        itext('. That same url can be also used for delete (');
         ie_open('code');
-          itext('System.currentTimeMillis()');
+          itext('DELETE');
         ie_close('code');
-        itext(' in Java)');
-      ie_close('p');
-      ie_open('p');
-        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
+        itext(' method) and update (');
         ie_open('code');
-          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
+          itext('PUT');
         ie_close('code');
-        itext(', and include that as a third header:');
+        itext(' method).');
       ie_close('p');
-      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'pagination');
+      ie_open('h2');
+        itext('Pagination');
+      ie_close('h2');
       ie_open('p');
-        itext('*3b) In case you didn\'t have the http request, we would call:');
+        itext('Every collection URL can be paginated using the optional params ');
+        ie_open('code');
+          itext('page');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('size');
+        ie_close('code');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('with these values:');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/data-sources?page=0&size=1');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> empty');
-        ie_close('li');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "name": "liferay-de"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Another example of a POST request with body parameters:');
+        itext('From this response, you can obtain the total number of existing elements under the ');
+        ie_open('code');
+          itext('page');
+        ie_close('code');
+        itext(' block and also the links to other pages of data sources.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/datasources');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> Map with the parameters:');
-        ie_close('li');
-      ie_close('ul');
-      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'sorting');
+      ie_open('h2');
+        itext('Sorting');
+      ie_close('h2');
+      ie_open('p');
+        itext('Every collection URL can be sorted using the optional param ');
+        ie_open('code');
+          itext('sort');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('e.g. Given a url for a Collection (such as http://localhost:8084/my-project/data-sources) I could sort the results by name appending to the url ');
+        ie_open('code');
+          itext('?sort=name');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('In order to navigate inside the fields of an entity, you should use the separator ');
+        ie_open('code');
+          itext('/');
+        ie_close('code');
+        itext('e.g. I could sort the results by the author name appending ');
+        ie_open('code');
+          itext('?sort=author/name');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('By default, the sorting is in ascending order. (0-1-A-Z). However, this can be changed adding ');
+        ie_open('code');
+          itext('desc');
+        ie_close('code');
+        itext(' after the parameter name separated with a comma.');
+      ie_close('p');
+      ie_open('p');
+        itext('e.g. I could sort the results by name descending, appending to the url ');
+        ie_open('code');
+          itext('?sort=name,desc');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('I could also sort by more than one field, adding more than one sort parameter or separating the fields by commas. In this situation, the first parameter found is used to sort, and in case of coincidence, the next parameter in the list is used to sort and so on.');
+      ie_close('p');
+      ie_open('p');
+        itext('e.g. I could sort the results by the name of the Provider, and in case of coincidence then order by the Date of creation appending this to the url: ');
+        ie_open('code');
+          itext('?sort=provider/name,dateCreated');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('If I want to change the order to descending for one of the fields, then I must used separated parameters in this way:');
+      ie_close('p');
+      ie_open('p');
+        ie_open('code');
+          itext('?sort=provider.name,desc&sort=dateCreated,asc');
+        ie_close('code');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'filtering');
+      ie_open('h2');
+        itext('Filtering');
+      ie_close('h2');
+      ie_open('p');
+        itext('Not all collections allow filtering. The ones that support it will contain the optional parameter ');
+        ie_open('code');
+          itext('{?filter}');
+        ie_close('code');
+        itext(' in their template.');
+      ie_close('p');
+      ie_open('p');
+        itext('In order to filter a collection based on the value of one or more fields, you can use the optional parameter filter following a subset of the oData standard.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Comparison Operators');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Operator');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('eq');
+            ie_close('td');
+            ie_open('td');
+              itext('Equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City eq \'Redmond\'');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_void('td');
+            ie_open('td');
+              itext('Equal null');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City eq null');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('ne');
+            ie_close('td');
+            ie_open('td');
+              itext('Not equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City ne \'London\'');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_void('td');
+            ie_open('td');
+              itext('Not null');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City ne null');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('gt');
+            ie_close('td');
+            ie_open('td');
+              itext('Greater than');
+            ie_close('td');
+            ie_open('td');
+              itext('Price gt 20');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('ge');
+            ie_close('td');
+            ie_open('td');
+              itext('Greater than or equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Price ge 10');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('lt');
+            ie_close('td');
+            ie_open('td');
+              itext('Less than');
+            ie_close('td');
+            ie_open('td');
+              itext('Price lt 20');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('le');
+            ie_close('td');
+            ie_open('td');
+              itext('Less than or equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Price le 100');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('h4');
+        itext('Logical Operators');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Operator');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('and');
+            ie_close('td');
+            ie_open('td');
+              itext('Logical and');
+            ie_close('td');
+            ie_open('td');
+              itext('Price le 200 and Price gt 3.5');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('or');
+            ie_close('td');
+            ie_open('td');
+              itext('Logical or');
+            ie_close('td');
+            ie_open('td');
+              itext('Price le 3.5 or Price gt 200');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('h4');
+        itext('Grouping Operators');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Operator');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('( )');
+            ie_close('td');
+            ie_open('td');
+              itext('Precedence grouping');
+            ie_close('td');
+            ie_open('td');
+              itext('(Price eq 5) or (Address/City eq \'London\')');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('h4');
+        itext('String functions');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Function');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('contains');
+            ie_close('td');
+            ie_open('td');
+              itext('Contains');
+            ie_close('td');
+            ie_open('td');
+              itext('contains(Address/City,\'edmon\')');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('startswith');
+            ie_close('td');
+            ie_open('td');
+              itext('Starts with');
+            ie_close('td');
+            ie_open('td');
+              itext('startswith(Address/City,\'Red\')');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('endswith');
+            ie_close('td');
+            ie_open('td');
+              itext('Ends with');
+            ie_close('td');
+            ie_open('td');
+              itext('endswith(Address/City,\'mond\')');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('p');
+        itext('e.g. We could append this to a URL that returns a collection of Data Sources to filter the DataSource by an author name and a name.');
+      ie_close('p');
+      $templateAlias2({code: '?filter=(author/name eq \'Julio\') and (name ne \'datasource-name\')', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'transformations');
+      ie_open('h2');
+        itext('Transformations');
+      ie_close('h2');
+      ie_open('p');
+        itext('Not all collections support transformations. The ones that support them will contain the optional parameter ');
+        ie_open('code');
+          itext('{?apply}');
+        ie_close('code');
+        itext(' in their template.');
+      ie_close('p');
+      ie_open('p');
+        itext('In order to perform a transformation on a collection, you can use the optional parameter ');
+        ie_open('code');
+          itext('apply');
+        ie_close('code');
+        itext(' following a subset of the oData standard.');
+      ie_close('p');
+      ie_open('p');
+        itext('Currently, the only supported transformation is ');
+        ie_open('code');
+          itext('groupby');
+        ie_close('code');
+        itext(' and within it, only');
+        ie_open('code');
+          itext('Simple grouping');
+        ie_close('code');
+        itext(' on a ');
+        ie_open('em');
+          itext('single field');
+        ie_close('em');
+        itext(' is allowed, with no further transformations applied is supported.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Supported Transformations');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Tranformation');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('groupby');
+            ie_close('td');
+            ie_open('td');
+              itext('Group by');
+            ie_close('td');
+            ie_open('td');
+              itext('groupby((demographics/address/value))');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11903,11 +12248,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param303}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param354}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'tuWtG.render';
+  $render.soyTemplateName = 'GDfYO.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11917,15 +12262,14 @@ return exports;
 
 });
 
-class tuWtG extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tuWtG, templates);
+class GDfYO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GDfYO, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11971,9 +12315,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tuWtG, templates);
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12001,9 +12343,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _authenticationSoy = __webpack_require__(101);
+var _indexSoy = __webpack_require__(102);
 
-var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12013,23 +12355,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var tuWtG = function (_Component) {
-  _inherits(tuWtG, _Component);
+var GDfYO = function (_Component) {
+  _inherits(GDfYO, _Component);
 
-  function tuWtG() {
-    _classCallCheck(this, tuWtG);
+  function GDfYO() {
+    _classCallCheck(this, GDfYO);
 
-    return _possibleConstructorReturn(this, (tuWtG.__proto__ || Object.getPrototypeOf(tuWtG)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (GDfYO.__proto__ || Object.getPrototypeOf(GDfYO)).apply(this, arguments));
   }
 
-  return tuWtG;
+  return GDfYO;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(tuWtG, _authenticationSoy2.default);
+_metalSoy2.default.register(GDfYO, _indexSoy2.default);
 
-exports.default = tuWtG;
+exports.default = GDfYO;
 
 /***/ })
-],[150]);
+],[148]);
