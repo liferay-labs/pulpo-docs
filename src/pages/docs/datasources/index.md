@@ -148,10 +148,7 @@ The following fields are supported for a Liferay Provider:
     * identifier - The primary key of the user group  
 * *instanceInfo* - Contacts information about the Liferay Portal instance
   * companyId
-  * ip
-  * lcsInstanceId
-  * location
-  * version   
+  * lcsInstallationId
 
 
 This is an example of the body passed  to the `POST` request to create a DataSource with a `provider` field of type 
@@ -192,10 +189,7 @@ Liferay:
         },
         "instanceInfo" : {
             "companyId" : "1",
-            "ip" : "100.100.100.100",
-            "lcsInstanceId" : "1",
-            "location" : "Los Angeles, USA",
-            "version" : "7.0.10.1"
+            "lcsInstallationId" : "1"
         },
         "type" : "LIFERAY"
     },
