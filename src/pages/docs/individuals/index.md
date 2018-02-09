@@ -8,7 +8,7 @@ weight: 6
 
 ###### {$page.description}
 
-<article id="1">
+<article id="individual-model">
 
 ## The Individual Model
 
@@ -42,7 +42,7 @@ The following fields are currently supported as part of an Invididual:
 </article>
 
 
-<article id="2">
+<article id="invidivuals-collection">
 
 ## Individuals Collection
 
@@ -191,7 +191,7 @@ Navigating through the list of individuals, the link to each individual can be f
 
 </article>
 
-<article id="3">
+<article id="filtering-individuals">
 
 ## Filtering and Sorting Individuals Collection
 
@@ -231,7 +231,7 @@ Filtering by Individual Segments can be combined with any of the aforementioned 
 </article>
 
 
-<article id="4">
+<article id="individual-transformations">
 
 ## Transformations on Individuals Collection
 
@@ -298,7 +298,7 @@ These are some examples of valid sortings:
 </article>
 
 
-<article id="5">
+<article id="individual-segments">
 
 ## Individual Segments
 
@@ -308,7 +308,7 @@ As part of the links of each individual, the following links can be found using 
 
 </article>
 
-<article id="6">
+<article id="individual-embedded">
 
 ## Embedded Resources on an Individual Collection
 
@@ -322,7 +322,7 @@ belonging to the Individual
 to
 </article>
 
-<article id="7">
+<article id="creating-individuals">
 
 ## Creating Individuals
 
