@@ -314,7 +314,7 @@ As part of the links of each individual, the following links can be found using 
 
 The `expand` parameter can be used when retrieving a Collection of Individuals as explained in [embedding resources](/docs/general#embedding-resources).
 
-The supported resources that can be embedded inside each interest resource are:
+The supported resources that can be embedded inside each individual resource are:
 
 * *data-sources* - The Data Sources contributing information to Fields
 belonging to the Individual
