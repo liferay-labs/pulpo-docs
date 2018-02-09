@@ -45,7 +45,7 @@ As described in [Initial Navigation to obtain URLs](/docs/general#navigation),
 the `_links` section of the root resource will contain a template link labelled as `activities` pointing to the
 collection of Activities.
 
-This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting) and [filtering](/docs/general#filtering).
+This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting), [transformations](/docs/general#transformations), and [filtering](/docs/general#filtering).
 
 The response will contain inside the `_embedded` section, a list of activities
 under the key `activities`.
@@ -102,5 +102,99 @@ generated and updated from the Activity Chunks sent by the different Connectors.
 Deletion of existing Activities is not allowed for now either. 
 
 Navigating through the list of activities, the link to each activity can be found with the rel `self`. 
+
+</article>
+
+<article id="activity-transformations">
+
+## Transformations on Activities Collection
+
+Transformations can be applied on Activities collection as explained in [transformations](/docs/general#transformations).
+
+The only transformation allowed for the Activities Collection is `groupby` by `day`, `week` or `month`.
+
+The number of intervals returned when `groupby` is used is determined by the page size. Only the page `0` can be requested.
+
+The returned object has the following fields:
+
+* *totalElements* - The number of elements inside this interval
+* *intervalInitDate* - The initial day of this interval 
+
+These are some examples of transformations:
+
+* Activities grouped by day of creation: `?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3`
+
+This is an example of a response to this url: ` http://localhost:8084/my-project/activities?apply=compute(day(day) as computedDay)/groupby((computedDay))&page=0&size=3`
+
+```json
+{
+    "_embedded": {
+        "activity-transformations": [
+            {
+                "totalElements": 0,
+                "intervalInitDate": "2018-05-20T00:00:00Z"
+            },
+            {
+                "totalElements": 7,
+                "intervalInitDate": "2018-05-21T00:00:00Z"
+            },
+            {
+                "totalElements": 4,
+                "intervalInitDate": "2018-05-22T00:00:00Z"
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project/activities?apply=compute%28day%28day%29%20as%20computedDay%29%2Fgroupby%28%28computedDay%29%29&page=0&size=3"
+        }
+    },
+    "page": {
+        "size": 3,
+        "totalElements": 3,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+
+```
+
+* Activities grouped by week of creation: `?apply=compute(week(day) as week)/groupby((week))&page=0&size=3`
+
+This is an example of a response to this url: ` http://localhost:8084/my-project/activities?apply=compute(week(dateRecorded) as week)/groupby((week))&page=0&size=3`
+
+```json
+{
+    "_embedded": {
+        "activity-transformations": [
+            {
+                "totalElements": 0,
+                "intervalInitDate": "2018-06-04T00:00:00Z"
+            },
+            {
+                "totalElements": 0,
+                "intervalInitDate": "2018-06-11T00:00:00Z"
+            },
+            {
+                "totalElements": 4,
+                "intervalInitDate": "2018-06-18T00:00:00Z"
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project/activities?apply=compute%28week%28day%29%20as%20week%29%2Fgroupby%28%28week%29%29&page=0&size=3"
+        }
+    },
+    "page": {
+        "size": 3,
+        "totalElements": 3,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+
+```
+
 
 </article>

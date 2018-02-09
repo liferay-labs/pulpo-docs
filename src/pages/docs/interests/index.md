@@ -139,7 +139,7 @@ These are some examples of Interests filtering to retrieve historical values of 
 
 Transformations can be applied on Interests collection as explained in [transformations](/docs/general#transformations).
 
-The only transformation allowed for the Interest Collection is `groupby` by `day` or `month`.
+The only transformation allowed for the Interest Collection is `groupby` by `day`, `week` or `month`.
 
 The number of intervals returned when `groupby` is used is determined by the page size. Only the page `0` can be requested.
 
@@ -152,7 +152,7 @@ The returned object has the following fields:
 
 These are some examples of transformations:
 
-* Interest group by day of creation: `?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3`
+* Interests grouped by day of creation: `?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3`
 
 This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3`
 
@@ -182,7 +182,7 @@ This is an example of a response to this url: ` http://localhost:8084/my-project
     },
     "_links": {
         "self": {
-            "href": "http://localhost:8084/1527005536349/interests?apply=compute%28day%28dateRecorded%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=3"
+            "href": "http://localhost:8084/my-project/interests?apply=compute%28day%28dateRecorded%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=3"
         }
     },
     "page": {
@@ -195,7 +195,7 @@ This is an example of a response to this url: ` http://localhost:8084/my-project
 
 ```
 
-* Interest group by month of creation: `?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3`
+* Interests grouped by month of creation: `?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3`
 
 This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3`
 
@@ -225,7 +225,7 @@ This is an example of a response to this url: ` http://localhost:8084/my-project
     },
     "_links": {
         "self": {
-            "href": "http://localhost:8084/1527005923917/interests?apply=compute%28month%28dateRecorded%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=3"
+            "href": "http://localhost:8084/my-project/interests?apply=compute%28month%28dateRecorded%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=3"
         }
     },
     "page": {

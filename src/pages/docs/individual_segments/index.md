@@ -373,7 +373,7 @@ These are some examples of filtering:
 
 Transformations can be applied on Individual Segment Membership Changes collection as explained in [transformations](/docs/general#transformations).
 
-The only transformation allowed for the Interest Collection is `groupby` by `day` or `month`.
+The only transformation allowed for the Interest Collection is `groupby` by `day`, `week` or `month`.
 
 The number of intervals returned when `groupby` is used is determined by the page size. Only the page `0` can be requested.
 
