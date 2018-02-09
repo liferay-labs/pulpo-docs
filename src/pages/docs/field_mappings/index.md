@@ -30,6 +30,9 @@ The following fields are currently supported in a field mapping:
 * *fieldName* - the name of the field on our model
 * *fieldType* - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)
 * *identifier*
+* *author*
+  * identifier
+  * name
 * *strategy* - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or 
 give preference to the value from a specific data source. See more details below.
 
