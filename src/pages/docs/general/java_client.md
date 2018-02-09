@@ -13,12 +13,21 @@ This client will help you navigate the API leveraging its hypermedia capabilitie
 
 <article id="setup">
 
+
+## Java API
+
+In case you want to use your own client, you will still find valuable our models in Java. You can use our API with this gradle dependency:
+
+```
+provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.api", version: "0.0.2-20180515.101145-15"
+```
+
 ## Set Up
 
 In order to use the Client, you should have this gradle dependency:
 
 ```
-compileInclude group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180312.115409-14"
+provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180427.224113-32"
 ```
 
 In case you need also the transitive dependencies, you should add:
