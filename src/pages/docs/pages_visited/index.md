@@ -1,8 +1,8 @@
 ---
 title: "Pages Visited"
-description: ""Pages Visited API"
+description: "Pages Visited API"
 layout: "guide"
-icon: "file"
+icon: "layout"
 weight: 10
 ---
 
