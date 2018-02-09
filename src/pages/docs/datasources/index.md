@@ -146,7 +146,31 @@ Since this process can take up to several minutes, when a `DELETE` request is ma
 the url of a DataSource, it won't be immediately deleted, it will just change its
 state to `IN_DELETION`. After all the operations are completed, the data source will 
 be finally deleted and won't be found anymore. However, if there is an error that prevented
-the final deletion of the data source it will be marked as `DELETE_ERROR`.  
+the final deletion of the data source it will be marked as `DELETE_ERROR`.
+
+When the DataSource is of type Liferay DE, there are several situations to handle:
+
+1) Connector is still online and reachable by the engine: The Engine will propagate the 
+deletion order to the connector. This will disconnect the connector and remove information
+about contacts already sent.
+
+2) Connector is offline or not reachable by the engine temporarily: The engine will keep
+trying every 10 seconds for a maximun of 2 minutes to reach the connector and will discnonect it
+if it is finally reached.
+
+3) Connector is offline or not reachable by the engine after 2 minutes: The engine will
+delete the datasource leaving the connector in a corrupt state since it will have 
+information to keep sending contacts and also the information about contacts that are
+synced with the engine (even when the engine has deleted that information already).
+If the connector is not connected again, there is nothing to worry about.
+- *What happens if the corrupt connector goes online again?*
+New or Updated contacts will be sent but they will be ignored by the engine. If you want
+to stop you need to delete the datasource properly, therefore you need to configure it
+again and make sure it is reachable when deleting the datasource.
+- *Can it be configured again to send everything again?*
+If a new datasource is created for this connector, it will continue sending information
+from where it left. If you want to send everything again, you need to recreate the
+datasource and delete it properly and then create it again. 
 
 </article>
 
