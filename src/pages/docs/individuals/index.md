@@ -280,7 +280,7 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
 
 Aggregations of individuals by a field are by default sorted by the number of individuals grouped 
 (aggregations with a higher number of individuals first), but they can also be
-ordered by the value of the field (See [sorting](/docs/general#sorting)). 
+ordered by the value of the field used to group by (See [sorting](/docs/general#sorting)). 
 
 These are some examples of valid sortings: 
 - ?sort=demographics/address/value
