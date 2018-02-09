@@ -2,8 +2,8 @@
 title: "Assets"
 description: "Assets API"
 layout: "guide"
-icon: "hammer"
-weight: 10
+icon: "streams"
+weight: 11
 ---
 
 ###### {$page.description}
@@ -16,9 +16,9 @@ Assets contain information about documents, pages, forms or any content that the
 
 The entity asset contains the following fields:
 * *identifier*
-* *assetType*
-* *dataSourceAssetPK*
-* *dataSourceIdentifier*
+* *assetType* - e.g. forms, DocumentLibrary, Layout...
+* *dataSourceAssetPK* - The primary key of this asset in its original data source
+* *dataSourceIdentifier* - The identifier of the data source that sent this asset
 * *name*
 * *description*
 
