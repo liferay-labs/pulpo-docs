@@ -55,10 +55,6 @@ This is an example of a response to this url: http://localhost:8084/my-project/i
     "_embedded": {
         "interests": [
             {
-
-
-
-
      			"dateRecorded": "2018-03-05T00:00:00+0000",
                 "identifier": "AWMYbBfSgcT3bCtqgwde",
                 "name": "intranets",
@@ -67,15 +63,15 @@ This is an example of a response to this url: http://localhost:8084/my-project/i
                 "ownerType": "individual",
                 "pagesVisited": [
 					{
-						"title": null,
+						"title": "Products for Liferay",
 						"uniqueVisitsCount": 1,
-						"description": null,
+						"description": "Liferay DXP, Liferay De, Sync...",
 						"url": "https://www.liferay.com/products"
 					},
 					{
-						"title": null,
-						"uniqueVisitsCount": 1,
-						"description": null,
+						"title": "Liferay Digital Experience Platform",
+						"uniqueVisitsCount": 5,
+						"description": "Portals, Intranets, Platforms...",
 						"url": "https://www.liferay.com/en/home"
 					}
 				],
