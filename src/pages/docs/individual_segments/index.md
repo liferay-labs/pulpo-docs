@@ -44,7 +44,7 @@ As described in [Initial Navigation to obtain URLs](/docs/general#navigation),
 the `_links` section of the root resource will contain a template link labelled as `individual-segments` pointing to the
 collection of Individual Segments.
 
-This API supports [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
+This API supports [filtering](/docs/general#filtering), [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
 
 The response will contain inside the `_embedded` section, a list of individual segments
 under the key `individual-segments`.
@@ -118,6 +118,12 @@ an example of the body passed to this POST request:
 Navigating through the list of entities, the link to each entity can be found with the rel `self`. 
 That same url can be also used for delete (`DELETE` method) and update (`PUT` method). 
 
+### Filtering and Sorting Individual Segments Collection
+
+These are some examples of filtering:
+* Individual Segments that belong to a user with identifier 123456: `?filter=((scope eq 'USER') and (author/identifier eq '123456'')`
+* Individual Segments modified after a certain date: `?filter=(datemodified gt 2018-02-13T12:33:12Z)`
+
 </article>
 
 <article id="individual-segment-links">
@@ -129,18 +135,6 @@ As part of the links of each individual segment, the following links can be foun
 * `individuals` - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in [filtering](/docs/general#filtering), and transformations can be applied on it as explained in [transformations](/docs/general#transformations).
 * `memberships` - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in [Individual Segment Membership Collection](#individual-segment-membership-collection).
 * `membership-changes` - The collection of Membership Changes of this Individual Segment. This collection can be used to track changes in the memberships, as described in [Individual Segment Membership Change Collection](#individual-segment-membership-change-collection).
-
-</article>
-
-<article id="filtering-and-sorting">
-
-## Filtering and Sorting Individual Segments Collection
-
-Individual Segment collection can be filtered as explained in [filtering](/docs/general#filtering).
-
-These are some examples of filtering:
-* Individual Segments that belong to a user with identifier 123456: `?filter=((scope eq 'USER') and (author/identifier eq '123456'')`
-* Individual Segments modified after a certain date: `?filter=(datemodified gt 2018-02-13T12:33:12Z)`
 
 </article>
 
@@ -166,7 +160,7 @@ The following fields are currently supported as part of an Individual Segment:
 As described in [Individual Segment Links](#individual-segment-links), the `_links` section of the `individual-segment` resource will contain a template link labelled as `memberships` pointing to the
 collection of Memberships of this Individual Segment.
 
-This API supports [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
+This API supports [filtering](/docs/general#filtering), [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
 
 The response will contain inside the `_embedded` section, a list of individual segment memberships
 under the key `memberships`.
@@ -243,8 +237,6 @@ A `DELETE` request to the URL `http://localhost:8084/my-project/individual-segme
 an existing Individual Segment Membership.
 
 ### Filtering the Individual Segment Membership Collection
-
-Individual Segment Membership collection can be filtered as explained in [filtering](/docs/general#filtering).
 
 These are some examples of filtering:
 * Individual Segment Memberships with active status created before a given date: `?filter=(status eq 'ACTIVE') and (dateCreated lt 2013-05-29T09:13:28Z)`
@@ -372,8 +364,6 @@ This is an example of a response of a `GET` request to this url: `http://localho
 ```
 
 ### Filtering the Individual Segment Membership Change Collection
-
-Individual Segment Membership Change collection can be filtered as explained in [filtering](/docs/general#filtering).
 
 These are some examples of filtering:
 * Individual Segment Membership Changes that changed with operation `ADDED` before a given date: `?filter=(operation eq 'ADDED') and (dateChanged lt 2013-05-29T09:13:28Z)`
