@@ -24,7 +24,7 @@ In order to have a signed request, it must contain the following http headers:
 You can use the following gradle dependency to use the `SignatureValidator.java` utility:
     
 ```
-provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180131.153601-1"
+provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.security.signature", version: "0.0.1-20180508.134750-15"
 ```
 
 
