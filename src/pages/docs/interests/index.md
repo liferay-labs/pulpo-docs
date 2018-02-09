@@ -43,7 +43,7 @@ As described in [Initial Navigation to obtain URLs](/docs/general#navigation),
 the `_links` section of the root resource will contain a template link labelled as `interests` pointing to the
 collection of Interests.
 
-This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting) and [filtering](/docs/general#filtering).
+This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting), [filtering](/docs/general#filtering) and [transformations](/docs/general#transformations).
 
 The response will contain inside the `_embedded` section, a list of interests
 under the key `interests`.
