@@ -127,9 +127,9 @@ The [sorting](/docs/general#sorting) option can be used to obtain the interests 
 
 These are some examples of Interests filtering to retrieve historical values of certain Individual and Individual Segment properties:
 
-* The historical values of the interst on "portals" for an Individual: `((name eq 'portals') and (ownerType eq 'individual') and (ownerIdentifier eq 'the-individual-identifier'))`
+* The historical values of the interests on "portals" for an Individual: `((name eq 'portals') and (ownerType eq 'individual') and (ownerIdentifier eq 'the-individual-identifier'))`
 * The historical values of the topic 'Business' for an Individual Segment: `((name eq 'business') and (ownerType eq 'individual-segment') and (ownerIdentifier eq 'the-individual-segment-identifier'))` 
-* The historical values of the interst on "intrantes" with a score higher than 10 for any Individual: `((score gt '10') and (name eq 'intranets') and (ownerType eq 'individual'))`
+* The historical values of the interest on "intrantes" with a score higher than 10 for any Individual: `((score gt '10') and (name eq 'intranets') and (ownerType eq 'individual'))`
 
 </article>
 
@@ -143,146 +143,51 @@ The only transformation allowed for the Interest Collection is `groupby` by `day
 
 The number of intervals returned when `groupby` is used is determined by the page size. Only the page `0` can be requested.
 
+The returned object has the following fields:
+
+* *totalElements* - The number of elements inside this interval
+* *viewsSum* - The sum of all the uniqueVisitsCount of each pageVisit of each Interest in the interval
+* *intervalInitDate* - The initial day of this interval 
+* *scoreAvg* - The average score of all the interests in the interval
+
 These are some examples of transformations:
 
-* Interest group by day of creation: `?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=20`
+* Interest group by day of creation: `?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3`
 
-This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=20`
+This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3`
 
 ```json
 {
     "_embedded": {
         "interest-transformations": [
             {
-                "count": 0,
-                "intervalInitDate": "2018-05-03T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-04T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-05T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-06T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-07T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-08T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-09T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-10T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-11T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-12T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-13T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-14T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-15T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-16T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-17T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-18T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-05-19T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
+                "totalElements": 0,
                 "intervalInitDate": "2018-05-20T00:00:00Z",
                 "scoreAvg": 0.0,
-                "viewSum": 0
+                "viewsSum": 0
             },
             {
-                "count": 7,
+                "totalElements": 7,
                 "intervalInitDate": "2018-05-21T00:00:00Z",
                 "scoreAvg": 10.3,
-                "viewSum": 0
+                "viewsSum": 0
             },
             {
-                "count": 4,
+                "totalElements": 4,
                 "intervalInitDate": "2018-05-22T00:00:00Z",
                 "scoreAvg": 41.86,
-                "viewSum": 0
+                "viewsSum": 0
             }
         ]
     },
     "_links": {
         "self": {
-            "href": "http://localhost:8084/1527005536349/interests?apply=compute%28day%28dateRecorded%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=20"
+            "href": "http://localhost:8084/1527005536349/interests?apply=compute%28day%28dateRecorded%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=3"
         }
     },
     "page": {
-        "size": 20,
-        "totalElements": 20,
+        "size": 3,
+        "totalElements": 3,
         "totalPages": 1,
         "number": 0
     }
@@ -290,144 +195,42 @@ This is an example of a response to this url: ` http://localhost:8084/my-project
 
 ```
 
-* Interest group by month of creation: `?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=20`
+* Interest group by month of creation: `?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3`
 
-This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=20`
+This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3`
 
 ```json
 {
     "_embedded": {
         "interest-transformations": [
             {
-                "count": 0,
-                "intervalInitDate": "2016-10-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2016-11-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2016-12-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-01-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-02-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-03-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-04-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-05-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-06-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-07-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-08-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-09-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-10-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-11-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2017-12-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-01-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
-                "intervalInitDate": "2018-02-01T00:00:00Z",
-                "scoreAvg": 0.0,
-                "viewSum": 0
-            },
-            {
-                "count": 0,
+                "totalElements": 0,
                 "intervalInitDate": "2018-03-01T00:00:00Z",
                 "scoreAvg": 0.0,
-                "viewSum": 0
+                "viewsSum": 0
             },
             {
-                "count": 0,
+                "totalElements": 0,
                 "intervalInitDate": "2018-04-01T00:00:00Z",
                 "scoreAvg": 0.0,
-                "viewSum": 0
+                "viewsSum": 0
             },
             {
-                "count": 4,
+                "totalElements": 4,
                 "intervalInitDate": "2018-05-01T00:00:00Z",
                 "scoreAvg": 41.86,
-                "viewSum": 0
+                "viewsSum": 0
             }
         ]
     },
     "_links": {
         "self": {
-            "href": "http://localhost:8084/1527005923917/interests?apply=compute%28month%28dateRecorded%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=20"
+            "href": "http://localhost:8084/1527005923917/interests?apply=compute%28month%28dateRecorded%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=3"
         }
     },
     "page": {
-        "size": 20,
-        "totalElements": 20,
+        "size": 3,
+        "totalElements": 3,
         "totalPages": 1,
         "number": 0
     }
