@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11667,7 +11667,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bxSMh", function() { return bxSMh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fuvlZ", function() { return fuvlZ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11683,11 +11683,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace bxSMh.
+ * @fileoverview Templates in namespace fuvlZ.
  * @public
  */
 
-goog.module('bxSMh.incrementaldom');
+goog.module('fuvlZ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11907,7 +11907,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'bxSMh.render';
+  $render.soyTemplateName = 'fuvlZ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11917,8 +11917,8 @@ return exports;
 
 });
 
-class bxSMh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bxSMh, templates);
+class fuvlZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fuvlZ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11972,8 +11972,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bxSMh, templates);
 /* 146 */,
 /* 147 */,
 /* 148 */,
-/* 149 */,
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12013,23 +12012,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var bxSMh = function (_Component) {
-  _inherits(bxSMh, _Component);
+var fuvlZ = function (_Component) {
+  _inherits(fuvlZ, _Component);
 
-  function bxSMh() {
-    _classCallCheck(this, bxSMh);
+  function fuvlZ() {
+    _classCallCheck(this, fuvlZ);
 
-    return _possibleConstructorReturn(this, (bxSMh.__proto__ || Object.getPrototypeOf(bxSMh)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (fuvlZ.__proto__ || Object.getPrototypeOf(fuvlZ)).apply(this, arguments));
   }
 
-  return bxSMh;
+  return fuvlZ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(bxSMh, _authenticationSoy2.default);
+_metalSoy2.default.register(fuvlZ, _authenticationSoy2.default);
 
-exports.default = bxSMh;
+exports.default = fuvlZ;
 
 /***/ })
-],[150]);
+],[149]);

@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11669,7 +11669,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MpuDI", function() { return MpuDI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WwVpR", function() { return WwVpR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11685,11 +11685,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace MpuDI.
+ * @fileoverview Templates in namespace WwVpR.
  * @public
  */
 
-goog.module('MpuDI.incrementaldom');
+goog.module('WwVpR.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11773,7 +11773,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'MpuDI.render';
+  $render.soyTemplateName = 'WwVpR.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11783,8 +11783,8 @@ return exports;
 
 });
 
-class MpuDI extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(MpuDI, templates);
+class WwVpR extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(WwVpR, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11835,8 +11835,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(MpuDI, templates);
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */,
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11876,23 +11875,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MpuDI = function (_Component) {
-  _inherits(MpuDI, _Component);
+var WwVpR = function (_Component) {
+  _inherits(WwVpR, _Component);
 
-  function MpuDI() {
-    _classCallCheck(this, MpuDI);
+  function WwVpR() {
+    _classCallCheck(this, WwVpR);
 
-    return _possibleConstructorReturn(this, (MpuDI.__proto__ || Object.getPrototypeOf(MpuDI)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (WwVpR.__proto__ || Object.getPrototypeOf(WwVpR)).apply(this, arguments));
   }
 
-  return MpuDI;
+  return WwVpR;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(MpuDI, _status_endpointsSoy2.default);
+_metalSoy2.default.register(WwVpR, _status_endpointsSoy2.default);
 
-exports.default = MpuDI;
+exports.default = WwVpR;
 
 /***/ })
-],[149]);
+],[148]);

@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11726,12 +11726,12 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param87 = function() {
+  var param40 = function() {
     $header(opt_data, null, opt_ijData);
     $environments(null, null, opt_ijData);
     $footer(null, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param87}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param40}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11753,13 +11753,13 @@ function $header(opt_data, opt_ignored, opt_ijData) {
         'class', 'container');
       ie_open('h1', null, null,
           'class', 'header-title');
-        var dyn5 = opt_data.site.title;
-        if (typeof dyn5 == 'function') dyn5(); else if (dyn5 != null) itext(dyn5);
+        var dyn3 = opt_data.site.title;
+        if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
       ie_close('h1');
       ie_open('h2', null, null,
           'class', 'header-subtitle');
-        var dyn6 = opt_data.site.index.description;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.index.description;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('h2');
       ie_open('h3');
         itext('We will help you gather Contacts, Assets and Analytics from all your sites, installations or apps. Contacts is already available.');
@@ -11828,13 +11828,13 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/8e963e40-93ee-11e7-88a1-35460e78d288?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1285\'%2Cdisplay%3A\'1%20minute\'%2Cpause%3A!f%2Csection%3A2%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-1h%2Cmode%3Arelative%2Cto%3Anow))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/8e963e40-93ee-11e7-88a1-35460e78d288');
                   itext('Status Dashboard');
                 ie_close('a');
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/f35fe1a0-a81b-11e7-9d7a-bd1cf37298fe?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/c9cc1b10-16f7-11e8-aafe-bf263848f2aa');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
@@ -11864,13 +11864,13 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/b3b0b720-a355-11e7-8e0e-ed58f3e98e81?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1085\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/b3b0b720-a355-11e7-8e0e-ed58f3e98e81');
                   itext('Status Dashboard');
                 ie_close('a');
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/1e073380-9855-11e7-a87a-6b9ea3a428bb?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/1e073380-9855-11e7-a87a-6b9ea3a428bb');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
@@ -11900,13 +11900,13 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/26fabc10-a817-11e7-8f68-bff39a8c8048?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1085\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard/26fabc10-a817-11e7-8f68-bff39a8c8048');
                   itext('Status Dashboard');
                 ie_close('a');
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/9caeae90-a816-11e7-8f68-bff39a8c8048?_g=(refreshInterval%3A(\'%24%24hashKey\'%3A\'object%3A1006\'%2Cdisplay%3A\'30%20seconds\'%2Cpause%3A!f%2Csection%3A1%2Cvalue%3A30000)%2Ctime%3A(from%3Anow-24h%2Cmode%3Aquick%2Cto%3Anow))');
+                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/9caeae90-a816-11e7-8f68-bff39a8c8048');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
