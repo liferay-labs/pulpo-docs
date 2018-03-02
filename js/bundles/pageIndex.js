@@ -11834,7 +11834,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/c9cc1b10-16f7-11e8-aafe-bf263848f2aa');
+                    'href', 'https://search-pulpo-elasticsearch-log-sv2gywtwskf6nj4ltt7siiopbm.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/feb44c30-1d78-11e8-b705-eb2fe265d69d');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
@@ -11870,7 +11870,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/1e073380-9855-11e7-a87a-6b9ea3a428bb');
+                    'href', 'https://search-pulpo-elasticsearch-log-sv2gywtwskf6nj4ltt7siiopbm.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/65eefe90-1d79-11e8-b705-eb2fe265d69d');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
@@ -11906,7 +11906,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
               ie_close('li');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://search-pulpo-elasticsearch-log-dev-uk3rplqex6ciog3xy2jojrpsoa.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/9caeae90-a816-11e7-8f68-bff39a8c8048');
+                    'href', 'https://search-pulpo-elasticsearch-log-sv2gywtwskf6nj4ltt7siiopbm.eu-west-1.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/0b263210-1e11-11e8-a571-77b54284e9b');
                   itext('Logs');
                 ie_close('a');
               ie_close('li');
@@ -11916,6 +11916,15 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
         ie_open('p', null, null,
             'class', 'col-md-12');
           itext('* The environments are secured using an API Key. You will need an access key and a secret key to sign your requests. If you need to use this API, please ask someone from the Pulpo Team for these keys.');
+        ie_close('p');
+        ie_open('p', null, null,
+            'class', 'col-md-12');
+          itext('* The logs are secured using AWS Policies. You will need an AWS access key and a AWS secret key to sign your requests. If you need to access the logs, please ask someone from the Pulpo Team for these keys. You could use ');
+          ie_open('a', null, null,
+              'href', 'https://github.com/santthosh/aws-es-kibana');
+            itext('this proxy');
+          ie_close('a');
+          itext(' to make easier access the logs. ');
         ie_close('p');
       ie_close('div');
     ie_close('div');

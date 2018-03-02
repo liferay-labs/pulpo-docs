@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([10],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11656,16 +11656,12 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EMumY", function() { return EMumY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cUMyI", function() { return cUMyI; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11681,11 +11677,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace EMumY.
+ * @fileoverview Templates in namespace cUMyI.
  * @public
  */
 
-goog.module('EMumY.incrementaldom');
+goog.module('cUMyI.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11719,35 +11715,84 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param276 = function() {
+  var param162 = function() {
     ie_open('h6');
-      var dyn16 = opt_data.page.description;
-      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+      var dyn12 = opt_data.page.description;
+      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Names');
+        itext('The Account Segment Model');
       ie_close('h2');
       ie_open('p');
-        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
+        itext('Account Segments are aggregations of Accounts.');
+      ie_close('p');
+      ie_open('p');
+        itext('These aggregations can be:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('Existing fields with the same or similar name of your label');
+          itext('Dynamic: A Variable set of accounts matching a certain condition (filter) belong to the Account Segment.');
         ie_close('li');
         ie_open('li');
-          itext('Previous field mappings from your label to other fields');
+          itext('Static: A fixed set of accounts have been manually associated to the Account Segment.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Account Segment:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          itext('Fields with values similar to your new values');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('filter');
+          ie_close('em');
+          itext(' - an oData filter that defines, for Account Segments with ');
+          ie_open('code');
+            itext('segmentType=DYNAMIC');
+          ie_close('code');
+          itext(', which Accounts belong to this Account Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+          itext(' - The name of the Account Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('segmentType');
+          ie_close('em');
+          itext(' - defines if the Account Segment aggregates Accounts dynamically or statically. The accepted values are ');
+          ie_open('code');
+            itext('Type.STATIC');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('Type.DYNAMIC');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Fields Names Service');
+        itext('Account Segment Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11761,35 +11806,192 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('field-names');
+          itext('account-segments');
         ie_close('code');
-        itext(' pointing to the endpoint for obtaining the field names.');
+        itext(' pointing to the collection of Account Segments.');
       ie_close('p');
       ie_open('p');
-        itext('This endpoint accepts the ');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
         ie_open('code');
-          itext('GET');
+          itext('_embedded');
         ie_close('code');
-        itext(' method with the following parameters:');
+        itext(' section, a list of account segments under the key ');
+        ie_open('code');
+          itext('account-segments');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments?page=0&size=20');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "account-segments":[\n            {\n                 "dateCreated":"2017-11-15T16:23:35Z",\n                 "dateModified":"2017-11-15T16:23:35Z",\n                 "filter":null,\n                 "identifier":"AV_Afi6-Y3UMLZEdmkBE",\n                 "name":"Partners",\n                 "segmentType":"STATIC",\n                 "_links":{\n                    "self":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE"\n                    },\n                    "account-segments":{\n                       "href":"http://localhost:8084/my-project/account-segments{?filter}",\n                       "templated":true\n                    },\n                    "accounts":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE/accounts{?filter}",\n                       "templated":true\n                    },\n                    "memberships": {\n                        "href":"http://localhost:8084/my-project/account-segments/AV_81uji7IU2hIVahEU6/memberships"\n                    }\n                 }\n            }\n           ]\n       },\n    "_links":{\n       "self":{\n           "href":"http://localhost:8084/my-project/account-segments?page=0&size=20"\n       }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Account Segments is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "My First AccountSegment",\n    "filter" : "(organization/employees/value eq \'30\')",\n    "segmentType" : "DYNAMIC"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Account Segment Links');
+      ie_close('h2');
+      ie_open('p');
+        itext('As part of the links of each account, the following links can be found using these keys:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('label - the label from your field (e.g. telephone, email addres... etc)');
+          ie_open('code');
+            itext('account-segments');
+          ie_close('code');
+          itext(' - The collection of Account Segments');
         ie_close('li');
         ie_open('li');
-          itext('ownerType - the type of entity your are mapping (individual, account...)');
+          ie_open('code');
+            itext('accounts');
+          ie_close('code');
+          itext(' - The collection of Accounts who belong to this Account Segment. This collection can be filtered as explained in ');
+          ie_open('a', null, null,
+              'href', '/docs/general#filtering');
+            itext('filtering');
+          ie_close('a');
+          itext('.');
         ie_close('li');
         ie_open('li');
-          itext('values - array of sample values from your field');
+          ie_open('code');
+            itext('memberships');
+          ie_close('code');
+          itext(' - The collection of Memberships of this Account Segment. This collection can be used to add new members to this account segment manually, as described in #4.');
         ie_close('li');
       ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Account Segment Membership Collection');
+      ie_close('h2');
       ie_open('p');
-        itext('The response will contain a list of existing field names ordered by relevance.');
+        itext('Creation of new Account-Account Segment memberships is supported only for Account Segments with ');
+        ie_open('code');
+          itext('segmentType=STATIC');
+        ie_close('code');
+        itext(' by making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the ');
+        ie_open('code');
+          itext('memberships');
+        ie_close('code');
+        itext(' Collection URL of each account segment . This is an example of the body passed to this POST request to the URL');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "accountIdentifier" : "my-account-identifier"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('A ');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' request to the URL ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships/my-account-identifier');
+        ie_close('code');
+        itext(' removes an existing Account-Account Segment membership.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '5');
+      ie_open('h2');
+        itext('Account Segment Membership Count');
+      ie_close('h2');
+      ie_open('p');
+        itext('The current value of the count of Accounts that are members of an Account Segment can be obtained from the ');
+        ie_open('code');
+          itext('totalElements');
+        ie_close('code');
+        itext(' field of the ');
+        ie_open('code');
+          itext('accounts');
+        ie_close('code');
+        itext(' collection.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
+        itext('The historical values of the count of Accounts that are members of an Account Segment are stored as ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' with the name ');
+        ie_open('code');
+          itext('accountCount');
+        ie_close('code');
+        itext(' and associated to the Individual Segment through the ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext(' properties. For example, using the oData filter');
+        ie_open('code');
+          itext('(name eq \'accountCount\') and (ownerype eq \'account-segment\') and (ownerIdentifier eq \'AV_Afi6-Y3UMLZEdmkBE\')');
+        ie_close('code');
+        itext('returns a collection of fields with the historical count values for the Account Segment with identifier ');
+        ie_open('code');
+          itext('AV_Afi6-Y3UMLZEdmkBE');
+        ie_close('code');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('The latest value of the count is also stored in the fields of the Account Segment and therefore it can be used to filter and sort the collection of Account Segments. However, it is very important to know that ');
+        ie_open('em');
+          itext('this value may be outdated');
+        ie_close('em');
+        itext(' since this is just the latest historical value that is updated once a day. For the accurate number of members, the totalElements field from the collection should be retrieved.');
+      ie_close('p');
+      ie_open('p');
+        itext('For example, this URL would obtain the the collection of Account segments sorted by number of members.');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments?sort=fields/accountCount/value');
+        ie_close('code');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11800,11 +12002,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param276}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param162}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'EMumY.render';
+  $render.soyTemplateName = 'cUMyI.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11814,14 +12016,18 @@ return exports;
 
 });
 
-class EMumY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EMumY, templates);
+class cUMyI extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(cUMyI, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -11864,11 +12070,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EMumY, templates);
 /* 139 */,
 /* 140 */,
 /* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11896,7 +12098,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(99);
+var _indexSoy = __webpack_require__(95);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11908,23 +12110,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EMumY = function (_Component) {
-  _inherits(EMumY, _Component);
+var cUMyI = function (_Component) {
+  _inherits(cUMyI, _Component);
 
-  function EMumY() {
-    _classCallCheck(this, EMumY);
+  function cUMyI() {
+    _classCallCheck(this, cUMyI);
 
-    return _possibleConstructorReturn(this, (EMumY.__proto__ || Object.getPrototypeOf(EMumY)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (cUMyI.__proto__ || Object.getPrototypeOf(cUMyI)).apply(this, arguments));
   }
 
-  return EMumY;
+  return cUMyI;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(EMumY, _indexSoy2.default);
+_metalSoy2.default.register(cUMyI, _indexSoy2.default);
 
-exports.default = EMumY;
+exports.default = cUMyI;
 
 /***/ })
-],[146]);
+],[142]);
