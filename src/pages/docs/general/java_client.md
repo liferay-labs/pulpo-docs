@@ -107,7 +107,7 @@ String dataSourceName = contactsEngineClient.follow(
 ).withTemplateParameters(
 	parameters
 ).toObject(
-	"$.name"
+	'$.name'
 );
 ```
 
@@ -128,7 +128,7 @@ String individualSegmentName = contactsEngineClient.follow(
 ).withTemplateParameters(
 	parameters
 ).toObject(
-	"$.name"
+	'$.name'
 );
 ```
 
@@ -142,11 +142,11 @@ String individualSegmentName =
 		).follow(
 			ContactsEngineClient.INDIVIDUAL_SEGMENTS
 		).follow(
-			"$._embedded.individual-segments[0]"	
+			'$' + '._embedded.' + ContactsEngineClient.INDIVIDUAL_SEGMENTS + '[0]'
 		).withTemplateParameters(
 			commonParameters
 		).toObject(
-			"$.name"
+			'$.name'
 		);
 ```
 
