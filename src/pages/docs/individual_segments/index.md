@@ -30,6 +30,7 @@ The following fields are currently supported as part of an Individual Segment:
 * *filterMetadata* - a placeholder for extra information about the filter
 * *identifier*
 * *name* - The name of the Individual Segment
+* *scope* - The scope of the Individual Segment, whether this segment belongs to a user or is shared between the members of a project. The accepted values are `USER` and `PROJECT`.
 * *segmentType* - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are `STATIC` and `DYNAMIC`
 * *status* - defines if the Individual Segment accepts memberships or not. The accepted values are `ACTIVE` and `INACTIVE`
 
