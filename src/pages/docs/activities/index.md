@@ -24,7 +24,7 @@ The entity field contains the following fields:
 * *name*
 * *description*
 * *activityType*
-* *ownerType* - The entity that performed this activity (e.g. an Individual, an Individual Identifier...)
+* *ownerType* - The entity that performed this activity (e.g. an Individual, an Account...)
 * *ownerIdentifier* - The Identifier of the entity that performed this activity.
 * *subactivities* - A list with the more detailed activities that compose this activity.
 

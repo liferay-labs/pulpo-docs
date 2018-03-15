@@ -27,7 +27,7 @@ The entity field contains the following fields:
 * *label*
 * *name*
 * *value*
-* *ownerType* - The entity that owns this field (e.g. an Individual, an Individual Identifier...)
+* *ownerType* - The entity that owns this field (e.g. an Individual, an Account...)
 * *ownerIdentifier* - The Identifier of the entity that owns this field.
 
 </article>
