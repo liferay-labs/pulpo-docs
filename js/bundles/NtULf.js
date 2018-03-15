@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([6],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,20 +11658,12 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EuOgX", function() { return EuOgX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NtULf", function() { return NtULf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11683,15 +11675,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from status_endpoints.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace EuOgX.
+ * @fileoverview Templates in namespace NtULf.
  * @public
  */
 
-goog.module('EuOgX.incrementaldom');
+goog.module('NtULf.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11725,42 +11717,148 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param492 = function() {
+  var param209 = function() {
     ie_open('h6');
-      var dyn22 = opt_data.page.description;
-      if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'health');
+        'id', '1');
       ie_open('h2');
-        itext('API Health');
+        itext('The Activity Model');
       ie_close('h2');
       ie_open('p');
-        itext('The health of the API can be checked at the endpoint: ');
-        ie_open('code');
-          itext('/management/health');
-        ie_close('code');
+        itext('Activities contain information about behaviour and actions performed by different entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', accounts, individual segments... etc).');
       ie_close('p');
       ie_open('p');
-        itext('The response will be JSON in this format with posible statuses UP and DOWN:');
+        itext('Activities can aggregate subactivities inside to provide a higher level of detail. E.g. An activity could be a visit to a website and it could have subactivities such as "View the Home Page", "Submit a Form", "Click on a button"... etc');
       ie_close('p');
-      $templateAlias2({code: '{\n    "description":"Pulpo Contacts Engine",\n    "status":"UP"\n}', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The entity field contains the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('startTime');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('endTime');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('description');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('activityType');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerType');
+          ie_close('em');
+          itext(' - The entity that performed this activity (e.g. an Individual, an Account...)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerIdentifier');
+          ie_close('em');
+          itext(' - The Identifier of the entity that performed this activity.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('subactivities');
+          ie_close('em');
+          itext(' - A list with the more detailed activities that compose this activity.');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'version');
+        'id', '2');
       ie_open('h2');
-        itext('API Deployed Version');
+        itext('Activities Collection');
       ie_close('h2');
       ie_open('p');
-        itext('The version of the API that is running can be checked at the endpoint: ');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
         ie_open('code');
-          itext('/management/info');
+          itext('_links');
         ie_close('code');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('activities');
+        ie_close('code');
+        itext(' pointing to the collection of Activities.');
       ie_close('p');
       ie_open('p');
-        itext('The response will be JSON in this format, with information relative to the branch deployed, the time it was built, the version of the API and the git commit:');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: '{\n    "branch":"PULPO-166.hateoas",\n    "buildtime":"20180103T142812Z",\n    "version":"1.0.0",\n    "revision":"e015458b74a1378801c26d9eb5756c5a245d885d"\n}', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of activities under the key ');
+        ie_open('code');
+          itext('activities');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/activities?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "activities": [\n            {\n                "name": "Visit liferay.com",\n                "description": "3 Documents, 2 Pages, 1 Form",\n                "ownerIdentifier": "AWIqHXWWV1ufgGLxavLQ",\n                "ownerType": "individual",\n                "activityType": "Web",\n                "startTime": "2018-03-15T14:43:16Z",\n                "endTime": "2018-03-15T14:43:16Z",\n                "subactivities": [\n                    {\n                        "name": "Visit Home Page",\n                        "description": "Spent 5 min reading",\n                        "createdDate": "2018-03-15T14:43:16Z",\n                        "subactivityType": "View"\n                    },\n                    {\n                        "name": "Download Document: Use Cases",\n                        "createdDate": "2018-03-15T14:43:16Z",\n                        "subactivityType": "Download"\n                    }\n                ],\n                "identifier": "AWIqHXbVV1ufgGLxavLg",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/activities/AWIqHXbVV1ufgGLxavLg"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWIqHXWWV1ufgGLxavLQ"\n                    },\n                    "activities": {\n                        "href": "http://localhost:8084/my-project/activities?page=0&size=20{&filter,sort*}"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Activities or Update of Activities manually is not supported. Activities are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
+      ie_close('p');
+      ie_open('p');
+        itext('Deletion of existing Activities is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of activities, the link to each activity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11771,11 +11869,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param492}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'EuOgX.render';
+  $render.soyTemplateName = 'NtULf.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11785,14 +11883,22 @@ return exports;
 
 });
 
-class EuOgX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EuOgX, templates);
+class NtULf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NtULf, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11833,12 +11939,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EuOgX, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11866,9 +11967,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _status_endpointsSoy = __webpack_require__(105);
+var _indexSoy = __webpack_require__(97);
 
-var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11878,23 +11979,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EuOgX = function (_Component) {
-  _inherits(EuOgX, _Component);
+var NtULf = function (_Component) {
+  _inherits(NtULf, _Component);
 
-  function EuOgX() {
-    _classCallCheck(this, EuOgX);
+  function NtULf() {
+    _classCallCheck(this, NtULf);
 
-    return _possibleConstructorReturn(this, (EuOgX.__proto__ || Object.getPrototypeOf(EuOgX)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NtULf.__proto__ || Object.getPrototypeOf(NtULf)).apply(this, arguments));
   }
 
-  return EuOgX;
+  return NtULf;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(EuOgX, _status_endpointsSoy2.default);
+_metalSoy2.default.register(NtULf, _indexSoy2.default);
 
-exports.default = EuOgX;
+exports.default = NtULf;
 
 /***/ })
-],[151]);
+],[146]);

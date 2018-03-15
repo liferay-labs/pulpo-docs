@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([13],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11659,16 +11659,12 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ITzNC", function() { return ITzNC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JIMkc", function() { return JIMkc; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,15 +11676,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from authentication.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ITzNC.
+ * @fileoverview Templates in namespace JIMkc.
  * @public
  */
 
-goog.module('ITzNC.incrementaldom');
+goog.module('JIMkc.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11722,178 +11718,353 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param324 = function() {
+  var param225 = function() {
     ie_open('h6');
-      var dyn19 = opt_data.page.description;
-      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+      var dyn15 = opt_data.page.description;
+      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'intro');
+        'id', '1');
       ie_open('h2');
-        itext('Authentication Headers');
+        itext('The Data Source Model');
       ie_close('h2');
       ie_open('p');
-        itext('In order to have a signed request, it must contain the following http headers:');
+        itext('DataSources support a subset of the Type ');
+        ie_open('a', null, null,
+            'href', 'http://schema.org/DataFeed');
+          itext('DataFeed');
+        ie_close('a');
+        itext(' from Schema.org');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('timestamp');
+            itext('about');
           ie_close('em');
-          itext(': the timestamp of the request in milliseconds');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('apikey');
+            itext('author');
           ie_close('em');
-          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
+          ie_open('ul');
+            ie_open('li');
+              itext('identifier');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('signature');
+            itext('dateCreated');
           ie_close('em');
-          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('provider');
+          ie_close('em');
+          ie_open('ul');
+            ie_open('li');
+              itext('type - See the ');
+              ie_open('a', null, null,
+                  'href', '#provider');
+                itext('DataSource Provider');
+              ie_close('a');
+              itext(' section for more details');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('url');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('subjectOf');
+          ie_close('em');
+          itext(' - An event about this Data Source');
+          ie_open('ul');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+            ie_open('li');
+              itext('startDate');
+            ie_close('li');
+            ie_open('li');
+              itext('endDate');
+            ie_close('li');
+            ie_open('li');
+              itext('location');
+            ie_close('li');
+            ie_open('li');
+              itext('sameAs - the URL of the Event');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'signature');
+        'id', '2');
       ie_open('h2');
-        itext('Signature Generation');
+        itext('DataSources Collection');
       ie_close('h2');
       ie_open('p');
-        itext('You can use the following gradle dependency to use the ');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
         ie_open('code');
-          itext('SignatureValidator.java');
+          itext('_links');
         ie_close('code');
-        itext(' utility:');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('data-sources');
+        ie_close('code');
+        itext(' pointing to the collection of Data Sources.');
       ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180131.153601-1"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('In order to obtain the signature for your request, you can use one of the following methods:');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of data sources under the key ');
+        ie_open('code');
+          itext('data-sources');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/data-sources?page=0&size=1');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "type": "CSV"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Data Sources is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "My First DataSource",\n    "provider" : {\n        "type" : "CSV"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'provider');
+      ie_open('h2');
+        itext('DataSource Provider');
+      ie_close('h2');
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('provider');
+        ie_close('code');
+        itext(' field of the DataSource contains the specific configuration for a provider (e.g. Liferay, CSV). As this information changes from one type of provider to other, the set of fields is different, too.');
+      ie_close('p');
+      ie_open('p');
+        itext('A valid DataSource provider field must contain at least a field ');
+        ie_open('code');
+          itext('type');
+        ie_close('code');
+        itext(' with one of the supported types as values. Currently, the supported values are ');
+        ie_open('code');
+          itext('LIFERAY');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('CSV');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Liferay DataSource Provider');
+      ie_close('h3');
+      ie_open('p');
+        itext('The following fields are supported for a Liferay Provider:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
-            ie_close('code');
-          ie_close('p');
+          ie_open('em');
+            itext('type');
+          ie_close('em');
+          itext(' - the value must be ');
+          ie_open('code');
+            itext('LIFERAY');
+          ie_close('code');
+          itext(' for a Liferay Provider');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('analyticsConfiguration');
+          ie_close('em');
+          itext(' - Contains the analytics configuration for the DataSource');
           ie_open('ul');
             ie_open('li');
-              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
+              itext('analyticsKey');
+            ie_close('li');
+            ie_open('li');
+              itext('enableAllSites - If the value is ');
+              ie_open('code');
+                itext('true');
+              ie_close('code');
+              itext(', all the sites in the instance will send analytics, ignoring the configuration in the ');
+              ie_open('code');
+                itext('sites');
+              ie_close('code');
+              itext(' field.');
+            ie_close('li');
+            ie_open('li');
+              itext('sites - A list elements with the structure:');
+              ie_open('ul');
+                ie_open('li');
+                  itext('enableAllChildren - If the value is ');
+                  ie_open('code');
+                    itext('true');
+                  ie_close('code');
+                  itext(', all the children of this site will send analytics');
+                ie_close('li');
+                ie_open('li');
+                  itext('identifier - The primary key of the site');
+                ie_close('li');
+              ie_close('ul');
             ie_close('li');
           ie_close('ul');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
-            ie_close('code');
-          ie_close('p');
+          ie_open('em');
+            itext('contactsConfiguration');
+          ie_close('em');
+          itext(' - Contains the contacts configuration for the DataSource');
           ie_open('ul');
             ie_open('li');
-              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
+              itext('enableAllContacts - If the value is ');
+              ie_open('code');
+                itext('true');
+              ie_close('code');
+              itext(', all the contacts in the instance will be synchronized, ignoring the configuration in the ');
+              ie_open('code');
+                itext('organizations');
+              ie_close('code');
+              itext(' and ');
+              ie_open('code');
+                itext('userGroups');
+              ie_close('code');
+              itext(' fields.');
             ie_close('li');
             ie_open('li');
-              itext('The parameters map must contain the parameters of the body of your request (if any)');
+              itext('organizations - A list elements with the structure:');
+              ie_open('ul');
+                ie_open('li');
+                  itext('enableAllChildren - If the value is ');
+                  ie_open('code');
+                    itext('true');
+                  ie_close('code');
+                  itext(', all the contacts in the children of this organization will be synchronized');
+                ie_close('li');
+                ie_open('li');
+                  itext('identifier - The primary key of the organization');
+                ie_close('li');
+              ie_close('ul');
             ie_close('li');
             ie_open('li');
-              itext('The timestamp must match the value in your timestamp header');
+              itext('userGroups - A list elements with the structure:');
+              ie_open('ul');
+                ie_open('li');
+                  itext('enableAllChildren - If the value is ');
+                  ie_open('code');
+                    itext('true');
+                  ie_close('code');
+                  itext(', all the contacts in the children of this user group will be synchronized');
+                ie_close('li');
+                ie_open('li');
+                  itext('identifier - The primary key of the user group');
+                ie_close('li');
+              ie_close('ul');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('instanceInfo');
+          ie_close('em');
+          itext(' - Contacts information about the Liferay Portal instance');
+          ie_open('ul');
+            ie_open('li');
+              itext('companyId');
             ie_close('li');
             ie_open('li');
-              itext('The api key must match your api key header too.');
+              itext('lcsInstallationId');
             ie_close('li');
           ie_close('ul');
         ie_close('li');
       ie_close('ul');
       ie_open('p');
-        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
+        itext('This is an example of the body passed  to the ');
         ie_open('code');
-          itext('PULPO_PRIVATE_KEY');
+          itext('POST');
         ie_close('code');
-        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how the request headers could look like:');
-      ie_close('p');
-      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how to generate the signature for a POST request:');
-      ie_close('p');
-      ie_open('p');
-        itext('*1) Include the api key Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*2) Include the timestamp Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('(e.g. ');
+        itext(' request to create a DataSource with a ');
         ie_open('code');
-          itext('System.currentTimeMillis()');
+          itext('provider');
         ie_close('code');
-        itext(' in Java)');
+        itext(' field of type Liferay:');
       ie_close('p');
-      ie_open('p');
-        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
-        ie_open('code');
-          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
-        ie_close('code');
-        itext(', and include that as a third header:');
-      ie_close('p');
-      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*3b) In case you didn\'t have the http request, we would call:');
-      ie_close('p');
-      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('with these values:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> empty');
-        ie_close('li');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Another example of a POST request with body parameters:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/datasources');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> Map with the parameters:');
-        ie_close('li');
-      ie_close('ul');
-      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '{\n    "name" : "Liferay Intranet DataSource",\n    "provider" : {\n        "analyticsConfiguration" : {\n            "analyticsKey" : "My-Key-For-Analytics",\n            "enableAllSites" : false,\n            "sites" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "1"\n                }\n            ]\n        },\n        "contactsConfiguration" : {\n            "enableAllContacts" : false,\n            "organizations" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "2"\n                },\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "3"\n                }\n            ],\n            "userGroups" : [\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "4"\n                }\n            ]\n        },\n        "instanceInfo" : {\n            "companyId" : "1",\n            "lcsInstallationId" : "1"\n        },\n        "type" : "LIFERAY"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11904,11 +12075,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param324}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param225}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ITzNC.render';
+  $render.soyTemplateName = 'JIMkc.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11918,14 +12089,18 @@ return exports;
 
 });
 
-class ITzNC extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ITzNC, templates);
+class JIMkc extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(JIMkc, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11970,12 +12145,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ITzNC, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12003,9 +12173,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _authenticationSoy = __webpack_require__(102);
+var _indexSoy = __webpack_require__(98);
 
-var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12015,23 +12185,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ITzNC = function (_Component) {
-  _inherits(ITzNC, _Component);
+var JIMkc = function (_Component) {
+  _inherits(JIMkc, _Component);
 
-  function ITzNC() {
-    _classCallCheck(this, ITzNC);
+  function JIMkc() {
+    _classCallCheck(this, JIMkc);
 
-    return _possibleConstructorReturn(this, (ITzNC.__proto__ || Object.getPrototypeOf(ITzNC)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (JIMkc.__proto__ || Object.getPrototypeOf(JIMkc)).apply(this, arguments));
   }
 
-  return ITzNC;
+  return JIMkc;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ITzNC, _authenticationSoy2.default);
+_metalSoy2.default.register(JIMkc, _indexSoy2.default);
 
-exports.default = ITzNC;
+exports.default = JIMkc;
 
 /***/ })
-],[152]);
+],[147]);
