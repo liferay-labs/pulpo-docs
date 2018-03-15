@@ -11665,12 +11665,13 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */
+/* 104 */,
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HONNi", function() { return HONNi; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EuOgX", function() { return EuOgX; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11686,11 +11687,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace HONNi.
+ * @fileoverview Templates in namespace EuOgX.
  * @public
  */
 
-goog.module('HONNi.incrementaldom');
+goog.module('EuOgX.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11724,7 +11725,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param502 = function() {
+  var param492 = function() {
     ie_open('h6');
       var dyn22 = opt_data.page.description;
       if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
@@ -11770,11 +11771,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param502}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param492}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'HONNi.render';
+  $render.soyTemplateName = 'EuOgX.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11784,15 +11785,14 @@ return exports;
 
 });
 
-class HONNi extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HONNi, templates);
+class EuOgX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EuOgX, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -11837,7 +11837,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HONNi, templates);
 /* 147 */,
 /* 148 */,
 /* 149 */,
-/* 150 */
+/* 150 */,
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11865,7 +11866,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _status_endpointsSoy = __webpack_require__(104);
+var _status_endpointsSoy = __webpack_require__(105);
 
 var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
 
@@ -11877,23 +11878,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HONNi = function (_Component) {
-  _inherits(HONNi, _Component);
+var EuOgX = function (_Component) {
+  _inherits(EuOgX, _Component);
 
-  function HONNi() {
-    _classCallCheck(this, HONNi);
+  function EuOgX() {
+    _classCallCheck(this, EuOgX);
 
-    return _possibleConstructorReturn(this, (HONNi.__proto__ || Object.getPrototypeOf(HONNi)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (EuOgX.__proto__ || Object.getPrototypeOf(EuOgX)).apply(this, arguments));
   }
 
-  return HONNi;
+  return EuOgX;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(HONNi, _status_endpointsSoy2.default);
+_metalSoy2.default.register(EuOgX, _status_endpointsSoy2.default);
 
-exports.default = HONNi;
+exports.default = EuOgX;
 
 /***/ })
-],[150]);
+],[151]);

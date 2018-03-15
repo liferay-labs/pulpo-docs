@@ -11659,12 +11659,13 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mhMTg", function() { return mhMTg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EoUjA", function() { return EoUjA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,11 +11681,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace mhMTg.
+ * @fileoverview Templates in namespace EoUjA.
  * @public
  */
 
-goog.module('mhMTg.incrementaldom');
+goog.module('EoUjA.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,10 +11719,10 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param235 = function() {
+  var param251 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
@@ -11963,11 +11964,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param235}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param251}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'mhMTg.render';
+  $render.soyTemplateName = 'EoUjA.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11977,15 +11978,14 @@ return exports;
 
 });
 
-class mhMTg extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mhMTg, templates);
+class EoUjA extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EoUjA, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -12032,7 +12032,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mhMTg, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */
+/* 146 */,
+/* 147 */,
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12060,7 +12062,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(99);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12072,23 +12074,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var mhMTg = function (_Component) {
-  _inherits(mhMTg, _Component);
+var EoUjA = function (_Component) {
+  _inherits(EoUjA, _Component);
 
-  function mhMTg() {
-    _classCallCheck(this, mhMTg);
+  function EoUjA() {
+    _classCallCheck(this, EoUjA);
 
-    return _possibleConstructorReturn(this, (mhMTg.__proto__ || Object.getPrototypeOf(mhMTg)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (EoUjA.__proto__ || Object.getPrototypeOf(EoUjA)).apply(this, arguments));
   }
 
-  return mhMTg;
+  return EoUjA;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(mhMTg, _indexSoy2.default);
+_metalSoy2.default.register(EoUjA, _indexSoy2.default);
 
-exports.default = mhMTg;
+exports.default = EoUjA;
 
 /***/ })
-],[146]);
+],[148]);
