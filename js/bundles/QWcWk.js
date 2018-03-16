@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11663,12 +11663,15 @@ module.exports = function(module) {
 /* 99 */,
 /* 100 */,
 /* 101 */,
-/* 102 */
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YRIBR", function() { return YRIBR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QWcWk", function() { return QWcWk; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,15 +11683,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from authentication.soy.
+// This file was automatically generated from status_endpoints.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace YRIBR.
+ * @fileoverview Templates in namespace QWcWk.
  * @public
  */
 
-goog.module('YRIBR.incrementaldom');
+goog.module('QWcWk.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11722,178 +11725,42 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param324 = function() {
+  var param492 = function() {
     ie_open('h6');
-      var dyn19 = opt_data.page.description;
-      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+      var dyn22 = opt_data.page.description;
+      if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'intro');
+        'id', 'health');
       ie_open('h2');
-        itext('Authentication Headers');
+        itext('API Health');
       ie_close('h2');
       ie_open('p');
-        itext('In order to have a signed request, it must contain the following http headers:');
+        itext('The health of the API can be checked at the endpoint: ');
+        ie_open('code');
+          itext('/management/health');
+        ie_close('code');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('timestamp');
-          ie_close('em');
-          itext(': the timestamp of the request in milliseconds');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('apikey');
-          ie_close('em');
-          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('signature');
-          ie_close('em');
-          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('The response will be JSON in this format with posible statuses UP and DOWN:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "description":"Pulpo Contacts Engine",\n    "status":"UP"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'signature');
+        'id', 'version');
       ie_open('h2');
-        itext('Signature Generation');
+        itext('API Deployed Version');
       ie_close('h2');
       ie_open('p');
-        itext('You can use the following gradle dependency to use the ');
+        itext('The version of the API that is running can be checked at the endpoint: ');
         ie_open('code');
-          itext('SignatureValidator.java');
+          itext('/management/info');
         ie_close('code');
-        itext(' utility:');
-      ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180131.153601-1"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In order to obtain the signature for your request, you can use one of the following methods:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
-            ie_close('li');
-            ie_open('li');
-              itext('The parameters map must contain the parameters of the body of your request (if any)');
-            ie_close('li');
-            ie_open('li');
-              itext('The timestamp must match the value in your timestamp header');
-            ie_close('li');
-            ie_open('li');
-              itext('The api key must match your api key header too.');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
-        ie_open('code');
-          itext('PULPO_PRIVATE_KEY');
-        ie_close('code');
-        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of how the request headers could look like:');
+        itext('The response will be JSON in this format, with information relative to the branch deployed, the time it was built, the version of the API and the git commit:');
       ie_close('p');
-      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how to generate the signature for a POST request:');
-      ie_close('p');
-      ie_open('p');
-        itext('*1) Include the api key Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*2) Include the timestamp Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('(e.g. ');
-        ie_open('code');
-          itext('System.currentTimeMillis()');
-        ie_close('code');
-        itext(' in Java)');
-      ie_close('p');
-      ie_open('p');
-        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
-        ie_open('code');
-          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
-        ie_close('code');
-        itext(', and include that as a third header:');
-      ie_close('p');
-      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*3b) In case you didn\'t have the http request, we would call:');
-      ie_close('p');
-      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('with these values:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> empty');
-        ie_close('li');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Another example of a POST request with body parameters:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/datasources');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> Map with the parameters:');
-        ie_close('li');
-      ie_close('ul');
-      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '{\n    "branch":"PULPO-166.hateoas",\n    "buildtime":"20180103T142812Z",\n    "version":"1.0.0",\n    "revision":"e015458b74a1378801c26d9eb5756c5a245d885d"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11904,11 +11771,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param324}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param492}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'YRIBR.render';
+  $render.soyTemplateName = 'QWcWk.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11918,17 +11785,14 @@ return exports;
 
 });
 
-class YRIBR extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(YRIBR, templates);
+class QWcWk extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QWcWk, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 103 */,
-/* 104 */,
-/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -12003,9 +11867,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _authenticationSoy = __webpack_require__(102);
+var _status_endpointsSoy = __webpack_require__(105);
 
-var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
+var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12015,23 +11879,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var YRIBR = function (_Component) {
-  _inherits(YRIBR, _Component);
+var QWcWk = function (_Component) {
+  _inherits(QWcWk, _Component);
 
-  function YRIBR() {
-    _classCallCheck(this, YRIBR);
+  function QWcWk() {
+    _classCallCheck(this, QWcWk);
 
-    return _possibleConstructorReturn(this, (YRIBR.__proto__ || Object.getPrototypeOf(YRIBR)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (QWcWk.__proto__ || Object.getPrototypeOf(QWcWk)).apply(this, arguments));
   }
 
-  return YRIBR;
+  return QWcWk;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(YRIBR, _authenticationSoy2.default);
+_metalSoy2.default.register(QWcWk, _status_endpointsSoy2.default);
 
-exports.default = YRIBR;
+exports.default = QWcWk;
 
 /***/ })
 ],[152]);
