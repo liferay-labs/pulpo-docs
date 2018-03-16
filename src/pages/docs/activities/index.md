@@ -14,10 +14,10 @@ weight: 10
 
 Activities contain information about behaviour and actions performed by different entities ([individuals](/docs/individuals), accounts, individual segments... etc).
 
-Activities can aggregate subactivities inside to provide a higher level of detail. E.g. An activity could be a visit
-to a website and it could have subactivities such as "View the Home Page", "Submit a Form", "Click on a button"... etc
+Activities can aggregate actions inside to provide a higher level of detail. E.g. An activity could be a visit
+to a website and it could have actions such as "View the Home Page", "Submit a Form", "Click on a button"... etc
 
-The entity field contains the following fields:
+The entity activity contains the following fields:
 * *identifier*
 * *startTime*
 * *endTime*
@@ -26,7 +26,21 @@ The entity field contains the following fields:
 * *activityType*
 * *ownerType* - The entity that performed this activity (e.g. an Individual, an Account...)
 * *ownerIdentifier* - The Identifier of the entity that performed this activity.
-* *subactivities* - A list with the more detailed activities that compose this activity.
+* *actions* - A list with of the actions that compose this activity.
+
+The entity action contains the following fields:
+* *startTime*
+* *name*
+* *description*
+* *actionType*
+* *object* - The object upon which the action is carried out
+
+The entity object contains the following fields:
+* *identifier*
+* *name*
+* *description*
+* *objectType*
+* *url*
 
 </article>
 
@@ -51,39 +65,54 @@ This is an example of a response to this url: http://localhost:8084/my-project/a
     "_embedded": {
         "activities": [
             {
-                "name": "Visit liferay.com",
-                "description": "3 Documents, 2 Pages, 1 Form",
-                "ownerIdentifier": "AWIqHXWWV1ufgGLxavLQ",
-                "ownerType": "individual",
-                "activityType": "Web",
-                "startTime": "2018-03-15T14:43:16Z",
-                "endTime": "2018-03-15T14:43:16Z",
-                "subactivities": [
-                    {
-                        "name": "Visit Home Page",
-                        "description": "Spent 5 min reading",
-                        "createdDate": "2018-03-15T14:43:16Z",
-                        "subactivityType": "View"
-                    },
-                    {
-                        "name": "Download Document: Use Cases",
-                        "createdDate": "2018-03-15T14:43:16Z",
-                        "subactivityType": "Download"
-                    }
-                ],
-                "identifier": "AWIqHXbVV1ufgGLxavLg",
-                "_links": {
-                    "self": {
-                        "href": "http://localhost:8084/my-project/activities/AWIqHXbVV1ufgGLxavLg"
-                    },
-                    "individual": {
-                        "href": "http://localhost:8084/my-project/individuals/AWIqHXWWV1ufgGLxavLQ"
-                    },
-                    "activities": {
-                        "href": "http://localhost:8084/my-project/activities?page=0&size=20{&filter,sort*}"
-                    }
-                }
-            }
+				"name": "Visit liferay.com",
+				"actions": [
+					{
+						"name": "Visit Home Page",
+						"description": "Spent 5 min reading",
+						"startTime": "2018-03-06T03:50:43Z",
+						"actionType": "Download",
+						"object": {
+							"name": "Home Page",
+							"objectType": "Page",
+							"url": "http://homepage.com",
+							"description": "Description of the page",
+							"identifier": "194EF"
+						}
+					},
+					{
+						"name": "Download Document",
+						"description": "Spent 5 min reading",
+						"startTime": "2018-03-16T10:47:56Z",
+						"actionType": "Download",
+						"object": {
+							"name": "Use Cases 2018",
+							"objectType": "PDF",
+							"url": "http://document-download.com",
+							"description": "A document with a long description",
+							"identifier": "12345-ABCDEF"
+						}
+					}
+				],
+				"description": "3 Documents, 2 Visits",
+				"ownerIdentifier": "AWIubFositjEuNSqYpR",
+				"ownerType": "individual",
+				"activityType": "Web",
+				"startTime": "2018-03-06T03:50:43Z",
+				"endTime": "2018-03-06T03:50:43Z",
+				"identifier": "AWIubHEhitjEuNSqYph",
+				"_links": {
+					"self": {
+						"href": "http://localhost:8084/my-project/activities/AWIubHEhitjEuNSqYph"
+					},
+					"individual": {
+						"href": "http://localhost:8084/my-project/individuals/AWIubFositjEuNSqYpR"
+					},
+					"activities": {
+						"href": "http://localhost:8084/my-project/activities?page=0&size=20{&filter,sort*}"
+					}
+				}
+			}
         ]
     },
     "_links": {
