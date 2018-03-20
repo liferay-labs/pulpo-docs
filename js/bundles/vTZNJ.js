@@ -11671,7 +11671,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QWcWk", function() { return QWcWk; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vTZNJ", function() { return vTZNJ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11687,11 +11687,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace QWcWk.
+ * @fileoverview Templates in namespace vTZNJ.
  * @public
  */
 
-goog.module('QWcWk.incrementaldom');
+goog.module('vTZNJ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11775,7 +11775,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'QWcWk.render';
+  $render.soyTemplateName = 'vTZNJ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11785,8 +11785,8 @@ return exports;
 
 });
 
-class QWcWk extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QWcWk, templates);
+class vTZNJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(vTZNJ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11839,7 +11839,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QWcWk, templates);
 /* 149 */,
 /* 150 */,
 /* 151 */,
-/* 152 */
+/* 152 */,
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11879,23 +11880,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var QWcWk = function (_Component) {
-  _inherits(QWcWk, _Component);
+var vTZNJ = function (_Component) {
+  _inherits(vTZNJ, _Component);
 
-  function QWcWk() {
-    _classCallCheck(this, QWcWk);
+  function vTZNJ() {
+    _classCallCheck(this, vTZNJ);
 
-    return _possibleConstructorReturn(this, (QWcWk.__proto__ || Object.getPrototypeOf(QWcWk)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (vTZNJ.__proto__ || Object.getPrototypeOf(vTZNJ)).apply(this, arguments));
   }
 
-  return QWcWk;
+  return vTZNJ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(QWcWk, _status_endpointsSoy2.default);
+_metalSoy2.default.register(vTZNJ, _status_endpointsSoy2.default);
 
-exports.default = QWcWk;
+exports.default = vTZNJ;
 
 /***/ })
-],[152]);
+],[153]);

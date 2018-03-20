@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11659,12 +11659,22 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hASTJ", function() { return hASTJ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pPPHa", function() { return pPPHa; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,11 +11690,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace hASTJ.
+ * @fileoverview Templates in namespace pPPHa.
  * @public
  */
 
-goog.module('hASTJ.incrementaldom');
+goog.module('pPPHa.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,45 +11728,76 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param225 = function() {
+  var param539 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn24 = opt_data.page.description;
+      if (typeof dyn24 == 'function') dyn24(); else if (dyn24 != null) itext(dyn24);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Data Source Model');
+        itext('The Individual Model');
       ie_close('h2');
       ie_open('p');
-        itext('DataSources support a subset of the Type ');
-        ie_open('a', null, null,
-            'href', 'http://schema.org/DataFeed');
-          itext('DataFeed');
-        ie_close('a');
-        itext(' from Schema.org');
+        itext('Individuals are a complex entity that contain several contexts for each Person stored in our system.');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported:');
+        itext('Those contexts are:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Identity & Demographics');
+        ie_close('li');
+        ie_open('li');
+          itext('Sentiment Analysis');
+        ie_close('li');
+        ie_open('li');
+          itext('Event Attendance');
+        ie_close('li');
+        ie_open('li');
+          itext('Sales Interaction');
+        ie_close('li');
+        ie_open('li');
+          itext('Social Engagement');
+        ie_close('li');
+        ie_open('li');
+          itext('Transactions');
+        ie_close('li');
+        ie_open('li');
+          itext('Browsing Activity');
+        ie_close('li');
+        ie_open('li');
+          itext('Firmographic');
+        ie_close('li');
+        ie_open('li');
+          itext('Support Interaction');
+        ie_close('li');
+        ie_open('li');
+          itext('etc');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Only some of those contexts are available for now. Each context will contain certain ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' with information. These fields will correspond to ');
+        ie_open('a', null, null,
+            'href', 'http://schema.org/');
+          itext('schema.org');
+        ie_close('a');
+        itext(' Properties');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Invididual:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('about');
+            itext('dataSourceIndividualPKs');
           ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('author');
-          ie_close('em');
-          ie_open('ul');
-            ie_open('li');
-              itext('identifier');
-            ie_close('li');
-            ie_open('li');
-              itext('name');
-            ie_close('li');
-          ie_close('ul');
+          itext(' - a map with the different datasource identifiers as keys and the primary keys of this individual in each datasource. Potentially, an individual could be the aggregation of several users in one datasource.');
         ie_close('li');
         ie_open('li');
           ie_open('em');
@@ -11775,58 +11816,36 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('name');
+            itext('demographics');
           ie_close('em');
+          itext(' - a Map of identity & demographic ');
+          ie_open('a', null, null,
+              'href', '/docs/fields');
+            itext('Fields');
+          ie_close('a');
+          itext(' corresponding to properties of the Type ');
+          ie_open('a', null, null,
+              'href', 'http://schema.org/Person');
+            itext('Person');
+          ie_close('a');
+          itext(' from Schema.org');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('provider');
+            itext('sentiment');
           ie_close('em');
-          ie_open('ul');
-            ie_open('li');
-              itext('type - See the ');
-              ie_open('a', null, null,
-                  'href', '#provider');
-                itext('DataSource Provider');
-              ie_close('a');
-              itext(' section for more details');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('url');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('subjectOf');
-          ie_close('em');
-          itext(' - An event about this Data Source');
-          ie_open('ul');
-            ie_open('li');
-              itext('name');
-            ie_close('li');
-            ie_open('li');
-              itext('startDate');
-            ie_close('li');
-            ie_open('li');
-              itext('endDate');
-            ie_close('li');
-            ie_open('li');
-              itext('location');
-            ie_close('li');
-            ie_open('li');
-              itext('sameAs - the URL of the Event');
-            ie_close('li');
-          ie_close('ul');
+          itext(' - a Map of sentiment analysis ');
+          ie_open('a', null, null,
+              'href', '/docs/fields');
+            itext('Fields');
+          ie_close('a');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('DataSources Collection');
+        itext('Individuals Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11840,9 +11859,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('data-sources');
+          itext('individuals');
         ie_close('code');
-        itext(' pointing to the collection of Data Sources.');
+        itext(' pointing to the collection of Individuals.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11867,204 +11886,273 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of data sources under the key ');
+        itext(' section, a list of individuals under the key ');
         ie_open('code');
-          itext('data-sources');
+          itext('individuals');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
         itext('This is an example of a response to this url: ');
         ie_open('code');
-          itext('http://localhost:8084/my-project/data-sources?page=0&size=1');
+          itext('http://localhost:8084/my-project/individuals?page=0&size=20');
         ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "type": "CSV"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "individuals": [\n            {\n                "dateCreated": "2017-11-13T11:47:43Z",\n                "dateModified": "2017-11-13T11:47:44Z",\n                "demographics": {\n                    "address": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/address",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "address",\n                            "projectId": "my-project",\n                            "value": "125 Main Street, Candelaria"\n                        }\n                    ],\n                    "telephone": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/telephone",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": "home",\n                            "name": "telephone",\n                            "projectId": "my-project",\n                            "value": "+34699001234"\n                        }\n                    ],\n                    "email": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/email",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "email",\n                            "projectId": "my-project",\n                            "value": "cris@liferay.com"\n                        }\n                    ],\n                    "age": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/age",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "age",\n                            "projectId": "my-project",\n                            "value": "32"\n                        }\n                    ]\n                },\n                "identifier": "AV-1NOYHDh9K2u0PkWnL",\n                "sentiment": {},\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL"\n                    },\n                    "individuals": {\n                        "href": "http://localhost:8084/my-project/individuals{?filter}",\n                        "templated": true\n                    },\n                    "individual-segments": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL/individual-segments"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/individuals?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Data Sources is supported making a ');
-        ie_open('code');
-          itext('POST');
-        ie_close('code');
-        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+        itext('Creation of new Individuals or Update of Individuals manually is not supported. Indivuals are automatically generated and updated from the Field Chunks sent by the different Connectors.');
       ie_close('p');
-      $templateAlias2({code: '{\n    "name" : "My First DataSource",\n    "provider" : {\n        "type" : "CSV"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        itext('Deletion of existing Individuals is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of individuals, the link to each individual can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
-        itext('. That same url can be also used for delete (');
-        ie_open('code');
-          itext('DELETE');
-        ie_close('code');
-        itext(' method) and update (');
-        ie_open('code');
-          itext('PUT');
-        ie_close('code');
-        itext(' method).');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'provider');
+        'id', '3');
       ie_open('h2');
-        itext('DataSource Provider');
+        itext('Filtering and Sorting Individuals Collection');
       ie_close('h2');
       ie_open('p');
-        itext('The ');
-        ie_open('code');
-          itext('provider');
-        ie_close('code');
-        itext(' field of the DataSource contains the specific configuration for a provider (e.g. Liferay, CSV). As this information changes from one type of provider to other, the set of fields is different, too.');
-      ie_close('p');
-      ie_open('p');
-        itext('A valid DataSource provider field must contain at least a field ');
-        ie_open('code');
-          itext('type');
-        ie_close('code');
-        itext(' with one of the supported types as values. Currently, the supported values are ');
-        ie_open('code');
-          itext('LIFERAY');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('CSV');
-        ie_close('code');
+        itext('Individuals collection can be filtered as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
         itext('.');
       ie_close('p');
-      ie_open('h3');
-        itext('Liferay DataSource Provider');
-      ie_close('h3');
       ie_open('p');
-        itext('The following fields are supported for a Liferay Provider:');
+        itext('These are some examples of filtering:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('type');
-          ie_close('em');
-          itext(' - the value must be ');
+          itext('Individuals from Madrid: ');
           ie_open('code');
-            itext('LIFERAY');
+            itext('?filter=(demographics/city/value eq \'Madrid\')');
           ie_close('code');
-          itext(' for a Liferay Provider');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('analyticsConfiguration');
-          ie_close('em');
-          itext(' - Contains the analytics configuration for the DataSource');
-          ie_open('ul');
-            ie_open('li');
-              itext('analyticsKey');
-            ie_close('li');
-            ie_open('li');
-              itext('enableAllSites - If the value is ');
-              ie_open('code');
-                itext('true');
-              ie_close('code');
-              itext(', all the sites in the instance will send analytics, ignoring the configuration in the ');
-              ie_open('code');
-                itext('sites');
-              ie_close('code');
-              itext(' field.');
-            ie_close('li');
-            ie_open('li');
-              itext('sites - A list elements with the structure:');
-              ie_open('ul');
-                ie_open('li');
-                  itext('enableAllChildren - If the value is ');
-                  ie_open('code');
-                    itext('true');
-                  ie_close('code');
-                  itext(', all the children of this site will send analytics');
-                ie_close('li');
-                ie_open('li');
-                  itext('identifier - The primary key of the site');
-                ie_close('li');
-              ie_close('ul');
-            ie_close('li');
-          ie_close('ul');
+          itext('Individuals under 30 years old: ');
+          ie_open('code');
+            itext('?filter=(demographics/age/value lt \'30\')');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('contactsConfiguration');
-          ie_close('em');
-          itext(' - Contains the contacts configuration for the DataSource');
-          ie_open('ul');
-            ie_open('li');
-              itext('enableAllContacts - If the value is ');
-              ie_open('code');
-                itext('true');
-              ie_close('code');
-              itext(', all the contacts in the instance will be synchronized, ignoring the configuration in the ');
-              ie_open('code');
-                itext('organizations');
-              ie_close('code');
-              itext(' and ');
-              ie_open('code');
-                itext('userGroups');
-              ie_close('code');
-              itext(' fields.');
-            ie_close('li');
-            ie_open('li');
-              itext('organizations - A list elements with the structure:');
-              ie_open('ul');
-                ie_open('li');
-                  itext('enableAllChildren - If the value is ');
-                  ie_open('code');
-                    itext('true');
-                  ie_close('code');
-                  itext(', all the contacts in the children of this organization will be synchronized');
-                ie_close('li');
-                ie_open('li');
-                  itext('identifier - The primary key of the organization');
-                ie_close('li');
-              ie_close('ul');
-            ie_close('li');
-            ie_open('li');
-              itext('userGroups - A list elements with the structure:');
-              ie_open('ul');
-                ie_open('li');
-                  itext('enableAllChildren - If the value is ');
-                  ie_open('code');
-                    itext('true');
-                  ie_close('code');
-                  itext(', all the contacts in the children of this user group will be synchronized');
-                ie_close('li');
-                ie_open('li');
-                  itext('identifier - The primary key of the user group');
-                ie_close('li');
-              ie_close('ul');
-            ie_close('li');
-          ie_close('ul');
+          itext('Individuals from Madrid sorted by age in descending order:');
+          ie_open('code');
+            itext('?filter=(demographics/city/value eq \'Madrid\')&sort=demographics/age/value,desc');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('instanceInfo');
-          ie_close('em');
-          itext(' - Contacts information about the Liferay Portal instance');
-          ie_open('ul');
-            ie_open('li');
-              itext('companyId');
-            ie_close('li');
-            ie_open('li');
-              itext('lcsInstallationId');
-            ie_close('li');
-          ie_close('ul');
+          itext('Individuals who work as Engineers from Malaga or Madrid under 40 years old:');
+          ie_open('code');
+            itext('?filter=(demographics/city/value eq \'Madrid\' or demographics/city/value eq \'Malaga\') and (demographics/age/value lt \'30\') and (demographics/jobTitle/value eq \'Engineer\')');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Transformations on Individuals Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('Transformations can be applied on Individuals collection as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#transformations');
+          itext('transformations');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('These are some examples of transformations:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Individuals count by address: ');
+          ie_open('code');
+            itext('?apply=groupby((demographics/address/value))');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
       ie_open('p');
-        itext('This is an example of the body passed  to the ');
+        itext('This is an example of a response to this url: ');
         ie_open('code');
-          itext('POST');
+          itext('http://localhost:8084/my-project/individuals?page=0&size=20');
         ie_close('code');
-        itext(' request to create a DataSource with a ');
-        ie_open('code');
-          itext('provider');
-        ie_close('code');
-        itext(' field of type Liferay:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "name" : "Liferay Intranet DataSource",\n    "provider" : {\n        "analyticsConfiguration" : {\n            "analyticsKey" : "My-Key-For-Analytics",\n            "enableAllSites" : false,\n            "sites" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "1"\n                }\n            ]\n        },\n        "contactsConfiguration" : {\n            "enableAllContacts" : false,\n            "organizations" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "2"\n                },\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "3"\n                }\n            ],\n            "userGroups" : [\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "4"\n                }\n            ]\n        },\n        "instanceInfo" : {\n            "companyId" : "1",\n            "lcsInstallationId" : "1"\n        },\n        "type" : "LIFERAY"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n  "_embedded": {\n    "individual-transformations": [\n      {\n        "totalElements": 1,\n        "terms": {\n          "demographics/address/value": "candelaria"\n        },\n        "_links": {\n          "individuals": {\n            "href": "http://localhost:8084/DEMO/individuals?filter=(demographics/address/value%20eq%20%27candelaria%27){&page,size,sort*}"\n          }\n        }\n      },\n      {\n        "totalElements": 2,\n        "terms": {\n          "demographics/address/value": "malaga"\n        },\n        "_links": {\n          "individuals": {\n            "href": "http://localhost:8084/DEMO/individuals?filter=(demographics/address/value%20eq%20%27malaga%27){&page,size,sort*}"\n          }\n        }\n      }\n    ]\n  },\n  "_links": {\n    "self": {\n      "href": "http://localhost:8084/DEMO/individuals?apply=groupby((demographics/address/value))&page=0&size=20"\n    }\n  },\n  "page": {\n    "size": 20,\n    "totalElements": 2,\n    "totalPages": 1,\n    "number": 0\n  }\n}', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '5');
+      ie_open('h2');
+        itext('Individual Segments');
+      ie_close('h2');
+      ie_open('p');
+        itext('As part of the links of each individual, the following links can be found using these keys:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('individual-segments');
+          ie_close('code');
+          itext(' - The collection of Individual Segments this individual belongs to');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('individuals');
+          ie_close('code');
+          itext(' - The collection of Individuals');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '6');
+      ie_open('h2');
+        itext('Creating Individuals');
+      ie_close('h2');
+      ie_open('p');
+        itext('Individuals are not created using the REST API. Dependending on the data source, the individuals should be created differently:');
+      ie_close('p');
+      ie_open('h3');
+        itext('Creating Individuals from Liferay DataSource');
+      ie_close('h3');
+      ie_open('p');
+        itext('To send Users from a Liferay Server to Pulpo, you need to have a ');
+        ie_open('a', null, null,
+            'href', 'https://customer.liferay.com/documentation/7.0/deploy/-/official_documentation/deployment/using-lcs');
+          itext('LCS configured environment');
+        ie_close('a');
+        itext(' and also you should install the following OSGi modules to your Liferay Server:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.api');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.impl');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('If the installation is OK, every time a User is stored/changed in the DB, all the information related with this User will be sent to the Pulpo engine.');
+      ie_close('p');
+      ie_open('h4');
+        itext('How to add extra information to the User');
+      ie_close('h4');
+      ie_open('p');
+        itext('To Serialize custom fields of the User, you just need to register a CustomFieldSerializer OSGI service. Where:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext(': in this method you should return the object that contains the extra information of the user.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('getCustomFieldClass');
+          ie_close('code');
+          itext(': in this method you should return the class of the object returned by ');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('getCustomFieldName');
+          ie_close('code');
+          itext(': name that will be used to serialize the object returned by ');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('writeAsString');
+          ie_close('code');
+          itext(': serialization of the object return by ');
+          ie_open('code');
+            itext('getCustomField');
+          ie_close('code');
+          itext(' as a valid JSON Object.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a implementation of CustomFieldSerializer.');
+      ie_close('p');
+      $templateAlias2({code: '@Component(immediate = true, service = CustomFieldSerializer.class)\npublic class CustomFieldExampleSerializer\n    implements CustomFieldSerializer<CustomFieldExample> {\n\n    @Override\n    public CustomFieldExample getCustomField(User user) {\n        ...\n    }\n\n    @Override\n    public Class getCustomFieldClass() {\n        ...\n    }\n\n    @Override\n    public String getCustomFieldName(){\n        ...\n    }\n\n    @Override\n    public String writeAsString(T object){\n        ...\n    }\n\n    }', mode: 'java'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Creating Individuals from a CSV DataSource');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('csv_pulpo/individual_chunk_add_<environment_name>');
+          ie_close('code');
+          itext(' - The queue to write messages to when creating individuals via CSV import. ');
+          ie_open('code');
+            itext('<environment_name>');
+          ie_close('code');
+          itext(' may be one of ');
+          ie_open('code');
+            itext('dev');
+          ie_close('code');
+          itext(', ');
+          ie_open('code');
+            itext('pre');
+          ie_close('code');
+          itext(' or ');
+          ie_open('code');
+            itext('prod');
+          ie_close('code');
+          itext('.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The messages written to this queue, are expected to have the following format:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "projectId" : "<projectId>"\n    "dataSourceIdentifier" : "<dataSourceIdentifier>"\n    "individualSegmentIdentifiers" : "<individualSegmentIdentifiers>"\n    "fields" : {\n        "name" : "value"\n        ...\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Where:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('projectId');
+          ie_close('code');
+          itext(' is your LCS projectId.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('dataSourceIdentifier');
+          ie_close('code');
+          itext(' is your DataSource identifier.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('individualSegmentIdentifiers');
+          ie_close('code');
+          itext(' is a optional field and should be a JSON array of one or several individualSegmentIdentifiers.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('fields');
+          ie_close('code');
+          itext(' is a optional field and should be a JSON object where each pair name/value should be mapped as columnName/columnValue.');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -12075,11 +12163,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param225}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param539}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'hASTJ.render';
+  $render.soyTemplateName = 'pPPHa.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12089,24 +12177,14 @@ return exports;
 
 });
 
-class hASTJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(hASTJ, templates);
+class pPPHa extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pPPHa, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -12145,7 +12223,16 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(hASTJ, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12173,7 +12260,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(108);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12185,23 +12272,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var hASTJ = function (_Component) {
-  _inherits(hASTJ, _Component);
+var pPPHa = function (_Component) {
+  _inherits(pPPHa, _Component);
 
-  function hASTJ() {
-    _classCallCheck(this, hASTJ);
+  function pPPHa() {
+    _classCallCheck(this, pPPHa);
 
-    return _possibleConstructorReturn(this, (hASTJ.__proto__ || Object.getPrototypeOf(hASTJ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (pPPHa.__proto__ || Object.getPrototypeOf(pPPHa)).apply(this, arguments));
   }
 
-  return hASTJ;
+  return pPPHa;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(hASTJ, _indexSoy2.default);
+_metalSoy2.default.register(pPPHa, _indexSoy2.default);
 
-exports.default = hASTJ;
+exports.default = pPPHa;
 
 /***/ })
-],[147]);
+],[156]);
