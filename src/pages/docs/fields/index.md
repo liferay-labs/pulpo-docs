@@ -21,7 +21,7 @@ Therefore, if the field Address for an Individual changed 5 times, we will have
 The entity field contains the following fields:
 * *identifier*
 * *context*
-* *dataSourceIdentifier*
+* *dataSourceIdentifier* - The identifier of the ([datasource](/docs/datasources) that provided this information
 * *dateModified*
 * *fieldType* - A schema.org property
 * *label*
