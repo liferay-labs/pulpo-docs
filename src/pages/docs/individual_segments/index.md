@@ -29,6 +29,7 @@ The following fields are currently supported as part of an Individual Segment:
    belong to this Individual Segment 
 * *filterMetadata* - a placeholder for extra information about the filter
 * *identifier*
+* *individualCount* - the current count of individuals associated to the Individual Segment
 * *name* - The name of the Individual Segment
 * *scope* - The scope of the Individual Segment, whether this segment belongs to a user or is shared between the members of a project. The accepted values are `USER` and `PROJECT`.
 * *segmentType* - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are `STATIC` and `DYNAMIC`
@@ -156,7 +157,7 @@ an existing Individual-Individual Segment membership.
 ## Individual Segment Membership Count
 
 The current value of the count of Individuals that are members of an Individual Segment can be obtained from 
-the `totalElements` field of the `individuals` collection.
+the `individualCount` field of the `individual-segment` resource.
 
 The historical values of the count of Individuals that are members of an Individual Segment are stored
 as [Fields](/docs/fields) with the name `individualCount` and associated to the Individual Segment through 
@@ -164,16 +165,6 @@ the `ownerType` and `ownerIdentifier` properties. For example, using the oData f
 `(name eq 'individualCount') and (ownerype eq 'individual-segment') and (ownerIdentifier eq 'AV_Afi6-Y3UMLZEdmkBE')`
 returns a collection of fields with the historical count values for the Individual Segment with 
 identifier `AV_Afi6-Y3UMLZEdmkBE`.
-
-The latest value of the count is also stored in the fields of the Individual Segment and therefore it
-can be used to filter and sort the collection of Individual Segments.  However, it is 
-very important to know that *this value may be outdated* since this is just the latest
-historical value that is updated once a day. For the accurate number of members, the
-totalElements field from the collection should be retrieved.
- 
-For example, this URL would obtain the
-the collection of Individual segments sorted by number of members.
-`http://localhost:8084/my-project/individual-segments?sort=fields/individualCount/value` 
  
 
 </article>
