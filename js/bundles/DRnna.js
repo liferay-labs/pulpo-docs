@@ -11667,7 +11667,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wuvvi", function() { return wuvvi; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DRnna", function() { return DRnna; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11683,11 +11683,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace wuvvi.
+ * @fileoverview Templates in namespace DRnna.
  * @public
  */
 
-goog.module('wuvvi.incrementaldom');
+goog.module('DRnna.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11755,6 +11755,14 @@ function $render(opt_data, opt_ignored, opt_ijData) {
           ie_open('em');
             itext('context');
           ie_close('em');
+          itext(' - The context of the field. Some examples are ');
+          ie_open('code');
+            itext('demographics');
+          ie_close('code');
+          itext(' or ');
+          ie_open('code');
+            itext('interests');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
           ie_open('em');
@@ -11875,6 +11883,67 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         itext('.');
       ie_close('p');
     ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Retrieving historical values');
+      ie_close('h2');
+      ie_open('p');
+        itext('Fields store the historical values of properties of other resources, such as ');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('Individuals');
+        ie_close('a');
+        itext(' (e.g. demographics fields, topics of interests) or ');
+        ie_open('a', null, null,
+            'href', '/docs/individual_segments');
+          itext('Individual Segments');
+        ie_close('a');
+        itext(' (e.g. member count, topics of interests). These values can be obtained by using the ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(' option in the Field Collection with the ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext(' corresponding to the original resource.');
+      ie_close('p');
+      ie_open('p');
+        itext('These are some examples of Fields filtering to retrieve historical values of certain Individual and Individual Segment properties:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('The historical values of the address for an Individual: ');
+          ie_open('code');
+            itext('((context eq \'demographics\') and (name eq \'address\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('The historical scores of the topic \'Software\' for an Individual: ');
+          ie_open('code');
+            itext('((context eq \'interests\') and (name eq \'software\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('The historical counts of members of an Individual Segment: ');
+          ie_open('code');
+            itext('((name eq \'individualCount\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('The historical scores of the topic \'Business\' for an Individual Segment: ');
+          ie_open('code');
+            itext('((context eq \'interests\') and (name eq \'business\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
         'value', opt_data.page.title);
@@ -11888,7 +11957,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'wuvvi.render';
+  $render.soyTemplateName = 'DRnna.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11898,8 +11967,8 @@ return exports;
 
 });
 
-class wuvvi extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(wuvvi, templates);
+class DRnna extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DRnna, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -11994,23 +12063,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var wuvvi = function (_Component) {
-  _inherits(wuvvi, _Component);
+var DRnna = function (_Component) {
+  _inherits(DRnna, _Component);
 
-  function wuvvi() {
-    _classCallCheck(this, wuvvi);
+  function DRnna() {
+    _classCallCheck(this, DRnna);
 
-    return _possibleConstructorReturn(this, (wuvvi.__proto__ || Object.getPrototypeOf(wuvvi)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (DRnna.__proto__ || Object.getPrototypeOf(DRnna)).apply(this, arguments));
   }
 
-  return wuvvi;
+  return DRnna;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(wuvvi, _indexSoy2.default);
+_metalSoy2.default.register(DRnna, _indexSoy2.default);
 
-exports.default = wuvvi;
+exports.default = DRnna;
 
 /***/ })
 ],[150]);

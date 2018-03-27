@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,15 +11658,12 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bWcwO", function() { return bWcwO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXihU", function() { return EXihU; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11682,11 +11679,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace bWcwO.
+ * @fileoverview Templates in namespace EXihU.
  * @public
  */
 
-goog.module('bWcwO.incrementaldom');
+goog.module('EXihU.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11720,35 +11717,146 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param292 = function() {
+  var param209 = function() {
     ie_open('h6');
-      var dyn17 = opt_data.page.description;
-      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Names');
+        itext('The Activity Model');
       ie_close('h2');
       ie_open('p');
-        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
+        itext('Activities contain information about behaviour and actions performed by different entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', accounts, individual segments... etc).');
+      ie_close('p');
+      ie_open('p');
+        itext('Activities can aggregate actions inside to provide a higher level of detail. E.g. An activity could be a visit to a website and it could have actions such as "View the Home Page", "Submit a Form", "Click on a button"... etc');
+      ie_close('p');
+      ie_open('p');
+        itext('The entity activity contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('Existing fields with the same or similar name of your label');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          itext('Previous field mappings from your label to other fields');
+          ie_open('em');
+            itext('startTime');
+          ie_close('em');
         ie_close('li');
         ie_open('li');
-          itext('Fields with values similar to your new values');
+          ie_open('em');
+            itext('endTime');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('description');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('activityType');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerType');
+          ie_close('em');
+          itext(' - The entity that performed this activity (e.g. an Individual, an Account...)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerIdentifier');
+          ie_close('em');
+          itext(' - The Identifier of the entity that performed this activity.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('actions');
+          ie_close('em');
+          itext(' - A list with of the actions that compose this activity.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The entity action contains the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('startTime');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('description');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('actionType');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('object');
+          ie_close('em');
+          itext(' - The object upon which the action is carried out');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The entity object contains the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('description');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('objectType');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('url');
+          ie_close('em');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Fields Names Service');
+        itext('Activities Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11762,35 +11870,56 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('field-names');
+          itext('activities');
         ie_close('code');
-        itext(' pointing to the endpoint for obtaining the field names.');
+        itext(' pointing to the collection of Activities.');
       ie_close('p');
       ie_open('p');
-        itext('This endpoint accepts the ');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
         ie_open('code');
-          itext('GET');
+          itext('_embedded');
         ie_close('code');
-        itext(' method with the following parameters:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('label - the label from your field (e.g. telephone, email addres... etc)');
-        ie_close('li');
-        ie_open('li');
-          itext('ownerType - the type of entity your are mapping (individual, account...)');
-        ie_close('li');
-        ie_open('li');
-          itext('values - array of sample values from your field');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The response will contain a list of existing field names ordered by relevance.');
+        itext(' section, a list of activities under the key ');
+        ie_open('code');
+          itext('activities');
+        ie_close('code');
+        itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/activities?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "activities": [\n            {\n                "name": "Visit liferay.com",\n                "actions": [\n                    {\n                        "name": "Visit Home Page",\n                        "description": "Spent 5 min reading",\n                        "startTime": "2018-03-06T03:50:43Z",\n                        "actionType": "Download",\n                        "object": {\n                            "name": "Home Page",\n                            "objectType": "Page",\n                            "url": "http://homepage.com",\n                            "description": "Description of the page",\n                            "identifier": "194EF"\n                        }\n                    },\n                    {\n                        "name": "Download Document",\n                        "description": "Spent 5 min reading",\n                        "startTime": "2018-03-16T10:47:56Z",\n                        "actionType": "Download",\n                        "object": {\n                            "name": "Use Cases 2018",\n                            "objectType": "PDF",\n                            "url": "http://document-download.com",\n                            "description": "A document with a long description",\n                            "identifier": "12345-ABCDEF"\n                        }\n                    }\n                ],\n                "description": "3 Documents, 2 Visits",\n                "ownerIdentifier": "AWIubFositjEuNSqYpR",\n                "ownerType": "individual",\n                "activityType": "Web",\n                "startTime": "2018-03-06T03:50:43Z",\n                "endTime": "2018-03-06T03:50:43Z",\n                "identifier": "AWIubHEhitjEuNSqYph",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/activities/AWIubHEhitjEuNSqYph"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWIubFositjEuNSqYpR"\n                    },\n                    "activities": {\n                        "href": "http://localhost:8084/my-project/activities?page=0&size=20{&filter,sort*}"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Activities or Update of Activities manually is not supported. Activities are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
+      ie_close('p');
+      ie_open('p');
+        itext('Deletion of existing Activities is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of activities, the link to each activity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11801,11 +11930,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param292}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'bWcwO.render';
+  $render.soyTemplateName = 'EXihU.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11815,14 +11944,17 @@ return exports;
 
 });
 
-class bWcwO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bWcwO, templates);
+class EXihU extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EXihU, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 98 */,
+/* 99 */,
+/* 100 */,
 /* 101 */,
 /* 102 */,
 /* 103 */,
@@ -11868,10 +12000,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bWcwO, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11899,7 +12028,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(100);
+var _indexSoy = __webpack_require__(97);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11911,23 +12040,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var bWcwO = function (_Component) {
-  _inherits(bWcwO, _Component);
+var EXihU = function (_Component) {
+  _inherits(EXihU, _Component);
 
-  function bWcwO() {
-    _classCallCheck(this, bWcwO);
+  function EXihU() {
+    _classCallCheck(this, EXihU);
 
-    return _possibleConstructorReturn(this, (bWcwO.__proto__ || Object.getPrototypeOf(bWcwO)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (EXihU.__proto__ || Object.getPrototypeOf(EXihU)).apply(this, arguments));
   }
 
-  return bWcwO;
+  return EXihU;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(bWcwO, _indexSoy2.default);
+_metalSoy2.default.register(EXihU, _indexSoy2.default);
 
-exports.default = bWcwO;
+exports.default = EXihU;
 
 /***/ })
-],[149]);
+],[146]);
