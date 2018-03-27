@@ -30,6 +30,7 @@ The following fields are currently supported as part of an Individual Segment:
 * *filterMetadata* - a placeholder for extra information about the filter
 * *identifier*
 * *individualCount* - the current count of individuals associated to the Individual Segment
+* *interests* - a Map of interest [Fields](/docs/fields)
 * *name* - The name of the Individual Segment
 * *scope* - The scope of the Individual Segment, whether this segment belongs to a user or is shared between the members of a project. The accepted values are `USER` and `PROJECT`.
 * *segmentType* - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are `STATIC` and `DYNAMIC`
@@ -69,6 +70,36 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                  "name":"John Doe",
                  "identifier":"12345"
               },
+             "interests": {
+                "business": [
+                    {
+                        "ownerIdentifier": "AWJL5ucfj5w_cS02rIwL",
+                        "dataSourceIdentifier": "AWI_0f2_q_9uZvuIRBN3",
+                        "fieldType": "http://schema.org/Number",
+                        "ownerType": "individualSegment",
+                        "context": "interests",
+                        "name": "business",
+                        "value": "1.609438",
+                        "dateModified": "2018-03-27T10:46:59+0000",
+                        "label": null,
+                        "identifier": "AWJnEXGW1sOrFJL935Fw"
+                    }
+                ],
+                "connected experiences": [
+                    {
+                        "ownerIdentifier": "AWJL5ucfj5w_cS02rIwL",
+                        "dataSourceIdentifier": "AWI_0f2_q_9uZvuIRBN3",
+                        "fieldType": "http://schema.org/Number",
+                        "ownerType": "individualSegment",
+                        "context": "interests",
+                        "name": "connected experiences",
+                        "value": "2.4849067",
+                        "dateModified": "2018-03-27T10:46:59+0000",
+                        "label": null,
+                        "identifier": "AWJnEXG21sOrFJL935Fy"
+                    }
+                ]
+             },
              "fields": {                   
              }, 
              "_links":{
@@ -149,7 +180,6 @@ This is an example of the body passed to this POST request to the URL
 A `DELETE` request to the URL `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/my-individual-identifier` removes
 an existing Individual-Individual Segment membership.
 
-
 </article>
 
 <article id="5">
@@ -160,11 +190,19 @@ The current value of the count of Individuals that are members of an Individual 
 the `individualCount` field of the `individual-segment` resource.
 
 The historical values of the count of Individuals that are members of an Individual Segment are stored
-as [Fields](/docs/fields) with the name `individualCount` and associated to the Individual Segment through 
-the `ownerType` and `ownerIdentifier` properties. For example, using the oData filter
-`(name eq 'individualCount') and (ownerype eq 'individual-segment') and (ownerIdentifier eq 'AV_Afi6-Y3UMLZEdmkBE')`
-returns a collection of fields with the historical count values for the Individual Segment with 
-identifier `AV_Afi6-Y3UMLZEdmkBE`.
+as [Fields](/docs/fields) and they can be obtained through the [filtering](/docs/general#filtering) options as described
+in the [Retrieving historical values](/docs/fields#3) section. 
  
+</article>
+
+<article id="6">
+
+## Filtering and Sorting Individual Segments Collection
+
+Individual Segment collection can be filtered as explained in [filtering](/docs/general#filtering).
+
+These are some examples of filtering:
+* Individual Segments with interests for business: `?filter=(interests/business/value gt '0')`
+* Individual Segments with interests for software and sports greater than a score of 10: `?filter=(interests/software/value gt '10') and (interests/sports/value gt '10'))`
 
 </article>

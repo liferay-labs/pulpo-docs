@@ -17,6 +17,7 @@ stored in our system.
 
 Those contexts are:
 * Identity & Demographics
+* Topics of Interest
 * Sentiment Analysis
 * Event Attendance
 * Sales Interaction
@@ -36,7 +37,7 @@ The following fields are currently supported as part of an Invididual:
 * *dateModified*
 * *identifier*
 * *demographics* - a Map of identity & demographic [Fields](/docs/fields) corresponding to properties of the Type [Person](http://schema.org/Person) from Schema.org
-* *sentiment* - a Map of sentiment analysis [Fields](/docs/fields)
+* *interests* - a Map of interest [Fields](/docs/fields)
 
 </article>
 
@@ -122,7 +123,36 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                     ]
                 },
                 "identifier": "AV-1NOYHDh9K2u0PkWnL",
-                "sentiment": {},
+                "interests": {
+                    "digital experiences": [
+                        {
+                            "ownerIdentifier": "AWJEx5uAxvlVqtdUeNi",
+                            "dataSourceIdentifier": "AWI_0f2_q_9uZvuIRBN3",
+                            "fieldType": "http://schema.org/Number",
+                            "ownerType": "individual",
+                            "context": "interests",
+                            "name": "digital experiences",
+                            "value": "7.601294274664403",
+                            "dateModified": "2018-03-27T10:57:37+0000",
+                            "label": null,
+                            "identifier": "AWJnGyoj8HyMTOCFNH"
+                        }
+                    ],
+                    "modern portals": [
+                        {
+                            "ownerIdentifier": "AWJEx5uAxvlVqtdUeNi",
+                            "dataSourceIdentifier": "AWI_0f2_q_9uZvuIRBN3",
+                            "fieldType": "http://schema.org/Number",
+                            "ownerType": "individual",
+                            "context": "interests",
+                            "name": "modern portals",
+                            "value": "49.39764376820623",
+                            "dateModified": "2018-03-27T10:57:37+0000",
+                            "label": null,
+                            "identifier": "AWJnGzAj8HyMTOCFNIC"
+                        }
+                    ]    
+                },
                 "_links": {
                     "self": {
                         "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL"
@@ -172,6 +202,7 @@ These are some examples of filtering:
 * Individuals under 30 years old: `?filter=(demographics/age/value lt '30')` 
 * Individuals from Madrid sorted by age in descending order:`?filter=(demographics/city/value eq 'Madrid')&sort=demographics/age/value,desc` 
 * Individuals who work as Engineers from Malaga or Madrid under 40 years old:`?filter=(demographics/city/value eq 'Madrid' or demographics/city/value eq 'Malaga') and (demographics/age/value lt '30') and (demographics/jobTitle/value eq 'Engineer')`
+* Individuals who work as Engineers from Madrid with an interest for Liferay:`?filter=(demographics/city/value eq 'Madrid' and demographics/jobTitle/value eq 'Engineer' and interests/liferay/value gt '0')`
 
 </article>
 
