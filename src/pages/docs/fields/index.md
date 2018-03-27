@@ -20,7 +20,7 @@ Therefore, if the field Address for an Individual changed 5 times, we will have
 
 The entity field contains the following fields:
 * *identifier*
-* *context*
+* *context* - The context of the field. Some examples are `demographics` or `interests`
 * *dataSourceIdentifier* - The identifier of the ([datasource](/docs/datasources) that provided this information
 * *dateModified*
 * *fieldType* - A schema.org property
@@ -98,5 +98,22 @@ generated and updated from the Field Chunks sent by the different Connectors.
 Deletion of existing Fields is not allowed for now either. 
 
 Navigating through the list of fields, the link to each field can be found with the rel `self`. 
+
+</article>
+
+<article id="3">
+
+## Retrieving historical values
+
+Fields store the historical values of properties of other resources, such as [Individuals](/docs/individuals) (e.g. demographics fields, topics of interests) 
+or [Individual Segments](/docs/individual_segments) (e.g. member count, topics of interests). These values can be obtained by using 
+the [filtering](/docs/general#filtering) option in the Field Collection with the `ownerType` and `ownerIdentifier` corresponding to the original resource.
+
+These are some examples of Fields filtering to retrieve historical values of certain Individual and Individual Segment properties:
+
+* The historical values of the address for an Individual: `((context eq 'demographics') and (name eq 'address') and (ownerType eq 'individual') and (ownerIdentifier eq 'the-individual-identifier'))`
+* The historical scores of the topic 'Software' for an Individual: `((context eq 'interests') and (name eq 'software') and (ownerType eq 'individual') and (ownerIdentifier eq 'the-individual-identifier'))`
+* The historical counts of members of an Individual Segment: `((name eq 'individualCount') and (ownerType eq 'individual-segment') and (ownerIdentifier eq 'the-individual-segment-identifier'))`
+* The historical scores of the topic 'Business' for an Individual Segment: `((context eq 'interests') and (name eq 'business') and (ownerType eq 'individual-segment') and (ownerIdentifier eq 'the-individual-segment-identifier'))` 
 
 </article>
