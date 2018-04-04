@@ -242,7 +242,7 @@ For example an interest may have a value `digital experience`, but the
 following query would result in a parsing error:
 
 ```
-?filter=(interests/digital experience/value gt '0')
+?filter=(interests/digital experience/value gt 0)
 ```
 
 To support filtering by such interests, the identifier is modified, so
@@ -252,7 +252,7 @@ In order to filter by interest `digital experience` the correct query
 would be:
 
 ```
-?filter=(interests/digital_experience/value gt '0')
+?filter=(interests/digital_experience/value gt 0)
 ```
 
 </article>
