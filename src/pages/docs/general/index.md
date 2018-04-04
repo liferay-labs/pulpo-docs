@@ -220,6 +220,16 @@ to filter the DataSource by an author name and a name.
 ```
 ?filter=(author/name eq 'Julio') and (name ne 'datasource-name')
 ```
+
+#### Escaping in queries:
+
+In order to filter for a value which contains single quotes, these can
+be escaped by adding two single quotes.
+
+e.g. To filter for a company whose name is `L'Oreal`:
+```
+?filter=(company/name eq 'L''Oreal')
+```
 </article>
 
 <article id="transformations">
