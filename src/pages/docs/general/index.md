@@ -220,6 +220,41 @@ to filter the DataSource by an author name and a name.
 ```
 ?filter=(author/name eq 'Julio') and (name ne 'datasource-name')
 ```
+
+#### Escaping in queries:
+
+In order to filter for a value which contains single quotes, these can
+be escaped by adding two single quotes.
+
+e.g. To filter for a company whose name is `L'Oreal`:
+```
+?filter=(company/name eq 'L''Oreal')
+```
+
+#### Filtering by interests:
+
+Interests (of an individual or of a segment) may have values which can
+contain characters not supported by Odata as Identifiers, as described
+here:
+http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_SimpleIdentifier
+
+For example an interest may have a value `digital experience`, but the
+following query would result in a parsing error:
+
+```
+?filter=(interests/digital experience/value gt 0)
+```
+
+To support filtering by such interests, the identifier is modified, so
+that whitespace characters are replaced with `_` and not alpha numeric
+characters are removed.
+In order to filter by interest `digital experience` the correct query
+would be:
+
+```
+?filter=(interests/digital_experience/value gt 0)
+```
+
 </article>
 
 <article id="transformations">
