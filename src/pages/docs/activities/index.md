@@ -14,36 +14,21 @@ weight: 10
 
 Activities contain information about behaviour and actions performed by different entities ([individuals](/docs/individuals), accounts, individual segments... etc).
 
-Activities can aggregate actions inside to provide a higher level of detail. E.g. An activity could be a visit
-to a website and it could have actions such as "View the Home Page", "Submit a Form", "Click on a button"... etc
-
 The entity activity contains the following fields:
 * *identifier*
+* *day*
 * *startTime*
 * *endTime*
-* *name*
+* *groupName*
 * *description*
 * *activityType*
+* *applicationId*
+* *eventId*
+* *eventProperties*
 * *ownerType* - The entity that performed this activity (e.g. an Individual, an Account...)
 * *ownerIdentifier* - The Identifier of the entity that performed this activity.
-* *actions* - A list with of the actions that compose this activity.
-
-The entity action contains the following fields:
-* *startTime*
-* *name*
-* *description*
-* *actionType*
-* *object* - The object upon which the action is carried out
-
-The entity object contains the following fields:
-* *identifier*
-* *name*
-* *description*
-* *objectType*
-* *url*
 
 </article>
-
 
 <article id="2">
 
@@ -65,51 +50,26 @@ This is an example of a response to this url: http://localhost:8084/my-project/a
     "_embedded": {
         "activities": [
             {
-				"name": "Visit liferay.com",
-				"actions": [
-					{
-						"name": "Visit Home Page",
-						"description": "Spent 5 min reading",
-						"startTime": "2018-03-06T03:50:43Z",
-						"actionType": "Download",
-						"object": {
-							"name": "Home Page",
-							"objectType": "Page",
-							"url": "http://homepage.com",
-							"description": "Description of the page",
-							"identifier": "194EF"
-						}
-					},
-					{
-						"name": "Download Document",
-						"description": "Spent 5 min reading",
-						"startTime": "2018-03-16T10:47:56Z",
-						"actionType": "Download",
-						"object": {
-							"name": "Use Cases 2018",
-							"objectType": "PDF",
-							"url": "http://document-download.com",
-							"description": "A document with a long description",
-							"identifier": "12345-ABCDEF"
-						}
-					}
-				],
-				"description": "3 Documents, 2 Visits",
+				"groupName": "www.liferay.com",
+				"description": "Submit Form",
 				"ownerIdentifier": "AWIubFositjEuNSqYpR",
 				"ownerType": "individual",
-				"activityType": "Web",
+				"activityType": "Activity",
+				"day": "2018-03-06T00:00:00Z",
 				"startTime": "2018-03-06T03:50:43Z",
 				"endTime": "2018-03-06T03:50:43Z",
 				"identifier": "AWIubHEhitjEuNSqYph",
+				"applictionId": "Form",
+				"eventId": "formSubmited",
+				"eventProperties": {
+					"formId": "32cf039a-7a47-4461-82c5-e694d9f29057"
+				},
 				"_links": {
 					"self": {
 						"href": "http://localhost:8084/my-project/activities/AWIubHEhitjEuNSqYph"
 					},
 					"individual": {
 						"href": "http://localhost:8084/my-project/individuals/AWIubFositjEuNSqYpR"
-					},
-					"activities": {
-						"href": "http://localhost:8084/my-project/activities?page=0&size=20{&filter,sort*}"
 					}
 				}
 			}
