@@ -204,6 +204,21 @@ These are some examples of filtering:
 * Individuals who work as Engineers from Malaga or Madrid under 40 years old:`?filter=(demographics/city/value eq 'Madrid' or demographics/city/value eq 'Malaga') and (demographics/age/value lt '30') and (demographics/jobTitle/value eq 'Engineer')`
 * Individuals who work as Engineers from Madrid with an interest for Liferay:`?filter=(demographics/city/value eq 'Madrid' and demographics/jobTitle/value eq 'Engineer' and interests/liferay/value gt '0')`
 
+### Filtering Individuals by Activities
+
+You can obtain the individuals that performed an specific [activity](/docs/activities) on a time interval. For example, for an activity
+with the key `forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057` (i.e. submit a form with id 32cf039a-7a47-4461-82c5-e694d9f29057):
+
+* Individuals that submitted the form today (between 00:00 and current time):`?filter=(activities/today eq 'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057')`
+* Individuals that submitted the form yesterday:`?filter=(activities/yesterday eq 'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057')` 
+* Individuals that submitted the form within the last 7 days (excluding today):`?filter=(activities/last7days eq 'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057')`
+* Individuals that submitted the form within the last 30 days (excluding today):`?filter=(activities/last30days eq 'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057')`
+* Individuals that submitted the form within the last 90 days (excluding today):`?filter=(activities/last90days eq 'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057')`
+* Individuals that submitted the form within the last year (12 previous months):`?filter=(activities/lastYear eq 'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057')`
+* Individuals that ever submitted the form: `?filter=(activities/ever eq 'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057')`
+
+Filtering by activities can be combined with any of the aforementioned filters.
+
 </article>
 
 
