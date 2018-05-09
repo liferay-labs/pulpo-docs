@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([15],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,16 +11658,12 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JzDpY", function() { return JzDpY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EajXs", function() { return EajXs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11683,11 +11679,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace JzDpY.
+ * @fileoverview Templates in namespace EajXs.
  * @public
  */
 
-goog.module('JzDpY.incrementaldom');
+goog.module('EajXs.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11721,18 +11717,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param308 = function() {
+  var param209 = function() {
     ie_open('h6');
-      var dyn18 = opt_data.page.description;
-      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+      var dyn14 = opt_data.page.description;
+      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Model');
+        itext('The Activity Model');
       ie_close('h2');
       ie_open('p');
-        itext('Fields contain information about different entities (');
+        itext('Activities contain information about behaviour and actions performed by different entities (');
         ie_open('a', null, null,
             'href', '/docs/individuals');
           itext('individuals');
@@ -11740,10 +11736,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         itext(', accounts, individual segments... etc).');
       ie_close('p');
       ie_open('p');
-        itext('All the different values in time for a field are stored as fields themeshelves. Therefore, if the field Address for an Individual changed 5 times, we will have 5 fields for the Address for that particular Individual.');
-      ie_close('p');
-      ie_open('p');
-        itext('The entity field contains the following fields:');
+        itext('The entity activity contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
@@ -11753,72 +11746,67 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('context');
-          ie_close('em');
-          itext(' - The context of the field. Some examples are ');
-          ie_open('code');
-            itext('demographics');
-          ie_close('code');
-          itext(' or ');
-          ie_open('code');
-            itext('interests');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dataSourceIdentifier');
-          ie_close('em');
-          itext(' - The identifier of the (');
-          ie_open('a', null, null,
-              'href', '/docs/datasources');
-            itext('datasource');
-          ie_close('a');
-          itext(' that provided this information');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateModified');
+            itext('day');
           ie_close('em');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('fieldType');
-          ie_close('em');
-          itext(' - A schema.org property');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('label');
+            itext('startTime');
           ie_close('em');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('name');
+            itext('endTime');
           ie_close('em');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('value');
+            itext('groupName');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('description');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('activityType');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('applicationId');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('eventId');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('eventProperties');
           ie_close('em');
         ie_close('li');
         ie_open('li');
           ie_open('em');
             itext('ownerType');
           ie_close('em');
-          itext(' - The entity that owns this field (e.g. an Individual, an Account...)');
+          itext(' - The entity that performed this activity (e.g. an Individual, an Account...)');
         ie_close('li');
         ie_open('li');
           ie_open('em');
             itext('ownerIdentifier');
           ie_close('em');
-          itext(' - The Identifier of the entity that owns this field.');
+          itext(' - The Identifier of the entity that performed this activity.');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Fields Collection');
+        itext('Activities Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11832,9 +11820,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('fields');
+          itext('activities');
         ie_close('code');
-        itext(' pointing to the collection of Fields.');
+        itext(' pointing to the collection of Activities.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11859,78 +11847,29 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of fields under the key ');
+        itext(' section, a list of activities under the key ');
         ie_open('code');
-          itext('fields');
+          itext('activities');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/fields?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/activities?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "fields": [\n            {\n                "context": "demographics",\n                "dataSourceIdentifier": "AV-0-c1_4MMBozrmZ0T_",\n                "dateModified": "2017-11-13T10:43:13Z",\n                "fieldType": "http://schema.org/telephone",\n                "identifier": "AV-0-deU4MMBozrmZ0UO",\n                "label": "home",\n                "name": "telephone",\n                "ownerIdentifier": "AV-0-dcI4MMBozrmZ0UM",\n                "ownerType": "individual",\n                "value": "+34699001234",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/fields/AV-0-deU4MMBozrmZ0UO"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-0-dcI4MMBozrmZ0UM"\n                    },\n                    "fields": {\n                        "href": "http://localhost:8084/my-project/fields{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/fields?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "activities": [\n            {\n                "groupName": "www.liferay.com",\n                "description": "Submit Form",\n                "ownerIdentifier": "AWIubFositjEuNSqYpR",\n                "ownerType": "individual",\n                "activityType": "Activity",\n                "day": "2018-03-06T00:00:00Z",\n                "startTime": "2018-03-06T03:50:43Z",\n                "endTime": "2018-03-06T03:50:43Z",\n                "identifier": "AWIubHEhitjEuNSqYph",\n                "applictionId": "Form",\n                "eventId": "formSubmited",\n                "eventProperties": {\n                    "formId": "32cf039a-7a47-4461-82c5-e694d9f29057"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/activities/AWIubHEhitjEuNSqYph"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWIubFositjEuNSqYpR"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Fields or Update of Fields manually is not supported. Fields are automatically generated and updated from the Field Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Fields is not allowed for now either.');
+        itext('Creation of new Activities or Update of Activities manually is not supported. Activities are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
       ie_close('p');
       ie_open('p');
-        itext('Navigating through the list of fields, the link to each field can be found with the rel ');
+        itext('Deletion of existing Activities is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of activities, the link to each activity can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
         itext('.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Retrieving historical values');
-      ie_close('h2');
-      ie_open('p');
-        itext('Fields store the historical values of properties of other resources, such as ');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('Individuals');
-        ie_close('a');
-        itext(' (e.g. demographics fields, topics of interests) or ');
-        ie_open('a', null, null,
-            'href', '/docs/individual_segments');
-          itext('Individual Segments');
-        ie_close('a');
-        itext(' (e.g. member count, topics of interests). These values can be obtained by using the ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext(' option in the Field Collection with the ');
-        ie_open('code');
-          itext('ownerType');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('ownerIdentifier');
-        ie_close('code');
-        itext(' corresponding to the original resource.');
-      ie_close('p');
-      ie_open('p');
-        itext('These are some examples of Fields filtering to retrieve historical values of certain Individual and Individual Segment properties:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('The historical values of the address for an Individual: ');
-          ie_open('code');
-            itext('((context eq \'demographics\') and (name eq \'address\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('The historical counts of members of an Individual Segment: ');
-          ie_open('code');
-            itext('((name eq \'individualCount\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11941,11 +11880,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param308}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'JzDpY.render';
+  $render.soyTemplateName = 'EajXs.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11955,14 +11894,18 @@ return exports;
 
 });
 
-class JzDpY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(JzDpY, templates);
+class EajXs extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EajXs, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -12008,11 +11951,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(JzDpY, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12040,7 +11979,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(101);
+var _indexSoy = __webpack_require__(97);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12052,23 +11991,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var JzDpY = function (_Component) {
-  _inherits(JzDpY, _Component);
+var EajXs = function (_Component) {
+  _inherits(EajXs, _Component);
 
-  function JzDpY() {
-    _classCallCheck(this, JzDpY);
+  function EajXs() {
+    _classCallCheck(this, EajXs);
 
-    return _possibleConstructorReturn(this, (JzDpY.__proto__ || Object.getPrototypeOf(JzDpY)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (EajXs.__proto__ || Object.getPrototypeOf(EajXs)).apply(this, arguments));
   }
 
-  return JzDpY;
+  return EajXs;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(JzDpY, _indexSoy2.default);
+_metalSoy2.default.register(EajXs, _indexSoy2.default);
 
-exports.default = JzDpY;
+exports.default = EajXs;
 
 /***/ })
-],[151]);
+],[147]);

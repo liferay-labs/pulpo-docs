@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11660,12 +11660,16 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "yulnt", function() { return yulnt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SErOQ", function() { return SErOQ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11681,11 +11685,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace yulnt.
+ * @fileoverview Templates in namespace SErOQ.
  * @public
  */
 
-goog.module('yulnt.incrementaldom');
+goog.module('SErOQ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11719,166 +11723,106 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param251 = function() {
+  var param370 = function() {
     ie_open('h6');
-      var dyn16 = opt_data.page.description;
-      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'authentication');
       ie_open('h2');
-        itext('The Field Mapping Model');
+        itext('Authentication');
       ie_close('h2');
       ie_open('p');
-        itext('Field Mappings allow us to map the fields from the different ');
+        itext('Any request to this API will have to be signed, otherwise you will receive a 401 error response. Learn more about how to ');
         ie_open('a', null, null,
-            'href', '/docs/datasources');
-          itext('datasources');
+            'href', '/docs/general/authentication.html');
+          itext('authenticate your requests');
         ie_close('a');
-        itext(' to the');
-        ie_open('a', null, null,
-            'href', '/docs/fields');
-          itext('fields');
-        ie_close('a');
-        itext(' in our entities (');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
-        ie_close('a');
-        itext(', Accounts... etc)');
+        itext(' .');
       ie_close('p');
-      ie_open('p');
-        itext('The following fields are currently supported in a field mapping:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('context');
-            ie_close('em');
-            itext(' - the context of the field (demographics, sentiment... etc)');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dataSourceFieldNames');
-            ie_close('em');
-            itext(' - a map with the name of the original field for each Data Source.');
-          ie_close('p');
-          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dateCreated');
-            ie_close('em');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('dateModified');
-            ie_close('em');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('fieldName');
-            ie_close('em');
-            itext(' - the name of the field on our model');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('fieldType');
-            ie_close('em');
-            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('identifier');
-            ie_close('em');
-          ie_close('p');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('em');
-              itext('strategy');
-            ie_close('em');
-            itext(' - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or give preference to the value from a specific data source. See more details below.');
-          ie_close('p');
-        ie_close('li');
-      ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'navigation');
       ie_open('h2');
-        itext('Field Mappings Collection');
+        itext('Initial Navigation to obtain URLs');
       ie_close('h2');
       ie_open('p');
-        itext('As described in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#navigation');
-          itext('Initial Navigation to obtain URLs');
-        ie_close('a');
-        itext(', the ');
+        itext('URLs are not part of this API, they may change at any moment. URLs must be asked to the service before making any request.');
+      ie_close('p');
+      ie_open('p');
+        itext('The URLs can be obtained making a request to the root resource of the Service ');
+        ie_open('code');
+          itext('/');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response in ');
+        ie_open('code');
+          itext('json HAL');
+        ie_close('code');
+        itext(' format will contain a ');
         ie_open('code');
           itext('_links');
         ie_close('code');
-        itext(' section of the root resource will contain a template link labelled as ');
+        itext(' object with the different template links to be used. For example:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name": "pulpo-api",\n    "description": "API for consuming PULPO Services",\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/"\n        },\n        "data-sources": {\n            "href": "http://localhost:8084/{projectId}/data-sources{?filter}",\n            "templated": true\n        },\n        "field-mappings": {\n            "href": "http://localhost:8084/{projectId}/field-mappings{?filter}",\n            "templated": true\n        },\n        "fields": {\n            "href": "http://localhost:8084/{projectId}/fields{?filter}",\n            "templated": true\n        },\n        "individuals": {\n            "href": "http://localhost:8084/{projectId}/individuals{?filter}",\n            "templated": true\n        },\n        "individual-segments": {\n            "href": "http://localhost:8084/{projectId}/individual-segments{?filter}",\n            "templated": true\n        }\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('The template URLs for managing collections such as Data Sources or Individuals can be found inside the section ');
         ie_open('code');
-          itext('field-mappings');
+          itext('_links');
         ie_close('code');
-        itext(' pointing to the collection of Field Mappings.');
-      ie_close('p');
-      ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
+        itext(' with the keys ');
         ie_open('code');
-          itext('_embedded');
+          itext('data-sources');
         ie_close('code');
-        itext(' section, a list of fields under the key ');
+        itext(' or ');
         ie_open('code');
-          itext('field-mappings');
+          itext('individuals');
         ie_close('code');
-        itext('.');
+        itext('. (These keys are our API and they will never change).');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation of new Field Mappings is supported making a ');
+        itext('These template URLs allow us to build ULRs that can always be used to obtain the entities (');
+        ie_open('code');
+          itext('GET');
+        ie_close('code');
+        itext(' method) and create new ones (');
         ie_open('code');
           itext('POST');
         ie_close('code');
-        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+        itext(' method). (Note that not all collections support creation of new objects. e.g. Individuals API doesn\'t allow to create individuals directly).');
       ie_close('p');
-      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        itext('These template URLs need certain items to be replaced in order to have a valid URL:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('variables: ');
+          ie_open('code');
+            itext('{parameterName}');
+          ie_close('code');
+          itext(' They should be replaced with a value. e.g. The {projectId} item must be replaced with the projectId of the current proje`ct (such as "my-project").');
+        ie_close('li');
+        ie_open('li');
+          itext('parameters: ');
+          ie_open('code');
+            itext('{?parameterName}');
+          ie_close('code');
+          itext(' They should be replaced with a param and a value. e.g. The {?filter} item must be replaced with a filter parameter and as value a valid oData filter or with an empty string. (e.g. ');
+          ie_open('code');
+            itext('&filter=(name eq \'Jon\')');
+          ie_close('code');
+          itext(')');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Important: Optional parameters can be added at any time to these APIs, therefore, clients must consider that the templates may change with additional optional parameters (never with mandatory parameters).');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through a collection of entities, the link to each entity can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
@@ -11892,68 +11836,449 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' method).');
       ie_close('p');
-      ie_open('p');
-        itext('Adding new data Source Field Names without having to update the full field mapping is also supported using the ');
-        ie_open('code');
-          itext('PATCH');
-        ie_close('code');
-        itext(' method to an entity link. The body must contain a Data Source Field Name object, wich contains the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('dataSourceIdentifier - the identifier of an existing datasource.');
-        ie_close('li');
-        ie_open('li');
-          itext('fieldName - the name of this field in the existing data source');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of the body to patch an existing Field Mapping in order to add another data source field name:');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",\n    "fieldName" : "years-old"   \n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'pagination');
       ie_open('h2');
-        itext('Field Mappings Strategies');
+        itext('Pagination');
       ie_close('h2');
       ie_open('p');
-        itext('Field Mapping Strategies have the following fields:');
+        itext('Every collection URL can be paginated using the optional params ');
+        ie_open('code');
+          itext('page');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('size');
+        ie_close('code');
+        itext('.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('key');
-          ie_close('em');
-          itext(' - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITY_DATASOURCE"');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('configuration');
-          ie_close('em');
-          itext(' - A map with the specific configuration for the strategy. e.g. Most Recent doesn\'t need any configuration. However, Priority DataSource requires the value dataSourceIdentifier.');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/data-sources?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "name": "liferay-de"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('From this response, you can obtain the total number of existing elements under the ');
+        ie_open('code');
+          itext('page');
+        ie_close('code');
+        itext(' block and also the links to other pages of data sources.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'sorting');
+      ie_open('h2');
+        itext('Sorting');
+      ie_close('h2');
+      ie_open('p');
+        itext('Every collection URL can be sorted using the optional param ');
+        ie_open('code');
+          itext('sort');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('e.g. Given a url for a Collection (such as http://localhost:8084/my-project/data-sources) I could sort the results by name appending to the url ');
+        ie_open('code');
+          itext('?sort=name');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('In order to navigate inside the fields of an entity, you should use the separator ');
+        ie_open('code');
+          itext('/');
+        ie_close('code');
+        itext('e.g. I could sort the results by the author name appending ');
+        ie_open('code');
+          itext('?sort=author/name');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('By default, the sorting is in ascending order. (0-1-A-Z). However, this can be changed adding ');
+        ie_open('code');
+          itext('desc');
+        ie_close('code');
+        itext(' after the parameter name separated with a comma.');
+      ie_close('p');
+      ie_open('p');
+        itext('e.g. I could sort the results by name descending, appending to the url ');
+        ie_open('code');
+          itext('?sort=name,desc');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('I could also sort by more than one field, adding more than one sort parameter or separating the fields by commas. In this situation, the first parameter found is used to sort, and in case of coincidence, the next parameter in the list is used to sort and so on.');
+      ie_close('p');
+      ie_open('p');
+        itext('e.g. I could sort the results by the name of the Provider, and in case of coincidence then order by the Date of creation appending this to the url: ');
+        ie_open('code');
+          itext('?sort=provider/name,dateCreated');
+        ie_close('code');
+      ie_close('p');
+      ie_open('p');
+        itext('If I want to change the order to descending for one of the fields, then I must used separated parameters in this way:');
+      ie_close('p');
+      ie_open('p');
+        ie_open('code');
+          itext('?sort=provider.name,desc&sort=dateCreated,asc');
+        ie_close('code');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'filtering');
+      ie_open('h2');
+        itext('Filtering');
+      ie_close('h2');
+      ie_open('p');
+        itext('Not all collections allow filtering. The ones that support it will contain the optional parameter ');
+        ie_open('code');
+          itext('{?filter}');
+        ie_close('code');
+        itext(' in their template.');
+      ie_close('p');
+      ie_open('p');
+        itext('In order to filter a collection based on the value of one or more fields, you can use the optional parameter filter following a subset of the oData standard.');
+      ie_close('p');
       ie_open('h4');
-        itext('Most Recent Strategy');
+        itext('Comparison Operators');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Operator');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('eq');
+            ie_close('td');
+            ie_open('td');
+              itext('Equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City eq \'Redmond\'');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_void('td');
+            ie_open('td');
+              itext('Equal null');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City eq null');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('ne');
+            ie_close('td');
+            ie_open('td');
+              itext('Not equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City ne \'London\'');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_void('td');
+            ie_open('td');
+              itext('Not null');
+            ie_close('td');
+            ie_open('td');
+              itext('Address/City ne null');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('gt');
+            ie_close('td');
+            ie_open('td');
+              itext('Greater than');
+            ie_close('td');
+            ie_open('td');
+              itext('Price gt 20');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('ge');
+            ie_close('td');
+            ie_open('td');
+              itext('Greater than or equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Price ge 10');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('lt');
+            ie_close('td');
+            ie_open('td');
+              itext('Less than');
+            ie_close('td');
+            ie_open('td');
+              itext('Price lt 20');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('le');
+            ie_close('td');
+            ie_open('td');
+              itext('Less than or equal');
+            ie_close('td');
+            ie_open('td');
+              itext('Price le 100');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('h4');
+        itext('Logical Operators');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Operator');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('and');
+            ie_close('td');
+            ie_open('td');
+              itext('Logical and');
+            ie_close('td');
+            ie_open('td');
+              itext('Price le 200 and Price gt 3.5');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('or');
+            ie_close('td');
+            ie_open('td');
+              itext('Logical or');
+            ie_close('td');
+            ie_open('td');
+              itext('Price le 3.5 or Price gt 200');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('h4');
+        itext('Grouping Operators');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Operator');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('( )');
+            ie_close('td');
+            ie_open('td');
+              itext('Precedence grouping');
+            ie_close('td');
+            ie_open('td');
+              itext('(Price eq 5) or (Address/City eq \'London\')');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('h4');
+        itext('String functions');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Function');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('contains');
+            ie_close('td');
+            ie_open('td');
+              itext('Contains');
+            ie_close('td');
+            ie_open('td');
+              itext('contains(Address/City,\'edmon\')');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('startswith');
+            ie_close('td');
+            ie_open('td');
+              itext('Starts with');
+            ie_close('td');
+            ie_open('td');
+              itext('startswith(Address/City,\'Red\')');
+            ie_close('td');
+          ie_close('tr');
+          ie_open('tr');
+            ie_open('td');
+              itext('endswith');
+            ie_close('td');
+            ie_open('td');
+              itext('Ends with');
+            ie_close('td');
+            ie_open('td');
+              itext('endswith(Address/City,\'mond\')');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
+      ie_open('p');
+        itext('e.g. We could append this to a URL that returns a collection of Data Sources to filter the DataSource by an author name and a name.');
+      ie_close('p');
+      $templateAlias2({code: '?filter=(author/name eq \'Julio\') and (name ne \'datasource-name\')', mode: 'text'}, null, opt_ijData);
+      ie_open('h4');
+        itext('Escaping in queries:');
       ie_close('h4');
       ie_open('p');
-        itext('This strategy will add to the user fields the most recent field coming from any data source. For example, if we have two data sources set up and a field mapping configured to obtain the email address from both. If we only receive the email from one of them, that is the field that will be added to the individual profile. However, if we receive both, then the one which we received the latest will be the one added to the individual profile.');
+        itext('In order to filter for a value which contains single quotes, these can be escaped by adding two single quotes.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a valid strategy passed in JSON when creating or updating a field mapping to use the most recent field:');
+        itext('e.g. To filter for a company whose name is ');
+        ie_open('code');
+          itext('L\'Oreal');
+        ie_close('code');
+        itext(':');
       ie_close('p');
-      $templateAlias2({code: '{\n    "key": "MOST_RECENT"\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '?filter=(company/name eq \'L\'\'Oreal\')', mode: 'text'}, null, opt_ijData);
       ie_open('h4');
-        itext('Priority Data Source Strategy');
+        itext('Filtering by interests:');
       ie_close('h4');
       ie_open('p');
-        itext('This strategy will give preference to the information coming from a particular data source. In order to be configured, the configuration must include the dataSourceIdentifier. For example, if we have three data sources set up (A, B and C), and a field mapping configured to obtain the telephone from all of them. When we set A as the priority data source, if we receive a telephone field from A, then that will be the field added to the inidividual profile. In case we don\'t receive any telephone from A, but we do receive it from B and C, then the most recent strategy applies.');
+        itext('Interests (of an individual or of a segment) may have values which can contain characters not supported by Odata as Identifiers, as described here: http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_SimpleIdentifier');
       ie_close('p');
       ie_open('p');
-        itext('And this is an example setting the data source with identifier ABCEDFG as the priority data source.');
+        itext('For example an interest may have a value ');
+        ie_open('code');
+          itext('digital experience');
+        ie_close('code');
+        itext(', but the following query would result in a parsing error:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "key": "PRIORITY_DATASOURCE",\n    "configuration": {\n        "dataSourceIdentifier": "ABCDEFG"\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '?filter=(interests/digital experience/value gt 0)', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('To support filtering by such interests, the identifier is modified, so that whitespace characters are replaced with ');
+        ie_open('code');
+          itext('_');
+        ie_close('code');
+        itext(' and not alpha numeric characters are removed. In order to filter by interest ');
+        ie_open('code');
+          itext('digital experience');
+        ie_close('code');
+        itext(' the correct query would be:');
+      ie_close('p');
+      $templateAlias2({code: '?filter=(interests/digital_experience/value gt 0)', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'transformations');
+      ie_open('h2');
+        itext('Transformations');
+      ie_close('h2');
+      ie_open('p');
+        itext('Not all collections support transformations. The ones that support them will contain the optional parameter ');
+        ie_open('code');
+          itext('{?apply}');
+        ie_close('code');
+        itext(' in their template.');
+      ie_close('p');
+      ie_open('p');
+        itext('In order to perform a transformation on a collection, you can use the optional parameter ');
+        ie_open('code');
+          itext('apply');
+        ie_close('code');
+        itext(' following a subset of the oData standard.');
+      ie_close('p');
+      ie_open('p');
+        itext('Currently, the only supported transformation is ');
+        ie_open('code');
+          itext('groupby');
+        ie_close('code');
+        itext(' and within it, only');
+        ie_open('code');
+          itext('Simple grouping');
+        ie_close('code');
+        itext(' on a ');
+        ie_open('em');
+          itext('single field');
+        ie_close('em');
+        itext(' is allowed, with no further transformations applied is supported.');
+      ie_close('p');
+      ie_open('h4');
+        itext('Supported Transformations');
+      ie_close('h4');
+      ie_open('table');
+        ie_open('thead');
+          ie_open('tr');
+            ie_open('th');
+              itext('Tranformation');
+            ie_close('th');
+            ie_open('th');
+              itext('Description');
+            ie_close('th');
+            ie_open('th');
+              itext('Example');
+            ie_close('th');
+          ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+          ie_open('tr');
+            ie_open('td');
+              itext('groupby');
+            ie_close('td');
+            ie_open('td');
+              itext('Group by');
+            ie_close('td');
+            ie_open('td');
+              itext('groupby((demographics/address/value))');
+            ie_close('td');
+          ie_close('tr');
+        ie_close('tbody');
+      ie_close('table');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11964,11 +12289,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param251}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param370}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'yulnt.render';
+  $render.soyTemplateName = 'SErOQ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11978,18 +12303,14 @@ return exports;
 
 });
 
-class yulnt extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(yulnt, templates);
+class SErOQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SErOQ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -12035,7 +12356,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(yulnt, templates);
 /* 146 */,
 /* 147 */,
 /* 148 */,
-/* 149 */
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12063,7 +12388,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(99);
+var _indexSoy = __webpack_require__(103);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12075,23 +12400,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var yulnt = function (_Component) {
-  _inherits(yulnt, _Component);
+var SErOQ = function (_Component) {
+  _inherits(SErOQ, _Component);
 
-  function yulnt() {
-    _classCallCheck(this, yulnt);
+  function SErOQ() {
+    _classCallCheck(this, SErOQ);
 
-    return _possibleConstructorReturn(this, (yulnt.__proto__ || Object.getPrototypeOf(yulnt)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (SErOQ.__proto__ || Object.getPrototypeOf(SErOQ)).apply(this, arguments));
   }
 
-  return yulnt;
+  return SErOQ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(yulnt, _indexSoy2.default);
+_metalSoy2.default.register(SErOQ, _indexSoy2.default);
 
-exports.default = yulnt;
+exports.default = SErOQ;
 
 /***/ })
-],[149]);
+],[153]);
