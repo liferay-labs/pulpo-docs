@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([14],[
+webpackJsonppageComponent([16],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11657,13 +11657,12 @@ module.exports = function(module) {
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */,
-/* 97 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ZaTTO", function() { return ZaTTO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ubIct", function() { return ubIct; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11679,11 +11678,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ZaTTO.
+ * @fileoverview Templates in namespace ubIct.
  * @public
  */
 
-goog.module('ZaTTO.incrementaldom');
+goog.module('ubIct.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11717,7 +11716,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param209 = function() {
+  var param204 = function() {
     ie_open('h6');
       var dyn14 = opt_data.page.description;
       if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
@@ -11725,20 +11724,70 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Activity Model');
+        itext('The Accounts Model');
       ie_close('h2');
       ie_open('p');
-        itext('Activities contain information about behaviour and actions performed by different entities (');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
-        ie_close('a');
-        itext(', accounts, individual segments... etc).');
+        itext('Accounts are a complex entity that contain several contexts for each Organization stored in our system.');
       ie_close('p');
       ie_open('p');
-        itext('The entity activity contains the following fields:');
+        itext('Those contexts are:');
       ie_close('p');
       ie_open('ul');
+        ie_open('li');
+          itext('Organization');
+        ie_close('li');
+        ie_open('li');
+          itext('Sentiment Analysis');
+        ie_close('li');
+        ie_open('li');
+          itext('Sales Interaction');
+        ie_close('li');
+        ie_open('li');
+          itext('Transactions');
+        ie_close('li');
+        ie_open('li');
+          itext('Firmographic');
+        ie_close('li');
+        ie_open('li');
+          itext('Support Interaction');
+        ie_close('li');
+        ie_open('li');
+          itext('etc');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Only some of those contexts are available for now. Each context will contain certain ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' with information. These fields will correspond to ');
+        ie_open('a', null, null,
+            'href', 'http://schema.org/');
+          itext('schema.org');
+        ie_close('a');
+        itext(' Properties');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Invididual:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('dataSourceIdentifiers');
+          ie_close('em');
+          itext(' - a map with the different datasource identifiers and the datasource individual identifier (the primary key of this account in the original datasource)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
         ie_open('li');
           ie_open('em');
             itext('identifier');
@@ -11746,67 +11795,26 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('day');
+            itext('organization');
           ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('startTime');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('endTime');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('groupName');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('activityType');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('applicationId');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('eventId');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('eventProperties');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerType');
-          ie_close('em');
-          itext(' - The entity that performed this activity (e.g. an Individual, an Account...)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerIdentifier');
-          ie_close('em');
-          itext(' - The Identifier of the entity that performed this activity.');
+          itext(' - a Map of organizational ');
+          ie_open('a', null, null,
+              'href', '/docs/fields');
+            itext('Fields');
+          ie_close('a');
+          itext(' corresponding to properties of the Type ');
+          ie_open('a', null, null,
+              'href', 'http://schema.org/Organization');
+            itext('Organization');
+          ie_close('a');
+          itext(' from Schema.org');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Activities Collection');
+        itext('Accounts Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11820,9 +11828,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('activities');
+          itext('accounts');
         ie_close('code');
-        itext(' pointing to the collection of Activities.');
+        itext(' pointing to the collection of Accounts.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11847,28 +11855,146 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of activities under the key ');
+        itext(' section, a list of accounts under the key ');
         ie_open('code');
-          itext('activities');
+          itext('accounts');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/activities?page=0&size=1');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/accounts?page=0&size=1');
+        ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "activities": [\n            {\n                "groupName": "www.liferay.com",\n                "description": "Submit Form",\n                "ownerIdentifier": "AWIubFositjEuNSqYpR",\n                "ownerType": "individual",\n                "activityType": "Activity",\n                "day": "2018-03-06T00:00:00Z",\n                "startTime": "2018-03-06T03:50:43Z",\n                "endTime": "2018-03-06T03:50:43Z",\n                "identifier": "AWIubHEhitjEuNSqYph",\n                "applictionId": "Form",\n                "eventId": "formSubmited",\n                "eventProperties": {\n                    "formId": "32cf039a-7a47-4461-82c5-e694d9f29057"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/activities/AWIubHEhitjEuNSqYph"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWIubFositjEuNSqYpR"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "accounts": [\n            {\n                "dateCreated": "2017-11-14T15:32:06Z",\n                "dateModified": "2017-11-14T15:32:07Z",\n                "identifier": "AV-7KK2z2uFXwMzLKdBu",\n                "organization": {\n                    "ISIC": [\n                        {\n                            "context": "organization",\n                            "dataSourceIdentifier": null,\n                            "dateModified": "2017-11-14T15:32:07Z",\n                            "fieldType": "http://schema.org/isicV4",\n                            "label": null,\n                            "name": "Economic Activity",\n                            "ownerIdentifier": "AV-7KK2z2uFXwMzLKdBu",\n                            "ownerType": "account",\n                            "projectId": "DEMO",\n                            "value": "G762"\n                        }\n                    ]\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu"\n                    },\n                    "accounts": {\n                        "href": "http://localhost:8084/my-project/accounts{?filter}",\n                        "templated": true\n                    },\n                    "individuals": {\n                        "href": "http://localhost:8084/my-project/accounts/AV_Afi95Y3UMLZEdmkBK/individuals{?filter}"\n                    },\n                    "memberships": {\n                        "href": "http://localhost:8084/my-project/accounts/AV_81uhW7IU2hIVahEU2/memberships"\n                     },\n                    "account-segments": {\n                        "href": "http://localhost:8084/my-project/accounts/AV-7KK2z2uFXwMzLKdBu/account-segments{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/accounts?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Activities or Update of Activities manually is not supported. Activities are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
+        itext('Creation of new Accounts or Update of Accounts manually is not supported. Accounts are automatically generated and updated from the Field Chunks sent by the different Connectors.');
       ie_close('p');
       ie_open('p');
-        itext('Deletion of existing Activities is not allowed for now either.');
+        itext('Deletion of existing Accounts is not allowed for now either.');
       ie_close('p');
       ie_open('p');
-        itext('Navigating through the list of activities, the link to each activity can be found with the rel ');
+        itext('Navigating through the list of accounts, the link to each account can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
         itext('.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Filtering and Sorting Accounts Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('Accounts collection can be filtered as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('These are some examples of filtering:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Accounts from Madrid: ');
+          ie_open('code');
+            itext('?filter=(organization/location/value eq \'Madrid\')');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Accounts with yearly revenue greater than 50000: ');
+          ie_open('code');
+            itext('?filter=(organization/yearlyRevenue/value gt \'50000\')');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Accounts from Madrid sorted by yearlyRevenue in descending order:');
+          ie_open('code');
+            itext('?filter=(organization/location/value eq \'Madrid\')&sort=organization/yearlyRevenue/value,desc');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Accounts in the financial sector located either in Malaga or Madrid with a yearly revenue lower than 50000:');
+          ie_open('code');
+            itext('?filter=(organization/location/value eq \'Madrid\' or organization/location/value eq \'Malaga\') and (organization/yearlyRevenue/value lt \'50000\') and (organization/isicV4/value eq \'K6419\')');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Accounts Links');
+      ie_close('h2');
+      ie_open('p');
+        itext('As part of the links of each account, the following links can be found using these keys:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('account-segments');
+          ie_close('code');
+          itext(' - The collection of Account Segments this account belongs to');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('accounts');
+          ie_close('code');
+          itext(' - The collection of Accounts');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('individuals');
+          ie_close('code');
+          itext(' - The collection of Individuals who belong to this account. This collection can be filtered as explained in ');
+          ie_open('a', null, null,
+              'href', '/docs/general#filtering');
+            itext('filtering');
+          ie_close('a');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('memberships');
+          ie_close('code');
+          itext(' - The collection of Memberships of this account. This collection can be used to add new members to this account manually, as described in #5.');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '5');
+      ie_open('h2');
+        itext('Accounts Membership Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('Creation of new Individual-Account memberships is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the ');
+        ie_open('code');
+          itext('memberships');
+        ie_close('code');
+        itext(' Collection URL of each account . This is an example of the body passed to this POST request to the URL');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/accounts/my-account-identifier/memberships');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "individualIdentifier" : "my-individual-identifier"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('A ');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' request to the URL ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/accounts/my-account-identifier/memberships/my-individual-identifier');
+        ie_close('code');
+        itext(' removes an existing Individual-Account membership.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -11880,11 +12006,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param204}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ZaTTO.render';
+  $render.soyTemplateName = 'ubIct.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11894,14 +12020,15 @@ return exports;
 
 });
 
-class ZaTTO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ZaTTO, templates);
+class ubIct extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ubIct, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 97 */,
 /* 98 */,
 /* 99 */,
 /* 100 */,
@@ -11978,7 +12105,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(97);
+var _indexSoy = __webpack_require__(96);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11990,23 +12117,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ZaTTO = function (_Component) {
-  _inherits(ZaTTO, _Component);
+var ubIct = function (_Component) {
+  _inherits(ubIct, _Component);
 
-  function ZaTTO() {
-    _classCallCheck(this, ZaTTO);
+  function ubIct() {
+    _classCallCheck(this, ubIct);
 
-    return _possibleConstructorReturn(this, (ZaTTO.__proto__ || Object.getPrototypeOf(ZaTTO)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ubIct.__proto__ || Object.getPrototypeOf(ubIct)).apply(this, arguments));
   }
 
-  return ZaTTO;
+  return ubIct;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ZaTTO, _indexSoy2.default);
+_metalSoy2.default.register(ubIct, _indexSoy2.default);
 
-exports.default = ZaTTO;
+exports.default = ubIct;
 
 /***/ })
 ],[146]);

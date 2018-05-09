@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([13],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11660,15 +11660,12 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zncTQ", function() { return zncTQ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ueuCV", function() { return ueuCV; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,15 +11677,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from authentication.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace zncTQ.
+ * @fileoverview Templates in namespace ueuCV.
  * @public
  */
 
-goog.module('zncTQ.incrementaldom');
+goog.module('ueuCV.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11722,178 +11719,241 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param324 = function() {
+  var param251 = function() {
     ie_open('h6');
-      var dyn19 = opt_data.page.description;
-      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+      var dyn16 = opt_data.page.description;
+      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'intro');
+        'id', '1');
       ie_open('h2');
-        itext('Authentication Headers');
+        itext('The Field Mapping Model');
       ie_close('h2');
       ie_open('p');
-        itext('In order to have a signed request, it must contain the following http headers:');
+        itext('Field Mappings allow us to map the fields from the different ');
+        ie_open('a', null, null,
+            'href', '/docs/datasources');
+          itext('datasources');
+        ie_close('a');
+        itext(' to the');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('fields');
+        ie_close('a');
+        itext(' in our entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', Accounts... etc)');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported in a field mapping:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('timestamp');
-          ie_close('em');
-          itext(': the timestamp of the request in milliseconds');
+          ie_open('p');
+            ie_open('em');
+              itext('context');
+            ie_close('em');
+            itext(' - the context of the field (demographics, sentiment... etc)');
+          ie_close('p');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('apikey');
-          ie_close('em');
-          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
+          ie_open('p');
+            ie_open('em');
+              itext('dataSourceFieldNames');
+            ie_close('em');
+            itext(' - a map with the name of the original field for each Data Source.');
+          ie_close('p');
+          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('signature');
-          ie_close('em');
-          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
+          ie_open('p');
+            ie_open('em');
+              itext('dateCreated');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dateModified');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldName');
+            ie_close('em');
+            itext(' - the name of the field on our model');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldType');
+            ie_close('em');
+            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('identifier');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('strategy');
+            ie_close('em');
+            itext(' - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or give preference to the value from a specific data source. See more details below.');
+          ie_close('p');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'signature');
+        'id', '2');
       ie_open('h2');
-        itext('Signature Generation');
+        itext('Field Mappings Collection');
       ie_close('h2');
       ie_open('p');
-        itext('You can use the following gradle dependency to use the ');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
         ie_open('code');
-          itext('SignatureValidator.java');
+          itext('_links');
         ie_close('code');
-        itext(' utility:');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('field-mappings');
+        ie_close('code');
+        itext(' pointing to the collection of Field Mappings.');
       ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180413.152136-25"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('In order to obtain the signature for your request, you can use one of the following methods:');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of fields under the key ');
+        ie_open('code');
+          itext('field-mappings');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Field Mappings is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+      ie_open('p');
+        itext('Adding new data Source Field Names without having to update the full field mapping is also supported using the ');
+        ie_open('code');
+          itext('PATCH');
+        ie_close('code');
+        itext(' method to an entity link. The body must contain a Data Source Field Name object, wich contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
-            ie_close('li');
-          ie_close('ul');
+          itext('dataSourceIdentifier - the identifier of an existing datasource.');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
-            ie_close('li');
-            ie_open('li');
-              itext('The parameters map must contain the parameters of the body of your request (if any)');
-            ie_close('li');
-            ie_open('li');
-              itext('The timestamp must match the value in your timestamp header');
-            ie_close('li');
-            ie_open('li');
-              itext('The api key must match your api key header too.');
-            ie_close('li');
-          ie_close('ul');
+          itext('fieldName - the name of this field in the existing data source');
         ie_close('li');
       ie_close('ul');
       ie_open('p');
-        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
-        ie_open('code');
-          itext('PULPO_PRIVATE_KEY');
-        ie_close('code');
-        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
+        itext('This is an example of the body to patch an existing Field Mapping in order to add another data source field name:');
       ie_close('p');
+      $templateAlias2({code: '{\n    "dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",\n    "fieldName" : "years-old"   \n}', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Field Mappings Strategies');
+      ie_close('h2');
       ie_open('p');
-        itext('This is an example of how the request headers could look like:');
-      ie_close('p');
-      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how to generate the signature for a POST request:');
-      ie_close('p');
-      ie_open('p');
-        itext('*1) Include the api key Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*2) Include the timestamp Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('(e.g. ');
-        ie_open('code');
-          itext('System.currentTimeMillis()');
-        ie_close('code');
-        itext(' in Java)');
-      ie_close('p');
-      ie_open('p');
-        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
-        ie_open('code');
-          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
-        ie_close('code');
-        itext(', and include that as a third header:');
-      ie_close('p');
-      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*3b) In case you didn\'t have the http request, we would call:');
-      ie_close('p');
-      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('with these values:');
+        itext('Field Mapping Strategies have the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
+          ie_open('em');
+            itext('key');
+          ie_close('em');
+          itext(' - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITY_DATASOURCE"');
         ie_close('li');
         ie_open('li');
-          itext('parameters --> empty');
-        ie_close('li');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
+          ie_open('em');
+            itext('configuration');
+          ie_close('em');
+          itext(' - A map with the specific configuration for the strategy. e.g. Most Recent doesn\'t need any configuration. However, Priority DataSource requires the value dataSourceIdentifier.');
         ie_close('li');
       ie_close('ul');
+      ie_open('h4');
+        itext('Most Recent Strategy');
+      ie_close('h4');
       ie_open('p');
-        itext('Another example of a POST request with body parameters:');
+        itext('This strategy will add to the user fields the most recent field coming from any data source. For example, if we have two data sources set up and a field mapping configured to obtain the email address from both. If we only receive the email from one of them, that is the field that will be added to the individual profile. However, if we receive both, then the one which we received the latest will be the one added to the individual profile.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/datasources');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> Map with the parameters:');
-        ie_close('li');
-      ie_close('ul');
-      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a valid strategy passed in JSON when creating or updating a field mapping to use the most recent field:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "key": "MOST_RECENT"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('h4');
+        itext('Priority Data Source Strategy');
+      ie_close('h4');
+      ie_open('p');
+        itext('This strategy will give preference to the information coming from a particular data source. In order to be configured, the configuration must include the dataSourceIdentifier. For example, if we have three data sources set up (A, B and C), and a field mapping configured to obtain the telephone from all of them. When we set A as the priority data source, if we receive a telephone field from A, then that will be the field added to the inidividual profile. In case we don\'t receive any telephone from A, but we do receive it from B and C, then the most recent strategy applies.');
+      ie_close('p');
+      ie_open('p');
+        itext('And this is an example setting the data source with identifier ABCEDFG as the priority data source.');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "key": "PRIORITY_DATASOURCE",\n    "configuration": {\n        "dataSourceIdentifier": "ABCDEFG"\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11904,11 +11964,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param324}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param251}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'zncTQ.render';
+  $render.soyTemplateName = 'ueuCV.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11918,14 +11978,17 @@ return exports;
 
 });
 
-class zncTQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zncTQ, templates);
+class ueuCV extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ueuCV, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11972,12 +12035,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zncTQ, templates);
 /* 146 */,
 /* 147 */,
 /* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12005,9 +12063,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _authenticationSoy = __webpack_require__(102);
+var _indexSoy = __webpack_require__(99);
 
-var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12017,23 +12075,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var zncTQ = function (_Component) {
-  _inherits(zncTQ, _Component);
+var ueuCV = function (_Component) {
+  _inherits(ueuCV, _Component);
 
-  function zncTQ() {
-    _classCallCheck(this, zncTQ);
+  function ueuCV() {
+    _classCallCheck(this, ueuCV);
 
-    return _possibleConstructorReturn(this, (zncTQ.__proto__ || Object.getPrototypeOf(zncTQ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ueuCV.__proto__ || Object.getPrototypeOf(ueuCV)).apply(this, arguments));
   }
 
-  return zncTQ;
+  return ueuCV;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(zncTQ, _authenticationSoy2.default);
+_metalSoy2.default.register(ueuCV, _indexSoy2.default);
 
-exports.default = zncTQ;
+exports.default = ueuCV;
 
 /***/ })
-],[154]);
+],[149]);
