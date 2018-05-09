@@ -112,8 +112,6 @@ the [filtering](/docs/general#filtering) option in the Field Collection with the
 These are some examples of Fields filtering to retrieve historical values of certain Individual and Individual Segment properties:
 
 * The historical values of the address for an Individual: `((context eq 'demographics') and (name eq 'address') and (ownerType eq 'individual') and (ownerIdentifier eq 'the-individual-identifier'))`
-* The historical scores of the topic 'Software' for an Individual: `((context eq 'interests') and (name eq 'software') and (ownerType eq 'individual') and (ownerIdentifier eq 'the-individual-identifier'))`
 * The historical counts of members of an Individual Segment: `((name eq 'individualCount') and (ownerType eq 'individual-segment') and (ownerIdentifier eq 'the-individual-segment-identifier'))`
-* The historical scores of the topic 'Business' for an Individual Segment: `((context eq 'interests') and (name eq 'business') and (ownerType eq 'individual-segment') and (ownerIdentifier eq 'the-individual-segment-identifier'))` 
 
 </article>
