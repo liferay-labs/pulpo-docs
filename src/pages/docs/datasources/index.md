@@ -22,6 +22,13 @@ The following fields are currently supported:
 * *dateCreated*
 * *dateModified*
 * *identifier*
+* *lastConfigChange* - contains information about the configuration associated to this Data Source.
+  * transactionId - identifies the latest configuration operation
+  * status - the status of the latest configuration operation. Possible values are:
+    * `SENT` - the configuration has been sent by the Data Source, but no confirmation has been received
+    * `OK_RECEIVED` - the configuration has been sent by the Data Source, and a confirmation that been received with no errors.
+    * `ERROR_RECEIVED` - the configuration has been sent by the Data Source, and a confirmation that been received with errors. 
+    Your administrator can use the transactionId to track the error on the log files.
 * *name*
 * *provider*
   * type - See the [DataSource Provider](#provider) section for more details 
@@ -59,6 +66,10 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                 "dateCreated": "2017-09-14T12:00:04Z",
                 "dateModified": "2017-09-14T12:00:04Z",
                 "identifier": "AV6AQqVHWUV1yhbro9xD",
+                "lastConfigChange": {
+                    "transactionId": "AWJzfSDgdgFFtKdpvGBL",
+                    "status": "SENT"
+                },
                 "name": "my Liferay 6.2",
                 "provider": {
                     "type": "CSV"
