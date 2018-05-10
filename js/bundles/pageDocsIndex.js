@@ -11770,8 +11770,8 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
           ie_open('p', null, null,
               'class', 'docs-home-top-description');
             itext('Start learning how to leverage the power of ');
-            var dyn7 = opt_data.site.title;
-            if (typeof dyn7 == 'function') dyn7(); else if (dyn7 != null) itext(dyn7);
+            var dyn9 = opt_data.site.title;
+            if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
             itext('.');
           ie_close('p');
         ie_close('div');
@@ -11825,26 +11825,26 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
               'class', 'col-md-12 col-md-offset-2 col-xs-16');
             ie_open('div', null, null,
                 'class', 'row');
-              var childIdList130 = opt_data.page.childIds;
-              var childIdListLen130 = childIdList130.length;
-              for (var childIdIndex130 = 0; childIdIndex130 < childIdListLen130; childIdIndex130++) {
-                var childIdData130 = childIdList130[childIdIndex130];
-                var topic__soy120 = opt_data.page.children[childIdData130];
-                if (! topic__soy120.hidden) {
+              var childIdList142 = opt_data.page.childIds;
+              var childIdListLen142 = childIdList142.length;
+              for (var childIdIndex142 = 0; childIdIndex142 < childIdListLen142; childIdIndex142++) {
+                var childIdData142 = childIdList142[childIdIndex142];
+                var topic__soy132 = opt_data.page.children[childIdData142];
+                if (! topic__soy132.hidden) {
                   ie_open('div', null, null,
                       'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
                     ie_open('a', null, null,
                         'class', 'topic radial-out',
-                        'href', topic__soy120.url);
+                        'href', topic__soy132.url);
                       ie_open('div', null, null,
                           'class', 'topic-icon');
                         ie_void('span', null, null,
-                            'class', 'icon-16-' + topic__soy120.icon);
+                            'class', 'icon-16-' + topic__soy132.icon);
                       ie_close('div');
                       ie_open('h3', null, null,
                           'class', 'topic-title');
-                        var dyn8 = topic__soy120.title;
-                        if (typeof dyn8 == 'function') dyn8(); else if (dyn8 != null) itext(dyn8);
+                        var dyn10 = topic__soy132.title;
+                        if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
                       ie_close('h3');
                     ie_close('a');
                   ie_close('div');
