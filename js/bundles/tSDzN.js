@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([14],[
+webpackJsonppageComponent([17],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11656,15 +11656,12 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cmCpJ", function() { return cmCpJ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tSDzN", function() { return tSDzN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,11 +11677,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace cmCpJ.
+ * @fileoverview Templates in namespace tSDzN.
  * @public
  */
 
-goog.module('cmCpJ.incrementaldom');
+goog.module('tSDzN.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,46 +11715,34 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param225 = function() {
+  var param162 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn12 = opt_data.page.description;
+      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Data Source Model');
+        itext('The Account Segment Model');
       ie_close('h2');
       ie_open('p');
-        itext('DataSources support a subset of the Type ');
-        ie_open('a', null, null,
-            'href', 'http://schema.org/DataFeed');
-          itext('DataFeed');
-        ie_close('a');
-        itext(' from Schema.org');
+        itext('Account Segments are aggregations of Accounts.');
       ie_close('p');
       ie_open('p');
-        itext('The following fields are currently supported:');
+        itext('These aggregations can be:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('about');
-          ie_close('em');
+          itext('Dynamic: A Variable set of accounts matching a certain condition (filter) belong to the Account Segment.');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('author');
-          ie_close('em');
-          ie_open('ul');
-            ie_open('li');
-              itext('identifier');
-            ie_close('li');
-            ie_open('li');
-              itext('name');
-            ie_close('li');
-          ie_close('ul');
+          itext('Static: A fixed set of accounts have been manually associated to the Account Segment.');
         ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Account Segment:');
+      ie_close('p');
+      ie_open('ul');
         ie_open('li');
           ie_open('em');
             itext('dateCreated');
@@ -11770,97 +11755,44 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
+            itext('filter');
+          ie_close('em');
+          itext(' - an oData filter that defines, for Account Segments with ');
+          ie_open('code');
+            itext('segmentType=DYNAMIC');
+          ie_close('code');
+          itext(', which Accounts belong to this Account Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
             itext('identifier');
           ie_close('em');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('lastConfigChange');
-          ie_close('em');
-          itext(' - contains information about the configuration associated to this Data Source.');
-          ie_open('ul');
-            ie_open('li');
-              itext('transactionId - identifies the latest configuration operation');
-            ie_close('li');
-            ie_open('li');
-              itext('status - the status of the latest configuration operation. Possible values are:');
-              ie_open('ul');
-                ie_open('li');
-                  ie_open('code');
-                    itext('SENT');
-                  ie_close('code');
-                  itext(' - the configuration has been sent by the Data Source, but no confirmation has been received');
-                ie_close('li');
-                ie_open('li');
-                  ie_open('code');
-                    itext('OK_RECEIVED');
-                  ie_close('code');
-                  itext(' - the configuration has been sent by the Data Source, and a confirmation that been received with no errors.');
-                ie_close('li');
-                ie_open('li');
-                  ie_open('code');
-                    itext('ERROR_RECEIVED');
-                  ie_close('code');
-                  itext(' - the configuration has been sent by the Data Source, and a confirmation that been received with errors. Your administrator can use the transactionId to track the error on the log files.');
-                ie_close('li');
-              ie_close('ul');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
             itext('name');
           ie_close('em');
+          itext(' - The name of the Account Segment');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('provider');
+            itext('segmentType');
           ie_close('em');
-          ie_open('ul');
-            ie_open('li');
-              itext('type - See the ');
-              ie_open('a', null, null,
-                  'href', '#provider');
-                itext('DataSource Provider');
-              ie_close('a');
-              itext(' section for more details');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('url');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('subjectOf');
-          ie_close('em');
-          itext(' - An event about this Data Source');
-          ie_open('ul');
-            ie_open('li');
-              itext('name');
-            ie_close('li');
-            ie_open('li');
-              itext('startDate');
-            ie_close('li');
-            ie_open('li');
-              itext('endDate');
-            ie_close('li');
-            ie_open('li');
-              itext('location');
-            ie_close('li');
-            ie_open('li');
-              itext('sameAs - the URL of the Event');
-            ie_close('li');
-          ie_close('ul');
+          itext(' - defines if the Account Segment aggregates Accounts dynamically or statically. The accepted values are ');
+          ie_open('code');
+            itext('Type.STATIC');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('Type.DYNAMIC');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('DataSources Collection');
+        itext('Account Segment Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11874,9 +11806,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('data-sources');
+          itext('account-segments');
         ie_close('code');
-        itext(' pointing to the collection of Data Sources.');
+        itext(' pointing to the collection of Account Segments.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11884,15 +11816,10 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             'href', '/docs/general#pagination');
           itext('pagination');
         ie_close('a');
-        itext(', ');
+        itext(' and ');
         ie_open('a', null, null,
             'href', '/docs/general#sorting');
           itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11901,27 +11828,27 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of data sources under the key ');
+        itext(' section, a list of account segments under the key ');
         ie_open('code');
-          itext('data-sources');
+          itext('account-segments');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
         itext('This is an example of a response to this url: ');
         ie_open('code');
-          itext('http://localhost:8084/my-project/data-sources?page=0&size=1');
+          itext('http://localhost:8084/my-project/account-segments?page=0&size=20');
         ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "lastConfigChange": {\n                    "transactionId": "AWJzfSDgdgFFtKdpvGBL",\n                    "status": "SENT"\n                },\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "type": "CSV"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "account-segments":[\n            {\n                 "dateCreated":"2017-11-15T16:23:35Z",\n                 "dateModified":"2017-11-15T16:23:35Z",\n                 "filter":null,\n                 "identifier":"AV_Afi6-Y3UMLZEdmkBE",\n                 "name":"Partners",\n                 "segmentType":"STATIC",\n                 "_links":{\n                    "self":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE"\n                    },\n                    "account-segments":{\n                       "href":"http://localhost:8084/my-project/account-segments{?filter}",\n                       "templated":true\n                    },\n                    "accounts":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE/accounts{?filter}",\n                       "templated":true\n                    },\n                    "memberships": {\n                        "href":"http://localhost:8084/my-project/account-segments/AV_81uji7IU2hIVahEU6/memberships"\n                    }\n                 }\n            }\n           ]\n       },\n    "_links":{\n       "self":{\n           "href":"http://localhost:8084/my-project/account-segments?page=0&size=20"\n       }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Data Sources is supported making a ');
+        itext('Creation of new Account Segments is supported making a ');
         ie_open('code');
           itext('POST');
         ie_close('code');
         itext(' to the Collection URL. This is an example of the body passed to this POST request:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "name" : "My First DataSource",\n    "provider" : {\n        "type" : "CSV"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "name" : "My First AccountSegment",\n    "filter" : "(organization/employees/value eq \'30\')",\n    "segmentType" : "DYNAMIC"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
         itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
         ie_open('code');
@@ -11939,166 +11866,132 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'provider');
+        'id', '3');
       ie_open('h2');
-        itext('DataSource Provider');
+        itext('Account Segment Links');
       ie_close('h2');
       ie_open('p');
-        itext('The ');
-        ie_open('code');
-          itext('provider');
-        ie_close('code');
-        itext(' field of the DataSource contains the specific configuration for a provider (e.g. Liferay, CSV). As this information changes from one type of provider to other, the set of fields is different, too.');
-      ie_close('p');
-      ie_open('p');
-        itext('A valid DataSource provider field must contain at least a field ');
-        ie_open('code');
-          itext('type');
-        ie_close('code');
-        itext(' with one of the supported types as values. Currently, the supported values are ');
-        ie_open('code');
-          itext('LIFERAY');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('CSV');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('h3');
-        itext('Liferay DataSource Provider');
-      ie_close('h3');
-      ie_open('p');
-        itext('The following fields are supported for a Liferay Provider:');
+        itext('As part of the links of each account, the following links can be found using these keys:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('type');
-          ie_close('em');
-          itext(' - the value must be ');
           ie_open('code');
-            itext('LIFERAY');
+            itext('account-segments');
           ie_close('code');
-          itext(' for a Liferay Provider');
+          itext(' - The collection of Account Segments');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('analyticsConfiguration');
-          ie_close('em');
-          itext(' - Contains the analytics configuration for the DataSource');
-          ie_open('ul');
-            ie_open('li');
-              itext('analyticsKey');
-            ie_close('li');
-            ie_open('li');
-              itext('enableAllSites - If the value is ');
-              ie_open('code');
-                itext('true');
-              ie_close('code');
-              itext(', all the sites in the instance will send analytics, ignoring the configuration in the ');
-              ie_open('code');
-                itext('sites');
-              ie_close('code');
-              itext(' field.');
-            ie_close('li');
-            ie_open('li');
-              itext('sites - A list elements with the structure:');
-              ie_open('ul');
-                ie_open('li');
-                  itext('enableAllChildren - If the value is ');
-                  ie_open('code');
-                    itext('true');
-                  ie_close('code');
-                  itext(', all the children of this site will send analytics');
-                ie_close('li');
-                ie_open('li');
-                  itext('identifier - The primary key of the site');
-                ie_close('li');
-              ie_close('ul');
-            ie_close('li');
-          ie_close('ul');
+          ie_open('code');
+            itext('accounts');
+          ie_close('code');
+          itext(' - The collection of Accounts who belong to this Account Segment. This collection can be filtered as explained in ');
+          ie_open('a', null, null,
+              'href', '/docs/general#filtering');
+            itext('filtering');
+          ie_close('a');
+          itext('.');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('contactsConfiguration');
-          ie_close('em');
-          itext(' - Contains the contacts configuration for the DataSource');
-          ie_open('ul');
-            ie_open('li');
-              itext('enableAllContacts - If the value is ');
-              ie_open('code');
-                itext('true');
-              ie_close('code');
-              itext(', all the contacts in the instance will be synchronized, ignoring the configuration in the ');
-              ie_open('code');
-                itext('organizations');
-              ie_close('code');
-              itext(' and ');
-              ie_open('code');
-                itext('userGroups');
-              ie_close('code');
-              itext(' fields.');
-            ie_close('li');
-            ie_open('li');
-              itext('organizations - A list elements with the structure:');
-              ie_open('ul');
-                ie_open('li');
-                  itext('enableAllChildren - If the value is ');
-                  ie_open('code');
-                    itext('true');
-                  ie_close('code');
-                  itext(', all the contacts in the children of this organization will be synchronized');
-                ie_close('li');
-                ie_open('li');
-                  itext('identifier - The primary key of the organization');
-                ie_close('li');
-              ie_close('ul');
-            ie_close('li');
-            ie_open('li');
-              itext('userGroups - A list elements with the structure:');
-              ie_open('ul');
-                ie_open('li');
-                  itext('enableAllChildren - If the value is ');
-                  ie_open('code');
-                    itext('true');
-                  ie_close('code');
-                  itext(', all the contacts in the children of this user group will be synchronized');
-                ie_close('li');
-                ie_open('li');
-                  itext('identifier - The primary key of the user group');
-                ie_close('li');
-              ie_close('ul');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('instanceInfo');
-          ie_close('em');
-          itext(' - Contacts information about the Liferay Portal instance');
-          ie_open('ul');
-            ie_open('li');
-              itext('companyId');
-            ie_close('li');
-            ie_open('li');
-              itext('lcsInstallationId');
-            ie_close('li');
-          ie_close('ul');
+          ie_open('code');
+            itext('memberships');
+          ie_close('code');
+          itext(' - The collection of Memberships of this Account Segment. This collection can be used to add new members to this account segment manually, as described in #4.');
         ie_close('li');
       ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Account Segment Membership Collection');
+      ie_close('h2');
       ie_open('p');
-        itext('This is an example of the body passed  to the ');
+        itext('Creation of new Account-Account Segment memberships is supported only for Account Segments with ');
+        ie_open('code');
+          itext('segmentType=STATIC');
+        ie_close('code');
+        itext(' by making a ');
         ie_open('code');
           itext('POST');
         ie_close('code');
-        itext(' request to create a DataSource with a ');
+        itext(' to the ');
         ie_open('code');
-          itext('provider');
+          itext('memberships');
         ie_close('code');
-        itext(' field of type Liferay:');
+        itext(' Collection URL of each account segment . This is an example of the body passed to this POST request to the URL');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships');
+        ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "name" : "Liferay Intranet DataSource",\n    "provider" : {\n        "analyticsConfiguration" : {\n            "analyticsKey" : "My-Key-For-Analytics",\n            "enableAllSites" : false,\n            "sites" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "1"\n                }\n            ]\n        },\n        "contactsConfiguration" : {\n            "enableAllContacts" : false,\n            "organizations" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "2"\n                },\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "3"\n                }\n            ],\n            "userGroups" : [\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "4"\n                }\n            ]\n        },\n        "instanceInfo" : {\n            "companyId" : "1",\n            "lcsInstallationId" : "1"\n        },\n        "type" : "LIFERAY"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "accountIdentifier" : "my-account-identifier"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('A ');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' request to the URL ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships/my-account-identifier');
+        ie_close('code');
+        itext(' removes an existing Account-Account Segment membership.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '5');
+      ie_open('h2');
+        itext('Account Segment Membership Count');
+      ie_close('h2');
+      ie_open('p');
+        itext('The current value of the count of Accounts that are members of an Account Segment can be obtained from the ');
+        ie_open('code');
+          itext('totalElements');
+        ie_close('code');
+        itext(' field of the ');
+        ie_open('code');
+          itext('accounts');
+        ie_close('code');
+        itext(' collection.');
+      ie_close('p');
+      ie_open('p');
+        itext('The historical values of the count of Accounts that are members of an Account Segment are stored as ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' with the name ');
+        ie_open('code');
+          itext('accountCount');
+        ie_close('code');
+        itext(' and associated to the Individual Segment through the ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext(' properties. For example, using the oData filter');
+        ie_open('code');
+          itext('(name eq \'accountCount\') and (ownerype eq \'account-segment\') and (ownerIdentifier eq \'AV_Afi6-Y3UMLZEdmkBE\')');
+        ie_close('code');
+        itext('returns a collection of fields with the historical count values for the Account Segment with identifier ');
+        ie_open('code');
+          itext('AV_Afi6-Y3UMLZEdmkBE');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The latest value of the count is also stored in the fields of the Account Segment and therefore it can be used to filter and sort the collection of Account Segments. However, it is very important to know that ');
+        ie_open('em');
+          itext('this value may be outdated');
+        ie_close('em');
+        itext(' since this is just the latest historical value that is updated once a day. For the accurate number of members, the totalElements field from the collection should be retrieved.');
+      ie_close('p');
+      ie_open('p');
+        itext('For example, this URL would obtain the the collection of Account segments sorted by number of members.');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments?sort=fields/accountCount/value');
+        ie_close('code');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -12109,11 +12002,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param225}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param162}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'cmCpJ.render';
+  $render.soyTemplateName = 'tSDzN.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12123,14 +12016,17 @@ return exports;
 
 });
 
-class cmCpJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(cmCpJ, templates);
+class tSDzN extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tSDzN, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
@@ -12177,10 +12073,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(cmCpJ, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12208,7 +12101,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(95);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12220,23 +12113,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var cmCpJ = function (_Component) {
-  _inherits(cmCpJ, _Component);
+var tSDzN = function (_Component) {
+  _inherits(tSDzN, _Component);
 
-  function cmCpJ() {
-    _classCallCheck(this, cmCpJ);
+  function tSDzN() {
+    _classCallCheck(this, tSDzN);
 
-    return _possibleConstructorReturn(this, (cmCpJ.__proto__ || Object.getPrototypeOf(cmCpJ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (tSDzN.__proto__ || Object.getPrototypeOf(tSDzN)).apply(this, arguments));
   }
 
-  return cmCpJ;
+  return tSDzN;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(cmCpJ, _indexSoy2.default);
+_metalSoy2.default.register(tSDzN, _indexSoy2.default);
 
-exports.default = cmCpJ;
+exports.default = tSDzN;
 
 /***/ })
-],[148]);
+],[145]);
