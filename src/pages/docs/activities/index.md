@@ -24,9 +24,16 @@ The entity activity contains the following fields:
 * *activityType*
 * *applicationId*
 * *eventId*
-* *eventProperties*
+* *object*
 * *ownerType* - The entity that performed this activity (e.g. an Individual, an Account...)
 * *ownerIdentifier* - The Identifier of the entity that performed this activity.
+
+ The entity object contains the following fields:
+ * *identifier*
+ * *name*
+ * *description*
+ * *objectType*
+ * *url*
 
 </article>
 
