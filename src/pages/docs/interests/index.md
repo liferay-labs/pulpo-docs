@@ -2,7 +2,7 @@
 title: "Interests"
 description: "Interests API"
 layout: "guide"
-icon: "menu"
+icon: "circle-arrow"
 weight: 12
 ---
 
