@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([15],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11659,12 +11659,17 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xytwB", function() { return xytwB; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vcWGT", function() { return vcWGT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11676,15 +11681,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from authentication.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace xytwB.
+ * @fileoverview Templates in namespace vcWGT.
  * @public
  */
 
-goog.module('xytwB.incrementaldom');
+goog.module('vcWGT.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,125 +11723,178 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param225 = function() {
+  var param340 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn20 = opt_data.page.description;
+      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'intro');
       ie_open('h2');
-        itext('The Asset Model');
+        itext('Authentication Headers');
       ie_close('h2');
       ie_open('p');
-        itext('Assets contain information about documents, pages, forms or any content that the individual interacts with.');
-      ie_close('p');
-      ie_open('p');
-        itext('The entity asset contains the following fields:');
+        itext('In order to have a signed request, it must contain the following http headers:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('identifier');
+            itext('timestamp');
           ie_close('em');
+          itext(': the timestamp of the request in milliseconds');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('assetType');
+            itext('apikey');
           ie_close('em');
-          itext(' - e.g. forms, DocumentLibrary, Layout...');
+          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('dataSourceAssetPK');
+            itext('signature');
           ie_close('em');
-          itext(' - The primary key of this asset in its original data source');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dataSourceIdentifier');
-          ie_close('em');
-          itext(' - The identifier of the data source that sent this asset');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('name');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
+          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'signature');
       ie_open('h2');
-        itext('Assets Collection');
+        itext('Signature Generation');
       ie_close('h2');
       ie_open('p');
-        itext('As described in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#navigation');
-          itext('Initial Navigation to obtain URLs');
-        ie_close('a');
-        itext(', the ');
+        itext('You can use the following gradle dependency to use the ');
         ie_open('code');
-          itext('_links');
+          itext('SignatureValidator.java');
         ie_close('code');
-        itext(' section of the root resource will contain a template link labelled as ');
+        itext(' utility:');
+      ie_close('p');
+      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180413.152136-25"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In order to obtain the signature for your request, you can use one of the following methods:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('p');
+            ie_open('code');
+              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
+            ie_close('code');
+          ie_close('p');
+          ie_open('ul');
+            ie_open('li');
+              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('code');
+              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
+            ie_close('code');
+          ie_close('p');
+          ie_open('ul');
+            ie_open('li');
+              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
+            ie_close('li');
+            ie_open('li');
+              itext('The parameters map must contain the parameters of the body of your request (if any)');
+            ie_close('li');
+            ie_open('li');
+              itext('The timestamp must match the value in your timestamp header');
+            ie_close('li');
+            ie_open('li');
+              itext('The api key must match your api key header too.');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
         ie_open('code');
-          itext('assets');
+          itext('PULPO_PRIVATE_KEY');
         ie_close('code');
-        itext(' pointing to the collection of Assets.');
+        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
       ie_close('p');
       ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
+        itext('This is an example of how the request headers could look like:');
+      ie_close('p');
+      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
       ie_close('p');
       ie_open('p');
-        itext('The response will contain inside the ');
+        itext('This is an example of how to generate the signature for a POST request:');
+      ie_close('p');
+      ie_open('p');
+        itext('*1) Include the api key Header in your request');
+      ie_close('p');
+      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('*2) Include the timestamp Header in your request');
+      ie_close('p');
+      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('(e.g. ');
         ie_open('code');
-          itext('_embedded');
+          itext('System.currentTimeMillis()');
         ie_close('code');
-        itext(' section, a list of assets under the key ');
+        itext(' in Java)');
+      ie_close('p');
+      ie_open('p');
+        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
         ie_open('code');
-          itext('assets');
+          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
         ie_close('code');
-        itext('.');
+        itext(', and include that as a third header:');
       ie_close('p');
+      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/assets?page=0&size=1');
+        itext('*3b) In case you didn\'t have the http request, we would call:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "assets": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/assets/AWNoD0uDeO0_hdUWjxo_"\n                    },\n                    "assets": {\n                        "href": "http://localhost:8084/my-project/assets{?filter,page,size,sort*}"\n                    }\n                },\n                "name": "Liferay: Digital experience software tailored to your needs",\n                "dataSourceAssetPK": "https://www.liferay.com/",\n                "identifier": "AWNoD0uDeO0_hdUWjxo_",\n                "dataSourceIdentifier": "AWNoD0HTeO0_hdUWjxoo",\n                "assetType": "Layout"\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Assets or Update of Assets manually is not supported. Assets are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
+        itext('with these values:');
       ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
+        ie_close('li');
+        ie_open('li');
+          itext('parameters --> empty');
+        ie_close('li');
+        ie_open('li');
+          itext('apikey --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('timeStamp --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('privateKey --> the private key associated to our api key');
+        ie_close('li');
+      ie_close('ul');
       ie_open('p');
-        itext('Deletion of existing Assets is not allowed for now either.');
+        itext('Another example of a POST request with body parameters:');
       ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of assets, the link to each asset can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('requestURL --> /DEMO/datasources');
+        ie_close('li');
+        ie_open('li');
+          itext('parameters --> Map with the parameters:');
+        ie_close('li');
+      ie_close('ul');
+      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
+      ie_open('ul');
+        ie_open('li');
+          itext('apikey --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('timeStamp --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('privateKey --> the private key associated to our api key');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11847,11 +11905,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param225}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param340}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'xytwB.render';
+  $render.soyTemplateName = 'vcWGT.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11861,19 +11919,14 @@ return exports;
 
 });
 
-class xytwB extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xytwB, templates);
+class vcWGT extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(vcWGT, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -11919,7 +11972,15 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xytwB, templates);
 /* 146 */,
 /* 147 */,
 /* 148 */,
-/* 149 */
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11947,9 +12008,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _authenticationSoy = __webpack_require__(103);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11959,23 +12020,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var xytwB = function (_Component) {
-  _inherits(xytwB, _Component);
+var vcWGT = function (_Component) {
+  _inherits(vcWGT, _Component);
 
-  function xytwB() {
-    _classCallCheck(this, xytwB);
+  function vcWGT() {
+    _classCallCheck(this, vcWGT);
 
-    return _possibleConstructorReturn(this, (xytwB.__proto__ || Object.getPrototypeOf(xytwB)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (vcWGT.__proto__ || Object.getPrototypeOf(vcWGT)).apply(this, arguments));
   }
 
-  return xytwB;
+  return vcWGT;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(xytwB, _indexSoy2.default);
+_metalSoy2.default.register(vcWGT, _authenticationSoy2.default);
 
-exports.default = xytwB;
+exports.default = vcWGT;
 
 /***/ })
-],[149]);
+],[157]);
