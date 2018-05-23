@@ -158,13 +158,105 @@ That same url can be also used for delete (`DELETE` method) and update (`PUT` me
 As part of the links of each individual, the following links can be found using these keys:
 * `individual-segments` - The collection of Individual Segments
 * `individuals` - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in [filtering](/docs/general#filtering), and transformations can be applied on it as explained in [transformations](/docs/general#transformations).
-* `memberships` - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in #4.
+* `memberships` - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in [Individual Segment Membership Collection](#6).
 
 </article>
 
 <article id="4">
 
+## Filtering and Sorting Individual Segments Collection
+
+Individual Segment collection can be filtered as explained in [filtering](/docs/general#filtering).
+
+These are some examples of filtering:
+* Individual Segments with interests for business: `?filter=(interests/business/value gt '0')`
+* Individual Segments with interests for software and sports greater than a score of 10: `?filter=(interests/software/value gt '10') and (interests/sports/value gt '10'))`
+
+</article>
+
+<article id="5">
+
+## The Individual Segment Membership Model
+
+Individual Segment Memberships represent associations of Individuals to Individual Segments. 
+ 
+The following fields are currently supported as part of an Individual Segment:
+* *individualSegmentIdentifier* - The identifier of the Individual Segment
+* *individualIdentifier* - The identifier of the Individual 
+* *status* - The status of the membership. Its value can be `ACTIVE` if the membership exists currently, or `INACTIVE` if the membership no longer exists. 
+* *dateCreated* - The date when the membership was established, in ISO8601 format
+* *dateRemoved* - The date when the membership was removed, in ISO8601 format
+
+</article>
+
+<article id="6">
+
 ## Individual Segment Membership Collection
+
+As described in [Individual Segment Links](#3), the `_links` section of the `individual-segment resource will contain a template link labelled as `memberships` pointing to the
+collection of Memberships of this Individual Segment.
+
+This API supports [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
+
+The response will contain inside the `_embedded` section, a list of individual segment memberships
+under the key `memberships`.
+
+This is an example of a response of a `GET` request to this url: `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships?page=0&size=20`
+
+```json
+{
+    "_embedded": {
+        "memberships": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/AWONINaxjx1K64tMzvV6"
+                    },
+                    "individual": {
+                        "href": "http://localhost:8084/my-project/individuals/AWONINaxjx1K64tMzvV6"
+                    },
+                    "individual-segment": {
+                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier"
+                    }
+                },
+                "individualSegmentIdentifier": "my-individual-segment-identifier",
+                "status": "ACTIVE",
+                "dateCreated": "2018-05-23T13:12:10Z",
+                "individualIdentifier": "AWONINaxjx1K64tMzvV6"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/AWONINdEjx1K64tMzvWB"
+                    },
+                    "individual": {
+                        "href": "http://localhost:8084/my-project/individuals/AWONINdEjx1K64tMzvWB"
+                    },
+                    "individual-segment": {
+                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier"
+                    }
+                },
+                "individualSegmentIdentifier": "my-individual-segment-identifier",
+                "status": "INACTIVE",
+                "dateRemoved": "2018-05-23T13:12:10Z",
+                "dateCreated": "2018-05-23T13:12:10Z",
+                "individualIdentifier": "AWONINdEjx1K64tMzvWB"
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships?filter=%28dateCreated%20gt%202012-05-29T09%3A13%3A28Z%29&page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+```
 
 Creation of new Individual-Individual Segment memberships is supported only for Individual Segments with `status=ACTIVE`
 and `segmentType=STATIC` by making a `POST` to the `memberships` Collection URL of each individual segment . 
@@ -177,12 +269,20 @@ This is an example of the body passed to this POST request to the URL
 }
 ```
 
-A `DELETE` request to the URL `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/my-individual-identifier` removes
+A `DELETE` request to the URL `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/my-individual-identifier` deactivates
 an existing Individual-Individual Segment membership.
+
+### Filtering the Individual Segment Membership Collection
+
+Individual Segment Membership collection can be filtered as explained in [filtering](/docs/general#filtering).
+
+These are some examples of filtering:
+* Individual Segment Memberships with active status created before a given date: `?filter=(status eq 'ACTIVE') and (dateCreated lt 2013-05-29T09:13:28Z)`
+* Individual Segment Memberships with inactive status removed between two given dates: `?filter=(status eq 'INACTIVE') and (dateCreated gt 2012-05-29T09:13:28Z) and (dateCreated lt 2015-05-29T09:13:28Z)`
 
 </article>
 
-<article id="5">
+<article id="7">
 
 ## Individual Segment Membership Count
 
@@ -193,16 +293,4 @@ The historical values of the count of Individuals that are members of an Individ
 as [Fields](/docs/fields) and they can be obtained through the [filtering](/docs/general#filtering) options as described
 in the [Retrieving historical values](/docs/fields#3) section. 
  
-</article>
-
-<article id="6">
-
-## Filtering and Sorting Individual Segments Collection
-
-Individual Segment collection can be filtered as explained in [filtering](/docs/general#filtering).
-
-These are some examples of filtering:
-* Individual Segments with interests for business: `?filter=(interests/business/value gt '0')`
-* Individual Segments with interests for software and sports greater than a score of 10: `?filter=(interests/software/value gt '10') and (interests/sports/value gt '10'))`
-
 </article>
