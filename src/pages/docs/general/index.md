@@ -182,16 +182,16 @@ can use the optional parameter filter following a subset of the oData standard.
 
 #### Comparison Operators
 
-| Operator  | Description          | Example                            |
-|---------- |--------------------- |------------------------------------|
-| eq        | Equal                | Address/City eq 'Redmond'          |
-|           | Equal null           | Address/City eq null               |
-| ne        | Not equal            | Address/City ne 'London'           |
-|           | Not null             | Address/City ne null               |
-| gt        | Greater than         | Price gt 20                        |
-| ge        | Greater than or equal| Price ge 10                        |
-| lt        | Less than            | DateCreated lt 2018-02-13T12:33:12 |
-| le        | Less than or equal   | DateCreated le 2012-05-29T09:13:28 |
+| Operator  | Description          | Example                             |
+|---------- |--------------------- |-------------------------------------|
+| eq        | Equal                | Address/City eq 'Redmond'           |
+|           | Equal null           | Address/City eq null                |
+| ne        | Not equal            | Address/City ne 'London'            |
+|           | Not null             | Address/City ne null                |
+| gt        | Greater than         | Price gt 20                         |
+| ge        | Greater than or equal| Price ge 10                         |
+| lt        | Less than            | DateCreated lt 2018-02-13T12:33:12Z |
+| le        | Less than or equal   | DateCreated le 2012-05-29T09:13:28Z |
 
 #### Logical Operators
 
