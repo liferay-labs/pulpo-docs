@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([7],[
+webpackJsonppageComponent([18],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11656,23 +11656,12 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HqslE", function() { return HqslE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CODcq", function() { return CODcq; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11684,15 +11673,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from status_endpoints.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace HqslE.
+ * @fileoverview Templates in namespace CODcq.
  * @public
  */
 
-goog.module('HqslE.incrementaldom');
+goog.module('CODcq.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11726,42 +11715,283 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param523 = function() {
+  var param162 = function() {
     ie_open('h6');
-      var dyn23 = opt_data.page.description;
-      if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
+      var dyn12 = opt_data.page.description;
+      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'health');
+        'id', '1');
       ie_open('h2');
-        itext('API Health');
+        itext('The Account Segment Model');
       ie_close('h2');
       ie_open('p');
-        itext('The health of the API can be checked at the endpoint: ');
-        ie_open('code');
-          itext('/management/health');
-        ie_close('code');
+        itext('Account Segments are aggregations of Accounts.');
       ie_close('p');
       ie_open('p');
-        itext('The response will be JSON in this format with posible statuses UP and DOWN:');
+        itext('These aggregations can be:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "description":"Pulpo Contacts Engine",\n    "status":"UP"\n}', mode: 'text'}, null, opt_ijData);
+      ie_open('ul');
+        ie_open('li');
+          itext('Dynamic: A Variable set of accounts matching a certain condition (filter) belong to the Account Segment.');
+        ie_close('li');
+        ie_open('li');
+          itext('Static: A fixed set of accounts have been manually associated to the Account Segment.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Account Segment:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('filter');
+          ie_close('em');
+          itext(' - an oData filter that defines, for Account Segments with ');
+          ie_open('code');
+            itext('segmentType=DYNAMIC');
+          ie_close('code');
+          itext(', which Accounts belong to this Account Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+          itext(' - The name of the Account Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('segmentType');
+          ie_close('em');
+          itext(' - defines if the Account Segment aggregates Accounts dynamically or statically. The accepted values are ');
+          ie_open('code');
+            itext('Type.STATIC');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('Type.DYNAMIC');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'version');
+        'id', '2');
       ie_open('h2');
-        itext('API Deployed Version');
+        itext('Account Segment Collection');
       ie_close('h2');
       ie_open('p');
-        itext('The version of the API that is running can be checked at the endpoint: ');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
         ie_open('code');
-          itext('/management/info');
+          itext('_links');
         ie_close('code');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('account-segments');
+        ie_close('code');
+        itext(' pointing to the collection of Account Segments.');
       ie_close('p');
       ie_open('p');
-        itext('The response will be JSON in this format, with information relative to the branch deployed, the time it was built, the version of the API and the git commit:');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: '{\n    "branch":"PULPO-166.hateoas",\n    "buildtime":"20180103T142812Z",\n    "version":"1.0.0",\n    "revision":"e015458b74a1378801c26d9eb5756c5a245d885d"\n}', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of account segments under the key ');
+        ie_open('code');
+          itext('account-segments');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments?page=0&size=20');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "account-segments":[\n            {\n                 "dateCreated":"2017-11-15T16:23:35Z",\n                 "dateModified":"2017-11-15T16:23:35Z",\n                 "filter":null,\n                 "identifier":"AV_Afi6-Y3UMLZEdmkBE",\n                 "name":"Partners",\n                 "segmentType":"STATIC",\n                 "_links":{\n                    "self":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE"\n                    },\n                    "account-segments":{\n                       "href":"http://localhost:8084/my-project/account-segments{?filter}",\n                       "templated":true\n                    },\n                    "accounts":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE/accounts{?filter}",\n                       "templated":true\n                    },\n                    "memberships": {\n                        "href":"http://localhost:8084/my-project/account-segments/AV_81uji7IU2hIVahEU6/memberships"\n                    }\n                 }\n            }\n           ]\n       },\n    "_links":{\n       "self":{\n           "href":"http://localhost:8084/my-project/account-segments?page=0&size=20"\n       }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Account Segments is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "My First AccountSegment",\n    "filter" : "(organization/employees/value eq \'30\')",\n    "segmentType" : "DYNAMIC"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Account Segment Links');
+      ie_close('h2');
+      ie_open('p');
+        itext('As part of the links of each account, the following links can be found using these keys:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('account-segments');
+          ie_close('code');
+          itext(' - The collection of Account Segments');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('accounts');
+          ie_close('code');
+          itext(' - The collection of Accounts who belong to this Account Segment. This collection can be filtered as explained in ');
+          ie_open('a', null, null,
+              'href', '/docs/general#filtering');
+            itext('filtering');
+          ie_close('a');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('memberships');
+          ie_close('code');
+          itext(' - The collection of Memberships of this Account Segment. This collection can be used to add new members to this account segment manually, as described in #4.');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Account Segment Membership Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('Creation of new Account-Account Segment memberships is supported only for Account Segments with ');
+        ie_open('code');
+          itext('segmentType=STATIC');
+        ie_close('code');
+        itext(' by making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the ');
+        ie_open('code');
+          itext('memberships');
+        ie_close('code');
+        itext(' Collection URL of each account segment . This is an example of the body passed to this POST request to the URL');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "accountIdentifier" : "my-account-identifier"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('A ');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' request to the URL ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships/my-account-identifier');
+        ie_close('code');
+        itext(' removes an existing Account-Account Segment membership.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '5');
+      ie_open('h2');
+        itext('Account Segment Membership Count');
+      ie_close('h2');
+      ie_open('p');
+        itext('The current value of the count of Accounts that are members of an Account Segment can be obtained from the ');
+        ie_open('code');
+          itext('totalElements');
+        ie_close('code');
+        itext(' field of the ');
+        ie_open('code');
+          itext('accounts');
+        ie_close('code');
+        itext(' collection.');
+      ie_close('p');
+      ie_open('p');
+        itext('The historical values of the count of Accounts that are members of an Account Segment are stored as ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' with the name ');
+        ie_open('code');
+          itext('accountCount');
+        ie_close('code');
+        itext(' and associated to the Individual Segment through the ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext(' properties. For example, using the oData filter');
+        ie_open('code');
+          itext('(name eq \'accountCount\') and (ownerype eq \'account-segment\') and (ownerIdentifier eq \'AV_Afi6-Y3UMLZEdmkBE\')');
+        ie_close('code');
+        itext('returns a collection of fields with the historical count values for the Account Segment with identifier ');
+        ie_open('code');
+          itext('AV_Afi6-Y3UMLZEdmkBE');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The latest value of the count is also stored in the fields of the Account Segment and therefore it can be used to filter and sort the collection of Account Segments. However, it is very important to know that ');
+        ie_open('em');
+          itext('this value may be outdated');
+        ie_close('em');
+        itext(' since this is just the latest historical value that is updated once a day. For the accurate number of members, the totalElements field from the collection should be retrieved.');
+      ie_close('p');
+      ie_open('p');
+        itext('For example, this URL would obtain the the collection of Account segments sorted by number of members.');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/account-segments?sort=fields/accountCount/value');
+        ie_close('code');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11772,11 +12002,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param523}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param162}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'HqslE.render';
+  $render.soyTemplateName = 'CODcq.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11786,14 +12016,25 @@ return exports;
 
 });
 
-class HqslE extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HqslE, templates);
+class CODcq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(CODcq, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11833,15 +12074,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HqslE, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11869,9 +12102,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _status_endpointsSoy = __webpack_require__(106);
+var _indexSoy = __webpack_require__(95);
 
-var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11881,23 +12114,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HqslE = function (_Component) {
-  _inherits(HqslE, _Component);
+var CODcq = function (_Component) {
+  _inherits(CODcq, _Component);
 
-  function HqslE() {
-    _classCallCheck(this, HqslE);
+  function CODcq() {
+    _classCallCheck(this, CODcq);
 
-    return _possibleConstructorReturn(this, (HqslE.__proto__ || Object.getPrototypeOf(HqslE)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (CODcq.__proto__ || Object.getPrototypeOf(CODcq)).apply(this, arguments));
   }
 
-  return HqslE;
+  return CODcq;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(HqslE, _status_endpointsSoy2.default);
+_metalSoy2.default.register(CODcq, _indexSoy2.default);
 
-exports.default = HqslE;
+exports.default = CODcq;
 
 /***/ })
-],[154]);
+],[146]);

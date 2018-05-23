@@ -11674,7 +11674,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AjwSU", function() { return AjwSU; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vylDi", function() { return vylDi; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11690,11 +11690,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace AjwSU.
+ * @fileoverview Templates in namespace vylDi.
  * @public
  */
 
-goog.module('AjwSU.incrementaldom');
+goog.module('vylDi.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12109,7 +12109,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'AjwSU.render';
+  $render.soyTemplateName = 'vylDi.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12119,8 +12119,8 @@ return exports;
 
 });
 
-class AjwSU extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AjwSU, templates);
+class vylDi extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(vylDi, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12216,23 +12216,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var AjwSU = function (_Component) {
-  _inherits(AjwSU, _Component);
+var vylDi = function (_Component) {
+  _inherits(vylDi, _Component);
 
-  function AjwSU() {
-    _classCallCheck(this, AjwSU);
+  function vylDi() {
+    _classCallCheck(this, vylDi);
 
-    return _possibleConstructorReturn(this, (AjwSU.__proto__ || Object.getPrototypeOf(AjwSU)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (vylDi.__proto__ || Object.getPrototypeOf(vylDi)).apply(this, arguments));
   }
 
-  return AjwSU;
+  return vylDi;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(AjwSU, _indexSoy2.default);
+_metalSoy2.default.register(vylDi, _indexSoy2.default);
 
-exports.default = AjwSU;
+exports.default = vylDi;
 
 /***/ })
 ],[158]);

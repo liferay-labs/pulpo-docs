@@ -11666,7 +11666,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QLRvu", function() { return QLRvu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IMTvu", function() { return IMTvu; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11682,11 +11682,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace QLRvu.
+ * @fileoverview Templates in namespace IMTvu.
  * @public
  */
 
-goog.module('QLRvu.incrementaldom');
+goog.module('IMTvu.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11984,7 +11984,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'QLRvu.render';
+  $render.soyTemplateName = 'IMTvu.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11994,8 +11994,8 @@ return exports;
 
 });
 
-class QLRvu extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QLRvu, templates);
+class IMTvu extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(IMTvu, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12092,23 +12092,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var QLRvu = function (_Component) {
-  _inherits(QLRvu, _Component);
+var IMTvu = function (_Component) {
+  _inherits(IMTvu, _Component);
 
-  function QLRvu() {
-    _classCallCheck(this, QLRvu);
+  function IMTvu() {
+    _classCallCheck(this, IMTvu);
 
-    return _possibleConstructorReturn(this, (QLRvu.__proto__ || Object.getPrototypeOf(QLRvu)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (IMTvu.__proto__ || Object.getPrototypeOf(IMTvu)).apply(this, arguments));
   }
 
-  return QLRvu;
+  return IMTvu;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(QLRvu, _indexSoy2.default);
+_metalSoy2.default.register(IMTvu, _indexSoy2.default);
 
-exports.default = QLRvu;
+exports.default = IMTvu;
 
 /***/ })
 ],[151]);
