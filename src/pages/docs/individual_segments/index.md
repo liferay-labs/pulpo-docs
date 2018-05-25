@@ -115,7 +115,10 @@ This is an example of a response to this url: `http://localhost:8084/my-project/
                    "templated":true
                 },
                 "memberships": {
-                    "href": "http://localhost:8084/my-project/individual-segments/AV_81ueo7IU2hIVahEUv/memberships"
+                    "href": "http://localhost:8084/my-project/individual-segments/AV_81ueo7IU2hIVahEUv/memberships{?filter,page,size,sort*}"
+                },
+                "membership-changes": {
+                    "href": "http://localhost:8084/my-project/individual-segments/AV_81ueo7IU2hIVahEUv/membership-changes{?filter,page,size,sort*}"
                 }
              }
           }
@@ -159,6 +162,7 @@ As part of the links of each individual, the following links can be found using 
 * `individual-segments` - The collection of Individual Segments
 * `individuals` - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in [filtering](/docs/general#filtering), and transformations can be applied on it as explained in [transformations](/docs/general#transformations).
 * `memberships` - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in [Individual Segment Membership Collection](#6).
+* `membership-changes` - The collection of Membership Changes of this Individual Segment. This collection can be used to track changes in the memberships, as described in [Individual Segment Membership Change Collection](#9).
 
 </article>
 
@@ -193,7 +197,7 @@ The following fields are currently supported as part of an Individual Segment:
 
 ## Individual Segment Membership Collection
 
-As described in [Individual Segment Links](#3), the `_links` section of the `individual-segment resource will contain a template link labelled as `memberships` pointing to the
+As described in [Individual Segment Links](#3), the `_links` section of the `individual-segment` resource will contain a template link labelled as `memberships` pointing to the
 collection of Memberships of this Individual Segment.
 
 This API supports [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
@@ -293,4 +297,117 @@ The historical values of the count of Individuals that are members of an Individ
 as [Fields](/docs/fields) and they can be obtained through the [filtering](/docs/general#filtering) options as described
 in the [Retrieving historical values](/docs/fields#3) section. 
  
+</article>
+
+<article id="8">
+
+## The Individual Segment Membership Change Model
+
+Individual Segment Memberships Changes represent a log with the changes in the memberships of an Individual to an Individual Segment.
+ 
+The following fields are currently supported as part of an Individual Segment:
+* *individualSegmentIdentifier* - The identifier of the Individual Segment
+* *individualIdentifier* - The identifier of the Individual 
+* *operation* - The status of the membership. Its value can be `ADDED` if the membership was created, or `REMOVED` if the membership was deleted. 
+* *dateChanged* - The date when the membership was changed, in ISO8601 format
+* *dateFirst* - The date when the membership was created, in ISO8601 format
+
+</article>
+
+<article id="9">
+
+## Individual Segment Membership Change Collection
+
+As described in [Individual Segment Links](#3), the `_links` section of the `individual-segment` resource will contain a template link labelled as `membership-changes` pointing to the
+collection of Memberships Changes of this Individual Segment.
+
+This API supports [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
+
+The response will contain inside the `_embedded` section, a list of individual segment memberships
+under the key `membership-changes`.
+
+This is an example of a response of a `GET` request to this url: `http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/membership-changes?page=0&size=20`
+
+```json
+{
+    "_embedded": {
+        "membership-changes": [
+            {
+                "_links": {
+                    "individual": {
+                        "href": "http://localhost:8084/my-project-id/individuals/AWOWMtxI7k1UGopTvFDB"
+                    },
+                    "individual-segment": {
+                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier"
+                    },
+                    "membership": {
+                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/memberships/AWOWMtxI7k1UGopTvFDB"
+                    }
+                },
+                "operation": "REMOVED",
+                "individualIdentifier": "AWOWMtxI7k1UGopTvFDB",
+                "dateChanged": "2018-05-25T07:28:26Z",
+                "dateFirst": "2018-05-25T07:28:26Z",
+                "individualSegmentIdentifier": "my-individual-segment-identifier"
+            },
+            {
+                "_links": {
+                    "individual": {
+                        "href": "http://localhost:8084/my-project-id/individuals/AWOWMtxI7k1UGopTvFDB"
+                    },
+                    "individual-segment": {
+                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier"
+                    },
+                    "membership": {
+                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/memberships/AWOWMtxI7k1UGopTvFDB"
+                    }
+                },
+                "operation": "ADDED",
+                "individualIdentifier": "AWOWMtxI7k1UGopTvFDB",
+                "dateChanged": "2018-05-25T07:28:26Z",
+                "dateFirst": "2018-05-25T07:28:26Z",
+                "individualSegmentIdentifier": "my-individual-segment-identifier"
+            },
+            {
+                "_links": {
+                    "individual": {
+                        "href": "http://localhost:8084/my-project-id/individuals/AWOWMtks7k1UGopTvFC5"
+                    },
+                    "individual-segment": {
+                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier"
+                    },
+                    "membership": {
+                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/memberships/AWOWMtks7k1UGopTvFC5"
+                    }
+                },
+                "operation": "ADDED",
+                "individualIdentifier": "AWOWMtks7k1UGopTvFC5",
+                "dateChanged": "2018-05-25T07:28:26Z",
+                "dateFirst": "2018-05-25T07:28:26Z",
+                "individualSegmentIdentifier": "my-individual-segment-identifier"
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/membership-changes?filter=%28dateChanged%20gt%202012-05-29T09%3A13%3A28Z%29&page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 3,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+```
+
+### Filtering the Individual Segment Membership Change Collection
+
+Individual Segment Membership Change collection can be filtered as explained in [filtering](/docs/general#filtering).
+
+These are some examples of filtering:
+* Individual Segment Membership Changes that changed with operation `ADDED` before a given date: `?filter=(operation eq 'ADDED') and (dateChanged lt 2013-05-29T09:13:28Z)`
+* Individual Segment Memberships Changes that changed with operation `REMOVED` between two given dates: `?filter=(status eq 'REMOVED') and (dateChanged gt 2012-05-29T09:13:28Z) and (dateChanged lt 2015-05-29T09:13:28Z)`
+
 </article>
