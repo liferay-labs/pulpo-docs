@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([15],[
+webpackJsonppageComponent([12],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11659,12 +11659,15 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uVNAW", function() { return uVNAW; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AePlL", function() { return AePlL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,11 +11683,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace uVNAW.
+ * @fileoverview Templates in namespace AePlL.
  * @public
  */
 
-goog.module('uVNAW.incrementaldom');
+goog.module('AePlL.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,62 +11721,35 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param225 = function() {
+  var param308 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Asset Model');
+        itext('The Field Names');
       ie_close('h2');
       ie_open('p');
-        itext('Assets contain information about documents, pages, forms or any content that the individual interacts with.');
-      ie_close('p');
-      ie_open('p');
-        itext('The entity asset contains the following fields:');
+        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
+          itext('Existing fields with the same or similar name of your label');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('assetType');
-          ie_close('em');
-          itext(' - e.g. forms, DocumentLibrary, Layout...');
+          itext('Previous field mappings from your label to other fields');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('dataSourceAssetPK');
-          ie_close('em');
-          itext(' - The primary key of this asset in its original data source');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dataSourceIdentifier');
-          ie_close('em');
-          itext(' - The identifier of the data source that sent this asset');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('name');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
+          itext('Fields with values similar to your new values');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Assets Collection');
+        itext('Fields Names Service');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11787,56 +11763,35 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('assets');
+          itext('field-names');
         ie_close('code');
-        itext(' pointing to the collection of Assets.');
+        itext(' pointing to the endpoint for obtaining the field names.');
       ie_close('p');
       ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
+        itext('This endpoint accepts the ');
         ie_open('code');
-          itext('_embedded');
+          itext('GET');
         ie_close('code');
-        itext(' section, a list of assets under the key ');
-        ie_open('code');
-          itext('assets');
-        ie_close('code');
-        itext('.');
+        itext(' method with the following parameters:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('label - the label from your field (e.g. telephone, email addres... etc)');
+        ie_close('li');
+        ie_open('li');
+          itext('ownerType - the type of entity your are mapping (individual, account...)');
+        ie_close('li');
+        ie_open('li');
+          itext('values - array of sample values from your field');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The response will contain a list of existing field names ordered by relevance.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/assets?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "assets": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/assets/AWNoD0uDeO0_hdUWjxo_"\n                    },\n                    "assets": {\n                        "href": "http://localhost:8084/my-project/assets{?filter,page,size,sort*}"\n                    }\n                },\n                "name": "Liferay: Digital experience software tailored to your needs",\n                "dataSourceAssetPK": "https://www.liferay.com/",\n                "identifier": "AWNoD0uDeO0_hdUWjxo_",\n                "dataSourceIdentifier": "AWNoD0HTeO0_hdUWjxoo",\n                "assetType": "Layout"\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation of new Assets or Update of Assets manually is not supported. Assets are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Assets is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of assets, the link to each asset can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
+      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11847,11 +11802,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param225}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param308}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'uVNAW.render';
+  $render.soyTemplateName = 'AePlL.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11861,17 +11816,14 @@ return exports;
 
 });
 
-class uVNAW extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(uVNAW, templates);
+class AePlL extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AePlL, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -11919,7 +11871,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(uVNAW, templates);
 /* 146 */,
 /* 147 */,
 /* 148 */,
-/* 149 */
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11947,7 +11902,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(101);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11959,23 +11914,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var uVNAW = function (_Component) {
-  _inherits(uVNAW, _Component);
+var AePlL = function (_Component) {
+  _inherits(AePlL, _Component);
 
-  function uVNAW() {
-    _classCallCheck(this, uVNAW);
+  function AePlL() {
+    _classCallCheck(this, AePlL);
 
-    return _possibleConstructorReturn(this, (uVNAW.__proto__ || Object.getPrototypeOf(uVNAW)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AePlL.__proto__ || Object.getPrototypeOf(AePlL)).apply(this, arguments));
   }
 
-  return uVNAW;
+  return AePlL;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(uVNAW, _indexSoy2.default);
+_metalSoy2.default.register(AePlL, _indexSoy2.default);
 
-exports.default = uVNAW;
+exports.default = AePlL;
 
 /***/ })
-],[149]);
+],[152]);

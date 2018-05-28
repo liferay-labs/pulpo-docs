@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([10],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11664,12 +11664,19 @@ module.exports = function(module) {
 /* 100 */,
 /* 101 */,
 /* 102 */,
-/* 103 */
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zxeul", function() { return zxeul; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VnbSK", function() { return VnbSK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11681,15 +11688,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from authentication.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace zxeul.
+ * @fileoverview Templates in namespace VnbSK.
  * @public
  */
 
-goog.module('zxeul.incrementaldom');
+goog.module('VnbSK.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11723,178 +11730,267 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param340 = function() {
+  var param616 = function() {
     ie_open('h6');
-      var dyn20 = opt_data.page.description;
-      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+      var dyn26 = opt_data.page.description;
+      if (typeof dyn26 == 'function') dyn26(); else if (dyn26 != null) itext(dyn26);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'intro');
+        'id', '1');
       ie_open('h2');
-        itext('Authentication Headers');
+        itext('The Interest Model');
       ie_close('h2');
       ie_open('p');
-        itext('In order to have a signed request, it must contain the following http headers:');
+        itext('Interests contain information about diffferent topics that other entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', individual segments... etc) are interested on .');
+      ie_close('p');
+      ie_open('p');
+        itext('Each Interest represent certain interest of an entity about a topic for a certain day. Interests are calculated using a 30 day window range, therefore, even when there is a score calculated for every day, that score takes into account the previuos 30 days.');
+      ie_close('p');
+      ie_open('p');
+        itext('The interest field contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('timestamp');
+            itext('identifier');
           ie_close('em');
-          itext(': the timestamp of the request in milliseconds');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('apikey');
+            itext('dateRecorded');
           ie_close('em');
-          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
+          itext(' - The date this score was calculated');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('signature');
+            itext('name');
           ie_close('em');
-          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
+          itext(' - The name of the topic');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('score');
+          ie_close('em');
+          itext(' - The score for this topic (the higher the most interested on this topic)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerType');
+          ie_close('em');
+          itext(' - The entity that owns this field (e.g. an Individual, an Account...)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerIdentifier');
+          ie_close('em');
+          itext(' - The Identifier of the entity that owns this field.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('pagesVisited');
+          ie_close('em');
+          itext(' - A list of pageVisit that justifies this interest. Each pageVisit has the following fields:');
+          ie_open('ul');
+            ie_open('li');
+              itext('url - url of the page');
+            ie_close('li');
+            ie_open('li');
+              itext('title - title of the page');
+            ie_close('li');
+            ie_open('li');
+              itext('description - description of the page');
+            ie_close('li');
+            ie_open('li');
+              itext('uniqueVisitsCount - number of visits to this page');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'signature');
+        'id', '2');
       ie_open('h2');
-        itext('Signature Generation');
+        itext('Interests Collection');
       ie_close('h2');
       ie_open('p');
-        itext('You can use the following gradle dependency to use the ');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
         ie_open('code');
-          itext('SignatureValidator.java');
+          itext('_links');
         ie_close('code');
-        itext(' utility:');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('interests');
+        ie_close('code');
+        itext(' pointing to the collection of Interests.');
       ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180413.152136-25"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('In order to obtain the signature for your request, you can use one of the following methods:');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of interests under the key ');
+        ie_open('code');
+          itext('interests');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/interests?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "interests": [\n            {\n                "dateRecorded": "2018-03-05T00:00:00+0000",\n                "identifier": "AWMYbBfSgcT3bCtqgwde",\n                "name": "intranets",\n                "score": 1.0986122886681098,\n                "ownerIdentifier": "AV-0-dcI4MMBozrmZ0UM",\n                "ownerType": "individual",\n                "pagesVisited": [\n                    {\n                        "title": "Products for Liferay",\n                        "uniqueVisitsCount": 1,\n                        "description": "Liferay DXP, Liferay De, Sync...",\n                        "url": "https://www.liferay.com/products"\n                    },\n                    {\n                        "title": "Liferay Digital Experience Platform",\n                        "uniqueVisitsCount": 5,\n                        "description": "Portals, Intranets, Platforms...",\n                        "url": "https://www.liferay.com/en/home"\n                    }\n                ],\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/interests/AWMYbBfSgcT3bCtqgwde"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-0-dcI4MMBozrmZ0UM"\n                    },\n                    "interests": {\n                        "href": "http://localhost:8084/my-project/interests{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/interests?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Interests or Update of Interests manually is not supported. Interests are automatically generated and updated from the Interst Chunks sent by the algorithms used to calculate this based on the Analytics data.');
+      ie_close('p');
+      ie_open('p');
+        itext('Deletion of existing Interests is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of interests, the link to each interest can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext(', and also a link to the entity owning it with the rel of the entity (e.g. individual or individual-segment).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Retrieving historical values for a specific topic of interest');
+      ie_close('h2');
+      ie_open('p');
+        itext('Obtaining the historical value of an interest can be done using using the ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(' option in the Interest Collection. The ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext('can be used to idenfity the entity interested and the name to obtain interests for just one topic. The ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' option can be used to obtain the interests by date for example.');
+      ie_close('p');
+      ie_open('p');
+        itext('These are some examples of Interests filtering to retrieve historical values of certain Individual and Individual Segment properties:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
-            ie_close('li');
-          ie_close('ul');
+          itext('The historical values of the interst on "portals" for an Individual: ');
+          ie_open('code');
+            itext('((name eq \'portals\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
-            ie_close('li');
-            ie_open('li');
-              itext('The parameters map must contain the parameters of the body of your request (if any)');
-            ie_close('li');
-            ie_open('li');
-              itext('The timestamp must match the value in your timestamp header');
-            ie_close('li');
-            ie_open('li');
-              itext('The api key must match your api key header too.');
-            ie_close('li');
-          ie_close('ul');
+          itext('The historical values of the topic \'Business\' for an Individual Segment: ');
+          ie_open('code');
+            itext('((name eq \'business\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('The historical values of the interst on "intrantes" with a score higher than 10 for any Individual: ');
+          ie_open('code');
+            itext('((score gt \'10\') and (name eq \'intranets\') and (ownerType eq \'individual\'))');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '4');
+      ie_open('h2');
+        itext('Transformations on Interest Collection');
+      ie_close('h2');
       ie_open('p');
-        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
+        itext('Transformations can be applied on Interests collection as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#transformations');
+          itext('transformations');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The only transformation allowed for the Interest Collection is ');
         ie_open('code');
-          itext('PULPO_PRIVATE_KEY');
+          itext('groupby');
         ie_close('code');
-        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how the request headers could look like:');
-      ie_close('p');
-      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how to generate the signature for a POST request:');
-      ie_close('p');
-      ie_open('p');
-        itext('*1) Include the api key Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*2) Include the timestamp Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('(e.g. ');
+        itext(' by ');
         ie_open('code');
-          itext('System.currentTimeMillis()');
+          itext('day');
         ie_close('code');
-        itext(' in Java)');
-      ie_close('p');
-      ie_open('p');
-        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
+        itext(' or ');
         ie_open('code');
-          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
+          itext('month');
         ie_close('code');
-        itext(', and include that as a third header:');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('*3b) In case you didn\'t have the http request, we would call:');
-      ie_close('p');
-      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('with these values:');
+        itext('These are some examples of transformations:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> empty');
-        ie_close('li');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
+          itext('Interest group by day of creation: ');
+          ie_open('code');
+            itext('?apply=compute(day(dateRecorded) as day)/groupby((day))');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
       ie_open('p');
-        itext('Another example of a POST request with body parameters:');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/interests?apply=compute(day(dateRecorded) as day)/groupby((day))');
+        ie_close('code');
       ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "interest-transformations": [\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-03T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-04T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-05T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-06T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-07T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-08T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-09T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-10T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-11T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-12T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-13T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-14T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-15T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-16T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-17T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-18T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-19T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-05-20T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 7,\n                "intervalInitDate": "2018-05-21T00:00:00Z",\n                "scoreAvg": 10.3,\n                "viewSum": 0\n            },\n            {\n                "count": 4,\n                "intervalInitDate": "2018-05-22T00:00:00Z",\n                "scoreAvg": 41.86,\n                "viewSum": 0\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/1527005536349/interests?apply=compute%28day%28dateRecorded%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 20,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('ul');
         ie_open('li');
-          itext('requestURL --> /DEMO/datasources');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> Map with the parameters:');
-        ie_close('li');
-      ie_close('ul');
-      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
+          itext('Interest group by month of creation: ');
+          ie_open('code');
+            itext('?apply=compute(month(dateRecorded) as month)/groupby((month))');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/interests?apply=compute(month(dateRecorded) as month)/groupby((month))');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "interest-transformations": [\n            {\n                "count": 0,\n                "intervalInitDate": "2016-10-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2016-11-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2016-12-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-01-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-02-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-03-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-04-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-05-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-06-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-07-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-08-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-09-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-10-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-11-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2017-12-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-01-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-02-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-03-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 0,\n                "intervalInitDate": "2018-04-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewSum": 0\n            },\n            {\n                "count": 4,\n                "intervalInitDate": "2018-05-01T00:00:00Z",\n                "scoreAvg": 41.86,\n                "viewSum": 0\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/1527005923917/interests?apply=compute%28month%28dateRecorded%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 20,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11905,11 +12001,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param340}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param616}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'zxeul.render';
+  $render.soyTemplateName = 'VnbSK.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11919,21 +12015,14 @@ return exports;
 
 });
 
-class zxeul extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zxeul, templates);
+class VnbSK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VnbSK, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
 /* 111 */,
 /* 112 */,
 /* 113 */,
@@ -11980,7 +12069,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zxeul, templates);
 /* 154 */,
 /* 155 */,
 /* 156 */,
-/* 157 */
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12008,9 +12100,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _authenticationSoy = __webpack_require__(103);
+var _indexSoy = __webpack_require__(110);
 
-var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12020,23 +12112,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var zxeul = function (_Component) {
-  _inherits(zxeul, _Component);
+var VnbSK = function (_Component) {
+  _inherits(VnbSK, _Component);
 
-  function zxeul() {
-    _classCallCheck(this, zxeul);
+  function VnbSK() {
+    _classCallCheck(this, VnbSK);
 
-    return _possibleConstructorReturn(this, (zxeul.__proto__ || Object.getPrototypeOf(zxeul)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (VnbSK.__proto__ || Object.getPrototypeOf(VnbSK)).apply(this, arguments));
   }
 
-  return zxeul;
+  return VnbSK;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(zxeul, _authenticationSoy2.default);
+_metalSoy2.default.register(VnbSK, _indexSoy2.default);
 
-exports.default = zxeul;
+exports.default = VnbSK;
 
 /***/ })
-],[157]);
+],[160]);
