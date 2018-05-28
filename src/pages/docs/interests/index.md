@@ -141,11 +141,13 @@ Transformations can be applied on Interests collection as explained in [transfor
 
 The only transformation allowed for the Interest Collection is `groupby` by `day` or `month`.
 
+The number of intervals returned when `groupby` is used is determined by the page size. Only the page `0` can be requested.
+
 These are some examples of transformations:
 
-* Interest group by day of creation: `?apply=compute(day(dateRecorded) as day)/groupby((day))`
+* Interest group by day of creation: `?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=20`
 
-This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(day(dateRecorded) as day)/groupby((day))`
+This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=20`
 
 ```json
 {
@@ -288,9 +290,9 @@ This is an example of a response to this url: ` http://localhost:8084/my-project
 
 ```
 
-* Interest group by month of creation: `?apply=compute(month(dateRecorded) as month)/groupby((month))`
+* Interest group by month of creation: `?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=20`
 
-This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(month(dateRecorded) as month)/groupby((month))`
+This is an example of a response to this url: ` http://localhost:8084/my-project/interests?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=20`
 
 ```json
 {
