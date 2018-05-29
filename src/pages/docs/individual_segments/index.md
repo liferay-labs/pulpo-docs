@@ -282,7 +282,7 @@ The following fields are currently supported as part of an Individual Segment:
 As described in [Individual Segment Links](#individual-segment-links), the `_links` section of the `individual-segment` resource will contain a template link labelled as `membership-changes` pointing to the
 collection of Memberships Changes of this Individual Segment. (There is also a shortcut in the root endpoint)
 
-This API supports [filtering](/docs/general#filtering), [pagination](/docs/general#pagination) and [sorting](/docs/general#sorting).
+This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting), [filtering](/docs/general#filtering) and [transformations](/docs/general#transformations).
 
 The response will contain inside the `_embedded` section, a list of individual segment memberships
 under the key `membership-changes`.
@@ -368,5 +368,108 @@ This is an example of a response of a `GET` request to this url: `http://localho
 These are some examples of filtering:
 * Individual Segment Membership Changes that changed with operation `ADDED` before a given date: `?filter=(operation eq 'ADDED') and (dateChanged lt 2013-05-29T09:13:28Z)`
 * Individual Segment Memberships Changes that changed with operation `REMOVED` between two given dates: `?filter=(status eq 'REMOVED') and (dateChanged gt 2012-05-29T09:13:28Z) and (dateChanged lt 2015-05-29T09:13:28Z)`
+
+### Transformations on Individual Segment Membership Changes
+
+Transformations can be applied on Individual Segment Membership Changes collection as explained in [transformations](/docs/general#transformations).
+
+The only transformation allowed for the Interest Collection is `groupby` by `day` or `month`.
+
+The number of intervals returned when `groupby` is used is determined by the page size. Only the page `0` can be requested.
+
+The returned object has the following fields:
+
+* *individualsCount* - The number of individuals who are members of the segment in the last day of this interval
+* *addedIndividualsCount* - The number of individuals that were added to the segment on this interval (memberhips added) 
+* *removedIndividualsCount* -  The number of individuals that were added to the segment on this interval (memberships deactivated)
+* *initIntervalDate* - The initial day of this interval
+
+These are some examples of transformations:
+
+* Individual Segment Membership Changes grouped by day: `?apply=compute(day(dateChanged) as day)/groupby((day))&page=0&size=3`
+
+This is an example of a response to this url: ` http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute(day(dateChanged) as day)/groupby((day))&page=0&size=3`
+
+```json
+{
+    "_embedded": {
+        "membership-changes-transformations": [
+            {
+				"individualsCount": 110,
+				"initIntervalDate": "2018-05-26T00:00:00Z",
+				"addedIndividualsCount": 10,
+				"removedIndividualsCount": 0
+            },
+            {
+				"individualsCount": 120,
+				"initIntervalDate": "2018-05-27T00:00:00Z",
+				"addedIndividualsCount": 25,
+				"removedIndividualsCount": 15
+            },
+            {
+				"individualsCount": 150,
+				"initIntervalDate": "2018-05-28T00:00:00Z",
+				"addedIndividualsCount": 50,
+				"removedIndividualsCount": 20
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute%28day%28dateChanged%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=3"
+        }
+    },
+    "page": {
+        "size": 3,
+        "totalElements": 3,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+
+```
+
+* Individual Segment Membership Changes grouped by month: `?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3`
+
+This is an example of a response to this url: ` http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute(month(dateChanged) as month)/groupby((month))&page=0&size=3`
+
+```json
+{
+    "_embedded": {
+        "membership-changes-transformations": [
+             {
+				"individualsCount": 0,
+				"initIntervalDate": "2018-03-01T00:00:00Z",
+				"addedIndividualsCount": 0,
+				"removedIndividualsCount": 0
+			},
+			{
+				"individualsCount": 150,
+				"initIntervalDate": "2018-04-01T00:00:00Z",
+				"addedIndividualsCount": 150,
+				"removedIndividualsCount": 0
+			},
+			{
+				"individualsCount": 120,
+				"initIntervalDate": "2018-05-01T00:00:00Z",
+				"addedIndividualsCount": 20,
+				"removedIndividualsCount": 50
+			}
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute%28month%28dateChanged%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=3"
+        }
+    },
+    "page": {
+        "size": 3,
+        "totalElements": 3,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+
+```
 
 </article>
