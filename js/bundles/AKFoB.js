@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([5],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11666,12 +11666,15 @@ module.exports = function(module) {
 /* 102 */,
 /* 103 */,
 /* 104 */,
-/* 105 */
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QFIUE", function() { return QFIUE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AKFoB", function() { return AKFoB; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11683,15 +11686,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from java_client.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace QFIUE.
+ * @fileoverview Templates in namespace AKFoB.
  * @public
  */
 
-goog.module('QFIUE.incrementaldom');
+goog.module('AKFoB.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11725,201 +11728,763 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param427 = function() {
+  var param549 = function() {
     ie_open('h6');
-      var dyn22 = opt_data.page.description;
-      if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
+      var dyn24 = opt_data.page.description;
+      if (typeof dyn24 == 'function') dyn24(); else if (dyn24 != null) itext(dyn24);
     ie_close('h6');
-    ie_open('p');
-      itext('Pulpo provides a Java Client that allows you to consume this API inspired by the ');
-      ie_open('a', null, null,
-          'href', 'https://blog.codecentric.de/en/2013/11/traverson/');
-        itext('Traverson JavaScript library');
-      ie_close('a');
-    ie_close('p');
-    ie_open('p');
-      itext('This client will help you navigate the API leveraging its hypermedia capabilities.');
-    ie_close('p');
     ie_open('article', null, null,
-        'id', 'setup');
+        'id', 'individual-segment-model');
       ie_open('h2');
-        itext('Java API');
+        itext('The Individual Segment Model');
       ie_close('h2');
       ie_open('p');
-        itext('In case you want to use your own client, you will still find valuable our models in Java. You can use our API with this gradle dependency:');
+        itext('Individual Segments are aggregations of Individuals.');
       ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.api", version: "0.0.2-20180515.101145-15"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('These aggregations can be:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Dynamic: A Variable set of individuals matching a certain condition (filter) belong to the Individual Segment.');
+        ie_close('li');
+        ie_open('li');
+          itext('Static: A fixed set of individuals have been manually associated to the Individual Segment.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Individual Segment:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('author');
+          ie_close('em');
+          ie_open('ul');
+            ie_open('li');
+              itext('identifier');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('filter');
+          ie_close('em');
+          itext(' - an oData filter that defines, for Individual Segments with ');
+          ie_open('code');
+            itext('segmentType=DYNAMIC');
+          ie_close('code');
+          itext(', which Individuals belong to this Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('filterMetadata');
+          ie_close('em');
+          itext(' - a placeholder for extra information about the filter');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('individualCount');
+          ie_close('em');
+          itext(' - the current count of individuals associated to the Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+          itext(' - The name of the Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('scope');
+          ie_close('em');
+          itext(' - The scope of the Individual Segment, whether this segment belongs to a user or is shared between the members of a project. The accepted values are ');
+          ie_open('code');
+            itext('USER');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('PROJECT');
+          ie_close('code');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('segmentType');
+          ie_close('em');
+          itext(' - defines if the Individual Segment aggregates Individuals dynamically or statically. The accepted values are ');
+          ie_open('code');
+            itext('STATIC');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('DYNAMIC');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('status');
+          ie_close('em');
+          itext(' - defines if the Individual Segment accepts memberships or not. The accepted values are ');
+          ie_open('code');
+            itext('ACTIVE');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('INACTIVE');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'individual-segment-colleciton');
       ie_open('h2');
-        itext('Set Up');
+        itext('Individual Segment Collection');
       ie_close('h2');
       ie_open('p');
-        itext('In order to use the Client, you should have this gradle dependency:');
-      ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180427.224113-32"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In case you need also the transitive dependencies, you should add:');
-      ie_close('p');
-      $templateAlias2({code: 'compileInclude group: "com.eclipsesource.minimal-json", name: "minimal-json", version: "0.9.4"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-annotations", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-core", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-databind", version: "2.6.3"\ncompileInclude group: "com.github.javafaker", name: "javafaker", version: "0.13"\ncompileInclude group: "com.github.mifmif", name: "generex", version: "1.0.2"\ncompileInclude group: "com.github.wnameless", name: "json-flattener", version: "0.4.1"\ncompileInclude group: "com.liferay", name: "com.liferay.petra.lang", version: "1.1.2"\ncompileInclude group: "dk.brics.automaton", name: "automaton", version: "1.11.2"\ncompileInclude group: "org.apache.commons", name: "commons-lang3", version: "3.5"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('If you are using the client from an OSGI runtime, you may need to exclude some packages. See ');
+        itext('As described in ');
         ie_open('a', null, null,
-            'href', 'https://github.com/liferay/com-liferay-pulpo-connector-de-private/blob/7.0.x-private/pulpo-connector-de-contacts-demo/bnd.bnd');
-          itext('one example');
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('individual-segments');
+        ie_close('code');
+        itext(' pointing to the collection of Individual Segments.');
+      ie_close('p');
+      ie_open('p');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
         ie_close('a');
         itext('.');
       ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of individual segments under the key ');
+        ie_open('code');
+          itext('individual-segments');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments?page=0&size=20');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "individual-segments":[\n          {\n             "dateCreated":"2017-11-15T16:23:35Z",\n             "dateModified":"2017-11-15T16:23:35Z",\n             "filter":null,\n             "filterMetadata":null,\n             "identifier":"AV_Afi6-Y3UMLZEdmkBE",\n             "name":"Friends",\n             "segmentType":"STATIC",\n             "status":"ACTIVE",\n             "author": {\n                 "name":"John Doe",\n                 "identifier":"12345"\n              },\n             "_links":{\n                "self":{\n                   "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE"\n                },\n                "individual-segments":{\n                   "href":"http://localhost:8084/my-project/individual-segments{?filter}",\n                   "templated":true\n                },\n                "individuals":{\n                   "href":"http://localhost:8084/my-project/individual-segments/AV_Afi6-Y3UMLZEdmkBE/individuals{?filter}",\n                   "templated":true\n                },\n                "memberships": {\n                    "href": "http://localhost:8084/my-project/individual-segments/AV_81ueo7IU2hIVahEUv/memberships{?filter,page,size,sort*}"\n                },\n                "membership-changes": {\n                    "href": "http://localhost:8084/my-project/individual-segments/AV_81ueo7IU2hIVahEUv/membership-changes{?filter,page,size,sort*}"\n                }\n             }\n          }\n        ]\n    },\n    "_links":{\n       "self":{\n           "href":"http://localhost:8084/my-project/individual-segments?page=0&size=20"\n       }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Individual Segments is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "My First IndividualSegment",\n    "filter" : "(demographics/age/value eq \'30\')",\n    "segmentType" : "DYNAMIC"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+      ie_open('h3');
+        itext('Filtering and Sorting Individual Segments Collection');
+      ie_close('h3');
+      ie_open('p');
+        itext('These are some examples of filtering:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Individual Segments that belong to a user with identifier 123456: ');
+          ie_open('code');
+            itext('?filter=((scope eq \'USER\') and (author/identifier eq \'123456\'\')');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Individual Segments modified after a certain date: ');
+          ie_open('code');
+            itext('?filter=(datemodified gt 2018-02-13T12:33:12Z)');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'obtainClient');
+        'id', 'individual-segment-links');
       ie_open('h2');
-        itext('Obtain the client');
+        itext('Individual Segment Links');
       ie_close('h2');
       ie_open('p');
-        itext('You can obtain a Contacts Client instance using the ContactsClientFactory by pointing it to an ');
+        itext('As part of the links of each individual segment, the following links can be found using these keys:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('code');
+            itext('individual-segments');
+          ie_close('code');
+          itext(' - The collection of Individual Segments');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('individuals');
+          ie_close('code');
+          itext(' - The collection of Individuals who belong to this Individual Segment. This collection can be filtered as explained in ');
+          ie_open('a', null, null,
+              'href', '/docs/general#filtering');
+            itext('filtering');
+          ie_close('a');
+          itext(', and transformations can be applied on it as explained in ');
+          ie_open('a', null, null,
+              'href', '/docs/general#transformations');
+            itext('transformations');
+          ie_close('a');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('memberships');
+          ie_close('code');
+          itext(' - The collection of Memberships of this Individual Segment. This collection can be used to add new members to this individual segment manually, as described in ');
+          ie_open('a', null, null,
+              'href', '#individual-segment-membership-collection');
+            itext('Individual Segment Membership Collection');
+          ie_close('a');
+          itext('.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('code');
+            itext('membership-changes');
+          ie_close('code');
+          itext(' - The collection of Membership Changes of this Individual Segment. This collection can be used to track changes in the memberships, as described in ');
+          ie_open('a', null, null,
+              'href', '#individual-segment-membership-change-collection');
+            itext('Individual Segment Membership Change Collection');
+          ie_close('a');
+          itext('.');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'individual-segment-membership-model');
+      ie_open('h2');
+        itext('The Individual Segment Membership Model');
+      ie_close('h2');
+      ie_open('p');
+        itext('Individual Segment Memberships represent associations of Individuals to Individual Segments.');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Individual Segment:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('individualSegmentIdentifier');
+          ie_close('em');
+          itext(' - The identifier of the Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('individualIdentifier');
+          ie_close('em');
+          itext(' - The identifier of the Individual');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('status');
+          ie_close('em');
+          itext(' - The status of the membership. Its value can be ');
+          ie_open('code');
+            itext('ACTIVE');
+          ie_close('code');
+          itext(' if the individual is still a member, or ');
+          ie_open('code');
+            itext('INACTIVE');
+          ie_close('code');
+          itext(' if the individual is no longer a member.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateCreated');
+          ie_close('em');
+          itext(' - The date when the membership was established, in ISO8601 format');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateRemoved');
+          ie_close('em');
+          itext(' - The date when the the individual stopped being a member (membership was deactivated), in ISO8601 format');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'individual-segment-membership-collection');
+      ie_open('h2');
+        itext('Individual Segment Membership Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('As described in ');
         ie_open('a', null, null,
-            'href', '/#environments');
-          itext('engine URL');
+            'href', '#individual-segment-links');
+          itext('Individual Segment Links');
         ie_close('a');
-        itext(' and a ProjectID.');
+        itext(', the ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' section of the ');
+        ie_open('code');
+          itext('individual-segment');
+        ie_close('code');
+        itext(' resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('memberships');
+        ie_close('code');
+        itext(' pointing to the collection of Memberships of this Individual Segment.');
       ie_close('p');
-      $templateAlias2({code: 'ContactsEngineClient contactsEngineClient = \n    ContactsEngineClientFactory.getClient(\n        "https://contacts-dev.liferay.com/" "MY-PROJECT-ID");', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('You then go ahead and define the relation names you want to discover and follow. relation names can either be simple names or ');
+        itext('This API supports ');
         ie_open('a', null, null,
-            'href', 'http://goessner.net/articles/JsonPath/');
-          itext('JSONPath');
+            'href', '/docs/general#filtering');
+          itext('filtering');
         ie_close('a');
-        itext(' expressions (starting with an $).');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'traversing');
-      ie_open('h2');
-        itext('Traversing the API');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now, we will show some examples of how to traverse the API using the client.');
-      ie_close('p');
-      ie_open('p');
-        itext('For example, to obtain the list of data sources, you could do:');
-      ie_close('p');
-      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        contactsEngineClient.getDefaultTemplateParameters()\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    );\n            \nCollection<DataSource> dataSources = pagedResources.getContent();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Another example, to obtain just one datasource by the identifier:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nDataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Or one more, just to obtain the name of the datasource:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nString dataSourceName = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('These samples hand a parameter map into the execution (withTemplateParameters). The parameters will be used to expand URIs found during the traversal that are templated (the projectId variable is already filled when you call ');
-        ie_open('code');
-          itext('contactsEngineClient.getDefaultTemplateParameters()');
-        ie_close('code');
-        itext(').');
-      ie_close('p');
-      ie_open('p');
-        itext('In the case of the last example, we evaluate a JSONPath expression to access the data source\u2019s name.');
-      ie_close('p');
-      ie_open('p');
-        itext('The examples listed above show a simple version of traversal with just one hop. A more complex example with several hops could look like this:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-Individual-Identifier")\n\nString individualSegmentName = contactsEngineClient.follow(\n    ContactsEngineClient.INDIVIDUAL, ContactsEngineClient.INDIVIDUAL_SEGMENTS   \n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In this previous example, the follow method received 2 rels that will trigger 2 hops. At each hop, the same template parameters are applied. However, it could be customized at each hop:');
-      ie_close('p');
-      $templateAlias2({code: 'String individualSegmentName = \n    contactsEngineClient\n        .follow(\n            Hop.rel(ContactsEngineClient.INDIVIDUAL).withParameter("identifier", "12345"))\n        ).follow(\n            ContactsEngineClient.INDIVIDUAL_SEGMENTS\n        ).follow(\n            \'$\' + \'._embedded.\' + ContactsEngineClient.INDIVIDUAL_SEGMENTS + \'[0]\'\n        ).withTemplateParameters(\n            commonParameters\n        ).toObject(\n            \'$.name\'\n        );', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('The ');
-        ie_open('code');
-          itext('Hop.rel(String rel\u200B)');
-        ie_close('code');
-        itext(' function is a convenient way to create a single Hop. Using .withParameter(key, value) makes it simple to specify URI Template variables for just one hop. You can chain as many .withParameter() as needed or even pass a Map using .withParameter(Map).');
-      ie_close('p');
-      ie_open('p');
-        itext('The follow() method is chainable, meaning you can string together multiple hops as shown above. You can either put multiple, simple string-based rels (follow("individuals", "individual-segments")) or a single hop with specific parameters.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'return');
-      ie_open('h2');
-        itext('Return Objects');
-      ie_close('h2');
-      ie_open('p');
-        itext('There are different types of objects you can retrieve from the API, and you can decide which one you want.');
-      ie_close('p');
-      ie_open('p');
-        itext('For example, if you want to obtain just one object (DataSource, Individual...) you just need to specify it using the .toObject method.');
-      ie_close('p');
-      $templateAlias2({code: 'DataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In some situations you may not only want the object, but the full "Resource" which contains the object and its links, then you can pass a new TypeReference to the toObject method:');
-      ie_close('p');
-      $templateAlias2({code: 'Resource<DataSource> dataSourceResource =\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    new TypeReferences.ResourceType<DataSource>() {\n    }\n);\n\nList<Link> links = dataSourceResource.getLinks();\n\nString selfHref = dataSourceResource.getLink("self").getHref();\n\nDataSource dataSource = dataSourceResource.getContent();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('You can also obtain more information about the HTTP Request doing toEntity. It will return the ');
-        ie_open('code');
-          itext('ResponseEntity<T>');
-        ie_close('code');
-        itext(' of the type you especified.');
-      ie_close('p');
-      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).toEntity(\n    DataSource.class\n);\n\nAssert.assertEquals(HttpStatus.OK, dataSourceResponseEntity.getStatusCode());\n\nDataSource dataSource = dataSourceResponseEntity.getBody();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('When working with collections, the server will return "pages" of entities which will help you paginate the collection. In this situation the you have similar options:');
-      ie_close('p');
-      ie_open('p');
-        itext('if you want to obtain the list of objects (DataSource, Individual...) you just need to specify it passing an instance of ');
-        ie_open('code');
-          itext('TypeReferences.PagedResourcesType<DataSource>');
-        ie_close('code');
-        itext(' to the .toObject method.');
-      ie_close('p');
-      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    )', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('The PagedResources object will contain the "Content" with the DataSources, the "metadata" with information about the pagination and the "links" with links to other resources. For example:');
-      ie_close('p');
-      $templateAlias2({code: '// Content\n\nCollection<DataSource> dataSources = pagedResources.getContent();\n\n// MetaData\n\nPagedResources.PageMetadata metadata = pagedResources.getMetadata();\n\nlong totalElements = metadata.getTotalElements();\nint pageSize = metadata.getSize();\n\n// Links\n\nList<Link> links = pagedResources.getLinks();\n\nString nextHref = pagedResources.getLink("next").getHref();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('When you want to obtain the "page" of "Resources" which contains the objects and its links, then you can pass an instance of ');
-        ie_open('code');
-          itext('TypeReferences.PagedResourcesType<Resource<DataSource>>');
-        ie_close('code');
-        itext(' to the toObject method:');
-      ie_close('p');
-      $templateAlias2({code: 'PagedResources<Resource<DataSource>> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<Resource<DataSource>>() {}\n    )\n    \n// Content\n\nCollection<Resource<DataSource>> dataSources = pagedResources.getContent()', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In this last example, the type of the Content was different, but the Metadata and Links were the same.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'postputdelete');
-      ie_open('h2');
-        itext('Post, Put and Delete');
-      ie_close('h2');
-      ie_open('p');
-        itext('You can also use the client to create, update or delete entities. You first need to follow the relationships until the desired endpoint and then execute your method. For example, this would create a datasource:');
-      ie_close('p');
-      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).post(\n    _getSampleDataSource("MY-DATASOURCE"), MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)\n\nAssert.assertEquals(\n    HttpStatus.OK, dataSourceResponseEntity.getStatusCode())\n\nDataSource createdDataSource = dataSourceResponseEntity.getBody()', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('This would update a DataSource:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters =\n    contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).put(\n    dataSource, MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('And this would delete a DataSource:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).delete(\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('ul');
-      ie_open('li');
-        itext('All these examples can be found in ');
+        itext(', ');
         ie_open('a', null, null,
-            'href', 'https://github.com/liferay/com-liferay-osb-pulpo-engine-contacts-private/tree/7.0.x-private/osb-pulpo-engine-contacts-client-functional-test/src/testFunctional/groovy/com/liferay/osb/pulpo/engine/contacts/client/functional/test');
-          itext('github');
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
         ie_close('a');
         itext('.');
-      ie_close('li');
-    ie_close('ul');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of individual segment memberships under the key ');
+        ie_open('code');
+          itext('memberships');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response of a ');
+        ie_open('code');
+          itext('GET');
+        ie_close('code');
+        itext(' request to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships?page=0&size=20');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "memberships": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/AWONINaxjx1K64tMzvV6"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWONINaxjx1K64tMzvV6"\n                    },\n                    "individual-segment": {\n                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier"\n                    }\n                },\n                "individualSegmentIdentifier": "my-individual-segment-identifier",\n                "status": "ACTIVE",\n                "dateCreated": "2018-05-23T13:12:10Z",\n                "individualIdentifier": "AWONINaxjx1K64tMzvV6"\n            },\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/AWONINdEjx1K64tMzvWB"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWONINdEjx1K64tMzvWB"\n                    },\n                    "individual-segment": {\n                        "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier"\n                    }\n                },\n                "individualSegmentIdentifier": "my-individual-segment-identifier",\n                "status": "INACTIVE",\n                "dateRemoved": "2018-05-23T13:12:10Z",\n                "dateCreated": "2018-05-23T13:12:10Z",\n                "individualIdentifier": "AWONINdEjx1K64tMzvWB"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 2,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Individual Segment Memberships is supported only for Individual Segments with ');
+        ie_open('code');
+          itext('status=ACTIVE');
+        ie_close('code');
+        itext('and ');
+        ie_open('code');
+          itext('segmentType=STATIC');
+        ie_close('code');
+        itext(' by making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the ');
+        ie_open('code');
+          itext('memberships');
+        ie_close('code');
+        itext(' Collection URL of each individual segment . This is an example of the body passed to this POST request to the URL');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "individualIdentifier" : "my-individual-identifier"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('A ');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' request to the URL ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/memberships/my-individual-identifier');
+        ie_close('code');
+        itext(' deactivates an existing Individual Segment Membership.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Filtering the Individual Segment Membership Collection');
+      ie_close('h3');
+      ie_open('p');
+        itext('These are some examples of filtering:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Individual Segment Memberships with active status created before a given date: ');
+          ie_open('code');
+            itext('?filter=(status eq \'ACTIVE\') and (dateCreated lt 2013-05-29T09:13:28Z)');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Individual Segment Memberships with inactive status removed between two given dates: ');
+          ie_open('code');
+            itext('?filter=(status eq \'INACTIVE\') and (dateCreated gt 2012-05-29T09:13:28Z) and (dateCreated lt 2015-05-29T09:13:28Z)');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'individual-segment-membership-count');
+      ie_open('h2');
+        itext('Individual Segment Membership Count');
+      ie_close('h2');
+      ie_open('p');
+        itext('The current value of the count of Individuals that are members of an Individual Segment can be obtained from the ');
+        ie_open('code');
+          itext('individualCount');
+        ie_close('code');
+        itext(' field of the ');
+        ie_open('code');
+          itext('individual-segment');
+        ie_close('code');
+        itext(' resource.');
+      ie_close('p');
+      ie_open('p');
+        itext('The historical values of the count of Individuals that are members of an Individual Segment are stored as ');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('Fields');
+        ie_close('a');
+        itext(' and they can be obtained through the ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(' options as described in the ');
+        ie_open('a', null, null,
+            'href', '/docs/fields#individual-segment-links');
+          itext('Retrieving historical values');
+        ie_close('a');
+        itext(' section.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'individual-segment-membership-change-model');
+      ie_open('h2');
+        itext('The Individual Segment Membership Change Model');
+      ie_close('h2');
+      ie_open('p');
+        itext('Individual Segment Memberships Changes represent a log with the changes in the memberships of an Individual for an Individual Segment.');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported as part of an Individual Segment:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('individualSegmentIdentifier');
+          ie_close('em');
+          itext(' - The identifier of the Individual Segment');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('individualIdentifier');
+          ie_close('em');
+          itext(' - The identifier of the Individual');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('individualName');
+          ie_close('em');
+          itext(' - The name of the Individual');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('individualEmail');
+          ie_close('em');
+          itext(' - The email of the Individual');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('individualsCount');
+          ie_close('em');
+          itext(' - The number of Individuals who are members at this point in time');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('operation');
+          ie_close('em');
+          itext(' - The status of the membership. Its value can be ');
+          ie_open('code');
+            itext('ADDED');
+          ie_close('code');
+          itext(' if the membership was created, or ');
+          ie_open('code');
+            itext('REMOVED');
+          ie_close('code');
+          itext(' if the membership was deleted.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateChanged');
+          ie_close('em');
+          itext(' - The date when the membership was changed, in ISO8601 format');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateFirst');
+          ie_close('em');
+          itext(' - The date when the membership was created, in ISO8601 format');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'individual-segment-membership-change-collection');
+      ie_open('h2');
+        itext('Individual Segment Membership Change Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '#individual-segment-links');
+          itext('Individual Segment Links');
+        ie_close('a');
+        itext(', the ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' section of the ');
+        ie_open('code');
+          itext('individual-segment');
+        ie_close('code');
+        itext(' resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('membership-changes');
+        ie_close('code');
+        itext(' pointing to the collection of Memberships Changes of this Individual Segment. (There is also a shortcut in the root endpoint)');
+      ie_close('p');
+      ie_open('p');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#transformations');
+          itext('transformations');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of individual segment memberships under the key ');
+        ie_open('code');
+          itext('membership-changes');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response of a ');
+        ie_open('code');
+          itext('GET');
+        ie_close('code');
+        itext(' request to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/my-individual-segment-identifier/membership-changes?page=0&size=20');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "membership-changes": [\n            {\n                "_links": {\n                    "individual": {\n                        "href": "http://localhost:8084/my-project-id/individuals/AWOWMtxI7k1UGopTvFDB"\n                    },\n                    "individual-segment": {\n                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier"\n                    },\n                    "membership": {\n                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/memberships/AWOWMtxI7k1UGopTvFDB"\n                    }\n                },\n                "operation": "REMOVED",\n                "individualIdentifier": "AWOWMtxI7k1UGopTvFDB",\n                "dateChanged": "2018-05-25T07:28:26Z",\n                "dateFirst": "2018-05-25T07:28:26Z",\n                "individualSegmentIdentifier": "my-individual-segment-identifier"\n            },\n            {\n                "_links": {\n                    "individual": {\n                        "href": "http://localhost:8084/my-project-id/individuals/AWOWMtxI7k1UGopTvFDB"\n                    },\n                    "individual-segment": {\n                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier"\n                    },\n                    "membership": {\n                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/memberships/AWOWMtxI7k1UGopTvFDB"\n                    }\n                },\n                "operation": "ADDED",\n                "individualIdentifier": "AWOWMtxI7k1UGopTvFDB",\n                "dateChanged": "2018-05-25T07:28:26Z",\n                "dateFirst": "2018-05-25T07:28:26Z",\n                "individualSegmentIdentifier": "my-individual-segment-identifier"\n            },\n            {\n                "_links": {\n                    "individual": {\n                        "href": "http://localhost:8084/my-project-id/individuals/AWOWMtks7k1UGopTvFC5"\n                    },\n                    "individual-segment": {\n                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier"\n                    },\n                    "membership": {\n                        "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/memberships/AWOWMtks7k1UGopTvFC5"\n                    }\n                },\n                "operation": "ADDED",\n                "individualIdentifier": "AWOWMtks7k1UGopTvFC5",\n                "dateChanged": "2018-05-25T07:28:26Z",\n                "dateFirst": "2018-05-25T07:28:26Z",\n                "individualSegmentIdentifier": "my-individual-segment-identifier"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project-id/individual-segments/my-individual-segment-identifier/membership-changes?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Filtering the Individual Segment Membership Change Collection');
+      ie_close('h3');
+      ie_open('p');
+        itext('These are some examples of filtering:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Individual Segment Membership Changes that changed with operation ');
+          ie_open('code');
+            itext('ADDED');
+          ie_close('code');
+          itext(' before a given date: ');
+          ie_open('code');
+            itext('?filter=(operation eq \'ADDED\') and (dateChanged lt 2013-05-29T09:13:28Z)');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Individual Segment Memberships Changes that changed with operation ');
+          ie_open('code');
+            itext('REMOVED');
+          ie_close('code');
+          itext(' between two given dates: ');
+          ie_open('code');
+            itext('?filter=(status eq \'REMOVED\') and (dateChanged gt 2012-05-29T09:13:28Z) and (dateChanged lt 2015-05-29T09:13:28Z)');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h3');
+        itext('Transformations on Individual Segment Membership Changes');
+      ie_close('h3');
+      ie_open('p');
+        itext('Transformations can be applied on Individual Segment Membership Changes collection as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#transformations');
+          itext('transformations');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The only transformation allowed for the Interest Collection is ');
+        ie_open('code');
+          itext('groupby');
+        ie_close('code');
+        itext(' by ');
+        ie_open('code');
+          itext('day');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('month');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The number of intervals returned when ');
+        ie_open('code');
+          itext('groupby');
+        ie_close('code');
+        itext(' is used is determined by the page size. Only the page ');
+        ie_open('code');
+          itext('0');
+        ie_close('code');
+        itext(' can be requested.');
+      ie_close('p');
+      ie_open('p');
+        itext('The returned object has the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('individualsCount');
+          ie_close('em');
+          itext(' - The number of individuals who are members of the segment in the last day of this interval');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('addedIndividualsCount');
+          ie_close('em');
+          itext(' - The number of individuals that were added to the segment on this interval (memberhips added)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('removedIndividualsCount');
+          ie_close('em');
+          itext(' -  The number of individuals that were added to the segment on this interval (memberships deactivated)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('initIntervalDate');
+          ie_close('em');
+          itext(' - The initial day of this interval');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('These are some examples of transformations:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Individual Segment Membership Changes grouped by day: ');
+          ie_open('code');
+            itext('?apply=compute(day(dateChanged) as day)/groupby((day))&page=0&size=3');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute(day(dateChanged) as day)/groupby((day))&page=0&size=3');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "membership-changes-transformations": [\n            {\n                "individualsCount": 110,\n                "initIntervalDate": "2018-05-26T00:00:00Z",\n                "addedIndividualsCount": 10,\n                "removedIndividualsCount": 0\n            },\n            {\n                "individualsCount": 120,\n                "initIntervalDate": "2018-05-27T00:00:00Z",\n                "addedIndividualsCount": 25,\n                "removedIndividualsCount": 15\n            },\n            {\n                "individualsCount": 150,\n                "initIntervalDate": "2018-05-28T00:00:00Z",\n                "addedIndividualsCount": 50,\n                "removedIndividualsCount": 20\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute%28day%28dateChanged%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('ul');
+        ie_open('li');
+          itext('Individual Segment Membership Changes grouped by month: ');
+          ie_open('code');
+            itext('?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute(month(dateChanged) as month)/groupby((month))&page=0&size=3');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "membership-changes-transformations": [\n             {\n                "individualsCount": 0,\n                "initIntervalDate": "2018-03-01T00:00:00Z",\n                "addedIndividualsCount": 0,\n                "removedIndividualsCount": 0\n            },\n            {\n                "individualsCount": 150,\n                "initIntervalDate": "2018-04-01T00:00:00Z",\n                "addedIndividualsCount": 150,\n                "removedIndividualsCount": 0\n            },\n            {\n                "individualsCount": 120,\n                "initIntervalDate": "2018-05-01T00:00:00Z",\n                "addedIndividualsCount": 20,\n                "removedIndividualsCount": 50\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/individual-segments/AWOrHarmQtrdjzlpsSr_/membership-changes?apply=compute%28month%28dateChanged%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
         'value', opt_data.page.title);
@@ -11929,11 +12494,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param427}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param549}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'QFIUE.render';
+  $render.soyTemplateName = 'AKFoB.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11943,17 +12508,14 @@ return exports;
 
 });
 
-class QFIUE extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QFIUE, templates);
+class AKFoB extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AKFoB, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 106 */,
-/* 107 */,
-/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -11999,7 +12561,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QFIUE, templates);
 /* 151 */,
 /* 152 */,
 /* 153 */,
-/* 154 */
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12027,9 +12593,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _java_clientSoy = __webpack_require__(105);
+var _indexSoy = __webpack_require__(108);
 
-var _java_clientSoy2 = _interopRequireDefault(_java_clientSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12039,23 +12605,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var QFIUE = function (_Component) {
-  _inherits(QFIUE, _Component);
+var AKFoB = function (_Component) {
+  _inherits(AKFoB, _Component);
 
-  function QFIUE() {
-    _classCallCheck(this, QFIUE);
+  function AKFoB() {
+    _classCallCheck(this, AKFoB);
 
-    return _possibleConstructorReturn(this, (QFIUE.__proto__ || Object.getPrototypeOf(QFIUE)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AKFoB.__proto__ || Object.getPrototypeOf(AKFoB)).apply(this, arguments));
   }
 
-  return QFIUE;
+  return AKFoB;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(QFIUE, _java_clientSoy2.default);
+_metalSoy2.default.register(AKFoB, _indexSoy2.default);
 
-exports.default = QFIUE;
+exports.default = AKFoB;
 
 /***/ })
-],[154]);
+],[158]);

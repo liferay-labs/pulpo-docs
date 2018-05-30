@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([12],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11662,12 +11662,17 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tlNwB", function() { return tlNwB; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gFwyE", function() { return gFwyE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11679,15 +11684,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from status_endpoints.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace tlNwB.
+ * @fileoverview Templates in namespace gFwyE.
  * @public
  */
 
-goog.module('tlNwB.incrementaldom');
+goog.module('gFwyE.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11721,77 +11726,42 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param308 = function() {
+  var param528 = function() {
     ie_open('h6');
-      var dyn18 = opt_data.page.description;
-      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+      var dyn23 = opt_data.page.description;
+      if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'health');
       ie_open('h2');
-        itext('The Field Names');
+        itext('API Health');
       ie_close('h2');
       ie_open('p');
-        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
+        itext('The health of the API can be checked at the endpoint: ');
+        ie_open('code');
+          itext('/management/health');
+        ie_close('code');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Existing fields with the same or similar name of your label');
-        ie_close('li');
-        ie_open('li');
-          itext('Previous field mappings from your label to other fields');
-        ie_close('li');
-        ie_open('li');
-          itext('Fields with values similar to your new values');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('The response will be JSON in this format with posible statuses UP and DOWN:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "description":"Pulpo Contacts Engine",\n    "status":"UP"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'version');
       ie_open('h2');
-        itext('Fields Names Service');
+        itext('API Deployed Version');
       ie_close('h2');
       ie_open('p');
-        itext('As described in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#navigation');
-          itext('Initial Navigation to obtain URLs');
-        ie_close('a');
-        itext(', the ');
+        itext('The version of the API that is running can be checked at the endpoint: ');
         ie_open('code');
-          itext('_links');
+          itext('/management/info');
         ie_close('code');
-        itext(' section of the root resource will contain a template link labelled as ');
-        ie_open('code');
-          itext('field-names');
-        ie_close('code');
-        itext(' pointing to the endpoint for obtaining the field names.');
       ie_close('p');
       ie_open('p');
-        itext('This endpoint accepts the ');
-        ie_open('code');
-          itext('GET');
-        ie_close('code');
-        itext(' method with the following parameters:');
+        itext('The response will be JSON in this format, with information relative to the branch deployed, the time it was built, the version of the API and the git commit:');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('label - the label from your field (e.g. telephone, email addres... etc)');
-        ie_close('li');
-        ie_open('li');
-          itext('ownerType - the type of entity your are mapping (individual, account...)');
-        ie_close('li');
-        ie_open('li');
-          itext('values - array of sample values from your field');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The response will contain a list of existing field names ordered by relevance.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
-      ie_close('p');
-      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "branch":"PULPO-166.hateoas",\n    "buildtime":"20180103T142812Z",\n    "version":"1.0.0",\n    "revision":"e015458b74a1378801c26d9eb5756c5a245d885d"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11802,11 +11772,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param308}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param528}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'tlNwB.render';
+  $render.soyTemplateName = 'gFwyE.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11816,19 +11786,14 @@ return exports;
 
 });
 
-class tlNwB extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tlNwB, templates);
+class gFwyE extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(gFwyE, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11874,7 +11839,12 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tlNwB, templates);
 /* 149 */,
 /* 150 */,
 /* 151 */,
-/* 152 */
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11902,9 +11872,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(101);
+var _status_endpointsSoy = __webpack_require__(106);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11914,23 +11884,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var tlNwB = function (_Component) {
-  _inherits(tlNwB, _Component);
+var gFwyE = function (_Component) {
+  _inherits(gFwyE, _Component);
 
-  function tlNwB() {
-    _classCallCheck(this, tlNwB);
+  function gFwyE() {
+    _classCallCheck(this, gFwyE);
 
-    return _possibleConstructorReturn(this, (tlNwB.__proto__ || Object.getPrototypeOf(tlNwB)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (gFwyE.__proto__ || Object.getPrototypeOf(gFwyE)).apply(this, arguments));
   }
 
-  return tlNwB;
+  return gFwyE;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(tlNwB, _indexSoy2.default);
+_metalSoy2.default.register(gFwyE, _status_endpointsSoy2.default);
 
-exports.default = tlNwB;
+exports.default = gFwyE;
 
 /***/ })
-],[152]);
+],[157]);
