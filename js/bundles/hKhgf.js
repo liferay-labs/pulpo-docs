@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11663,12 +11663,16 @@ module.exports = function(module) {
 /* 99 */,
 /* 100 */,
 /* 101 */,
-/* 102 */
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ihFTO", function() { return ihFTO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hKhgf", function() { return hKhgf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,15 +11684,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from status_endpoints.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ihFTO.
+ * @fileoverview Templates in namespace hKhgf.
  * @public
  */
 
-goog.module('ihFTO.incrementaldom');
+goog.module('hKhgf.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11722,216 +11726,42 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param324 = function() {
+  var param528 = function() {
     ie_open('h6');
-      var dyn19 = opt_data.page.description;
-      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+      var dyn23 = opt_data.page.description;
+      if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'health');
       ie_open('h2');
-        itext('The Field Model');
+        itext('API Health');
       ie_close('h2');
       ie_open('p');
-        itext('Fields contain information about different entities (');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
-        ie_close('a');
-        itext(', accounts, individual segments... etc).');
+        itext('The health of the API can be checked at the endpoint: ');
+        ie_open('code');
+          itext('/management/health');
+        ie_close('code');
       ie_close('p');
       ie_open('p');
-        itext('All the different values in time for a field are stored as fields themeshelves. Therefore, if the field Address for an Individual changed 5 times, we will have 5 fields for the Address for that particular Individual.');
+        itext('The response will be JSON in this format with posible statuses UP and DOWN:');
       ie_close('p');
-      ie_open('p');
-        itext('The entity field contains the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('context');
-          ie_close('em');
-          itext(' - The context of the field. Some examples are ');
-          ie_open('code');
-            itext('demographics');
-          ie_close('code');
-          itext(' or ');
-          ie_open('code');
-            itext('interests');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dataSourceIdentifier');
-          ie_close('em');
-          itext(' - The identifier of the (');
-          ie_open('a', null, null,
-              'href', '/docs/datasources');
-            itext('datasource');
-          ie_close('a');
-          itext(' that provided this information');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateModified');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('fieldType');
-          ie_close('em');
-          itext(' - A schema.org property');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('label');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('name');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('value');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerType');
-          ie_close('em');
-          itext(' - The entity that owns this field (e.g. an Individual, an Account...)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerIdentifier');
-          ie_close('em');
-          itext(' - The Identifier of the entity that owns this field.');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '{\n    "description":"Pulpo Contacts Engine",\n    "status":"UP"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'version');
       ie_open('h2');
-        itext('Fields Collection');
+        itext('API Deployed Version');
       ie_close('h2');
       ie_open('p');
-        itext('As described in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#navigation');
-          itext('Initial Navigation to obtain URLs');
-        ie_close('a');
-        itext(', the ');
+        itext('The version of the API that is running can be checked at the endpoint: ');
         ie_open('code');
-          itext('_links');
+          itext('/management/info');
         ie_close('code');
-        itext(' section of the root resource will contain a template link labelled as ');
-        ie_open('code');
-          itext('fields');
-        ie_close('code');
-        itext(' pointing to the collection of Fields.');
       ie_close('p');
       ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
+        itext('The response will be JSON in this format, with information relative to the branch deployed, the time it was built, the version of the API and the git commit:');
       ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
-        ie_open('code');
-          itext('_embedded');
-        ie_close('code');
-        itext(' section, a list of fields under the key ');
-        ie_open('code');
-          itext('fields');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/fields?page=0&size=1');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "fields": [\n            {\n                "context": "demographics",\n                "dataSourceIdentifier": "AV-0-c1_4MMBozrmZ0T_",\n                "dateModified": "2017-11-13T10:43:13Z",\n                "fieldType": "http://schema.org/telephone",\n                "identifier": "AV-0-deU4MMBozrmZ0UO",\n                "label": "home",\n                "name": "telephone",\n                "ownerIdentifier": "AV-0-dcI4MMBozrmZ0UM",\n                "ownerType": "individual",\n                "value": "+34699001234",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/fields/AV-0-deU4MMBozrmZ0UO"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-0-dcI4MMBozrmZ0UM"\n                    },\n                    "fields": {\n                        "href": "http://localhost:8084/my-project/fields{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/fields?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation of new Fields or Update of Fields manually is not supported. Fields are automatically generated and updated from the Field Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Fields is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of fields, the link to each field can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Retrieving historical values');
-      ie_close('h2');
-      ie_open('p');
-        itext('Fields store the historical values of properties of other resources, such as ');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('Individuals');
-        ie_close('a');
-        itext(' (e.g. demographics fields, topics of interests) or ');
-        ie_open('a', null, null,
-            'href', '/docs/individual_segments');
-          itext('Individual Segments');
-        ie_close('a');
-        itext(' (e.g. member count, topics of interests). These values can be obtained by using the ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext(' option in the Field Collection with the ');
-        ie_open('code');
-          itext('ownerType');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('ownerIdentifier');
-        ie_close('code');
-        itext(' corresponding to the original resource.');
-      ie_close('p');
-      ie_open('p');
-        itext('These are some examples of Fields filtering to retrieve historical values of certain Individual and Individual Segment properties:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('The historical values of the address for an Individual: ');
-          ie_open('code');
-            itext('((context eq \'demographics\') and (name eq \'address\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('The historical counts of members of an Individual Segment: ');
-          ie_open('code');
-            itext('((name eq \'individualCount\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '{\n    "branch":"PULPO-166.hateoas",\n    "buildtime":"20180103T142812Z",\n    "version":"1.0.0",\n    "revision":"e015458b74a1378801c26d9eb5756c5a245d885d"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11942,11 +11772,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param324}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param528}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ihFTO.render';
+  $render.soyTemplateName = 'hKhgf.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11956,18 +11786,14 @@ return exports;
 
 });
 
-class ihFTO extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ihFTO, templates);
+class hKhgf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(hKhgf, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -12014,7 +11840,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ihFTO, templates);
 /* 150 */,
 /* 151 */,
 /* 152 */,
-/* 153 */
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12042,9 +11872,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(102);
+var _status_endpointsSoy = __webpack_require__(106);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12054,23 +11884,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ihFTO = function (_Component) {
-  _inherits(ihFTO, _Component);
+var hKhgf = function (_Component) {
+  _inherits(hKhgf, _Component);
 
-  function ihFTO() {
-    _classCallCheck(this, ihFTO);
+  function hKhgf() {
+    _classCallCheck(this, hKhgf);
 
-    return _possibleConstructorReturn(this, (ihFTO.__proto__ || Object.getPrototypeOf(ihFTO)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (hKhgf.__proto__ || Object.getPrototypeOf(hKhgf)).apply(this, arguments));
   }
 
-  return ihFTO;
+  return hKhgf;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ihFTO, _indexSoy2.default);
+_metalSoy2.default.register(hKhgf, _status_endpointsSoy2.default);
 
-exports.default = ihFTO;
+exports.default = hKhgf;
 
 /***/ })
-],[153]);
+],[157]);

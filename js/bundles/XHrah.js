@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11670,7 +11670,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WTaKZ", function() { return WTaKZ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XHrah", function() { return XHrah; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11686,11 +11686,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace WTaKZ.
+ * @fileoverview Templates in namespace XHrah.
  * @public
  */
 
-goog.module('WTaKZ.incrementaldom');
+goog.module('XHrah.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12342,7 +12342,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'WTaKZ.render';
+  $render.soyTemplateName = 'XHrah.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12352,8 +12352,8 @@ return exports;
 
 });
 
-class WTaKZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(WTaKZ, templates);
+class XHrah extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XHrah, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12450,23 +12450,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WTaKZ = function (_Component) {
-  _inherits(WTaKZ, _Component);
+var XHrah = function (_Component) {
+  _inherits(XHrah, _Component);
 
-  function WTaKZ() {
-    _classCallCheck(this, WTaKZ);
+  function XHrah() {
+    _classCallCheck(this, XHrah);
 
-    return _possibleConstructorReturn(this, (WTaKZ.__proto__ || Object.getPrototypeOf(WTaKZ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (XHrah.__proto__ || Object.getPrototypeOf(XHrah)).apply(this, arguments));
   }
 
-  return WTaKZ;
+  return XHrah;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(WTaKZ, _indexSoy2.default);
+_metalSoy2.default.register(XHrah, _indexSoy2.default);
 
-exports.default = WTaKZ;
+exports.default = XHrah;
 
 /***/ })
 ],[155]);
