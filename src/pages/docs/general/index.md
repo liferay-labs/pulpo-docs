@@ -286,3 +286,18 @@ Below it is explained how to use each of them.
 
 </article>
 
+<article id="embedding-resources">
+
+## Expanding embedded Resources
+
+Not all collections support embedding resources. The ones that support them will 
+contain the optional parameter `{lb}?expand{rb}` in their template. In addition,
+each embeddable resource will named with a "tag", and those will be documented
+on each entity (e.g. [Embedding Interests Aggregations inside an Interest](docs/interests/#interest-expand)).
+
+In order to embed certain resources on a collection, you can use the optional 
+parameter `expand` following a list of the names of the resources to embed 
+separated by commas.
+
+</article>
+

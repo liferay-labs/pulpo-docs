@@ -8,7 +8,7 @@ weight: 12
 
 ###### {$page.description}
 
-<article id="1">
+<article id="interest-model">
 
 ## The Interest Model
 
@@ -35,7 +35,7 @@ The interest field contains the following fields:
 </article>
 
 
-<article id="2">
+<article id="interests-collection">
 
 ## Interests Collection
 
@@ -43,7 +43,7 @@ As described in [Initial Navigation to obtain URLs](/docs/general#navigation),
 the `_links` section of the root resource will contain a template link labelled as `interests` pointing to the
 collection of Interests.
 
-This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting), [filtering](/docs/general#filtering) and [transformations](/docs/general#transformations).
+This API supports [pagination](/docs/general#pagination), [sorting](/docs/general#sorting), [filtering](/docs/general#filtering) [transformations](/docs/general#transformations), and [embedding resources](/docs/general#embedding-resources).
 
 The response will contain inside the `_embedded` section, a list of interests
 under the key `interests`.
@@ -115,7 +115,7 @@ a link to the entity owning it with the rel of the entity (e.g. individual or in
 
 </article>
 
-<article id="3">
+<article id="historical-values">
 
 ## Retrieving historical values for a specific topic of interest
 
@@ -133,7 +133,7 @@ These are some examples of Interests filtering to retrieve historical values of 
 
 </article>
 
-<article id="4">
+<article id="interest-transformations">
 
 ## Transformations on Interest Collection
 
@@ -238,5 +238,19 @@ This is an example of a response to this url: ` http://localhost:8084/my-project
 
 ```
 
+
+</article>
+
+<article id="interest-expand">
+
+## Embedded Resources on Interest Collection
+
+The expand parameter can be used when retrieving a Collection of Interests as explained in [embedding resources](/docs/general#embedding-resources).
+
+The supported resources that can be embedded inside each interest resource are:
+
+* *interest-aggregation-last-30-days* - The aggregation of the interest requested by day for the last 30 days
+* *interest-aggregation-last-60-days* - The aggregation of the interest requested by day for the last 60 days
+* *interest-aggregation-last-90-days* - The aggregation of the interest requested by day for the last 90 days
 
 </article>
