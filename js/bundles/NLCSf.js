@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11676,7 +11676,7 @@ module.exports = function(module) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "kniIJ", function() { return kniIJ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NLCSf", function() { return NLCSf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11692,11 +11692,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace kniIJ.
+ * @fileoverview Templates in namespace NLCSf.
  * @public
  */
 
-goog.module('kniIJ.incrementaldom');
+goog.module('NLCSf.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11736,7 +11736,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       if (typeof dyn26 == 'function') dyn26(); else if (dyn26 != null) itext(dyn26);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'interest-model');
       ie_open('h2');
         itext('The Interest Model');
       ie_close('h2');
@@ -11813,7 +11813,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'interests-collection');
       ie_open('h2');
         itext('Interests Collection');
       ie_close('h2');
@@ -11849,10 +11849,15 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             'href', '/docs/general#filtering');
           itext('filtering');
         ie_close('a');
-        itext(' and ');
+        itext(' ');
         ie_open('a', null, null,
             'href', '/docs/general#transformations');
           itext('transformations');
+        ie_close('a');
+        itext(', and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#embedding-resources');
+          itext('embedding resources');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11886,7 +11891,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '3');
+        'id', 'historical-values');
       ie_open('h2');
         itext('Retrieving historical values for a specific topic of interest');
       ie_close('h2');
@@ -11936,7 +11941,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '4');
+        'id', 'interest-transformations');
       ie_open('h2');
         itext('Transformations on Interest Collection');
       ie_close('h2');
@@ -12037,6 +12042,43 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('p');
       $templateAlias2({code: '{\n    "_embedded": {\n        "interest-transformations": [\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-03-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewsSum": 0\n            },\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-04-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewsSum": 0\n            },\n            {\n                "totalElements": 4,\n                "intervalInitDate": "2018-05-01T00:00:00Z",\n                "scoreAvg": 41.86,\n                "viewsSum": 0\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/1527005923917/interests?apply=compute%28month%28dateRecorded%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
+    ie_open('article', null, null,
+        'id', 'interest-expand');
+      ie_open('h2');
+        itext('Embedded Resources on Interest Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('The expand parameter can be used when retrieving a Collection of Interests as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#embedding-resources');
+          itext('embedding resources');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The supported resources that can be embedded inside each interest resource are:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('interest-aggregation-last-30-days');
+          ie_close('em');
+          itext(' - The aggregation of the interest requested by day for the last 30 days');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('interest-aggregation-last-60-days');
+          ie_close('em');
+          itext(' - The aggregation of the interest requested by day for the last 60 days');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('interest-aggregation-last-90-days');
+          ie_close('em');
+          itext(' - The aggregation of the interest requested by day for the last 90 days');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
         'value', opt_data.page.title);
@@ -12050,7 +12092,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'kniIJ.render';
+  $render.soyTemplateName = 'NLCSf.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12060,8 +12102,8 @@ return exports;
 
 });
 
-class kniIJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(kniIJ, templates);
+class NLCSf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NLCSf, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12158,23 +12200,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var kniIJ = function (_Component) {
-  _inherits(kniIJ, _Component);
+var NLCSf = function (_Component) {
+  _inherits(NLCSf, _Component);
 
-  function kniIJ() {
-    _classCallCheck(this, kniIJ);
+  function NLCSf() {
+    _classCallCheck(this, NLCSf);
 
-    return _possibleConstructorReturn(this, (kniIJ.__proto__ || Object.getPrototypeOf(kniIJ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NLCSf.__proto__ || Object.getPrototypeOf(NLCSf)).apply(this, arguments));
   }
 
-  return kniIJ;
+  return NLCSf;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(kniIJ, _indexSoy2.default);
+_metalSoy2.default.register(NLCSf, _indexSoy2.default);
 
-exports.default = kniIJ;
+exports.default = NLCSf;
 
 /***/ })
 ],[161]);
