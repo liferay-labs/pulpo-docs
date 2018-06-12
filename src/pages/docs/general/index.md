@@ -272,7 +272,7 @@ Currently, the only supported transformation is `groupby` and within it, only
 
 Depending on the data type of the grouping field, you may want to perform 
 different kinds of aggregations. As of today, it is allowed to create 
-aggregations by: **term** and **interval date** (day and month).
+aggregations by: **term** and **interval date** (day, week and month).
 
 Below it is explained how to use each of them.
 
@@ -282,6 +282,7 @@ Below it is explained how to use each of them.
 |----------------|-----------------|------------------------------|--------------------------------------------------------|
 | groupby        | Group by term   | without transformation       | groupby((demographics/address/value))                  |
 | groupby        | Group by day    | with compute of day method   | compute(day(dateRecorded) as day)/groupby((day))       |
+| groupby        | Group by week   | with compute of week method  | compute(week(dateRecorded) as week)/groupby((week))       |
 | groupby        | Group by month  | with compute of month method | compute(month(dateRecorded) as month)/groupby((month)) |
 
 </article>
