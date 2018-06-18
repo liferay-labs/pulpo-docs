@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11667,12 +11667,17 @@ module.exports = function(module) {
 /* 103 */,
 /* 104 */,
 /* 105 */,
-/* 106 */
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XSobV", function() { return XSobV; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wWGpi", function() { return wWGpi; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11684,15 +11689,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from status_endpoints.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace XSobV.
+ * @fileoverview Templates in namespace wWGpi.
  * @public
  */
 
-goog.module('XSobV.incrementaldom');
+goog.module('wWGpi.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11726,42 +11731,149 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param528 = function() {
+  var param662 = function() {
     ie_open('h6');
-      var dyn23 = opt_data.page.description;
-      if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
+      var dyn27 = opt_data.page.description;
+      if (typeof dyn27 == 'function') dyn27(); else if (dyn27 != null) itext(dyn27);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'health');
+        'id', '1');
       ie_open('h2');
-        itext('API Health');
+        itext('The Page Visited Model');
       ie_close('h2');
       ie_open('p');
-        itext('The health of the API can be checked at the endpoint: ');
-        ie_open('code');
-          itext('/management/health');
-        ie_close('code');
+        itext('Pages Visited contain information about pages visited by different entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', accounts, individual segments... etc).');
       ie_close('p');
       ie_open('p');
-        itext('The response will be JSON in this format with posible statuses UP and DOWN:');
+        itext('The entity page visited contains the following fields:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "description":"Pulpo Contacts Engine",\n    "status":"UP"\n}', mode: 'text'}, null, opt_ijData);
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('identifier');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('day');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('description');
+          ie_close('em');
+          itext(' - description of the page');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('interestName');
+          ie_close('em');
+          itext(' - The name of the interest which the visit of this page contribute to justify');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerType');
+          ie_close('em');
+          itext(' - The entity that visit the page (e.g. an Individual, an Account...)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerIdentifier');
+          ie_close('em');
+          itext(' - The Identifier of the entity that visit the page.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('title');
+          ie_close('em');
+          itext(' - title of the page');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('uniqueVisitsCount');
+          ie_close('em');
+          itext(' - number of unique visits to this page');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('url');
+          ie_close('em');
+          itext(' - url of the page');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'version');
+        'id', '2');
       ie_open('h2');
-        itext('API Deployed Version');
+        itext('Page Visited Collection');
       ie_close('h2');
       ie_open('p');
-        itext('The version of the API that is running can be checked at the endpoint: ');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
         ie_open('code');
-          itext('/management/info');
+          itext('_links');
         ie_close('code');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('pages-visited');
+        ie_close('code');
+        itext(' pointing to the collection of Pages Visited.');
       ie_close('p');
       ie_open('p');
-        itext('The response will be JSON in this format, with information relative to the branch deployed, the time it was built, the version of the API and the git commit:');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: '{\n    "branch":"PULPO-166.hateoas",\n    "buildtime":"20180103T142812Z",\n    "version":"1.0.0",\n    "revision":"e015458b74a1378801c26d9eb5756c5a245d885d"\n}', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of pages visited under the key ');
+        ie_open('code');
+          itext('pages-visited');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/pages-visited/?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "pages-visited": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/pages-visited/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "interest": {\n                        "href": "http://localhost:8084/my-project/interests/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "pages-visited": {\n                        "href": "http://localhost:8084/my-project/pages-visited{?filter,page,size,sort*}"\n                    }\n                },\n                "url": "https://www.liferay.com/page1",\n                "description": "This is Page 1",\n                "title": "Page 1",\n                "ownerIdentifier": "AWOx3BczTvifCU95Sg6G",\n                "uniqueVisitsCount": 2,\n                "day": "2018-04-12T00:00:00Z",\n                "identifier": "AWOx3B_0TvifCU95Sg6d",\n                "ownerType": "individual",\n                "interestName": "open source sharepoint alternative"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/1527697379274/pages-visited/?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 2,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Pages Visited or Update of Page Visited manually is not supported. Pages Visited are automatically generated and updated from the Interest Chunks sent by the different Connectors.');
+      ie_close('p');
+      ie_open('p');
+        itext('Deletion of existing Pages Visited is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of pages visited, the link to each page visited can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11772,11 +11884,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param528}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param662}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'XSobV.render';
+  $render.soyTemplateName = 'wWGpi.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11786,19 +11898,14 @@ return exports;
 
 });
 
-class XSobV extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XSobV, templates);
+class wWGpi extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(wWGpi, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
 /* 112 */,
 /* 113 */,
 /* 114 */,
@@ -11843,7 +11950,15 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XSobV, templates);
 /* 153 */,
 /* 154 */,
 /* 155 */,
-/* 156 */
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11871,9 +11986,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _status_endpointsSoy = __webpack_require__(106);
+var _indexSoy = __webpack_require__(111);
 
-var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11883,23 +11998,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var XSobV = function (_Component) {
-  _inherits(XSobV, _Component);
+var wWGpi = function (_Component) {
+  _inherits(wWGpi, _Component);
 
-  function XSobV() {
-    _classCallCheck(this, XSobV);
+  function wWGpi() {
+    _classCallCheck(this, wWGpi);
 
-    return _possibleConstructorReturn(this, (XSobV.__proto__ || Object.getPrototypeOf(XSobV)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (wWGpi.__proto__ || Object.getPrototypeOf(wWGpi)).apply(this, arguments));
   }
 
-  return XSobV;
+  return wWGpi;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(XSobV, _status_endpointsSoy2.default);
+_metalSoy2.default.register(wWGpi, _indexSoy2.default);
 
-exports.default = XSobV;
+exports.default = wWGpi;
 
 /***/ })
-],[156]);
+],[164]);
