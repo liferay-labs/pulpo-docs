@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([12],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9964,13 +9964,12 @@ exports.default = parseFromAnchor;
 /* 90 */,
 /* 91 */,
 /* 92 */,
-/* 93 */,
-/* 94 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guGTw", function() { return guGTw; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HaPsY", function() { return HaPsY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9982,15 +9981,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from authentication.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace guGTw.
+ * @fileoverview Templates in namespace HaPsY.
  * @public
  */
 
-goog.module('guGTw.incrementaldom');
+goog.module('HaPsY.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10024,176 +10023,214 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param350 = function() {
+  var param334 = function() {
     ie_open('h6');
-      var dyn20 = opt_data.page.description;
-      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+      var dyn19 = opt_data.page.description;
+      if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', 'intro');
+        'id', '1');
       ie_open('h2');
-        itext('Authentication Headers');
+        itext('The Field Model');
       ie_close('h2');
       ie_open('p');
-        itext('In order to have a signed request, it must contain the following http headers:');
+        itext('Fields contain information about different entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', accounts, individual segments... etc).');
+      ie_close('p');
+      ie_open('p');
+        itext('All the different values in time for a field are stored as fields themeshelves. Therefore, if the field Address for an Individual changed 5 times, we will have 5 fields for the Address for that particular Individual.');
+      ie_close('p');
+      ie_open('p');
+        itext('The entity field contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('timestamp');
+            itext('identifier');
           ie_close('em');
-          itext(': the timestamp of the request in milliseconds');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('apikey');
+            itext('context');
           ie_close('em');
-          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
+          itext(' - The context of the field. Some examples are ');
+          ie_open('code');
+            itext('demographics');
+          ie_close('code');
+          itext(' or ');
+          ie_open('code');
+            itext('interests');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('signature');
+            itext('dataSourceIdentifier');
           ie_close('em');
-          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
+          itext(' - The identifier of the (');
+          ie_open('a', null, null,
+              'href', '/docs/datasources');
+            itext('datasource');
+          ie_close('a');
+          itext(' that provided this information');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dateModified');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('fieldType');
+          ie_close('em');
+          itext(' - A schema.org property');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('label');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('value');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerType');
+          ie_close('em');
+          itext(' - The entity that owns this field (e.g. an Individual, an Account...)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerIdentifier');
+          ie_close('em');
+          itext(' - The Identifier of the entity that owns this field.');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'signature');
+        'id', '2');
       ie_open('h2');
-        itext('Signature Generation');
+        itext('Fields Collection');
       ie_close('h2');
       ie_open('p');
-        itext('You can use the following gradle dependency to use the ');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
         ie_open('code');
-          itext('SignatureValidator.java');
+          itext('_links');
         ie_close('code');
-        itext(' utility:');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('fields');
+        ie_close('code');
+        itext(' pointing to the collection of Fields.');
       ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.security.signature", version: "0.0.1-20180508.134750-15"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('In order to obtain the signature for your request, you can use one of the following methods:');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The response will contain inside the ');
+        ie_open('code');
+          itext('_embedded');
+        ie_close('code');
+        itext(' section, a list of fields under the key ');
+        ie_open('code');
+          itext('fields');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/fields?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "fields": [\n            {\n                "context": "demographics",\n                "dataSourceIdentifier": "AV-0-c1_4MMBozrmZ0T_",\n                "dateModified": "2017-11-13T10:43:13Z",\n                "fieldType": "http://schema.org/telephone",\n                "identifier": "AV-0-deU4MMBozrmZ0UO",\n                "label": "home",\n                "name": "telephone",\n                "ownerIdentifier": "AV-0-dcI4MMBozrmZ0UM",\n                "ownerType": "individual",\n                "value": "+34699001234",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/fields/AV-0-deU4MMBozrmZ0UO"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-0-dcI4MMBozrmZ0UM"\n                    },\n                    "fields": {\n                        "href": "http://localhost:8084/my-project/fields{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/fields?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Fields or Update of Fields manually is not supported. Fields are automatically generated and updated from the Field Chunks sent by the different Connectors.');
+      ie_close('p');
+      ie_open('p');
+        itext('Deletion of existing Fields is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of fields, the link to each field can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '3');
+      ie_open('h2');
+        itext('Retrieving historical values');
+      ie_close('h2');
+      ie_open('p');
+        itext('Fields store the historical values of properties of other resources, such as ');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('Individuals');
+        ie_close('a');
+        itext(' (e.g. demographics fields, topics of interests) or ');
+        ie_open('a', null, null,
+            'href', '/docs/individual_segments');
+          itext('Individual Segments');
+        ie_close('a');
+        itext(' (e.g. member count, topics of interests). These values can be obtained by using the ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(' option in the Field Collection with the ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext(' corresponding to the original resource.');
+      ie_close('p');
+      ie_open('p');
+        itext('These are some examples of Fields filtering to retrieve historical values of certain Individual and Individual Segment properties:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
-            ie_close('li');
-          ie_close('ul');
+          itext('The historical values of the address for an Individual: ');
+          ie_open('code');
+            itext('((context eq \'demographics\') and (name eq \'address\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
+          ie_close('code');
         ie_close('li');
         ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
-            ie_close('li');
-            ie_open('li');
-              itext('The parameters map must contain the parameters of the body of your request (if any)');
-            ie_close('li');
-            ie_open('li');
-              itext('The timestamp must match the value in your timestamp header');
-            ie_close('li');
-            ie_open('li');
-              itext('The api key must match your api key header too.');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
-        ie_open('code');
-          itext('PULPO_PRIVATE_KEY');
-        ie_close('code');
-        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how the request headers could look like:');
-      ie_close('p');
-      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how to generate the signature for a POST request:');
-      ie_close('p');
-      ie_open('p');
-        itext('*1) Include the api key Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*2) Include the timestamp Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('(e.g. ');
-        ie_open('code');
-          itext('System.currentTimeMillis()');
-        ie_close('code');
-        itext(' in Java)');
-      ie_close('p');
-      ie_open('p');
-        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
-        ie_open('code');
-          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
-        ie_close('code');
-        itext(', and include that as a third header:');
-      ie_close('p');
-      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*3b) In case you didn\'t have the http request, we would call:');
-      ie_close('p');
-      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('with these values:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> empty');
-        ie_close('li');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Another example of a POST request with body parameters:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/datasources');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> Map with the parameters:');
-        ie_close('li');
-      ie_close('ul');
-      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
+          itext('The historical counts of members of an Individual Segment: ');
+          ie_open('code');
+            itext('((name eq \'individualCount\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
@@ -10206,11 +10243,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param350}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param334}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'guGTw.render';
+  $render.soyTemplateName = 'HaPsY.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10220,14 +10257,15 @@ return exports;
 
 });
 
-class guGTw extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(guGTw, templates);
+class HaPsY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HaPsY, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 94 */,
 /* 95 */,
 /* 96 */,
 /* 97 */,
@@ -10278,10 +10316,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(guGTw, templates);
 /* 142 */,
 /* 143 */,
 /* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10309,9 +10344,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _authenticationSoy = __webpack_require__(94);
+var _indexSoy = __webpack_require__(93);
 
-var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10321,23 +10356,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var guGTw = function (_Component) {
-  _inherits(guGTw, _Component);
+var HaPsY = function (_Component) {
+  _inherits(HaPsY, _Component);
 
-  function guGTw() {
-    _classCallCheck(this, guGTw);
+  function HaPsY() {
+    _classCallCheck(this, HaPsY);
 
-    return _possibleConstructorReturn(this, (guGTw.__proto__ || Object.getPrototypeOf(guGTw)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (HaPsY.__proto__ || Object.getPrototypeOf(HaPsY)).apply(this, arguments));
   }
 
-  return guGTw;
+  return HaPsY;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(guGTw, _authenticationSoy2.default);
+_metalSoy2.default.register(HaPsY, _indexSoy2.default);
 
-exports.default = guGTw;
+exports.default = HaPsY;
 
 /***/ })
-],[148]);
+],[145]);

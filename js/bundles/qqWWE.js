@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([13],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9963,22 +9963,12 @@ exports.default = parseFromAnchor;
 /* 89 */,
 /* 90 */,
 /* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "klpOz", function() { return klpOz; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "qqWWE", function() { return qqWWE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9994,11 +9984,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace klpOz.
+ * @fileoverview Templates in namespace qqWWE.
  * @public
  */
 
-goog.module('klpOz.incrementaldom');
+goog.module('qqWWE.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10032,86 +10022,35 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param662 = function() {
+  var param318 = function() {
     ie_open('h6');
-      var dyn27 = opt_data.page.description;
-      if (typeof dyn27 == 'function') dyn27(); else if (dyn27 != null) itext(dyn27);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Page Visited Model');
+        itext('The Field Names');
       ie_close('h2');
       ie_open('p');
-        itext('Pages Visited contain information about pages visited by different entities (');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
-        ie_close('a');
-        itext(', accounts, individual segments... etc).');
-      ie_close('p');
-      ie_open('p');
-        itext('The entity page visited contains the following fields:');
+        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
+          itext('Existing fields with the same or similar name of your label');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('day');
-          ie_close('em');
+          itext('Previous field mappings from your label to other fields');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
-          itext(' - description of the page');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('interestName');
-          ie_close('em');
-          itext(' - The name of the interest which the visit of this page contribute to justify');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerType');
-          ie_close('em');
-          itext(' - The entity that visit the page (e.g. an Individual, an Account...)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerIdentifier');
-          ie_close('em');
-          itext(' - The Identifier of the entity that visit the page.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('title');
-          ie_close('em');
-          itext(' - title of the page');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('uniqueVisitsCount');
-          ie_close('em');
-          itext(' - number of unique visits to this page');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('url');
-          ie_close('em');
-          itext(' - url of the page');
+          itext('Fields with values similar to your new values');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Page Visited Collection');
+        itext('Fields Names Service');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -10125,56 +10064,35 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('pages-visited');
+          itext('field-names');
         ie_close('code');
-        itext(' pointing to the collection of Pages Visited.');
+        itext(' pointing to the endpoint for obtaining the field names.');
       ie_close('p');
       ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
+        itext('This endpoint accepts the ');
         ie_open('code');
-          itext('_embedded');
+          itext('GET');
         ie_close('code');
-        itext(' section, a list of pages visited under the key ');
-        ie_open('code');
-          itext('pages-visited');
-        ie_close('code');
-        itext('.');
+        itext(' method with the following parameters:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('label - the label from your field (e.g. telephone, email addres... etc)');
+        ie_close('li');
+        ie_open('li');
+          itext('ownerType - the type of entity your are mapping (individual, account...)');
+        ie_close('li');
+        ie_open('li');
+          itext('values - array of sample values from your field');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The response will contain a list of existing field names ordered by relevance.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/pages-visited/?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "pages-visited": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/pages-visited/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "interest": {\n                        "href": "http://localhost:8084/my-project/interests/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "pages-visited": {\n                        "href": "http://localhost:8084/my-project/pages-visited{?filter,page,size,sort*}"\n                    }\n                },\n                "url": "https://www.liferay.com/page1",\n                "description": "This is Page 1",\n                "title": "Page 1",\n                "ownerIdentifier": "AWOx3BczTvifCU95Sg6G",\n                "uniqueVisitsCount": 2,\n                "day": "2018-04-12T00:00:00Z",\n                "identifier": "AWOx3B_0TvifCU95Sg6d",\n                "ownerType": "individual",\n                "interestName": "open source sharepoint alternative"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/1527697379274/pages-visited/?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 2,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation of new Pages Visited or Update of Page Visited manually is not supported. Pages Visited are automatically generated and updated from the Interest Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Pages Visited is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of pages visited, the link to each page visited can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
+      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10185,11 +10103,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param662}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param318}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'klpOz.render';
+  $render.soyTemplateName = 'qqWWE.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10199,14 +10117,24 @@ return exports;
 
 });
 
-class klpOz extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(klpOz, templates);
+class qqWWE extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(qqWWE, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -10248,18 +10176,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(klpOz, templates);
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10287,7 +10204,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(102);
+var _indexSoy = __webpack_require__(92);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -10299,23 +10216,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var klpOz = function (_Component) {
-  _inherits(klpOz, _Component);
+var qqWWE = function (_Component) {
+  _inherits(qqWWE, _Component);
 
-  function klpOz() {
-    _classCallCheck(this, klpOz);
+  function qqWWE() {
+    _classCallCheck(this, qqWWE);
 
-    return _possibleConstructorReturn(this, (klpOz.__proto__ || Object.getPrototypeOf(klpOz)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (qqWWE.__proto__ || Object.getPrototypeOf(qqWWE)).apply(this, arguments));
   }
 
-  return klpOz;
+  return qqWWE;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(klpOz, _indexSoy2.default);
+_metalSoy2.default.register(qqWWE, _indexSoy2.default);
 
-exports.default = klpOz;
+exports.default = qqWWE;
 
 /***/ })
-],[155]);
+],[144]);

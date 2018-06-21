@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9967,16 +9967,12 @@ exports.default = parseFromAnchor;
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xKRXN", function() { return xKRXN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vFFvb", function() { return vFFvb; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9988,15 +9984,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from java_client.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace xKRXN.
+ * @fileoverview Templates in namespace vFFvb.
  * @public
  */
 
-goog.module('xKRXN.incrementaldom');
+goog.module('vFFvb.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10030,534 +10026,201 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param605 = function() {
+  var param437 = function() {
     ie_open('h6');
-      var dyn25 = opt_data.page.description;
-      if (typeof dyn25 == 'function') dyn25(); else if (dyn25 != null) itext(dyn25);
+      var dyn22 = opt_data.page.description;
+      if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
     ie_close('h6');
+    ie_open('p');
+      itext('Pulpo provides a Java Client that allows you to consume this API inspired by the ');
+      ie_open('a', null, null,
+          'href', 'https://blog.codecentric.de/en/2013/11/traverson/');
+        itext('Traverson JavaScript library');
+      ie_close('a');
+    ie_close('p');
+    ie_open('p');
+      itext('This client will help you navigate the API leveraging its hypermedia capabilities.');
+    ie_close('p');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'setup');
       ie_open('h2');
-        itext('The Individual Model');
+        itext('Java API');
       ie_close('h2');
       ie_open('p');
-        itext('Individuals are a complex entity that contain several contexts for each Person stored in our system.');
+        itext('In case you want to use your own client, you will still find valuable our models in Java. You can use our API with this gradle dependency:');
       ie_close('p');
-      ie_open('p');
-        itext('Those contexts are:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Identity & Demographics');
-        ie_close('li');
-        ie_open('li');
-          itext('Topics of Interest');
-        ie_close('li');
-        ie_open('li');
-          itext('Sentiment Analysis');
-        ie_close('li');
-        ie_open('li');
-          itext('Event Attendance');
-        ie_close('li');
-        ie_open('li');
-          itext('Sales Interaction');
-        ie_close('li');
-        ie_open('li');
-          itext('Social Engagement');
-        ie_close('li');
-        ie_open('li');
-          itext('Transactions');
-        ie_close('li');
-        ie_open('li');
-          itext('Browsing Activity');
-        ie_close('li');
-        ie_open('li');
-          itext('Firmographic');
-        ie_close('li');
-        ie_open('li');
-          itext('Support Interaction');
-        ie_close('li');
-        ie_open('li');
-          itext('etc');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Only some of those contexts are available for now. Each context will contain certain ');
-        ie_open('a', null, null,
-            'href', '/docs/fields');
-          itext('Fields');
-        ie_close('a');
-        itext(' with information. These fields will correspond to ');
-        ie_open('a', null, null,
-            'href', 'http://schema.org/');
-          itext('schema.org');
-        ie_close('a');
-        itext(' Properties');
-      ie_close('p');
-      ie_open('p');
-        itext('The following fields are currently supported as part of an Invididual:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('dataSourceIndividualPKs');
-          ie_close('em');
-          itext(' - a map with the different datasource identifiers as keys and the primary keys of this individual in each datasource. Potentially, an individual could be the aggregation of several users in one datasource.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateCreated');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateModified');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('demographics');
-          ie_close('em');
-          itext(' - a Map of identity & demographic ');
-          ie_open('a', null, null,
-              'href', '/docs/fields');
-            itext('Fields');
-          ie_close('a');
-          itext(' corresponding to properties of the Type ');
-          ie_open('a', null, null,
-              'href', 'http://schema.org/Person');
-            itext('Person');
-          ie_close('a');
-          itext(' from Schema.org');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('interests');
-          ie_close('em');
-          itext(' - a Map of interest ');
-          ie_open('a', null, null,
-              'href', '/docs/fields');
-            itext('Fields');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '2');
+      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.api", version: "0.0.2-20180515.101145-15"', mode: 'text'}, null, opt_ijData);
       ie_open('h2');
-        itext('Individuals Collection');
+        itext('Set Up');
       ie_close('h2');
       ie_open('p');
-        itext('As described in ');
+        itext('In order to use the Client, you should have this gradle dependency:');
+      ie_close('p');
+      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180427.224113-32"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In case you need also the transitive dependencies, you should add:');
+      ie_close('p');
+      $templateAlias2({code: 'compileInclude group: "com.eclipsesource.minimal-json", name: "minimal-json", version: "0.9.4"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-annotations", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-core", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-databind", version: "2.6.3"\ncompileInclude group: "com.github.javafaker", name: "javafaker", version: "0.13"\ncompileInclude group: "com.github.mifmif", name: "generex", version: "1.0.2"\ncompileInclude group: "com.github.wnameless", name: "json-flattener", version: "0.4.1"\ncompileInclude group: "com.liferay", name: "com.liferay.petra.lang", version: "1.1.2"\ncompileInclude group: "dk.brics.automaton", name: "automaton", version: "1.11.2"\ncompileInclude group: "org.apache.commons", name: "commons-lang3", version: "3.5"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('If you are using the client from an OSGI runtime, you may need to exclude some packages. See ');
         ie_open('a', null, null,
-            'href', '/docs/general#navigation');
-          itext('Initial Navigation to obtain URLs');
+            'href', 'https://github.com/liferay/com-liferay-pulpo-connector-de-private/blob/7.0.x-private/pulpo-connector-de-contacts-demo/bnd.bnd');
+          itext('one example');
         ie_close('a');
-        itext(', the ');
-        ie_open('code');
-          itext('_links');
-        ie_close('code');
-        itext(' section of the root resource will contain a template link labelled as ');
-        ie_open('code');
-          itext('individuals');
-        ie_close('code');
-        itext(' pointing to the collection of Individuals.');
-      ie_close('p');
-      ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#transformations');
-          itext('transformations');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
-        ie_open('code');
-          itext('_embedded');
-        ie_close('code');
-        itext(' section, a list of individuals under the key ');
-        ie_open('code');
-          itext('individuals');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/individuals?page=0&size=20');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "individuals": [\n            {\n                "dateCreated": "2017-11-13T11:47:43Z",\n                "dateModified": "2017-11-13T11:47:44Z",\n                "demographics": {\n                    "address": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/address",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "address",\n                            "projectId": "my-project",\n                            "value": "125 Main Street, Candelaria"\n                        }\n                    ],\n                    "telephone": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/telephone",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": "home",\n                            "name": "telephone",\n                            "projectId": "my-project",\n                            "value": "+34699001234"\n                        }\n                    ],\n                    "email": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NOAPDh9K2u0PkWnD",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/email",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "email",\n                            "projectId": "my-project",\n                            "value": "cris@liferay.com"\n                        }\n                    ],\n                    "age": [\n                        {\n                            "context": "demographics",\n                            "dataSourceIdentifier": "AV-1NN9zDh9K2u0PkWnC",\n                            "dateModified": null,\n                            "fieldType": "http://schema.org/age",\n                            "identifier": null,\n                            "individualIdentifier": "AV-1NOYHDh9K2u0PkWnL",\n                            "label": null,\n                            "name": "age",\n                            "projectId": "my-project",\n                            "value": "32"\n                        }\n                    ]\n                },\n                "identifier": "AV-1NOYHDh9K2u0PkWnL",\n                "interests": {\n                    "digital experiences": [\n                        {\n                            "ownerIdentifier": "AWJEx5uAxvlVqtdUeNi",\n                            "dataSourceIdentifier": "AWI_0f2_q_9uZvuIRBN3",\n                            "fieldType": "http://schema.org/Number",\n                            "ownerType": "individual",\n                            "context": "interests",\n                            "name": "digital experiences",\n                            "value": "7.601294274664403",\n                            "dateModified": "2018-03-27T10:57:37+0000",\n                            "label": null,\n                            "identifier": "AWJnGyoj8HyMTOCFNH"\n                        }\n                    ],\n                    "modern portals": [\n                        {\n                            "ownerIdentifier": "AWJEx5uAxvlVqtdUeNi",\n                            "dataSourceIdentifier": "AWI_0f2_q_9uZvuIRBN3",\n                            "fieldType": "http://schema.org/Number",\n                            "ownerType": "individual",\n                            "context": "interests",\n                            "name": "modern portals",\n                            "value": "49.39764376820623",\n                            "dateModified": "2018-03-27T10:57:37+0000",\n                            "label": null,\n                            "identifier": "AWJnGzAj8HyMTOCFNIC"\n                        }\n                    ]    \n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL"\n                    },\n                    "individuals": {\n                        "href": "http://localhost:8084/my-project/individuals{?filter}",\n                        "templated": true\n                    },\n                    "individual-segments": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-1NOYHDh9K2u0PkWnL/individual-segments"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/individuals?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation of new Individuals or Update of Individuals manually is not supported. Indivuals are automatically generated and updated from the Field Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Individuals is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of individuals, the link to each individual can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
         itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '3');
+        'id', 'obtainClient');
       ie_open('h2');
-        itext('Filtering and Sorting Individuals Collection');
+        itext('Obtain the client');
       ie_close('h2');
       ie_open('p');
-        itext('Individuals collection can be filtered as explained in ');
+        itext('You can obtain a Contacts Client instance using the ContactsClientFactory by pointing it to an ');
         ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
+            'href', '/#environments');
+          itext('engine URL');
         ie_close('a');
-        itext('.');
+        itext(' and a ProjectID.');
       ie_close('p');
+      $templateAlias2({code: 'ContactsEngineClient contactsEngineClient = \n    ContactsEngineClientFactory.getClient(\n        "https://contacts-dev.liferay.com/" "MY-PROJECT-ID");', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('These are some examples of filtering:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Individuals from Madrid: ');
-          ie_open('code');
-            itext('?filter=(demographics/city/value eq \'Madrid\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals under 30 years old: ');
-          ie_open('code');
-            itext('?filter=(demographics/age/value lt \'30\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals from Madrid sorted by age in descending order:');
-          ie_open('code');
-            itext('?filter=(demographics/city/value eq \'Madrid\')&sort=demographics/age/value,desc');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals who work as Engineers from Malaga or Madrid under 40 years old:');
-          ie_open('code');
-            itext('?filter=(demographics/city/value eq \'Madrid\' or demographics/city/value eq \'Malaga\') and (demographics/age/value lt \'30\') and (demographics/jobTitle/value eq \'Engineer\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals who work as Engineers from Madrid with an interest for Liferay:');
-          ie_open('code');
-            itext('?filter=(demographics/city/value eq \'Madrid\' and demographics/jobTitle/value eq \'Engineer\' and interests/liferay/value gt \'0\')');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('h3');
-        itext('Filtering Individuals by Activities');
-      ie_close('h3');
-      ie_open('p');
-        itext('You can obtain the individuals that performed an specific ');
+        itext('You then go ahead and define the relation names you want to discover and follow. relation names can either be simple names or ');
         ie_open('a', null, null,
-            'href', '/docs/activities');
-          itext('activity');
+            'href', 'http://goessner.net/articles/JsonPath/');
+          itext('JSONPath');
         ie_close('a');
-        itext(' on a time interval. For example, for an activity with the key ');
-        ie_open('code');
-          itext('forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057');
-        ie_close('code');
-        itext(' (i.e. submit a form with id 32cf039a-7a47-4461-82c5-e694d9f29057):');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Individuals that submitted the form today (between 00:00 and current time):');
-          ie_open('code');
-            itext('?filter=(activities/today eq \'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals that submitted the form yesterday:');
-          ie_open('code');
-            itext('?filter=(activities/yesterday eq \'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals that submitted the form within the last 7 days (excluding today):');
-          ie_open('code');
-            itext('?filter=(activities/last7days eq \'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals that submitted the form within the last 30 days (excluding today):');
-          ie_open('code');
-            itext('?filter=(activities/last30days eq \'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals that submitted the form within the last 90 days (excluding today):');
-          ie_open('code');
-            itext('?filter=(activities/last90days eq \'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals that submitted the form within the last year (12 previous months):');
-          ie_open('code');
-            itext('?filter=(activities/lastYear eq \'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057\')');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Individuals that ever submitted the form: ');
-          ie_open('code');
-            itext('?filter=(activities/ever eq \'forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057\')');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Filtering by activities can be combined with any of the aforementioned filters.');
+        itext(' expressions (starting with an $).');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '4');
+        'id', 'traversing');
       ie_open('h2');
-        itext('Transformations on Individuals Collection');
+        itext('Traversing the API');
       ie_close('h2');
       ie_open('p');
-        itext('Transformations can be applied on Individuals collection as explained in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#transformations');
-          itext('transformations');
-        ie_close('a');
-        itext('.');
+        itext('Now, we will show some examples of how to traverse the API using the client.');
       ie_close('p');
       ie_open('p');
-        itext('The only transformation allowed for the Individuals Collection is ');
+        itext('For example, to obtain the list of data sources, you could do:');
+      ie_close('p');
+      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        contactsEngineClient.getDefaultTemplateParameters()\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    );\n            \nCollection<DataSource> dataSources = pagedResources.getContent();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('Another example, to obtain just one datasource by the identifier:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nDataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('Or one more, just to obtain the name of the datasource:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nString dataSourceName = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('These samples hand a parameter map into the execution (withTemplateParameters). The parameters will be used to expand URIs found during the traversal that are templated (the projectId variable is already filled when you call ');
         ie_open('code');
-          itext('groupby');
+          itext('contactsEngineClient.getDefaultTemplateParameters()');
         ie_close('code');
-        itext(' by a field value.');
-      ie_close('p');
-      ie_open('p');
-        itext('These are some examples of transformations:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Individuals grouped by address: ');
-          ie_open('code');
-            itext('?apply=groupby((demographics/address/value))');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/individuals?apply=groupby((demographics/address/value))page=0&size=20');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '{\n  "_embedded": {\n    "individual-transformations": [\n      {\n        "totalElements": 1,\n        "terms": {\n          "demographics/address/value": "candelaria"\n        },\n        "_links": {\n          "individuals": {\n            "href": "http://localhost:8084/DEMO/individuals?filter=(demographics/address/value%20eq%20%27candelaria%27){&page,size,sort*}"\n          }\n        }\n      },\n      {\n        "totalElements": 2,\n        "terms": {\n          "demographics/address/value": "malaga"\n        },\n        "_links": {\n          "individuals": {\n            "href": "http://localhost:8084/DEMO/individuals?filter=(demographics/address/value%20eq%20%27malaga%27){&page,size,sort*}"\n          }\n        }\n      }\n    ]\n  },\n  "_links": {\n    "self": {\n      "href": "http://localhost:8084/DEMO/individuals?apply=groupby((demographics/address/value))&page=0&size=20"\n    }\n  },\n  "page": {\n    "size": 20,\n    "totalElements": 2,\n    "totalPages": 1,\n    "number": 0\n  }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Aggregations of individuals by a field are by default sorted by the number of individuals grouped (aggregations with a higher number of individuals first), but they can also be ordered by the value of the field used to group by (See ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
         itext(').');
       ie_close('p');
       ie_open('p');
-        itext('These are some examples of valid sortings:');
+        itext('In the case of the last example, we evaluate a JSONPath expression to access the data source\u2019s name.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('?sort=demographics/address/value');
-        ie_close('li');
-        ie_open('li');
-          itext('?sort=demographics/jobTitle/value,desc');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('The examples listed above show a simple version of traversal with just one hop. A more complex example with several hops could look like this:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-Individual-Identifier")\n\nString individualSegmentName = contactsEngineClient.follow(\n    ContactsEngineClient.INDIVIDUAL, ContactsEngineClient.INDIVIDUAL_SEGMENTS   \n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this previous example, the follow method received 2 rels that will trigger 2 hops. At each hop, the same template parameters are applied. However, it could be customized at each hop:');
+      ie_close('p');
+      $templateAlias2({code: 'String individualSegmentName = \n    contactsEngineClient\n        .follow(\n            Hop.rel(ContactsEngineClient.INDIVIDUAL).withParameter("identifier", "12345"))\n        ).follow(\n            ContactsEngineClient.INDIVIDUAL_SEGMENTS\n        ).follow(\n            \'$\' + \'._embedded.\' + ContactsEngineClient.INDIVIDUAL_SEGMENTS + \'[0]\'\n        ).withTemplateParameters(\n            commonParameters\n        ).toObject(\n            \'$.name\'\n        );', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('Hop.rel(String rel\u200B)');
+        ie_close('code');
+        itext(' function is a convenient way to create a single Hop. Using .withParameter(key, value) makes it simple to specify URI Template variables for just one hop. You can chain as many .withParameter() as needed or even pass a Map using .withParameter(Map).');
+      ie_close('p');
+      ie_open('p');
+        itext('The follow() method is chainable, meaning you can string together multiple hops as shown above. You can either put multiple, simple string-based rels (follow("individuals", "individual-segments")) or a single hop with specific parameters.');
+      ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '5');
+        'id', 'return');
       ie_open('h2');
-        itext('Individual Segments');
+        itext('Return Objects');
       ie_close('h2');
       ie_open('p');
-        itext('As part of the links of each individual, the following links can be found using these keys:');
+        itext('There are different types of objects you can retrieve from the API, and you can decide which one you want.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('code');
-            itext('individual-segments');
-          ie_close('code');
-          itext(' - The collection of Individual Segments this individual belongs to');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('individuals');
-          ie_close('code');
-          itext(' - The collection of Individuals');
-        ie_close('li');
-      ie_close('ul');
+      ie_open('p');
+        itext('For example, if you want to obtain just one object (DataSource, Individual...) you just need to specify it using the .toObject method.');
+      ie_close('p');
+      $templateAlias2({code: 'DataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In some situations you may not only want the object, but the full "Resource" which contains the object and its links, then you can pass a new TypeReference to the toObject method:');
+      ie_close('p');
+      $templateAlias2({code: 'Resource<DataSource> dataSourceResource =\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    new TypeReferences.ResourceType<DataSource>() {\n    }\n);\n\nList<Link> links = dataSourceResource.getLinks();\n\nString selfHref = dataSourceResource.getLink("self").getHref();\n\nDataSource dataSource = dataSourceResource.getContent();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('You can also obtain more information about the HTTP Request doing toEntity. It will return the ');
+        ie_open('code');
+          itext('ResponseEntity<T>');
+        ie_close('code');
+        itext(' of the type you especified.');
+      ie_close('p');
+      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).toEntity(\n    DataSource.class\n);\n\nAssert.assertEquals(HttpStatus.OK, dataSourceResponseEntity.getStatusCode());\n\nDataSource dataSource = dataSourceResponseEntity.getBody();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('When working with collections, the server will return "pages" of entities which will help you paginate the collection. In this situation the you have similar options:');
+      ie_close('p');
+      ie_open('p');
+        itext('if you want to obtain the list of objects (DataSource, Individual...) you just need to specify it passing an instance of ');
+        ie_open('code');
+          itext('TypeReferences.PagedResourcesType<DataSource>');
+        ie_close('code');
+        itext(' to the .toObject method.');
+      ie_close('p');
+      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    )', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The PagedResources object will contain the "Content" with the DataSources, the "metadata" with information about the pagination and the "links" with links to other resources. For example:');
+      ie_close('p');
+      $templateAlias2({code: '// Content\n\nCollection<DataSource> dataSources = pagedResources.getContent();\n\n// MetaData\n\nPagedResources.PageMetadata metadata = pagedResources.getMetadata();\n\nlong totalElements = metadata.getTotalElements();\nint pageSize = metadata.getSize();\n\n// Links\n\nList<Link> links = pagedResources.getLinks();\n\nString nextHref = pagedResources.getLink("next").getHref();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('When you want to obtain the "page" of "Resources" which contains the objects and its links, then you can pass an instance of ');
+        ie_open('code');
+          itext('TypeReferences.PagedResourcesType<Resource<DataSource>>');
+        ie_close('code');
+        itext(' to the toObject method:');
+      ie_close('p');
+      $templateAlias2({code: 'PagedResources<Resource<DataSource>> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<Resource<DataSource>>() {}\n    )\n    \n// Content\n\nCollection<Resource<DataSource>> dataSources = pagedResources.getContent()', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this last example, the type of the Content was different, but the Metadata and Links were the same.');
+      ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '6');
+        'id', 'postputdelete');
       ie_open('h2');
-        itext('Creating Individuals');
+        itext('Post, Put and Delete');
       ie_close('h2');
       ie_open('p');
-        itext('Individuals are not created using the REST API. Dependending on the data source, the individuals should be created differently:');
+        itext('You can also use the client to create, update or delete entities. You first need to follow the relationships until the desired endpoint and then execute your method. For example, this would create a datasource:');
       ie_close('p');
-      ie_open('h3');
-        itext('Creating Individuals from Liferay DataSource');
-      ie_close('h3');
+      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).post(\n    _getSampleDataSource("MY-DATASOURCE"), MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)\n\nAssert.assertEquals(\n    HttpStatus.OK, dataSourceResponseEntity.getStatusCode())\n\nDataSource createdDataSource = dataSourceResponseEntity.getBody()', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('To send Users from a Liferay Server to Pulpo, you need to have a ');
+        itext('This would update a DataSource:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters =\n    contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).put(\n    dataSource, MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('And this would delete a DataSource:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).delete(\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('ul');
+      ie_open('li');
+        itext('All these examples can be found in ');
         ie_open('a', null, null,
-            'href', 'https://customer.liferay.com/documentation/7.0/deploy/-/official_documentation/deployment/using-lcs');
-          itext('LCS configured environment');
+            'href', 'https://github.com/liferay/com-liferay-osb-pulpo-engine-contacts-private/tree/7.0.x-private/osb-pulpo-engine-contacts-client-functional-test/src/testFunctional/groovy/com/liferay/osb/pulpo/engine/contacts/client/functional/test');
+          itext('github');
         ie_close('a');
-        itext(' and also you should install the following OSGi modules to your Liferay Server:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('code');
-            itext('com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.api');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('com.liferay.pulpo:com.liferay.pulpo.connector.de.contacts.impl');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('If the installation is OK, every time a User is stored/changed in the DB, all the information related with this User will be sent to the Pulpo engine.');
-      ie_close('p');
-      ie_open('h4');
-        itext('How to add extra information to the User');
-      ie_close('h4');
-      ie_open('p');
-        itext('To Serialize custom fields of the User, you just need to register a CustomFieldSerializer OSGI service. Where:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('code');
-            itext('getCustomField');
-          ie_close('code');
-          itext(': in this method you should return the object that contains the extra information of the user.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('getCustomFieldClass');
-          ie_close('code');
-          itext(': in this method you should return the class of the object returned by ');
-          ie_open('code');
-            itext('getCustomField');
-          ie_close('code');
-          itext('.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('getCustomFieldName');
-          ie_close('code');
-          itext(': name that will be used to serialize the object returned by ');
-          ie_open('code');
-            itext('getCustomField');
-          ie_close('code');
-          itext('.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('writeAsString');
-          ie_close('code');
-          itext(': serialization of the object return by ');
-          ie_open('code');
-            itext('getCustomField');
-          ie_close('code');
-          itext(' as a valid JSON Object.');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of a implementation of CustomFieldSerializer.');
-      ie_close('p');
-      $templateAlias2({code: '@Component(immediate = true, service = CustomFieldSerializer.class)\npublic class CustomFieldExampleSerializer\n    implements CustomFieldSerializer<CustomFieldExample> {\n\n    @Override\n    public CustomFieldExample getCustomField(User user) {\n        ...\n    }\n\n    @Override\n    public Class getCustomFieldClass() {\n        ...\n    }\n\n    @Override\n    public String getCustomFieldName(){\n        ...\n    }\n\n    @Override\n    public String writeAsString(T object){\n        ...\n    }\n\n    }', mode: 'java'}, null, opt_ijData);
-      ie_open('h3');
-        itext('Creating Individuals from a CSV DataSource');
-      ie_close('h3');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('code');
-            itext('csv_pulpo/individual_chunk_add_<environment_name>');
-          ie_close('code');
-          itext(' - The queue to write messages to when creating individuals via CSV import. ');
-          ie_open('code');
-            itext('<environment_name>');
-          ie_close('code');
-          itext(' may be one of ');
-          ie_open('code');
-            itext('dev');
-          ie_close('code');
-          itext(', ');
-          ie_open('code');
-            itext('pre');
-          ie_close('code');
-          itext(' or ');
-          ie_open('code');
-            itext('prod');
-          ie_close('code');
-          itext('.');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The messages written to this queue, are expected to have the following format:');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "projectId" : "<projectId>"\n    "dataSourceIdentifier" : "<dataSourceIdentifier>"\n    "individualSegmentIdentifiers" : "<individualSegmentIdentifiers>"\n    "fields" : {\n        "name" : "value"\n        ...\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Where:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('code');
-            itext('projectId');
-          ie_close('code');
-          itext(' is your LCS projectId.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('dataSourceIdentifier');
-          ie_close('code');
-          itext(' is your DataSource identifier.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('individualSegmentIdentifiers');
-          ie_close('code');
-          itext(' is a optional field and should be a JSON array of one or several individualSegmentIdentifiers.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('fields');
-          ie_close('code');
-          itext(' is a optional field and should be a JSON object where each pair name/value should be mapped as columnName/columnValue.');
-        ie_close('li');
-      ie_close('ul');
-    ie_close('article');
+        itext('.');
+      ie_close('li');
+    ie_close('ul');
     ie_open('input', null, null,
         'type', 'hidden',
         'value', opt_data.page.title);
@@ -10567,11 +10230,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param605}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param437}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'xKRXN.render';
+  $render.soyTemplateName = 'vFFvb.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10581,14 +10244,18 @@ return exports;
 
 });
 
-class xKRXN extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xKRXN, templates);
+class vFFvb extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(vFFvb, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
 /* 101 */,
 /* 102 */,
 /* 103 */,
@@ -10636,10 +10303,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xKRXN, templates);
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10667,9 +10331,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(100);
+var _java_clientSoy = __webpack_require__(96);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _java_clientSoy2 = _interopRequireDefault(_java_clientSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10679,23 +10343,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var xKRXN = function (_Component) {
-  _inherits(xKRXN, _Component);
+var vFFvb = function (_Component) {
+  _inherits(vFFvb, _Component);
 
-  function xKRXN() {
-    _classCallCheck(this, xKRXN);
+  function vFFvb() {
+    _classCallCheck(this, vFFvb);
 
-    return _possibleConstructorReturn(this, (xKRXN.__proto__ || Object.getPrototypeOf(xKRXN)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (vFFvb.__proto__ || Object.getPrototypeOf(vFFvb)).apply(this, arguments));
   }
 
-  return xKRXN;
+  return vFFvb;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(xKRXN, _indexSoy2.default);
+_metalSoy2.default.register(vFFvb, _java_clientSoy2.default);
 
-exports.default = xKRXN;
+exports.default = vFFvb;
 
 /***/ })
-],[151]);
+],[148]);
