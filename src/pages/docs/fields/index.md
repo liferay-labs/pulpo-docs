@@ -30,6 +30,11 @@ The entity field contains the following fields:
 * *ownerType* - The entity that owns this field (e.g. an Individual, an Account...)
 * *ownerIdentifier* - The Identifier of the entity that owns this field.
 
+In addition, the following two fields are returned within the entity
+field but they cannot be used for filtering.
+* *dataSourceName* - The name of the ([datasource](/docs/datasources) that provided this information
+* *sourceName* - The  name of the original field in the Data Source
+
 </article>
 
 
