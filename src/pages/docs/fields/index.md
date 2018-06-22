@@ -31,7 +31,7 @@ The entity field contains the following fields:
 * *ownerIdentifier* - The Identifier of the entity that owns this field.
 
 In addition, the following two fields are returned within the entity
-field but they cannot be used for filtering.
+field but they cannot be used for filtering nor sorting.
 * *dataSourceName* - The name of the ([datasource](/docs/datasources) that provided this information
 * *sourceName* - The  name of the original field in the Data Source
 
