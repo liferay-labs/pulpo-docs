@@ -219,6 +219,15 @@ with the key `forms#formSubmitted#32cf039a-7a47-4461-82c5-e694d9f29057` (i.e. su
 
 Filtering by activities can be combined with any of the aforementioned filters.
 
+### Filtering Individuals by Segment Identifiers
+You can obtain the individuals that belong or do not belong to specific [Individual Segments](/docs/individual_segments). For example, for Individual Segments with identifiers `32cf039a-7a47-4461-82c5-000000000001` and `32cf039a-7a47-4461-82c5-000000000002`.
+
+* Individuals that belong to the first segment:`?filter=(individualSegmentIdentifiers eq '32cf039a-7a47-4461-82c5-000000000001')`
+* Individuals that do not belong to the first segment:`?filter=(individualSegmentIdentifiers ne '32cf039a-7a47-4461-82c5-000000000001')`
+* Individuals that belong to the first segment and not to the second segment:`?filter=(individualSegmentIdentifiers eq '32cf039a-7a47-4461-82c5-000000000001' and individualSegmentIdentifiers ne '32cf039a-7a47-4461-82c5-000000000002')`
+
+Filtering by Individual Segments can be combined with any of the aforementioned filters.
+
 </article>
 
 
