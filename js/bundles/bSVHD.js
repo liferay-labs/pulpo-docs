@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([17],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,12 +11658,26 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NonVF", function() { return NonVF; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bSVHD", function() { return bSVHD; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11679,11 +11693,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace NonVF.
+ * @fileoverview Templates in namespace bSVHD.
  * @public
  */
 
-goog.module('NonVF.incrementaldom');
+goog.module('bSVHD.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11717,18 +11731,18 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param209 = function() {
+  var param662 = function() {
     ie_open('h6');
-      var dyn14 = opt_data.page.description;
-      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+      var dyn27 = opt_data.page.description;
+      if (typeof dyn27 == 'function') dyn27(); else if (dyn27 != null) itext(dyn27);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Activity Model');
+        itext('The Page Visited Model');
       ie_close('h2');
       ie_open('p');
-        itext('Activities contain information about behaviour and actions performed by different entities (');
+        itext('Pages Visited contain information about pages visited by different entities (');
         ie_open('a', null, null,
             'href', '/docs/individuals');
           itext('individuals');
@@ -11736,7 +11750,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         itext(', accounts, individual segments... etc).');
       ie_close('p');
       ie_open('p');
-        itext('The entity activity contains the following fields:');
+        itext('The entity page visited contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
@@ -11751,92 +11765,52 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('startTime');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('endTime');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('groupName');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
             itext('description');
           ie_close('em');
+          itext(' - description of the page');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('activityType');
+            itext('interestName');
           ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('applicationId');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('eventId');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('object');
-          ie_close('em');
+          itext(' - The name of the interest which the visit of this page contribute to justify');
         ie_close('li');
         ie_open('li');
           ie_open('em');
             itext('ownerType');
           ie_close('em');
-          itext(' - The entity that performed this activity (e.g. an Individual, an Account...)');
+          itext(' - The entity that visit the page (e.g. an Individual, an Account...)');
         ie_close('li');
         ie_open('li');
           ie_open('em');
             itext('ownerIdentifier');
           ie_close('em');
-          itext(' - The Identifier of the entity that performed this activity.');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The entity object contains the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
+          itext(' - The Identifier of the entity that visit the page.');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('name');
+            itext('title');
           ie_close('em');
+          itext(' - title of the page');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('description');
+            itext('uniqueVisitsCount');
           ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('objectType');
-          ie_close('em');
+          itext(' - number of unique visits to this page');
         ie_close('li');
         ie_open('li');
           ie_open('em');
             itext('url');
           ie_close('em');
+          itext(' - url of the page');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Activities Collection');
+        itext('Page Visited Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11850,9 +11824,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('activities');
+          itext('pages-visited');
         ie_close('code');
-        itext(' pointing to the collection of Activities.');
+        itext(' pointing to the collection of Pages Visited.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11865,12 +11839,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             'href', '/docs/general#sorting');
           itext('sorting');
         ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#transformations');
-          itext('transformations');
-        ie_close('a');
-        itext(', and ');
+        itext(' and ');
         ie_open('a', null, null,
             'href', '/docs/general#filtering');
           itext('filtering');
@@ -11882,123 +11851,29 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of activities under the key ');
+        itext(' section, a list of pages visited under the key ');
         ie_open('code');
-          itext('activities');
+          itext('pages-visited');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/activities?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/pages-visited/?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "activities": [\n            {\n                "groupName": "www.liferay.com",\n                "description": "Submit Form",\n                "ownerIdentifier": "AWIubFositjEuNSqYpR",\n                "ownerType": "individual",\n                "activityType": "Activity",\n                "day": "2018-03-06T00:00:00Z",\n                "startTime": "2018-03-06T03:50:43Z",\n                "endTime": "2018-03-06T03:50:43Z",\n                "identifier": "AWIubHEhitjEuNSqYph",\n                "applictionId": "Form",\n                "eventId": "formSubmited",\n                "eventProperties": {\n                    "formId": "32cf039a-7a47-4461-82c5-e694d9f29057"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/activities/AWIubHEhitjEuNSqYph"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWIubFositjEuNSqYpR"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "pages-visited": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/pages-visited/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "interest": {\n                        "href": "http://localhost:8084/my-project/interests/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "pages-visited": {\n                        "href": "http://localhost:8084/my-project/pages-visited{?filter,page,size,sort*}"\n                    }\n                },\n                "url": "https://www.liferay.com/page1",\n                "description": "This is Page 1",\n                "title": "Page 1",\n                "ownerIdentifier": "AWOx3BczTvifCU95Sg6G",\n                "uniqueVisitsCount": 2,\n                "day": "2018-04-12T00:00:00Z",\n                "identifier": "AWOx3B_0TvifCU95Sg6d",\n                "ownerType": "individual",\n                "interestName": "open source sharepoint alternative"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/1527697379274/pages-visited/?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 2,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Activities or Update of Activities manually is not supported. Activities are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Activities is not allowed for now either.');
+        itext('Creation of new Pages Visited or Update of Page Visited manually is not supported. Pages Visited are automatically generated and updated from the Interest Chunks sent by the different Connectors.');
       ie_close('p');
       ie_open('p');
-        itext('Navigating through the list of activities, the link to each activity can be found with the rel ');
+        itext('Deletion of existing Pages Visited is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of pages visited, the link to each page visited can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
         itext('.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'activity-transformations');
-      ie_open('h2');
-        itext('Transformations on Activities Collection');
-      ie_close('h2');
-      ie_open('p');
-        itext('Transformations can be applied on Activities collection as explained in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#transformations');
-          itext('transformations');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The only transformation allowed for the Activities Collection is ');
-        ie_open('code');
-          itext('groupby');
-        ie_close('code');
-        itext(' by ');
-        ie_open('code');
-          itext('day');
-        ie_close('code');
-        itext(', ');
-        ie_open('code');
-          itext('week');
-        ie_close('code');
-        itext(' or ');
-        ie_open('code');
-          itext('month');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The number of intervals returned when ');
-        ie_open('code');
-          itext('groupby');
-        ie_close('code');
-        itext(' is used is determined by the page size. Only the page ');
-        ie_open('code');
-          itext('0');
-        ie_close('code');
-        itext(' can be requested.');
-      ie_close('p');
-      ie_open('p');
-        itext('The returned object has the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('totalElements');
-          ie_close('em');
-          itext(' - The number of elements inside this interval');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('intervalInitDate');
-          ie_close('em');
-          itext(' - The initial day of this interval');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('These are some examples of transformations:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Activities grouped by day of creation: ');
-          ie_open('code');
-            itext('?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/activities?apply=compute(day(day) as computedDay)/groupby((computedDay))&page=0&size=3');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "activity-transformations": [\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-05-20T00:00:00Z"\n            },\n            {\n                "totalElements": 7,\n                "intervalInitDate": "2018-05-21T00:00:00Z"\n            },\n            {\n                "totalElements": 4,\n                "intervalInitDate": "2018-05-22T00:00:00Z"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?apply=compute%28day%28day%29%20as%20computedDay%29%2Fgroupby%28%28computedDay%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('Activities grouped by week of creation: ');
-          ie_open('code');
-            itext('?apply=compute(week(day) as week)/groupby((week))&page=0&size=3');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/activities?apply=compute(week(dateRecorded) as week)/groupby((week))&page=0&size=3');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "activity-transformations": [\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-06-04T00:00:00Z"\n            },\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-06-11T00:00:00Z"\n            },\n            {\n                "totalElements": 4,\n                "intervalInitDate": "2018-06-18T00:00:00Z"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?apply=compute%28week%28day%29%20as%20week%29%2Fgroupby%28%28week%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -12009,11 +11884,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param662}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'NonVF.render';
+  $render.soyTemplateName = 'bSVHD.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12023,28 +11898,14 @@ return exports;
 
 });
 
-class NonVF extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NonVF, templates);
+class bSVHD extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bSVHD, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
 /* 112 */,
 /* 113 */,
 /* 114 */,
@@ -12082,7 +11943,22 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NonVF, templates);
 /* 146 */,
 /* 147 */,
 /* 148 */,
-/* 149 */
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12110,7 +11986,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(97);
+var _indexSoy = __webpack_require__(111);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12122,23 +11998,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var NonVF = function (_Component) {
-  _inherits(NonVF, _Component);
+var bSVHD = function (_Component) {
+  _inherits(bSVHD, _Component);
 
-  function NonVF() {
-    _classCallCheck(this, NonVF);
+  function bSVHD() {
+    _classCallCheck(this, bSVHD);
 
-    return _possibleConstructorReturn(this, (NonVF.__proto__ || Object.getPrototypeOf(NonVF)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (bSVHD.__proto__ || Object.getPrototypeOf(bSVHD)).apply(this, arguments));
   }
 
-  return NonVF;
+  return bSVHD;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(NonVF, _indexSoy2.default);
+_metalSoy2.default.register(bSVHD, _indexSoy2.default);
 
-exports.default = NonVF;
+exports.default = bSVHD;
 
 /***/ })
-],[149]);
+],[164]);
