@@ -11735,7 +11735,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param148 = function() {
+  var param136 = function() {
     $templateAlias2({section: opt_data.site.index.children['docs']}, null, opt_ijData);
     ie_open('div', null, null,
         'class', 'sidebar-offset');
@@ -11755,8 +11755,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             ie_open('p', null, null,
                 'class', 'docs-home-top-description');
               itext('Start learning how to leverage the power of ');
-              var dyn11 = opt_data.site.title;
-              if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+              var dyn9 = opt_data.site.title;
+              if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
               itext('.');
             ie_close('p');
           ie_close('div');
@@ -11771,7 +11771,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('div');
     ie_close('div');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'docs', content: param148}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'docs', content: param136}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
