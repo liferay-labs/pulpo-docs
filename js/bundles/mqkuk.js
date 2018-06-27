@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11668,16 +11668,12 @@ module.exports = function(module) {
 /* 104 */,
 /* 105 */,
 /* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bSVHD", function() { return bSVHD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mqkuk", function() { return mqkuk; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11689,15 +11685,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from status_endpoints.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace bSVHD.
+ * @fileoverview Templates in namespace mqkuk.
  * @public
  */
 
-goog.module('bSVHD.incrementaldom');
+goog.module('mqkuk.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11731,149 +11727,42 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param662 = function() {
+  var param554 = function() {
     ie_open('h6');
-      var dyn27 = opt_data.page.description;
-      if (typeof dyn27 == 'function') dyn27(); else if (dyn27 != null) itext(dyn27);
+      var dyn24 = opt_data.page.description;
+      if (typeof dyn24 == 'function') dyn24(); else if (dyn24 != null) itext(dyn24);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'health');
       ie_open('h2');
-        itext('The Page Visited Model');
+        itext('API Health');
       ie_close('h2');
       ie_open('p');
-        itext('Pages Visited contain information about pages visited by different entities (');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
-        ie_close('a');
-        itext(', accounts, individual segments... etc).');
+        itext('The health of the API can be checked at the endpoint: ');
+        ie_open('code');
+          itext('/management/health');
+        ie_close('code');
       ie_close('p');
       ie_open('p');
-        itext('The entity page visited contains the following fields:');
+        itext('The response will be JSON in this format with posible statuses UP and DOWN:');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('day');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
-          itext(' - description of the page');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('interestName');
-          ie_close('em');
-          itext(' - The name of the interest which the visit of this page contribute to justify');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerType');
-          ie_close('em');
-          itext(' - The entity that visit the page (e.g. an Individual, an Account...)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerIdentifier');
-          ie_close('em');
-          itext(' - The Identifier of the entity that visit the page.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('title');
-          ie_close('em');
-          itext(' - title of the page');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('uniqueVisitsCount');
-          ie_close('em');
-          itext(' - number of unique visits to this page');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('url');
-          ie_close('em');
-          itext(' - url of the page');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '{\n    "description":"Pulpo Contacts Engine",\n    "status":"UP"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'version');
       ie_open('h2');
-        itext('Page Visited Collection');
+        itext('API Deployed Version');
       ie_close('h2');
       ie_open('p');
-        itext('As described in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#navigation');
-          itext('Initial Navigation to obtain URLs');
-        ie_close('a');
-        itext(', the ');
+        itext('The version of the API that is running can be checked at the endpoint: ');
         ie_open('code');
-          itext('_links');
+          itext('/management/info');
         ie_close('code');
-        itext(' section of the root resource will contain a template link labelled as ');
-        ie_open('code');
-          itext('pages-visited');
-        ie_close('code');
-        itext(' pointing to the collection of Pages Visited.');
       ie_close('p');
       ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
+        itext('The response will be JSON in this format, with information relative to the branch deployed, the time it was built, the version of the API and the git commit:');
       ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
-        ie_open('code');
-          itext('_embedded');
-        ie_close('code');
-        itext(' section, a list of pages visited under the key ');
-        ie_open('code');
-          itext('pages-visited');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/pages-visited/?page=0&size=1');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "pages-visited": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/pages-visited/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "interest": {\n                        "href": "http://localhost:8084/my-project/interests/AWOx3B_0TvifCU95Sg6d"\n                    },\n                    "pages-visited": {\n                        "href": "http://localhost:8084/my-project/pages-visited{?filter,page,size,sort*}"\n                    }\n                },\n                "url": "https://www.liferay.com/page1",\n                "description": "This is Page 1",\n                "title": "Page 1",\n                "ownerIdentifier": "AWOx3BczTvifCU95Sg6G",\n                "uniqueVisitsCount": 2,\n                "day": "2018-04-12T00:00:00Z",\n                "identifier": "AWOx3B_0TvifCU95Sg6d",\n                "ownerType": "individual",\n                "interestName": "open source sharepoint alternative"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/1527697379274/pages-visited/?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 2,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation of new Pages Visited or Update of Page Visited manually is not supported. Pages Visited are automatically generated and updated from the Interest Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Pages Visited is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of pages visited, the link to each page visited can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
+      $templateAlias2({code: '{\n    "branch":"PULPO-166.hateoas",\n    "buildtime":"20180103T142812Z",\n    "version":"1.0.0",\n    "revision":"e015458b74a1378801c26d9eb5756c5a245d885d"\n}', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11884,11 +11773,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param662}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param554}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'bSVHD.render';
+  $render.soyTemplateName = 'mqkuk.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11898,14 +11787,18 @@ return exports;
 
 });
 
-class bSVHD extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bSVHD, templates);
+class mqkuk extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mqkuk, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
 /* 112 */,
 /* 113 */,
 /* 114 */,
@@ -11954,11 +11847,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bSVHD, templates);
 /* 157 */,
 /* 158 */,
 /* 159 */,
-/* 160 */,
-/* 161 */,
-/* 162 */,
-/* 163 */,
-/* 164 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11986,9 +11875,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(111);
+var _status_endpointsSoy = __webpack_require__(107);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _status_endpointsSoy2 = _interopRequireDefault(_status_endpointsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11998,23 +11887,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var bSVHD = function (_Component) {
-  _inherits(bSVHD, _Component);
+var mqkuk = function (_Component) {
+  _inherits(mqkuk, _Component);
 
-  function bSVHD() {
-    _classCallCheck(this, bSVHD);
+  function mqkuk() {
+    _classCallCheck(this, mqkuk);
 
-    return _possibleConstructorReturn(this, (bSVHD.__proto__ || Object.getPrototypeOf(bSVHD)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (mqkuk.__proto__ || Object.getPrototypeOf(mqkuk)).apply(this, arguments));
   }
 
-  return bSVHD;
+  return mqkuk;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(bSVHD, _indexSoy2.default);
+_metalSoy2.default.register(mqkuk, _status_endpointsSoy2.default);
 
-exports.default = bSVHD;
+exports.default = mqkuk;
 
 /***/ })
-],[164]);
+],[160]);

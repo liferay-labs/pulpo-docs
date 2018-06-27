@@ -11673,7 +11673,8 @@ module.exports = function(module) {
 /* 109 */,
 /* 110 */,
 /* 111 */,
-/* 112 */
+/* 112 */,
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11734,7 +11735,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param136 = function() {
+  var param148 = function() {
     $templateAlias2({section: opt_data.site.index.children['docs']}, null, opt_ijData);
     ie_open('div', null, null,
         'class', 'sidebar-offset');
@@ -11754,8 +11755,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             ie_open('p', null, null,
                 'class', 'docs-home-top-description');
               itext('Start learning how to leverage the power of ');
-              var dyn9 = opt_data.site.title;
-              if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
+              var dyn11 = opt_data.site.title;
+              if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
               itext('.');
             ie_close('p');
           ie_close('div');
@@ -11770,7 +11771,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('div');
     ie_close('div');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'docs', content: param136}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'docs', content: param148}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11792,7 +11793,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearch, templ
 
 
 /***/ }),
-/* 113 */,
 /* 114 */,
 /* 115 */,
 /* 116 */,
@@ -11842,7 +11842,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearch, templ
 /* 160 */,
 /* 161 */,
 /* 162 */,
-/* 163 */
+/* 163 */,
+/* 164 */,
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11870,7 +11872,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _searchSoy = __webpack_require__(112);
+var _searchSoy = __webpack_require__(113);
 
 var _searchSoy2 = _interopRequireDefault(_searchSoy);
 
@@ -11901,4 +11903,4 @@ _metalSoy2.default.register(pageDocsSearch, _searchSoy2.default);
 exports.default = pageDocsSearch;
 
 /***/ })
-],[163]);
+],[165]);
