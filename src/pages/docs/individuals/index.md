@@ -520,11 +520,11 @@ The messages written to this queue, are expected to have the following format:
 
 ```json
 {
-	"projectId" : "<projectId>"
-	"dataSourceIdentifier" : "<dataSourceIdentifier>"
-	"individualSegmentIdentifiers" : "<individualSegmentIdentifiers>"
+	"projectId" : "<projectId>",
+	"dataSourceIdentifier" : "<dataSourceIdentifier>",
+	"individualSegmentIdentifiers" : "<individualSegmentIdentifiers>",
 	"fields" : {
-		"name" : "value"
+		"name" : "value",
 		...
 	}
 }
@@ -535,5 +535,30 @@ Where:
 - `dataSourceIdentifier` is your DataSource identifier.
 - `individualSegmentIdentifiers` is a optional field and should be a JSON array of one or several individualSegmentIdentifiers.
 - `fields` is a optional field and should be a JSON object where each pair name/value should be mapped as columnName/columnValue.
+
+It is also possible to send batches of that kind of messages:
+
+```json
+[
+	{
+		"projectId" : "<projectId>",
+		"dataSourceIdentifier" : "<dataSourceIdentifier>",
+		"individualSegmentIdentifiers" : "<individualSegmentIdentifiers>",
+		"fields" : {
+			"name" : "value",
+			...
+		}
+	},
+	{
+		"projectId" : "<projectId>",
+		"dataSourceIdentifier" : "<dataSourceIdentifier>",
+		"individualSegmentIdentifiers" : "<individualSegmentIdentifiers>",
+		"fields" : {
+			"name" : "value",
+			...
+		}
+	}
+]
+```
 
 </article>
