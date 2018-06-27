@@ -322,6 +322,140 @@ belonging to the Individual
 to
 </article>
 
+<article id="individual-indivisual-segments-embedded">
+
+## Embedded resources on Individual Segments of an Individual 
+
+The `expand` parameter can also be used when retrieving [Individuals Segments](/docs/individuals#individual-segments) of an Individual as explained in [embedding resources](/docs/general#embedding-resources).
+The supported resource that can be embedded inside each individual segment resource is:
+
+* *active-membership* - The **active** [Individual Segment Membership](/docs/individual_segments#individual-segment-membership-model) 
+that associates the current Individual and Individual Segment.
+
+
+This is an example of a response to this url: `http://localhost:8084/my-project/individuals/AWRAgrHwCx5q5cIjnRhC/individual-segments?expand=active-membership&page=0&size=10&sort=name,asc`
+
+```json
+{
+    "_embedded": {
+        "individual-segments": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrPhCx5q5cIjnRhN"
+                    },
+                    "individual-segments": {
+                        "href": "http://localhost:8084/my-project/individual-segments{?filter,page,size,sort*}"
+                    },
+                    "individuals": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrPhCx5q5cIjnRhN/individuals{?apply,filter,page,size,sort*}"
+                    },
+                    "memberships": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrPhCx5q5cIjnRhN/memberships{?filter,page,size,sort*}"
+                    },
+                    "membership-changes": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrPhCx5q5cIjnRhN/membership-changes{?apply,filter,page,size,sort*}"
+                    }
+                },
+                "_embedded": {
+                    "active-membership": {
+                        "_links": {
+                            "self": {
+                                "href": "http://localhost:8084/my-project/individual-segments/AWRAgrPhCx5q5cIjnRhN/memberships/AWRAgrHwCx5q5cIjnRhC"
+                            },
+                            "individual": {
+                                "href": "http://localhost:8084/my-project/individuals/AWRAgrHwCx5q5cIjnRhC{?expand}",
+                                "templated": true
+                            },
+                            "individual-segment": {
+                                "href": "http://localhost:8084/my-project/individual-segments/AWRAgrPhCx5q5cIjnRhN"
+                            }
+                        },
+                        "status": "ACTIVE",
+                        "individualIdentifier": "AWRAgrHwCx5q5cIjnRhC",
+                        "dateCreated": "2018-06-27T09:11:05Z",
+                        "individualSegmentIdentifier": "AWRAgrPhCx5q5cIjnRhN"
+                    }
+                },
+                "name": "Developers",
+                "state": "READY",
+                "individualCount": 1,
+                "dateModified": "2018-06-27T09:11:04Z",
+                "identifier": "AWRAgrPhCx5q5cIjnRhN",
+                "scope": "PROJECT",
+                "status": "ACTIVE",
+                "segmentType": "DYNAMIC",
+                "dateCreated": "2018-06-27T09:11:04Z",
+                "filter": "(demographics/jobTitle/value eq 'Dev')"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrROCx5q5cIjnRhS"
+                    },
+                    "individual-segments": {
+                        "href": "http://localhost:8084/my-project/individual-segments{?filter,page,size,sort*}"
+                    },
+                    "individuals": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrROCx5q5cIjnRhS/individuals{?apply,filter,page,size,sort*}"
+                    },
+                    "memberships": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrROCx5q5cIjnRhS/memberships{?filter,page,size,sort*}"
+                    },
+                    "membership-changes": {
+                        "href": "http://localhost:8084/my-project/individual-segments/AWRAgrROCx5q5cIjnRhS/membership-changes{?apply,filter,page,size,sort*}"
+                    }
+                },
+                "_embedded": {
+                    "active-membership": {
+                        "_links": {
+                            "self": {
+                                "href": "http://localhost:8084/my-project/individual-segments/AWRAgrROCx5q5cIjnRhS/memberships/AWRAgrHwCx5q5cIjnRhC"
+                            },
+                            "individual": {
+                                "href": "http://localhost:8084/my-project/individuals/AWRAgrHwCx5q5cIjnRhC{?expand}",
+                                "templated": true
+                            },
+                            "individual-segment": {
+                                "href": "http://localhost:8084/my-project/individual-segments/AWRAgrROCx5q5cIjnRhS"
+                            }
+                        },
+                        "status": "ACTIVE",
+                        "individualIdentifier": "AWRAgrHwCx5q5cIjnRhC",
+                        "dateCreated": "2018-06-27T09:11:05Z",
+                        "individualSegmentIdentifier": "AWRAgrROCx5q5cIjnRhS"
+                    }
+                },
+                "name": "Wealthy",
+                "state": "READY",
+                "individualCount": 1,
+                "dateModified": "2018-06-27T09:11:05Z",
+                "identifier": "AWRAgrROCx5q5cIjnRhS",
+                "scope": "PROJECT",
+                "status": "ACTIVE",
+                "segmentType": "DYNAMIC",
+                "dateCreated": "2018-06-27T09:11:05Z",
+                "filter": "(demographics/salary/value eq '5000')"
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/my-project/individuals/AWRAgrHwCx5q5cIjnRhC/individual-segments?expand=active-membership&page=0&size=10&sort=name,asc"
+        }
+    },
+    "page": {
+        "size": 10,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+}
+```
+
+</article>
+
+
 <article id="creating-individuals">
 
 ## Creating Individuals
