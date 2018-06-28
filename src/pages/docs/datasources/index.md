@@ -39,6 +39,8 @@ The following fields are currently supported:
   * endDate
   * location
   * sameAs - the URL of the Event
+* *state* - defines the current state of the datasource as a result of certain operations. The accepted values are `CONFIGURING`, `DELETE_ERROR`,`IN_DELETION`, `READY`
+* *status* - defines if the DataSource is working or not. The accepted values are `ACTIVE` and `INACTIVE`
 
 </article>
 
@@ -126,6 +128,25 @@ an example of the body passed to this POST request:
 
 Navigating through the list of entities, the link to each entity can be found with the rel `self`. 
 That same url can be also used for delete (`DELETE` method) and update (`PUT` method).
+
+</article>
+
+<article id="delete-datasource">
+
+## Deleting a Data Source
+
+Deleting a DataSource is a complex operation since it involves deleting all 
+the configuration for that datasource and all information provided from that datasource, at least:
+- Delete configuration of field mappings configured to map information from the deleted datasource
+- Delete fields obtained from the deleted datasource
+- Delete the information provided from this datasource from individuals
+- Delete the datasource information in the Liferay DE Connector instance (for DE Data Sources)
+
+Since this process can take up to several minutes, when a `DELETE` request is made to
+the url of a DataSource, it won't be immediately deleted, it will just change its
+state to `IN_DELETION`. After all the operations are completed, the data source will 
+be finally deleted and won't be found anymore. However, if there is an error that prevented
+the final deletion of the data source it will be marked as `DELETE_ERROR`.  
 
 </article>
 
