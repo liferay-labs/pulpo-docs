@@ -11828,7 +11828,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_open('ul');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://contacts-dev.liferay.com');
+                    'href', 'http://pulpo-engine-contacts-dev.us-east-1.elasticbeanstalk.com');
                   itext('Engine');
                 ie_close('a');
               ie_close('li');
@@ -11858,7 +11858,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_open('ul');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://contacts-pre.liferay.com');
+                    'href', 'http://pulpo-engine-contacts-pre.us-east-1.elasticbeanstalk.com');
                   itext('Engine');
                 ie_close('a');
               ie_close('li');
@@ -11888,7 +11888,7 @@ function $environments(opt_data, opt_ignored, opt_ijData) {
             ie_open('ul');
               ie_open('li');
                 ie_open('a', null, null,
-                    'href', 'https://contacts-prod.liferay.com/');
+                    'href', 'http://pulpo-engine-contacts-prod.us-east-1.elasticbeanstalk.com');
                   itext('Engine');
                 ie_close('a');
               ie_close('li');

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([16],[
+webpackJsonppageComponent([13],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11660,12 +11660,15 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sejjf", function() { return sejjf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "waoiT", function() { return waoiT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11681,11 +11684,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace sejjf.
+ * @fileoverview Templates in namespace waoiT.
  * @public
  */
 
-goog.module('sejjf.incrementaldom');
+goog.module('waoiT.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11719,66 +11722,35 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param251 = function() {
+  var param293 = function() {
     ie_open('h6');
-      var dyn16 = opt_data.page.description;
-      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Connector State Model');
+        itext('The Field Names');
       ie_close('h2');
       ie_open('p');
-        itext('Connector State contains information about the state of an Analytics Cloud connector installed on a remote Liferay instance connected to LCS.');
-      ie_close('p');
-      ie_open('p');
-        itext('The entity asset contains the following fields:');
+        itext('Sometimes, in order to choose an existing field mapping to map your own data, you may want to find the most appropriate field considering the information you have. This service will help you with that considering the following information:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
-          itext(' - the unique identifier of the connector state');
+          itext('Existing fields with the same or similar name of your label');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('installationId');
-          ie_close('em');
-          itext(' - the ID of the system where the connector is installed');
+          itext('Previous field mappings from your label to other fields');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('state');
-          ie_close('em');
-          itext(' - the current state of the connector. Possible values are: ');
-          ie_open('code');
-            itext('READY');
-          ie_close('code');
-          itext(' and ');
-          ie_open('code');
-            itext('OFFLINE');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateCreated');
-          ie_close('em');
-          itext(' - the date when the connector state was created.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateModified');
-          ie_close('em');
-          itext(' - the date when the connector state was modified.');
+          itext('Fields with values similar to your new values');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Connector States Collection');
+        itext('Fields Names Service');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11792,51 +11764,35 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('connector-states');
+          itext('field-names');
         ie_close('code');
-        itext(' pointing to the collection of Connector States.');
+        itext(' pointing to the endpoint for obtaining the field names.');
       ie_close('p');
       ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
+        itext('This endpoint accepts the ');
         ie_open('code');
-          itext('_embedded');
+          itext('GET');
         ie_close('code');
-        itext(' section, a list of connector states under the key ');
-        ie_open('code');
-          itext('connector-states');
-        ie_close('code');
-        itext('.');
+        itext(' method with the following parameters:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('label - the label from your field (e.g. telephone, email addres... etc)');
+        ie_close('li');
+        ie_open('li');
+          itext('ownerType - the type of entity your are mapping (individual, account...)');
+        ie_close('li');
+        ie_open('li');
+          itext('values - array of sample values from your field');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The response will contain a list of existing field names ordered by relevance.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/connector-states?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-names?ownerType=individual&label=phone');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "connector-states": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/connector-states/my-installation-id"\n                    },\n                    "connector-states": {\n                        "href": "http://localhost:8084/my-project/connector-states{?page,size,sort*}"\n                    }\n                },\n                "state": "READY",\n                "identifier": "AWQ73UnelLXzRA3LpnPi",\n                "dateModified": "2018-06-26T11:31:55Z",\n                "installationId": "my-installation-id",\n                "dateCreated": "2018-06-26T11:31:55Z"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/connector-states?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation or Update of Connector States is not supported by the API. Connector States are automatically generated and updated from the Heartbeat messages sent by the installed connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Connector States is not allowed either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of connector states, the link to each connector state can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
+      $templateAlias2({code: '["telephone", "faxNumber", "globalLocationNumber"]', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11847,11 +11803,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param251}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param293}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'sejjf.render';
+  $render.soyTemplateName = 'waoiT.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11861,17 +11817,14 @@ return exports;
 
 });
 
-class sejjf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(sejjf, templates);
+class waoiT extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(waoiT, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 100 */,
-/* 101 */,
-/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -11921,7 +11874,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(sejjf, templates);
 /* 149 */,
 /* 150 */,
 /* 151 */,
-/* 152 */
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11949,7 +11905,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(99);
+var _indexSoy = __webpack_require__(102);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11961,23 +11917,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var sejjf = function (_Component) {
-  _inherits(sejjf, _Component);
+var waoiT = function (_Component) {
+  _inherits(waoiT, _Component);
 
-  function sejjf() {
-    _classCallCheck(this, sejjf);
+  function waoiT() {
+    _classCallCheck(this, waoiT);
 
-    return _possibleConstructorReturn(this, (sejjf.__proto__ || Object.getPrototypeOf(sejjf)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (waoiT.__proto__ || Object.getPrototypeOf(waoiT)).apply(this, arguments));
   }
 
-  return sejjf;
+  return waoiT;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(sejjf, _indexSoy2.default);
+_metalSoy2.default.register(waoiT, _indexSoy2.default);
 
-exports.default = sejjf;
+exports.default = waoiT;
 
 /***/ })
-],[152]);
+],[155]);

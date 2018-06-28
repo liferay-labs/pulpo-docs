@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11665,12 +11665,14 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DRnzB", function() { return DRnzB; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sMneF", function() { return sMneF; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11682,15 +11684,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from authentication.soy.
+// This file was automatically generated from java_client.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace DRnzB.
+ * @fileoverview Templates in namespace sMneF.
  * @public
  */
 
-goog.module('DRnzB.incrementaldom');
+goog.module('sMneF.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11724,179 +11726,201 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param366 = function() {
+  var param453 = function() {
     ie_open('h6');
-      var dyn21 = opt_data.page.description;
-      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
+      var dyn23 = opt_data.page.description;
+      if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
     ie_close('h6');
+    ie_open('p');
+      itext('Pulpo provides a Java Client that allows you to consume this API inspired by the ');
+      ie_open('a', null, null,
+          'href', 'https://blog.codecentric.de/en/2013/11/traverson/');
+        itext('Traverson JavaScript library');
+      ie_close('a');
+    ie_close('p');
+    ie_open('p');
+      itext('This client will help you navigate the API leveraging its hypermedia capabilities.');
+    ie_close('p');
     ie_open('article', null, null,
-        'id', 'intro');
+        'id', 'setup');
       ie_open('h2');
-        itext('Authentication Headers');
+        itext('Java API');
       ie_close('h2');
       ie_open('p');
-        itext('In order to have a signed request, it must contain the following http headers:');
+        itext('In case you want to use your own client, you will still find valuable our models in Java. You can use our API with this gradle dependency:');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('timestamp');
-          ie_close('em');
-          itext(': the timestamp of the request in milliseconds');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('apikey');
-          ie_close('em');
-          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('signature');
-          ie_close('em');
-          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
-        ie_close('li');
-      ie_close('ul');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'signature');
+      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.api", version: "0.0.2-20180515.101145-15"', mode: 'text'}, null, opt_ijData);
       ie_open('h2');
-        itext('Signature Generation');
+        itext('Set Up');
       ie_close('h2');
       ie_open('p');
-        itext('You can use the following gradle dependency to use the ');
-        ie_open('code');
-          itext('SignatureValidator.java');
-        ie_close('code');
-        itext(' utility:');
+        itext('In order to use the Client, you should have this gradle dependency:');
       ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.security.signature", version: "0.0.1-20180508.134750-15"', mode: 'text'}, null, opt_ijData);
+      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180427.224113-32"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('In order to obtain the signature for your request, you can use one of the following methods:');
+        itext('In case you need also the transitive dependencies, you should add:');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            ie_open('code');
-              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
-            ie_close('code');
-          ie_close('p');
-          ie_open('ul');
-            ie_open('li');
-              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
-            ie_close('li');
-            ie_open('li');
-              itext('The parameters map must contain the parameters of the body of your request (if any)');
-            ie_close('li');
-            ie_open('li');
-              itext('The timestamp must match the value in your timestamp header');
-            ie_close('li');
-            ie_open('li');
-              itext('The api key must match your api key header too.');
-            ie_close('li');
-          ie_close('ul');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: 'compileInclude group: "com.eclipsesource.minimal-json", name: "minimal-json", version: "0.9.4"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-annotations", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-core", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-databind", version: "2.6.3"\ncompileInclude group: "com.github.javafaker", name: "javafaker", version: "0.13"\ncompileInclude group: "com.github.mifmif", name: "generex", version: "1.0.2"\ncompileInclude group: "com.github.wnameless", name: "json-flattener", version: "0.4.1"\ncompileInclude group: "com.liferay", name: "com.liferay.petra.lang", version: "1.1.2"\ncompileInclude group: "dk.brics.automaton", name: "automaton", version: "1.11.2"\ncompileInclude group: "org.apache.commons", name: "commons-lang3", version: "3.5"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
-        ie_open('code');
-          itext('PULPO_PRIVATE_KEY');
-        ie_close('code');
-        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
+        itext('If you are using the client from an OSGI runtime, you may need to exclude some packages. See ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/liferay/com-liferay-pulpo-connector-de-private/blob/7.0.x-private/pulpo-connector-de-contacts-demo/bnd.bnd');
+          itext('one example');
+        ie_close('a');
+        itext('.');
       ie_close('p');
-      ie_open('p');
-        itext('This is an example of how the request headers could look like:');
-      ie_close('p');
-      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of how to generate the signature for a POST request:');
-      ie_close('p');
-      ie_open('p');
-        itext('*1) Include the api key Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*2) Include the timestamp Header in your request');
-      ie_close('p');
-      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('(e.g. ');
-        ie_open('code');
-          itext('System.currentTimeMillis()');
-        ie_close('code');
-        itext(' in Java)');
-      ie_close('p');
-      ie_open('p');
-        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
-        ie_open('code');
-          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
-        ie_close('code');
-        itext(', and include that as a third header:');
-      ie_close('p');
-      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('*3b) In case you didn\'t have the http request, we would call:');
-      ie_close('p');
-      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('with these values:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> empty');
-        ie_close('li');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Another example of a POST request with body parameters:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('requestURL --> /DEMO/datasources');
-        ie_close('li');
-        ie_open('li');
-          itext('parameters --> Map with the parameters:');
-        ie_close('li');
-      ie_close('ul');
-      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
-      ie_open('ul');
-        ie_open('li');
-          itext('apikey --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('timeStamp --> the same value from the header');
-        ie_close('li');
-        ie_open('li');
-          itext('privateKey --> the private key associated to our api key');
-        ie_close('li');
-      ie_close('ul');
     ie_close('article');
+    ie_open('article', null, null,
+        'id', 'obtainClient');
+      ie_open('h2');
+        itext('Obtain the client');
+      ie_close('h2');
+      ie_open('p');
+        itext('You can obtain a Contacts Client instance using the ContactsClientFactory by pointing it to an ');
+        ie_open('a', null, null,
+            'href', '/#environments');
+          itext('engine URL');
+        ie_close('a');
+        itext(' and a ProjectID.');
+      ie_close('p');
+      $templateAlias2({code: 'ContactsEngineClient contactsEngineClient = \n    ContactsEngineClientFactory.getClient(\n        "https://contacts-dev.liferay.com/" "MY-PROJECT-ID");', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('You then go ahead and define the relation names you want to discover and follow. relation names can either be simple names or ');
+        ie_open('a', null, null,
+            'href', 'http://goessner.net/articles/JsonPath/');
+          itext('JSONPath');
+        ie_close('a');
+        itext(' expressions (starting with an $).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'traversing');
+      ie_open('h2');
+        itext('Traversing the API');
+      ie_close('h2');
+      ie_open('p');
+        itext('Now, we will show some examples of how to traverse the API using the client.');
+      ie_close('p');
+      ie_open('p');
+        itext('For example, to obtain the list of data sources, you could do:');
+      ie_close('p');
+      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        contactsEngineClient.getDefaultTemplateParameters()\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    );\n            \nCollection<DataSource> dataSources = pagedResources.getContent();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('Another example, to obtain just one datasource by the identifier:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nDataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('Or one more, just to obtain the name of the datasource:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nString dataSourceName = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('These samples hand a parameter map into the execution (withTemplateParameters). The parameters will be used to expand URIs found during the traversal that are templated (the projectId variable is already filled when you call ');
+        ie_open('code');
+          itext('contactsEngineClient.getDefaultTemplateParameters()');
+        ie_close('code');
+        itext(').');
+      ie_close('p');
+      ie_open('p');
+        itext('In the case of the last example, we evaluate a JSONPath expression to access the data source\u2019s name.');
+      ie_close('p');
+      ie_open('p');
+        itext('The examples listed above show a simple version of traversal with just one hop. A more complex example with several hops could look like this:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-Individual-Identifier")\n\nString individualSegmentName = contactsEngineClient.follow(\n    ContactsEngineClient.INDIVIDUAL, ContactsEngineClient.INDIVIDUAL_SEGMENTS   \n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this previous example, the follow method received 2 rels that will trigger 2 hops. At each hop, the same template parameters are applied. However, it could be customized at each hop:');
+      ie_close('p');
+      $templateAlias2({code: 'String individualSegmentName = \n    contactsEngineClient\n        .follow(\n            Hop.rel(ContactsEngineClient.INDIVIDUAL).withParameter("identifier", "12345"))\n        ).follow(\n            ContactsEngineClient.INDIVIDUAL_SEGMENTS\n        ).follow(\n            \'$\' + \'._embedded.\' + ContactsEngineClient.INDIVIDUAL_SEGMENTS + \'[0]\'\n        ).withTemplateParameters(\n            commonParameters\n        ).toObject(\n            \'$.name\'\n        );', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('Hop.rel(String rel\u200B)');
+        ie_close('code');
+        itext(' function is a convenient way to create a single Hop. Using .withParameter(key, value) makes it simple to specify URI Template variables for just one hop. You can chain as many .withParameter() as needed or even pass a Map using .withParameter(Map).');
+      ie_close('p');
+      ie_open('p');
+        itext('The follow() method is chainable, meaning you can string together multiple hops as shown above. You can either put multiple, simple string-based rels (follow("individuals", "individual-segments")) or a single hop with specific parameters.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'return');
+      ie_open('h2');
+        itext('Return Objects');
+      ie_close('h2');
+      ie_open('p');
+        itext('There are different types of objects you can retrieve from the API, and you can decide which one you want.');
+      ie_close('p');
+      ie_open('p');
+        itext('For example, if you want to obtain just one object (DataSource, Individual...) you just need to specify it using the .toObject method.');
+      ie_close('p');
+      $templateAlias2({code: 'DataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In some situations you may not only want the object, but the full "Resource" which contains the object and its links, then you can pass a new TypeReference to the toObject method:');
+      ie_close('p');
+      $templateAlias2({code: 'Resource<DataSource> dataSourceResource =\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    new TypeReferences.ResourceType<DataSource>() {\n    }\n);\n\nList<Link> links = dataSourceResource.getLinks();\n\nString selfHref = dataSourceResource.getLink("self").getHref();\n\nDataSource dataSource = dataSourceResource.getContent();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('You can also obtain more information about the HTTP Request doing toEntity. It will return the ');
+        ie_open('code');
+          itext('ResponseEntity<T>');
+        ie_close('code');
+        itext(' of the type you especified.');
+      ie_close('p');
+      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).toEntity(\n    DataSource.class\n);\n\nAssert.assertEquals(HttpStatus.OK, dataSourceResponseEntity.getStatusCode());\n\nDataSource dataSource = dataSourceResponseEntity.getBody();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('When working with collections, the server will return "pages" of entities which will help you paginate the collection. In this situation the you have similar options:');
+      ie_close('p');
+      ie_open('p');
+        itext('if you want to obtain the list of objects (DataSource, Individual...) you just need to specify it passing an instance of ');
+        ie_open('code');
+          itext('TypeReferences.PagedResourcesType<DataSource>');
+        ie_close('code');
+        itext(' to the .toObject method.');
+      ie_close('p');
+      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    )', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The PagedResources object will contain the "Content" with the DataSources, the "metadata" with information about the pagination and the "links" with links to other resources. For example:');
+      ie_close('p');
+      $templateAlias2({code: '// Content\n\nCollection<DataSource> dataSources = pagedResources.getContent();\n\n// MetaData\n\nPagedResources.PageMetadata metadata = pagedResources.getMetadata();\n\nlong totalElements = metadata.getTotalElements();\nint pageSize = metadata.getSize();\n\n// Links\n\nList<Link> links = pagedResources.getLinks();\n\nString nextHref = pagedResources.getLink("next").getHref();', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('When you want to obtain the "page" of "Resources" which contains the objects and its links, then you can pass an instance of ');
+        ie_open('code');
+          itext('TypeReferences.PagedResourcesType<Resource<DataSource>>');
+        ie_close('code');
+        itext(' to the toObject method:');
+      ie_close('p');
+      $templateAlias2({code: 'PagedResources<Resource<DataSource>> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<Resource<DataSource>>() {}\n    )\n    \n// Content\n\nCollection<Resource<DataSource>> dataSources = pagedResources.getContent()', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this last example, the type of the Content was different, but the Metadata and Links were the same.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'postputdelete');
+      ie_open('h2');
+        itext('Post, Put and Delete');
+      ie_close('h2');
+      ie_open('p');
+        itext('You can also use the client to create, update or delete entities. You first need to follow the relationships until the desired endpoint and then execute your method. For example, this would create a datasource:');
+      ie_close('p');
+      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).post(\n    _getSampleDataSource("MY-DATASOURCE"), MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)\n\nAssert.assertEquals(\n    HttpStatus.OK, dataSourceResponseEntity.getStatusCode())\n\nDataSource createdDataSource = dataSourceResponseEntity.getBody()', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('This would update a DataSource:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters =\n    contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).put(\n    dataSource, MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('And this would delete a DataSource:');
+      ie_close('p');
+      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).delete(\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('ul');
+      ie_open('li');
+        itext('All these examples can be found in ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/liferay/com-liferay-osb-pulpo-engine-contacts-private/tree/7.0.x-private/osb-pulpo-engine-contacts-client-functional-test/src/testFunctional/groovy/com/liferay/osb/pulpo/engine/contacts/client/functional/test');
+          itext('github');
+        ie_close('a');
+        itext('.');
+      ie_close('li');
+    ie_close('ul');
     ie_open('input', null, null,
         'type', 'hidden',
         'value', opt_data.page.title);
@@ -11906,11 +11930,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param366}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param453}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'DRnzB.render';
+  $render.soyTemplateName = 'sMneF.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11920,16 +11944,14 @@ return exports;
 
 });
 
-class DRnzB extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DRnzB, templates);
+class sMneF extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(sMneF, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11980,7 +12002,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DRnzB, templates);
 /* 154 */,
 /* 155 */,
 /* 156 */,
-/* 157 */
+/* 157 */,
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12008,9 +12031,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _authenticationSoy = __webpack_require__(104);
+var _java_clientSoy = __webpack_require__(106);
 
-var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
+var _java_clientSoy2 = _interopRequireDefault(_java_clientSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12020,23 +12043,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DRnzB = function (_Component) {
-  _inherits(DRnzB, _Component);
+var sMneF = function (_Component) {
+  _inherits(sMneF, _Component);
 
-  function DRnzB() {
-    _classCallCheck(this, DRnzB);
+  function sMneF() {
+    _classCallCheck(this, sMneF);
 
-    return _possibleConstructorReturn(this, (DRnzB.__proto__ || Object.getPrototypeOf(DRnzB)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (sMneF.__proto__ || Object.getPrototypeOf(sMneF)).apply(this, arguments));
   }
 
-  return DRnzB;
+  return sMneF;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(DRnzB, _authenticationSoy2.default);
+_metalSoy2.default.register(sMneF, _java_clientSoy2.default);
 
-exports.default = DRnzB;
+exports.default = sMneF;
 
 /***/ })
-],[157]);
+],[158]);

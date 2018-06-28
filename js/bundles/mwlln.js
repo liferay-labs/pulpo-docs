@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([20],[
+webpackJsonppageComponent([17],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11656,12 +11656,15 @@ module.exports = function(module) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rjgvY", function() { return rjgvY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mwlln", function() { return mwlln; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11677,11 +11680,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace rjgvY.
+ * @fileoverview Templates in namespace mwlln.
  * @public
  */
 
-goog.module('rjgvY.incrementaldom');
+goog.module('mwlln.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11715,54 +11718,23 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param162 = function() {
+  var param235 = function() {
     ie_open('h6');
-      var dyn12 = opt_data.page.description;
-      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+      var dyn15 = opt_data.page.description;
+      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Account Segment Model');
+        itext('The Asset Model');
       ie_close('h2');
       ie_open('p');
-        itext('Account Segments are aggregations of Accounts.');
+        itext('Assets contain information about documents, pages, forms or any content that the individual interacts with.');
       ie_close('p');
       ie_open('p');
-        itext('These aggregations can be:');
+        itext('The entity asset contains the following fields:');
       ie_close('p');
       ie_open('ul');
-        ie_open('li');
-          itext('Dynamic: A Variable set of accounts matching a certain condition (filter) belong to the Account Segment.');
-        ie_close('li');
-        ie_open('li');
-          itext('Static: A fixed set of accounts have been manually associated to the Account Segment.');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The following fields are currently supported as part of an Account Segment:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('dateCreated');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('dateModified');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('filter');
-          ie_close('em');
-          itext(' - an oData filter that defines, for Account Segments with ');
-          ie_open('code');
-            itext('segmentType=DYNAMIC');
-          ie_close('code');
-          itext(', which Accounts belong to this Account Segment');
-        ie_close('li');
         ie_open('li');
           ie_open('em');
             itext('identifier');
@@ -11770,29 +11742,38 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('name');
+            itext('assetType');
           ie_close('em');
-          itext(' - The name of the Account Segment');
+          itext(' - e.g. forms, DocumentLibrary, Layout...');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('segmentType');
+            itext('dataSourceAssetPK');
           ie_close('em');
-          itext(' - defines if the Account Segment aggregates Accounts dynamically or statically. The accepted values are ');
-          ie_open('code');
-            itext('Type.STATIC');
-          ie_close('code');
-          itext(' and ');
-          ie_open('code');
-            itext('Type.DYNAMIC');
-          ie_close('code');
+          itext(' - The primary key of this asset in its original data source');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('dataSourceIdentifier');
+          ie_close('em');
+          itext(' - The identifier of the data source that sent this asset');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('name');
+          ie_close('em');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('description');
+          ie_close('em');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Account Segment Collection');
+        itext('Assets Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11806,9 +11787,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('account-segments');
+          itext('assets');
         ie_close('code');
-        itext(' pointing to the collection of Account Segments.');
+        itext(' pointing to the collection of Assets.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11816,10 +11797,15 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             'href', '/docs/general#pagination');
           itext('pagination');
         ie_close('a');
-        itext(' and ');
+        itext(', ');
         ie_open('a', null, null,
             'href', '/docs/general#sorting');
           itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11828,169 +11814,28 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of account segments under the key ');
+        itext(' section, a list of assets under the key ');
         ie_open('code');
-          itext('account-segments');
+          itext('assets');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/account-segments?page=0&size=20');
-        ie_close('code');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/assets?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "account-segments":[\n            {\n                 "dateCreated":"2017-11-15T16:23:35Z",\n                 "dateModified":"2017-11-15T16:23:35Z",\n                 "filter":null,\n                 "identifier":"AV_Afi6-Y3UMLZEdmkBE",\n                 "name":"Partners",\n                 "segmentType":"STATIC",\n                 "_links":{\n                    "self":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE"\n                    },\n                    "account-segments":{\n                       "href":"http://localhost:8084/my-project/account-segments{?filter}",\n                       "templated":true\n                    },\n                    "accounts":{\n                       "href":"http://localhost:8084/my-project/account-segments/AV_Afi6-Y3UMLZEdmkBE/accounts{?filter}",\n                       "templated":true\n                    },\n                    "memberships": {\n                        "href":"http://localhost:8084/my-project/account-segments/AV_81uji7IU2hIVahEU6/memberships"\n                    }\n                 }\n            }\n           ]\n       },\n    "_links":{\n       "self":{\n           "href":"http://localhost:8084/my-project/account-segments?page=0&size=20"\n       }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "assets": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/assets/AWNoD0uDeO0_hdUWjxo_"\n                    },\n                    "assets": {\n                        "href": "http://localhost:8084/my-project/assets{?filter,page,size,sort*}"\n                    }\n                },\n                "name": "Liferay: Digital experience software tailored to your needs",\n                "dataSourceAssetPK": "https://www.liferay.com/",\n                "identifier": "AWNoD0uDeO0_hdUWjxo_",\n                "dataSourceIdentifier": "AWNoD0HTeO0_hdUWjxoo",\n                "assetType": "Layout"\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Account Segments is supported making a ');
-        ie_open('code');
-          itext('POST');
-        ie_close('code');
-        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+        itext('Creation of new Assets or Update of Assets manually is not supported. Assets are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
       ie_close('p');
-      $templateAlias2({code: '{\n    "name" : "My First AccountSegment",\n    "filter" : "(organization/employees/value eq \'30\')",\n    "segmentType" : "DYNAMIC"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        itext('Deletion of existing Assets is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of assets, the link to each asset can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
-        itext('. That same url can be also used for delete (');
-        ie_open('code');
-          itext('DELETE');
-        ie_close('code');
-        itext(' method) and update (');
-        ie_open('code');
-          itext('PUT');
-        ie_close('code');
-        itext(' method).');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '3');
-      ie_open('h2');
-        itext('Account Segment Links');
-      ie_close('h2');
-      ie_open('p');
-        itext('As part of the links of each account, the following links can be found using these keys:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('code');
-            itext('account-segments');
-          ie_close('code');
-          itext(' - The collection of Account Segments');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('accounts');
-          ie_close('code');
-          itext(' - The collection of Accounts who belong to this Account Segment. This collection can be filtered as explained in ');
-          ie_open('a', null, null,
-              'href', '/docs/general#filtering');
-            itext('filtering');
-          ie_close('a');
-          itext('.');
-        ie_close('li');
-        ie_open('li');
-          ie_open('code');
-            itext('memberships');
-          ie_close('code');
-          itext(' - The collection of Memberships of this Account Segment. This collection can be used to add new members to this account segment manually, as described in #4.');
-        ie_close('li');
-      ie_close('ul');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '4');
-      ie_open('h2');
-        itext('Account Segment Membership Collection');
-      ie_close('h2');
-      ie_open('p');
-        itext('Creation of new Account-Account Segment memberships is supported only for Account Segments with ');
-        ie_open('code');
-          itext('segmentType=STATIC');
-        ie_close('code');
-        itext(' by making a ');
-        ie_open('code');
-          itext('POST');
-        ie_close('code');
-        itext(' to the ');
-        ie_open('code');
-          itext('memberships');
-        ie_close('code');
-        itext(' Collection URL of each account segment . This is an example of the body passed to this POST request to the URL');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "accountIdentifier" : "my-account-identifier"\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('A ');
-        ie_open('code');
-          itext('DELETE');
-        ie_close('code');
-        itext(' request to the URL ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/account-segments/my-account-segment-identifier/memberships/my-account-identifier');
-        ie_close('code');
-        itext(' removes an existing Account-Account Segment membership.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', '5');
-      ie_open('h2');
-        itext('Account Segment Membership Count');
-      ie_close('h2');
-      ie_open('p');
-        itext('The current value of the count of Accounts that are members of an Account Segment can be obtained from the ');
-        ie_open('code');
-          itext('totalElements');
-        ie_close('code');
-        itext(' field of the ');
-        ie_open('code');
-          itext('accounts');
-        ie_close('code');
-        itext(' collection.');
-      ie_close('p');
-      ie_open('p');
-        itext('The historical values of the count of Accounts that are members of an Account Segment are stored as ');
-        ie_open('a', null, null,
-            'href', '/docs/fields');
-          itext('Fields');
-        ie_close('a');
-        itext(' with the name ');
-        ie_open('code');
-          itext('accountCount');
-        ie_close('code');
-        itext(' and associated to the Individual Segment through the ');
-        ie_open('code');
-          itext('ownerType');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('ownerIdentifier');
-        ie_close('code');
-        itext(' properties. For example, using the oData filter');
-        ie_open('code');
-          itext('(name eq \'accountCount\') and (ownerype eq \'account-segment\') and (ownerIdentifier eq \'AV_Afi6-Y3UMLZEdmkBE\')');
-        ie_close('code');
-        itext('returns a collection of fields with the historical count values for the Account Segment with identifier ');
-        ie_open('code');
-          itext('AV_Afi6-Y3UMLZEdmkBE');
-        ie_close('code');
         itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The latest value of the count is also stored in the fields of the Account Segment and therefore it can be used to filter and sort the collection of Account Segments. However, it is very important to know that ');
-        ie_open('em');
-          itext('this value may be outdated');
-        ie_close('em');
-        itext(' since this is just the latest historical value that is updated once a day. For the accurate number of members, the totalElements field from the collection should be retrieved.');
-      ie_close('p');
-      ie_open('p');
-        itext('For example, this URL would obtain the the collection of Account segments sorted by number of members.');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/account-segments?sort=fields/accountCount/value');
-        ie_close('code');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -12002,11 +11847,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param162}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param235}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'rjgvY.render';
+  $render.soyTemplateName = 'mwlln.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12016,17 +11861,14 @@ return exports;
 
 });
 
-class rjgvY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rjgvY, templates);
+class mwlln extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mwlln, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 96 */,
-/* 97 */,
-/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
@@ -12076,7 +11918,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rjgvY, templates);
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12104,7 +11949,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(95);
+var _indexSoy = __webpack_require__(98);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12116,23 +11961,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var rjgvY = function (_Component) {
-  _inherits(rjgvY, _Component);
+var mwlln = function (_Component) {
+  _inherits(mwlln, _Component);
 
-  function rjgvY() {
-    _classCallCheck(this, rjgvY);
+  function mwlln() {
+    _classCallCheck(this, mwlln);
 
-    return _possibleConstructorReturn(this, (rjgvY.__proto__ || Object.getPrototypeOf(rjgvY)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (mwlln.__proto__ || Object.getPrototypeOf(mwlln)).apply(this, arguments));
   }
 
-  return rjgvY;
+  return mwlln;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(rjgvY, _indexSoy2.default);
+_metalSoy2.default.register(mwlln, _indexSoy2.default);
 
-exports.default = rjgvY;
+exports.default = mwlln;
 
 /***/ })
-],[148]);
+],[151]);

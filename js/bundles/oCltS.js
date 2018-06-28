@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([12],[
+webpackJsonppageComponent([15],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11661,15 +11661,12 @@ module.exports = function(module) {
 /* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ZcsSK", function() { return ZcsSK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "oCltS", function() { return oCltS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11685,11 +11682,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ZcsSK.
+ * @fileoverview Templates in namespace oCltS.
  * @public
  */
 
-goog.module('ZcsSK.incrementaldom');
+goog.module('oCltS.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11723,59 +11720,50 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param350 = function() {
+  var param267 = function() {
     ie_open('h6');
-      var dyn20 = opt_data.page.description;
-      if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+      var dyn17 = opt_data.page.description;
+      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Field Model');
+        itext('The Data Source Model');
       ie_close('h2');
       ie_open('p');
-        itext('Fields contain information about different entities (');
+        itext('DataSources support a subset of the Type ');
         ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
+            'href', 'http://schema.org/DataFeed');
+          itext('DataFeed');
         ie_close('a');
-        itext(', accounts, individual segments... etc).');
+        itext(' from Schema.org');
       ie_close('p');
       ie_open('p');
-        itext('All the different values in time for a field are stored as fields themeshelves. Therefore, if the field Address for an Individual changed 5 times, we will have 5 fields for the Address for that particular Individual.');
-      ie_close('p');
-      ie_open('p');
-        itext('The entity field contains the following fields:');
+        itext('The following fields are currently supported:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('identifier');
+            itext('about');
           ie_close('em');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('context');
+            itext('author');
           ie_close('em');
-          itext(' - The context of the field. Some examples are ');
-          ie_open('code');
-            itext('demographics');
-          ie_close('code');
-          itext(' or ');
-          ie_open('code');
-            itext('interests');
-          ie_close('code');
+          ie_open('ul');
+            ie_open('li');
+              itext('identifier');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('dataSourceIdentifier');
+            itext('dateCreated');
           ie_close('em');
-          itext(' - The identifier of the (');
-          ie_open('a', null, null,
-              'href', '/docs/datasources');
-            itext('datasource');
-          ie_close('a');
-          itext(' that provided this information');
         ie_close('li');
         ie_open('li');
           ie_open('em');
@@ -11784,14 +11772,42 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('fieldType');
+            itext('identifier');
           ie_close('em');
-          itext(' - A schema.org property');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('label');
+            itext('lastConfigChange');
           ie_close('em');
+          itext(' - contains information about the configuration associated to this Data Source.');
+          ie_open('ul');
+            ie_open('li');
+              itext('transactionId - identifies the latest configuration operation');
+            ie_close('li');
+            ie_open('li');
+              itext('status - the status of the latest configuration operation. Possible values are:');
+              ie_open('ul');
+                ie_open('li');
+                  ie_open('code');
+                    itext('SENT');
+                  ie_close('code');
+                  itext(' - the configuration has been sent by the Data Source, but no confirmation has been received');
+                ie_close('li');
+                ie_open('li');
+                  ie_open('code');
+                    itext('OK_RECEIVED');
+                  ie_close('code');
+                  itext(' - the configuration has been sent by the Data Source, and a confirmation that been received with no errors.');
+                ie_close('li');
+                ie_open('li');
+                  ie_open('code');
+                    itext('ERROR_RECEIVED');
+                  ie_close('code');
+                  itext(' - the configuration has been sent by the Data Source, and a confirmation that been received with errors. Your administrator can use the transactionId to track the error on the log files.');
+                ie_close('li');
+              ie_close('ul');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
           ie_open('em');
@@ -11800,49 +11816,87 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('value');
+            itext('provider');
+          ie_close('em');
+          ie_open('ul');
+            ie_open('li');
+              itext('type - See the ');
+              ie_open('a', null, null,
+                  'href', '#provider');
+                itext('DataSource Provider');
+              ie_close('a');
+              itext(' section for more details');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('url');
           ie_close('em');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('ownerType');
+            itext('subjectOf');
           ie_close('em');
-          itext(' - The entity that owns this field (e.g. an Individual, an Account...)');
+          itext(' - An event about this Data Source');
+          ie_open('ul');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+            ie_open('li');
+              itext('startDate');
+            ie_close('li');
+            ie_open('li');
+              itext('endDate');
+            ie_close('li');
+            ie_open('li');
+              itext('location');
+            ie_close('li');
+            ie_open('li');
+              itext('sameAs - the URL of the Event');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('ownerIdentifier');
+            itext('state');
           ie_close('em');
-          itext(' - The Identifier of the entity that owns this field.');
+          itext(' - defines the current state of the datasource as a result of certain operations. The accepted values are ');
+          ie_open('code');
+            itext('CONFIGURING');
+          ie_close('code');
+          itext(', ');
+          ie_open('code');
+            itext('DELETE_ERROR');
+          ie_close('code');
+          itext(',');
+          ie_open('code');
+            itext('IN_DELETION');
+          ie_close('code');
+          itext(', ');
+          ie_open('code');
+            itext('READY');
+          ie_close('code');
         ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('In addition, the following two fields are returned within the entity field but they cannot be used for filtering nor sorting.');
-      ie_close('p');
-      ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('dataSourceName');
+            itext('status');
           ie_close('em');
-          itext(' - The name of the (');
-          ie_open('a', null, null,
-              'href', '/docs/datasources');
-            itext('datasource');
-          ie_close('a');
-          itext(' that provided this information');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('sourceName');
-          ie_close('em');
-          itext(' - The  name of the original field in the Data Source');
+          itext(' - defines if the DataSource is working or not. The accepted values are ');
+          ie_open('code');
+            itext('ACTIVE');
+          ie_close('code');
+          itext(' and ');
+          ie_open('code');
+            itext('INACTIVE');
+          ie_close('code');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Fields Collection');
+        itext('DataSources Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11856,9 +11910,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('fields');
+          itext('data-sources');
         ie_close('code');
-        itext(' pointing to the collection of Fields.');
+        itext(' pointing to the collection of Data Sources.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11883,78 +11937,242 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of fields under the key ');
+        itext(' section, a list of data sources under the key ');
         ie_open('code');
-          itext('fields');
+          itext('data-sources');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/fields?page=0&size=1');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/data-sources?page=0&size=1');
+        ie_close('code');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "fields": [\n            {\n                "context": "demographics",\n                "dataSourceIdentifier": "AV-0-c1_4MMBozrmZ0T_",\n                "dateModified": "2017-11-13T10:43:13Z",\n                "fieldType": "http://schema.org/telephone",\n                "identifier": "AV-0-deU4MMBozrmZ0UO",\n                "label": "home",\n                "name": "telephone",\n                "ownerIdentifier": "AV-0-dcI4MMBozrmZ0UM",\n                "ownerType": "individual",\n                "value": "+34699001234",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/fields/AV-0-deU4MMBozrmZ0UO"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-0-dcI4MMBozrmZ0UM"\n                    },\n                    "fields": {\n                        "href": "http://localhost:8084/my-project/fields{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/fields?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "data-sources": [\n            {\n                "dateCreated": "2017-09-14T12:00:04Z",\n                "dateModified": "2017-09-14T12:00:04Z",\n                "identifier": "AV6AQqVHWUV1yhbro9xD",\n                "lastConfigChange": {\n                    "transactionId": "AWJzfSDgdgFFtKdpvGBL",\n                    "status": "SENT"\n                },\n                "name": "my Liferay 6.2",\n                "provider": {\n                    "type": "CSV"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/data-sources/AV6AQqVHWUV1yhbro9xD"\n                    },\n                    "data-sources": {\n                        "href": "http://localhost:8084/my-project/data-sources"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/data-sources?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/data-sources?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Fields or Update of Fields manually is not supported. Fields are automatically generated and updated from the Field Chunks sent by the different Connectors.');
+        itext('Creation of new Data Sources is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
       ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "My First DataSource",\n    "provider" : {\n        "type" : "CSV"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Deletion of existing Fields is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of fields, the link to each field can be found with the rel ');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
         ie_open('code');
           itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'delete-datasource');
+      ie_open('h2');
+        itext('Deleting a Data Source');
+      ie_close('h2');
+      ie_open('p');
+        itext('Deleting a DataSource is a complex operation since it involves deleting all the configuration for that datasource and all information provided from that datasource, including at least:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Deleting configuration of field mappings configured to map information from the deleted datasource');
+        ie_close('li');
+        ie_open('li');
+          itext('Deleting fields obtained from the deleted datasource');
+        ie_close('li');
+        ie_open('li');
+          itext('Deleting the information provided from this datasource from individuals');
+        ie_close('li');
+        ie_open('li');
+          itext('Deleting the datasource information in the Liferay DE Connector instance (for DE Data Sources)');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Since this process can take up to several minutes, when a ');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' request is made to the url of a DataSource, it won\'t be immediately deleted, it will just change its state to ');
+        ie_open('code');
+          itext('IN_DELETION');
+        ie_close('code');
+        itext('. After all the operations are completed, the data source will be finally deleted and won\'t be found anymore. However, if there is an error that prevented the final deletion of the data source it will be marked as ');
+        ie_open('code');
+          itext('DELETE_ERROR');
         ie_close('code');
         itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '3');
+        'id', 'provider');
       ie_open('h2');
-        itext('Retrieving historical values');
+        itext('DataSource Provider');
       ie_close('h2');
       ie_open('p');
-        itext('Fields store the historical values of properties of other resources, such as ');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('Individuals');
-        ie_close('a');
-        itext(' (e.g. demographics fields, topics of interests) or ');
-        ie_open('a', null, null,
-            'href', '/docs/individual_segments');
-          itext('Individual Segments');
-        ie_close('a');
-        itext(' (e.g. member count, topics of interests). These values can be obtained by using the ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext(' option in the Field Collection with the ');
+        itext('The ');
         ie_open('code');
-          itext('ownerType');
+          itext('provider');
+        ie_close('code');
+        itext(' field of the DataSource contains the specific configuration for a provider (e.g. Liferay, CSV). As this information changes from one type of provider to other, the set of fields is different, too.');
+      ie_close('p');
+      ie_open('p');
+        itext('A valid DataSource provider field must contain at least a field ');
+        ie_open('code');
+          itext('type');
+        ie_close('code');
+        itext(' with one of the supported types as values. Currently, the supported values are ');
+        ie_open('code');
+          itext('LIFERAY');
         ie_close('code');
         itext(' and ');
         ie_open('code');
-          itext('ownerIdentifier');
+          itext('CSV');
         ie_close('code');
-        itext(' corresponding to the original resource.');
+        itext('.');
       ie_close('p');
+      ie_open('h3');
+        itext('Liferay DataSource Provider');
+      ie_close('h3');
       ie_open('p');
-        itext('These are some examples of Fields filtering to retrieve historical values of certain Individual and Individual Segment properties:');
+        itext('The following fields are supported for a Liferay Provider:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('The historical values of the address for an Individual: ');
+          ie_open('em');
+            itext('type');
+          ie_close('em');
+          itext(' - the value must be ');
           ie_open('code');
-            itext('((context eq \'demographics\') and (name eq \'address\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
+            itext('LIFERAY');
           ie_close('code');
+          itext(' for a Liferay Provider');
         ie_close('li');
         ie_open('li');
-          itext('The historical counts of members of an Individual Segment: ');
-          ie_open('code');
-            itext('((name eq \'individualCount\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
-          ie_close('code');
+          ie_open('em');
+            itext('analyticsConfiguration');
+          ie_close('em');
+          itext(' - Contains the analytics configuration for the DataSource');
+          ie_open('ul');
+            ie_open('li');
+              itext('analyticsKey');
+            ie_close('li');
+            ie_open('li');
+              itext('enableAllSites - If the value is ');
+              ie_open('code');
+                itext('true');
+              ie_close('code');
+              itext(', all the sites in the instance will send analytics, ignoring the configuration in the ');
+              ie_open('code');
+                itext('sites');
+              ie_close('code');
+              itext(' field.');
+            ie_close('li');
+            ie_open('li');
+              itext('sites - A list elements with the structure:');
+              ie_open('ul');
+                ie_open('li');
+                  itext('enableAllChildren - If the value is ');
+                  ie_open('code');
+                    itext('true');
+                  ie_close('code');
+                  itext(', all the children of this site will send analytics');
+                ie_close('li');
+                ie_open('li');
+                  itext('identifier - The primary key of the site');
+                ie_close('li');
+              ie_close('ul');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('contactsConfiguration');
+          ie_close('em');
+          itext(' - Contains the contacts configuration for the DataSource');
+          ie_open('ul');
+            ie_open('li');
+              itext('enableAllContacts - If the value is ');
+              ie_open('code');
+                itext('true');
+              ie_close('code');
+              itext(', all the contacts in the instance will be synchronized, ignoring the configuration in the ');
+              ie_open('code');
+                itext('organizations');
+              ie_close('code');
+              itext(' and ');
+              ie_open('code');
+                itext('userGroups');
+              ie_close('code');
+              itext(' fields.');
+            ie_close('li');
+            ie_open('li');
+              itext('organizations - A list elements with the structure:');
+              ie_open('ul');
+                ie_open('li');
+                  itext('enableAllChildren - If the value is ');
+                  ie_open('code');
+                    itext('true');
+                  ie_close('code');
+                  itext(', all the contacts in the children of this organization will be synchronized');
+                ie_close('li');
+                ie_open('li');
+                  itext('identifier - The primary key of the organization');
+                ie_close('li');
+              ie_close('ul');
+            ie_close('li');
+            ie_open('li');
+              itext('userGroups - A list elements with the structure:');
+              ie_open('ul');
+                ie_open('li');
+                  itext('enableAllChildren - If the value is ');
+                  ie_open('code');
+                    itext('true');
+                  ie_close('code');
+                  itext(', all the contacts in the children of this user group will be synchronized');
+                ie_close('li');
+                ie_open('li');
+                  itext('identifier - The primary key of the user group');
+                ie_close('li');
+              ie_close('ul');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('instanceInfo');
+          ie_close('em');
+          itext(' - Contacts information about the Liferay Portal instance');
+          ie_open('ul');
+            ie_open('li');
+              itext('companyId');
+            ie_close('li');
+            ie_open('li');
+              itext('lcsInstallationId');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
       ie_close('ul');
+      ie_open('p');
+        itext('This is an example of the body passed  to the ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' request to create a DataSource with a ');
+        ie_open('code');
+          itext('provider');
+        ie_close('code');
+        itext(' field of type Liferay:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "name" : "Liferay Intranet DataSource",\n    "provider" : {\n        "analyticsConfiguration" : {\n            "analyticsKey" : "My-Key-For-Analytics",\n            "enableAllSites" : false,\n            "sites" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "1"\n                }\n            ]\n        },\n        "contactsConfiguration" : {\n            "enableAllContacts" : false,\n            "organizations" : [\n                {\n                    "enableAllChildren" : true,\n                    "identifier" : "2"\n                },\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "3"\n                }\n            ],\n            "userGroups" : [\n                {\n                    "enableAllChildren" : false,\n                    "identifier" : "4"\n                }\n            ]\n        },\n        "instanceInfo" : {\n            "companyId" : "1",\n            "lcsInstallationId" : "1"\n        },\n        "type" : "LIFERAY"\n    },\n    "author" : {\n        "name" : "Shinn",\n        "identifier" : "ABC1234"\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11965,11 +12183,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param350}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param267}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ZcsSK.render';
+  $render.soyTemplateName = 'oCltS.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11979,14 +12197,17 @@ return exports;
 
 });
 
-class ZcsSK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ZcsSK, templates);
+class oCltS extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(oCltS, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 101 */,
+/* 102 */,
+/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -12036,10 +12257,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ZcsSK, templates);
 /* 150 */,
 /* 151 */,
 /* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12067,7 +12285,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(103);
+var _indexSoy = __webpack_require__(100);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -12079,23 +12297,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ZcsSK = function (_Component) {
-  _inherits(ZcsSK, _Component);
+var oCltS = function (_Component) {
+  _inherits(oCltS, _Component);
 
-  function ZcsSK() {
-    _classCallCheck(this, ZcsSK);
+  function oCltS() {
+    _classCallCheck(this, oCltS);
 
-    return _possibleConstructorReturn(this, (ZcsSK.__proto__ || Object.getPrototypeOf(ZcsSK)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (oCltS.__proto__ || Object.getPrototypeOf(oCltS)).apply(this, arguments));
   }
 
-  return ZcsSK;
+  return oCltS;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ZcsSK, _indexSoy2.default);
+_metalSoy2.default.register(oCltS, _indexSoy2.default);
 
-exports.default = ZcsSK;
+exports.default = oCltS;
 
 /***/ })
-],[156]);
+],[153]);
