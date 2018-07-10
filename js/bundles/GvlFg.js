@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11662,17 +11662,12 @@ module.exports = function(module) {
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sMneF", function() { return sMneF; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GvlFg", function() { return GvlFg; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11684,15 +11679,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from java_client.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace sMneF.
+ * @fileoverview Templates in namespace GvlFg.
  * @public
  */
 
-goog.module('sMneF.incrementaldom');
+goog.module('GvlFg.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11726,201 +11721,257 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param453 = function() {
+  var param293 = function() {
     ie_open('h6');
-      var dyn23 = opt_data.page.description;
-      if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
-    ie_open('p');
-      itext('Pulpo provides a Java Client that allows you to consume this API inspired by the ');
-      ie_open('a', null, null,
-          'href', 'https://blog.codecentric.de/en/2013/11/traverson/');
-        itext('Traverson JavaScript library');
-      ie_close('a');
-    ie_close('p');
-    ie_open('p');
-      itext('This client will help you navigate the API leveraging its hypermedia capabilities.');
-    ie_close('p');
     ie_open('article', null, null,
-        'id', 'setup');
+        'id', '1');
       ie_open('h2');
-        itext('Java API');
+        itext('The Field Mapping Model');
       ie_close('h2');
       ie_open('p');
-        itext('In case you want to use your own client, you will still find valuable our models in Java. You can use our API with this gradle dependency:');
-      ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.api", version: "0.0.2-20180515.101145-15"', mode: 'text'}, null, opt_ijData);
-      ie_open('h2');
-        itext('Set Up');
-      ie_close('h2');
-      ie_open('p');
-        itext('In order to use the Client, you should have this gradle dependency:');
-      ie_close('p');
-      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.client", version: "0.0.1-20180427.224113-32"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In case you need also the transitive dependencies, you should add:');
-      ie_close('p');
-      $templateAlias2({code: 'compileInclude group: "com.eclipsesource.minimal-json", name: "minimal-json", version: "0.9.4"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-annotations", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-core", version: "2.6.3"\ncompileInclude group: "com.fasterxml.jackson.core", name: "jackson-databind", version: "2.6.3"\ncompileInclude group: "com.github.javafaker", name: "javafaker", version: "0.13"\ncompileInclude group: "com.github.mifmif", name: "generex", version: "1.0.2"\ncompileInclude group: "com.github.wnameless", name: "json-flattener", version: "0.4.1"\ncompileInclude group: "com.liferay", name: "com.liferay.petra.lang", version: "1.1.2"\ncompileInclude group: "dk.brics.automaton", name: "automaton", version: "1.11.2"\ncompileInclude group: "org.apache.commons", name: "commons-lang3", version: "3.5"', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('If you are using the client from an OSGI runtime, you may need to exclude some packages. See ');
+        itext('Field Mappings allow us to map the fields from the different ');
         ie_open('a', null, null,
-            'href', 'https://github.com/liferay/com-liferay-pulpo-connector-de-private/blob/7.0.x-private/pulpo-connector-de-contacts-demo/bnd.bnd');
-          itext('one example');
+            'href', '/docs/datasources');
+          itext('datasources');
+        ie_close('a');
+        itext(' to the');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('fields');
+        ie_close('a');
+        itext(' in our entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', Accounts... etc)');
+      ie_close('p');
+      ie_open('p');
+        itext('The following fields are currently supported in a field mapping:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('context');
+            ie_close('em');
+            itext(' - the context of the field (demographics, sentiment... etc)');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dataSourceFieldNames');
+            ie_close('em');
+            itext(' - a map with the name of the original field for each Data Source.');
+          ie_close('p');
+          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dateCreated');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('dateModified');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldName');
+            ie_close('em');
+            itext(' - the name of the field on our model');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldType');
+            ie_close('em');
+            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('identifier');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('author');
+            ie_close('em');
+          ie_close('p');
+          ie_open('ul');
+            ie_open('li');
+              itext('identifier');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('strategy');
+            ie_close('em');
+            itext(' - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or give preference to the value from a specific data source. See more details below.');
+          ie_close('p');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Field Mappings Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('As described in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#navigation');
+          itext('Initial Navigation to obtain URLs');
+        ie_close('a');
+        itext(', the ');
+        ie_open('code');
+          itext('_links');
+        ie_close('code');
+        itext(' section of the root resource will contain a template link labelled as ');
+        ie_open('code');
+          itext('field-mappings');
+        ie_close('code');
+        itext(' pointing to the collection of Field Mappings.');
+      ie_close('p');
+      ie_open('p');
+        itext('This API supports ');
+        ie_open('a', null, null,
+            'href', '/docs/general#pagination');
+          itext('pagination');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
         ie_close('a');
         itext('.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'obtainClient');
-      ie_open('h2');
-        itext('Obtain the client');
-      ie_close('h2');
       ie_open('p');
-        itext('You can obtain a Contacts Client instance using the ContactsClientFactory by pointing it to an ');
-        ie_open('a', null, null,
-            'href', '/#environments');
-          itext('engine URL');
-        ie_close('a');
-        itext(' and a ProjectID.');
-      ie_close('p');
-      $templateAlias2({code: 'ContactsEngineClient contactsEngineClient = \n    ContactsEngineClientFactory.getClient(\n        "https://contacts-dev.liferay.com/" "MY-PROJECT-ID");', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('You then go ahead and define the relation names you want to discover and follow. relation names can either be simple names or ');
-        ie_open('a', null, null,
-            'href', 'http://goessner.net/articles/JsonPath/');
-          itext('JSONPath');
-        ie_close('a');
-        itext(' expressions (starting with an $).');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'traversing');
-      ie_open('h2');
-        itext('Traversing the API');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now, we will show some examples of how to traverse the API using the client.');
-      ie_close('p');
-      ie_open('p');
-        itext('For example, to obtain the list of data sources, you could do:');
-      ie_close('p');
-      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        contactsEngineClient.getDefaultTemplateParameters()\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    );\n            \nCollection<DataSource> dataSources = pagedResources.getContent();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Another example, to obtain just one datasource by the identifier:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nDataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('Or one more, just to obtain the name of the datasource:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-DataSource-Identifier")\n\nString dataSourceName = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('These samples hand a parameter map into the execution (withTemplateParameters). The parameters will be used to expand URIs found during the traversal that are templated (the projectId variable is already filled when you call ');
+        itext('The response will contain inside the ');
         ie_open('code');
-          itext('contactsEngineClient.getDefaultTemplateParameters()');
+          itext('_embedded');
         ie_close('code');
-        itext(').');
-      ie_close('p');
-      ie_open('p');
-        itext('In the case of the last example, we evaluate a JSONPath expression to access the data source\u2019s name.');
-      ie_close('p');
-      ie_open('p');
-        itext('The examples listed above show a simple version of traversal with just one hop. A more complex example with several hops could look like this:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters();\n\nparameters.put(ContactsEngineClient.IDENTIFIER, "My-Individual-Identifier")\n\nString individualSegmentName = contactsEngineClient.follow(\n    ContactsEngineClient.INDIVIDUAL, ContactsEngineClient.INDIVIDUAL_SEGMENTS   \n).withTemplateParameters(\n    parameters\n).toObject(\n    \'$.name\'\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In this previous example, the follow method received 2 rels that will trigger 2 hops. At each hop, the same template parameters are applied. However, it could be customized at each hop:');
-      ie_close('p');
-      $templateAlias2({code: 'String individualSegmentName = \n    contactsEngineClient\n        .follow(\n            Hop.rel(ContactsEngineClient.INDIVIDUAL).withParameter("identifier", "12345"))\n        ).follow(\n            ContactsEngineClient.INDIVIDUAL_SEGMENTS\n        ).follow(\n            \'$\' + \'._embedded.\' + ContactsEngineClient.INDIVIDUAL_SEGMENTS + \'[0]\'\n        ).withTemplateParameters(\n            commonParameters\n        ).toObject(\n            \'$.name\'\n        );', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('The ');
+        itext(' section, a list of fields under the key ');
         ie_open('code');
-          itext('Hop.rel(String rel\u200B)');
+          itext('field-mappings');
         ie_close('code');
-        itext(' function is a convenient way to create a single Hop. Using .withParameter(key, value) makes it simple to specify URI Template variables for just one hop. You can chain as many .withParameter() as needed or even pass a Map using .withParameter(Map).');
-      ie_close('p');
-      ie_open('p');
-        itext('The follow() method is chainable, meaning you can string together multiple hops as shown above. You can either put multiple, simple string-based rels (follow("individuals", "individual-segments")) or a single hop with specific parameters.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'return');
-      ie_open('h2');
-        itext('Return Objects');
-      ie_close('h2');
-      ie_open('p');
-        itext('There are different types of objects you can retrieve from the API, and you can decide which one you want.');
-      ie_close('p');
-      ie_open('p');
-        itext('For example, if you want to obtain just one object (DataSource, Individual...) you just need to specify it using the .toObject method.');
-      ie_close('p');
-      $templateAlias2({code: 'DataSource dataSource = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    DataSource.class\n);', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In some situations you may not only want the object, but the full "Resource" which contains the object and its links, then you can pass a new TypeReference to the toObject method:');
-      ie_close('p');
-      $templateAlias2({code: 'Resource<DataSource> dataSourceResource =\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).toObject(\n    new TypeReferences.ResourceType<DataSource>() {\n    }\n);\n\nList<Link> links = dataSourceResource.getLinks();\n\nString selfHref = dataSourceResource.getLink("self").getHref();\n\nDataSource dataSource = dataSourceResource.getContent();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('You can also obtain more information about the HTTP Request doing toEntity. It will return the ');
-        ie_open('code');
-          itext('ResponseEntity<T>');
-        ie_close('code');
-        itext(' of the type you especified.');
-      ie_close('p');
-      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).toEntity(\n    DataSource.class\n);\n\nAssert.assertEquals(HttpStatus.OK, dataSourceResponseEntity.getStatusCode());\n\nDataSource dataSource = dataSourceResponseEntity.getBody();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('When working with collections, the server will return "pages" of entities which will help you paginate the collection. In this situation the you have similar options:');
-      ie_close('p');
-      ie_open('p');
-        itext('if you want to obtain the list of objects (DataSource, Individual...) you just need to specify it passing an instance of ');
-        ie_open('code');
-          itext('TypeReferences.PagedResourcesType<DataSource>');
-        ie_close('code');
-        itext(' to the .toObject method.');
-      ie_close('p');
-      $templateAlias2({code: 'PagedResources<DataSource> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<DataSource>() {\n        }\n    )', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('The PagedResources object will contain the "Content" with the DataSources, the "metadata" with information about the pagination and the "links" with links to other resources. For example:');
-      ie_close('p');
-      $templateAlias2({code: '// Content\n\nCollection<DataSource> dataSources = pagedResources.getContent();\n\n// MetaData\n\nPagedResources.PageMetadata metadata = pagedResources.getMetadata();\n\nlong totalElements = metadata.getTotalElements();\nint pageSize = metadata.getSize();\n\n// Links\n\nList<Link> links = pagedResources.getLinks();\n\nString nextHref = pagedResources.getLink("next").getHref();', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('When you want to obtain the "page" of "Resources" which contains the objects and its links, then you can pass an instance of ');
-        ie_open('code');
-          itext('TypeReferences.PagedResourcesType<Resource<DataSource>>');
-        ie_close('code');
-        itext(' to the toObject method:');
-      ie_close('p');
-      $templateAlias2({code: 'PagedResources<Resource<DataSource>> pagedResources =\n    _contactsEngineClient.follow(\n        ContactsEngineClient.DATA_SOURCES\n    ).withTemplateParameters(\n        parameters\n    ).toObject(\n        new TypeReferences.PagedResourcesType<Resource<DataSource>>() {}\n    )\n    \n// Content\n\nCollection<Resource<DataSource>> dataSources = pagedResources.getContent()', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('In this last example, the type of the Content was different, but the Metadata and Links were the same.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'postputdelete');
-      ie_open('h2');
-        itext('Post, Put and Delete');
-      ie_close('h2');
-      ie_open('p');
-        itext('You can also use the client to create, update or delete entities. You first need to follow the relationships until the desired endpoint and then execute your method. For example, this would create a datasource:');
-      ie_close('p');
-      $templateAlias2({code: 'ResponseEntity<DataSource> dataSourceResponseEntity = contactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCES\n).withTemplateParameters(\n    contactsEngineClient.getDefaultTemplateParameters()\n).post(\n    _getSampleDataSource("MY-DATASOURCE"), MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)\n\nAssert.assertEquals(\n    HttpStatus.OK, dataSourceResponseEntity.getStatusCode())\n\nDataSource createdDataSource = dataSourceResponseEntity.getBody()', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('This would update a DataSource:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters =\n    contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).put(\n    dataSource, MediaType.APPLICATION_JSON\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        itext('And this would delete a DataSource:');
-      ie_close('p');
-      $templateAlias2({code: 'Map<String, Object> parameters = contactsEngineClient.getDefaultTemplateParameters()\n\nparameters.put(IDENTIFIER, identifier)\n\ncontactsEngineClient.follow(\n    ContactsEngineClient.DATA_SOURCE\n).withTemplateParameters(\n    parameters\n).delete(\n).toEntity(\n    DataSource.class\n)', mode: 'text'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('ul');
-      ie_open('li');
-        itext('All these examples can be found in ');
-        ie_open('a', null, null,
-            'href', 'https://github.com/liferay/com-liferay-osb-pulpo-engine-contacts-private/tree/7.0.x-private/osb-pulpo-engine-contacts-client-functional-test/src/testFunctional/groovy/com/liferay/osb/pulpo/engine/contacts/client/functional/test');
-          itext('github');
-        ie_close('a');
         itext('.');
-      ie_close('li');
-    ie_close('ul');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Creation of new Field Mappings is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('p');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
+        ie_open('code');
+          itext('self');
+        ie_close('code');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
+      ie_close('p');
+      ie_open('p');
+        itext('Adding new data Source Field Names without having to update the full field mapping is also supported using the ');
+        ie_open('code');
+          itext('PATCH');
+        ie_close('code');
+        itext(' method to an entity link. The body must contain a Data Source Field Name object, wich contains the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('dataSourceIdentifier - the identifier of an existing datasource.');
+        ie_close('li');
+        ie_open('li');
+          itext('fieldName - the name of this field in the existing data source');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of the body to patch an existing Field Mapping in order to add another data source field name:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",\n    "fieldName" : "years-old"   \n}', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Field Mappings Strategies');
+      ie_close('h2');
+      ie_open('p');
+        itext('Field Mapping Strategies have the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('key');
+          ie_close('em');
+          itext(' - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITY_DATASOURCE"');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('configuration');
+          ie_close('em');
+          itext(' - A map with the specific configuration for the strategy. e.g. Most Recent doesn\'t need any configuration. However, Priority DataSource requires the value dataSourceIdentifier.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Most Recent Strategy');
+      ie_close('h4');
+      ie_open('p');
+        itext('This strategy will add to the user fields the most recent field coming from any data source. For example, if we have two data sources set up and a field mapping configured to obtain the email address from both. If we only receive the email from one of them, that is the field that will be added to the individual profile. However, if we receive both, then the one which we received the latest will be the one added to the individual profile.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a valid strategy passed in JSON when creating or updating a field mapping to use the most recent field:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "key": "MOST_RECENT"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('h4');
+        itext('Priority Data Source Strategy');
+      ie_close('h4');
+      ie_open('p');
+        itext('This strategy will give preference to the information coming from a particular data source. In order to be configured, the configuration must include the dataSourceIdentifier. For example, if we have three data sources set up (A, B and C), and a field mapping configured to obtain the telephone from all of them. When we set A as the priority data source, if we receive a telephone field from A, then that will be the field added to the inidividual profile. In case we don\'t receive any telephone from A, but we do receive it from B and C, then the most recent strategy applies.');
+      ie_close('p');
+      ie_open('p');
+        itext('And this is an example setting the data source with identifier ABCEDFG as the priority data source.');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "key": "PRIORITY_DATASOURCE",\n    "configuration": {\n        "dataSourceIdentifier": "ABCDEFG"\n    }\n}', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
         'value', opt_data.page.title);
@@ -11930,11 +11981,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param453}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param293}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'sMneF.render';
+  $render.soyTemplateName = 'GvlFg.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11944,14 +11995,19 @@ return exports;
 
 });
 
-class sMneF extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(sMneF, templates);
+class GvlFg extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GvlFg, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -11999,11 +12055,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(sMneF, templates);
 /* 151 */,
 /* 152 */,
 /* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12031,9 +12083,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _java_clientSoy = __webpack_require__(106);
+var _indexSoy = __webpack_require__(101);
 
-var _java_clientSoy2 = _interopRequireDefault(_java_clientSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12043,23 +12095,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var sMneF = function (_Component) {
-  _inherits(sMneF, _Component);
+var GvlFg = function (_Component) {
+  _inherits(GvlFg, _Component);
 
-  function sMneF() {
-    _classCallCheck(this, sMneF);
+  function GvlFg() {
+    _classCallCheck(this, GvlFg);
 
-    return _possibleConstructorReturn(this, (sMneF.__proto__ || Object.getPrototypeOf(sMneF)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (GvlFg.__proto__ || Object.getPrototypeOf(GvlFg)).apply(this, arguments));
   }
 
-  return sMneF;
+  return GvlFg;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(sMneF, _java_clientSoy2.default);
+_metalSoy2.default.register(GvlFg, _indexSoy2.default);
 
-exports.default = sMneF;
+exports.default = GvlFg;
 
 /***/ })
-],[158]);
+],[154]);

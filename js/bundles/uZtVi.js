@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([18],[
+webpackJsonppageComponent([11],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11658,12 +11658,19 @@ module.exports = function(module) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "razcu", function() { return razcu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uZtVi", function() { return uZtVi; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11675,15 +11682,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from authentication.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace razcu.
+ * @fileoverview Templates in namespace uZtVi.
  * @public
  */
 
-goog.module('razcu.incrementaldom');
+goog.module('uZtVi.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11717,288 +11724,178 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param209 = function() {
+  var param366 = function() {
     ie_open('h6');
-      var dyn14 = opt_data.page.description;
-      if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+      var dyn21 = opt_data.page.description;
+      if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'intro');
       ie_open('h2');
-        itext('The Activity Model');
+        itext('Authentication Headers');
       ie_close('h2');
       ie_open('p');
-        itext('Activities contain information about behaviour and actions performed by different entities (');
-        ie_open('a', null, null,
-            'href', '/docs/individuals');
-          itext('individuals');
-        ie_close('a');
-        itext(', accounts, individual segments... etc).');
-      ie_close('p');
-      ie_open('p');
-        itext('The entity activity contains the following fields:');
+        itext('In order to have a signed request, it must contain the following http headers:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
-            itext('identifier');
+            itext('timestamp');
           ie_close('em');
+          itext(': the timestamp of the request in milliseconds');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('day');
+            itext('apikey');
           ie_close('em');
+          itext(': your client key for accessing this API (ask for one to the Pulpo Team)');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('startTime');
+            itext('signature');
           ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('endTime');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('groupName');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('activityType');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('applicationId');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('eventId');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('object');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerType');
-          ie_close('em');
-          itext(' - The entity that performed this activity (e.g. an Individual, an Account...)');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('ownerIdentifier');
-          ie_close('em');
-          itext(' - The Identifier of the entity that performed this activity.');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The entity object contains the following fields:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('name');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('objectType');
-          ie_close('em');
-        ie_close('li');
-        ie_open('li');
-          ie_open('em');
-            itext('url');
-          ie_close('em');
+          itext(': your request signed. In order to sign your request, you can use the SignatureGenerator utility to obtain this signature.');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'signature');
       ie_open('h2');
-        itext('Activities Collection');
+        itext('Signature Generation');
       ie_close('h2');
       ie_open('p');
-        itext('As described in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#navigation');
-          itext('Initial Navigation to obtain URLs');
-        ie_close('a');
-        itext(', the ');
+        itext('You can use the following gradle dependency to use the ');
         ie_open('code');
-          itext('_links');
+          itext('SignatureValidator.java');
         ie_close('code');
-        itext(' section of the root resource will contain a template link labelled as ');
-        ie_open('code');
-          itext('activities');
-        ie_close('code');
-        itext(' pointing to the collection of Activities.');
+        itext(' utility:');
       ie_close('p');
+      $templateAlias2({code: 'provided group: "com.liferay.osb.pulpo", name: "com.liferay.osb.pulpo.engine.contacts.security.signature", version: "0.0.1-20180508.134750-15"', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('This API supports ');
-        ie_open('a', null, null,
-            'href', '/docs/general#pagination');
-          itext('pagination');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#sorting');
-          itext('sorting');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null,
-            'href', '/docs/general#transformations');
-          itext('transformations');
-        ie_close('a');
-        itext(', and ');
-        ie_open('a', null, null,
-            'href', '/docs/general#filtering');
-          itext('filtering');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The response will contain inside the ');
-        ie_open('code');
-          itext('_embedded');
-        ie_close('code');
-        itext(' section, a list of activities under the key ');
-        ie_open('code');
-          itext('activities');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/activities?page=0&size=1');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "activities": [\n            {\n                "groupName": "www.liferay.com",\n                "description": "Submit Form",\n                "ownerIdentifier": "AWIubFositjEuNSqYpR",\n                "ownerType": "individual",\n                "activityType": "Activity",\n                "day": "2018-03-06T00:00:00Z",\n                "startTime": "2018-03-06T03:50:43Z",\n                "endTime": "2018-03-06T03:50:43Z",\n                "identifier": "AWIubHEhitjEuNSqYph",\n                "applictionId": "Form",\n                "eventId": "formSubmited",\n                "eventProperties": {\n                    "formId": "32cf039a-7a47-4461-82c5-e694d9f29057"\n                },\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/activities/AWIubHEhitjEuNSqYph"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AWIubFositjEuNSqYpR"\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
-      ie_open('p');
-        itext('Creation of new Activities or Update of Activities manually is not supported. Activities are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Activities is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of activities, the link to each activity can be found with the rel ');
-        ie_open('code');
-          itext('self');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'activity-transformations');
-      ie_open('h2');
-        itext('Transformations on Activities Collection');
-      ie_close('h2');
-      ie_open('p');
-        itext('Transformations can be applied on Activities collection as explained in ');
-        ie_open('a', null, null,
-            'href', '/docs/general#transformations');
-          itext('transformations');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The only transformation allowed for the Activities Collection is ');
-        ie_open('code');
-          itext('groupby');
-        ie_close('code');
-        itext(' by ');
-        ie_open('code');
-          itext('day');
-        ie_close('code');
-        itext(', ');
-        ie_open('code');
-          itext('week');
-        ie_close('code');
-        itext(' or ');
-        ie_open('code');
-          itext('month');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('The number of intervals returned when ');
-        ie_open('code');
-          itext('groupby');
-        ie_close('code');
-        itext(' is used is determined by the page size. Only the page ');
-        ie_open('code');
-          itext('0');
-        ie_close('code');
-        itext(' can be requested.');
-      ie_close('p');
-      ie_open('p');
-        itext('The returned object has the following fields:');
+        itext('In order to obtain the signature for your request, you can use one of the following methods:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('totalElements');
-          ie_close('em');
-          itext(' - The number of elements inside this interval');
+          ie_open('p');
+            ie_open('code');
+              itext('SignatureGenerator.getSignature(HttpServletRequest request, String private key)');
+            ie_close('code');
+          ie_close('p');
+          ie_open('ul');
+            ie_open('li');
+              itext('This will be helpful if you already have the request object. It must contain the timestamp and api key headers. If for any reason, you don\'t have access to the request, you can use the following method:');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('intervalInitDate');
-          ie_close('em');
-          itext(' - The initial day of this interval');
+          ie_open('p');
+            ie_open('code');
+              itext('SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)');
+            ie_close('code');
+          ie_close('p');
+          ie_open('ul');
+            ie_open('li');
+              itext('The request URL must be the same URL you are making your request to (it may include url parameters as well)');
+            ie_close('li');
+            ie_open('li');
+              itext('The parameters map must contain the parameters of the body of your request (if any)');
+            ie_close('li');
+            ie_open('li');
+              itext('The timestamp must match the value in your timestamp header');
+            ie_close('li');
+            ie_open('li');
+              itext('The api key must match your api key header too.');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
       ie_close('ul');
       ie_open('p');
-        itext('These are some examples of transformations:');
+        itext('In both methods, you are expected to pass the private key you received associated to your api key. If you don\'t pass any private key, it will automatically look for the system variable ');
+        ie_open('code');
+          itext('PULPO_PRIVATE_KEY');
+        ie_close('code');
+        itext(', therefore, you can just set this variable and don\'t pass any privateKey to the method.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of how the request headers could look like:');
+      ie_close('p');
+      $templateAlias2({code: '"GET /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\') HTTP/1.1"\nheader: "Accept: */*"\nheader: "apikey: MY-API-KEY"\nheader: "timestamp: 1517245158236"\nheader: "signature: MC0C1234-ew5bytvbSxebxAhUAg57SDhuBIGmJkS45zo"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('Signatures are unique to each combination of url, params and headers, therefore they need to be generated for each request, they can\'t be reused.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of how to generate the signature for a POST request:');
+      ie_close('p');
+      ie_open('p');
+        itext('*1) Include the api key Header in your request');
+      ie_close('p');
+      $templateAlias2({code: 'header: "apikey: MY-API-KEY"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('*2) Include the timestamp Header in your request');
+      ie_close('p');
+      $templateAlias2({code: 'header: "timestamp: 1517245158236"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('(e.g. ');
+        ie_open('code');
+          itext('System.currentTimeMillis()');
+        ie_close('code');
+        itext(' in Java)');
+      ie_close('p');
+      ie_open('p');
+        itext('*3) Obtain the Signature. If we had the http request, we would just call ');
+        ie_open('code');
+          itext('SignatureGenerator.getSignature(HttpServletRequest request)');
+        ie_close('code');
+        itext(', and include that as a third header:');
+      ie_close('p');
+      $templateAlias2({code: 'header: "signature: (result of the previous call)"', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('*3b) In case you didn\'t have the http request, we would call:');
+      ie_close('p');
+      $templateAlias2({code: 'SignatureGenerator.getSignature(String requestURL, Map<String, String[]> parameters, String apiKey, String timeStamp, String privateKey)', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('with these values:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          itext('Activities grouped by day of creation: ');
-          ie_open('code');
-            itext('?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3');
-          ie_close('code');
+          itext('requestURL --> /DEMO/accounts?filter=(organization/isicV4/value eq \'G1252\')');
+        ie_close('li');
+        ie_open('li');
+          itext('parameters --> empty');
+        ie_close('li');
+        ie_open('li');
+          itext('apikey --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('timeStamp --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('privateKey --> the private key associated to our api key');
         ie_close('li');
       ie_close('ul');
       ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/activities?apply=compute(day(day) as computedDay)/groupby((computedDay))&page=0&size=3');
-        ie_close('code');
+        itext('Another example of a POST request with body parameters:');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "activity-transformations": [\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-05-20T00:00:00Z"\n            },\n            {\n                "totalElements": 7,\n                "intervalInitDate": "2018-05-21T00:00:00Z"\n            },\n            {\n                "totalElements": 4,\n                "intervalInitDate": "2018-05-22T00:00:00Z"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?apply=compute%28day%28day%29%20as%20computedDay%29%2Fgroupby%28%28computedDay%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('ul');
         ie_open('li');
-          itext('Activities grouped by week of creation: ');
-          ie_open('code');
-            itext('?apply=compute(week(day) as week)/groupby((week))&page=0&size=3');
-          ie_close('code');
+          itext('requestURL --> /DEMO/datasources');
+        ie_close('li');
+        ie_open('li');
+          itext('parameters --> Map with the parameters:');
         ie_close('li');
       ie_close('ul');
-      ie_open('p');
-        itext('This is an example of a response to this url: ');
-        ie_open('code');
-          itext('http://localhost:8084/my-project/activities?apply=compute(week(dateRecorded) as week)/groupby((week))&page=0&size=3');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "activity-transformations": [\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-06-04T00:00:00Z"\n            },\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-06-11T00:00:00Z"\n            },\n            {\n                "totalElements": 4,\n                "intervalInitDate": "2018-06-18T00:00:00Z"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/activities?apply=compute%28week%28day%29%20as%20week%29%2Fgroupby%28%28week%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '  {\n    "name" : ["My DataSource"],\n    "url" : ["My DataSource URL"]\n  }', mode: 'text'}, null, opt_ijData);
+      ie_open('ul');
+        ie_open('li');
+          itext('apikey --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('timeStamp --> the same value from the header');
+        ie_close('li');
+        ie_open('li');
+          itext('privateKey --> the private key associated to our api key');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -12009,11 +11906,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param209}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param366}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'razcu.render';
+  $render.soyTemplateName = 'uZtVi.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12023,21 +11920,14 @@ return exports;
 
 });
 
-class razcu extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(razcu, templates);
+class uZtVi extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(uZtVi, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
 /* 105 */,
 /* 106 */,
 /* 107 */,
@@ -12083,7 +11973,17 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(razcu, templates);
 /* 147 */,
 /* 148 */,
 /* 149 */,
-/* 150 */
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12111,9 +12011,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(97);
+var _authenticationSoy = __webpack_require__(104);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _authenticationSoy2 = _interopRequireDefault(_authenticationSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12123,23 +12023,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var razcu = function (_Component) {
-  _inherits(razcu, _Component);
+var uZtVi = function (_Component) {
+  _inherits(uZtVi, _Component);
 
-  function razcu() {
-    _classCallCheck(this, razcu);
+  function uZtVi() {
+    _classCallCheck(this, uZtVi);
 
-    return _possibleConstructorReturn(this, (razcu.__proto__ || Object.getPrototypeOf(razcu)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (uZtVi.__proto__ || Object.getPrototypeOf(uZtVi)).apply(this, arguments));
   }
 
-  return razcu;
+  return uZtVi;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(razcu, _indexSoy2.default);
+_metalSoy2.default.register(uZtVi, _authenticationSoy2.default);
 
-exports.default = razcu;
+exports.default = uZtVi;
 
 /***/ })
-],[150]);
+],[160]);

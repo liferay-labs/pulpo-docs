@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([16],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -11660,12 +11660,24 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ZDPkX", function() { return ZDPkX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMIx", function() { return isMIx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11681,11 +11693,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ZDPkX.
+ * @fileoverview Templates in namespace isMIx.
  * @public
  */
 
-goog.module('ZDPkX.incrementaldom');
+goog.module('isMIx.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11719,66 +11731,92 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param251 = function() {
+  var param662 = function() {
     ie_open('h6');
-      var dyn16 = opt_data.page.description;
-      if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+      var dyn27 = opt_data.page.description;
+      if (typeof dyn27 == 'function') dyn27(); else if (dyn27 != null) itext(dyn27);
     ie_close('h6');
     ie_open('article', null, null,
-        'id', '1');
+        'id', 'interest-model');
       ie_open('h2');
-        itext('The Connector State Model');
+        itext('The Interest Model');
       ie_close('h2');
       ie_open('p');
-        itext('Connector State contains information about the state of an Analytics Cloud connector installed on a remote Liferay instance connected to LCS.');
+        itext('Interests contain information about diffferent topics that other entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', individual segments... etc) are interested on .');
       ie_close('p');
       ie_open('p');
-        itext('The entity asset contains the following fields:');
+        itext('Each Interest represent certain interest of an entity about a topic for a certain day. Interests are calculated using a 30 day window range, therefore, even when there is a score calculated for every day, that score takes into account the previuos 30 days.');
+      ie_close('p');
+      ie_open('p');
+        itext('The interest field contains the following fields:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
           ie_open('em');
             itext('identifier');
           ie_close('em');
-          itext(' - the unique identifier of the connector state');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('installationId');
+            itext('dateRecorded');
           ie_close('em');
-          itext(' - the ID of the system where the connector is installed');
+          itext(' - The date this score was calculated');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('state');
+            itext('name');
           ie_close('em');
-          itext(' - the current state of the connector. Possible values are: ');
-          ie_open('code');
-            itext('READY');
-          ie_close('code');
-          itext(' and ');
-          ie_open('code');
-            itext('OFFLINE');
-          ie_close('code');
+          itext(' - The name of the topic');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('dateCreated');
+            itext('score');
           ie_close('em');
-          itext(' - the date when the connector state was created.');
+          itext(' - The score for this topic (the higher the most interested on this topic)');
         ie_close('li');
         ie_open('li');
           ie_open('em');
-            itext('dateModified');
+            itext('ownerType');
           ie_close('em');
-          itext(' - the date when the connector state was modified.');
+          itext(' - The entity that owns this field (e.g. an Individual, an Account...)');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('ownerIdentifier');
+          ie_close('em');
+          itext(' - The Identifier of the entity that owns this field.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('pagesVisited');
+          ie_close('em');
+          itext(' - A list of pageVisit that justifies this interest. Each pageVisit has the following fields:');
+          ie_open('ul');
+            ie_open('li');
+              itext('url - url of the page');
+            ie_close('li');
+            ie_open('li');
+              itext('title - title of the page');
+            ie_close('li');
+            ie_open('li');
+              itext('description - description of the page');
+            ie_close('li');
+            ie_open('li');
+              itext('uniqueVisitsCount - number of visits to this page');
+            ie_close('li');
+          ie_close('ul');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
-        'id', '2');
+        'id', 'interests-collection');
       ie_open('h2');
-        itext('Connector States Collection');
+        itext('Interests Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11792,9 +11830,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('connector-states');
+          itext('interests');
         ie_close('code');
-        itext(' pointing to the collection of Connector States.');
+        itext(' pointing to the collection of Interests.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11802,10 +11840,25 @@ function $render(opt_data, opt_ignored, opt_ijData) {
             'href', '/docs/general#pagination');
           itext('pagination');
         ie_close('a');
-        itext(' and ');
+        itext(', ');
         ie_open('a', null, null,
             'href', '/docs/general#sorting');
           itext('sorting');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(' ');
+        ie_open('a', null, null,
+            'href', '/docs/general#transformations');
+          itext('transformations');
+        ie_close('a');
+        itext(', and ');
+        ie_open('a', null, null,
+            'href', '/docs/general#embedding-resources');
+          itext('embedding resources');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -11814,29 +11867,222 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of connector states under the key ');
+        itext(' section, a list of interests under the key ');
         ie_open('code');
-          itext('connector-states');
+          itext('interests');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/connector-states?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/interests?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "connector-states": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/connector-states/my-installation-id"\n                    },\n                    "connector-states": {\n                        "href": "http://localhost:8084/my-project/connector-states{?page,size,sort*}"\n                    }\n                },\n                "state": "READY",\n                "identifier": "AWQ73UnelLXzRA3LpnPi",\n                "dateModified": "2018-06-26T11:31:55Z",\n                "installationId": "my-installation-id",\n                "dateCreated": "2018-06-26T11:31:55Z"\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/connector-states?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "interests": [\n            {\n                "dateRecorded": "2018-03-05T00:00:00+0000",\n                "identifier": "AWMYbBfSgcT3bCtqgwde",\n                "name": "intranets",\n                "score": 1.0986122886681098,\n                "ownerIdentifier": "AV-0-dcI4MMBozrmZ0UM",\n                "ownerType": "individual",\n                "pagesVisited": [\n                    {\n                        "title": "Products for Liferay",\n                        "uniqueVisitsCount": 1,\n                        "description": "Liferay DXP, Liferay De, Sync...",\n                        "url": "https://www.liferay.com/products"\n                    },\n                    {\n                        "title": "Liferay Digital Experience Platform",\n                        "uniqueVisitsCount": 5,\n                        "description": "Portals, Intranets, Platforms...",\n                        "url": "https://www.liferay.com/en/home"\n                    }\n                ],\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/interests/AWMYbBfSgcT3bCtqgwde"\n                    },\n                    "individual": {\n                        "href": "http://localhost:8084/my-project/individuals/AV-0-dcI4MMBozrmZ0UM"\n                    },\n                    "interests": {\n                        "href": "http://localhost:8084/my-project/interests{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/interests?page=0&size=1"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation or Update of Connector States is not supported by the API. Connector States are automatically generated and updated from the Heartbeat messages sent by the installed connectors.');
-      ie_close('p');
-      ie_open('p');
-        itext('Deletion of existing Connector States is not allowed either.');
+        itext('Creation of new Interests or Update of Interests manually is not supported. Interests are automatically generated and updated from the Interst Chunks sent by the algorithms used to calculate this based on the Analytics data.');
       ie_close('p');
       ie_open('p');
-        itext('Navigating through the list of connector states, the link to each connector state can be found with the rel ');
+        itext('Deletion of existing Interests is not allowed for now either.');
+      ie_close('p');
+      ie_open('p');
+        itext('Navigating through the list of interests, the link to each interest can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
+        itext(', and also a link to the entity owning it with the rel of the entity (e.g. individual or individual-segment).');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'historical-values');
+      ie_open('h2');
+        itext('Retrieving historical values for a specific topic of interest');
+      ie_close('h2');
+      ie_open('p');
+        itext('Obtaining the historical value of an interest can be done using using the ');
+        ie_open('a', null, null,
+            'href', '/docs/general#filtering');
+          itext('filtering');
+        ie_close('a');
+        itext(' option in the Interest Collection. The ');
+        ie_open('code');
+          itext('ownerType');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('ownerIdentifier');
+        ie_close('code');
+        itext('can be used to idenfity the entity interested and the name to obtain interests for just one topic. The ');
+        ie_open('a', null, null,
+            'href', '/docs/general#sorting');
+          itext('sorting');
+        ie_close('a');
+        itext(' option can be used to obtain the interests by date for example.');
+      ie_close('p');
+      ie_open('p');
+        itext('These are some examples of Interests filtering to retrieve historical values of certain Individual and Individual Segment properties:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('The historical values of the interests on "portals" for an Individual: ');
+          ie_open('code');
+            itext('((name eq \'portals\') and (ownerType eq \'individual\') and (ownerIdentifier eq \'the-individual-identifier\'))');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('The historical values of the topic \'Business\' for an Individual Segment: ');
+          ie_open('code');
+            itext('((name eq \'business\') and (ownerType eq \'individual-segment\') and (ownerIdentifier eq \'the-individual-segment-identifier\'))');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('The historical values of the interest on "intrantes" with a score higher than 10 for any Individual: ');
+          ie_open('code');
+            itext('((score gt \'10\') and (name eq \'intranets\') and (ownerType eq \'individual\'))');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'interest-transformations');
+      ie_open('h2');
+        itext('Transformations on Interest Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('Transformations can be applied on Interests collection as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#transformations');
+          itext('transformations');
+        ie_close('a');
         itext('.');
       ie_close('p');
+      ie_open('p');
+        itext('The only transformation allowed for the Interest Collection is ');
+        ie_open('code');
+          itext('groupby');
+        ie_close('code');
+        itext(' by ');
+        ie_open('code');
+          itext('day');
+        ie_close('code');
+        itext(', ');
+        ie_open('code');
+          itext('week');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('month');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The number of intervals returned when ');
+        ie_open('code');
+          itext('groupby');
+        ie_close('code');
+        itext(' is used is determined by the page size. Only the page ');
+        ie_open('code');
+          itext('0');
+        ie_close('code');
+        itext(' can be requested.');
+      ie_close('p');
+      ie_open('p');
+        itext('The returned object has the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('totalElements');
+          ie_close('em');
+          itext(' - The number of elements inside this interval');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('viewsSum');
+          ie_close('em');
+          itext(' - The sum of all the uniqueVisitsCount of each pageVisit of each Interest in the interval');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('intervalInitDate');
+          ie_close('em');
+          itext(' - The initial day of this interval');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('scoreAvg');
+          ie_close('em');
+          itext(' - The average score of all the interests in the interval');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('These are some examples of transformations:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Interests grouped by day of creation: ');
+          ie_open('code');
+            itext('?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/interests?apply=compute(day(dateRecorded) as day)/groupby((day))&page=0&size=3');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "interest-transformations": [\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-05-20T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewsSum": 0\n            },\n            {\n                "totalElements": 7,\n                "intervalInitDate": "2018-05-21T00:00:00Z",\n                "scoreAvg": 10.3,\n                "viewsSum": 0\n            },\n            {\n                "totalElements": 4,\n                "intervalInitDate": "2018-05-22T00:00:00Z",\n                "scoreAvg": 41.86,\n                "viewsSum": 0\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/interests?apply=compute%28day%28dateRecorded%29%20as%20day%29%2Fgroupby%28%28day%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('ul');
+        ie_open('li');
+          itext('Interests grouped by month of creation: ');
+          ie_open('code');
+            itext('?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of a response to this url: ');
+        ie_open('code');
+          itext('http://localhost:8084/my-project/interests?apply=compute(month(dateRecorded) as month)/groupby((month))&page=0&size=3');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "_embedded": {\n        "interest-transformations": [\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-03-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewsSum": 0\n            },\n            {\n                "totalElements": 0,\n                "intervalInitDate": "2018-04-01T00:00:00Z",\n                "scoreAvg": 0.0,\n                "viewsSum": 0\n            },\n            {\n                "totalElements": 4,\n                "intervalInitDate": "2018-05-01T00:00:00Z",\n                "scoreAvg": 41.86,\n                "viewsSum": 0\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/interests?apply=compute%28month%28dateRecorded%29%20as%20month%29%2Fgroupby%28%28month%29%29&page=0&size=3"\n        }\n    },\n    "page": {\n        "size": 3,\n        "totalElements": 3,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'interest-expand');
+      ie_open('h2');
+        itext('Embedded Resources on Interest Collection');
+      ie_close('h2');
+      ie_open('p');
+        itext('The expand parameter can be used when retrieving a Collection of Interests as explained in ');
+        ie_open('a', null, null,
+            'href', '/docs/general#embedding-resources');
+          itext('embedding resources');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('The supported resources that can be embedded inside each interest resource are:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('interest-aggregation-last-30-days');
+          ie_close('em');
+          itext(' - The aggregation of the interest requested by day for the last 30 days');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('interest-aggregation-last-60-days');
+          ie_close('em');
+          itext(' - The aggregation of the interest requested by day for the last 60 days');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('interest-aggregation-last-90-days');
+          ie_close('em');
+          itext(' - The aggregation of the interest requested by day for the last 90 days');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11847,11 +12093,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param251}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param662}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ZDPkX.render';
+  $render.soyTemplateName = 'isMIx.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11861,26 +12107,14 @@ return exports;
 
 });
 
-class ZDPkX extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ZDPkX, templates);
+class isMIx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(isMIx, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
 /* 112 */,
 /* 113 */,
 /* 114 */,
@@ -11921,7 +12155,18 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ZDPkX, templates);
 /* 149 */,
 /* 150 */,
 /* 151 */,
-/* 152 */
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11949,7 +12194,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(99);
+var _indexSoy = __webpack_require__(111);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11961,23 +12206,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ZDPkX = function (_Component) {
-  _inherits(ZDPkX, _Component);
+var isMIx = function (_Component) {
+  _inherits(isMIx, _Component);
 
-  function ZDPkX() {
-    _classCallCheck(this, ZDPkX);
+  function isMIx() {
+    _classCallCheck(this, isMIx);
 
-    return _possibleConstructorReturn(this, (ZDPkX.__proto__ || Object.getPrototypeOf(ZDPkX)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (isMIx.__proto__ || Object.getPrototypeOf(isMIx)).apply(this, arguments));
   }
 
-  return ZDPkX;
+  return isMIx;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ZDPkX, _indexSoy2.default);
+_metalSoy2.default.register(isMIx, _indexSoy2.default);
 
-exports.default = ZDPkX;
+exports.default = isMIx;
 
 /***/ })
-],[152]);
+],[163]);
