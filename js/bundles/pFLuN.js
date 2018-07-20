@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([17],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2487,8 +2487,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-hammer');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -11659,12 +11659,15 @@ module.exports = function(module) {
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GpfaY", function() { return GpfaY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pFLuN", function() { return pFLuN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -11680,11 +11683,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace GpfaY.
+ * @fileoverview Templates in namespace pFLuN.
  * @public
  */
 
-goog.module('GpfaY.incrementaldom');
+goog.module('pFLuN.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -11718,62 +11721,121 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param235 = function() {
+  var param298 = function() {
     ie_open('h6');
-      var dyn15 = opt_data.page.description;
-      if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+      var dyn18 = opt_data.page.description;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
     ie_close('h6');
     ie_open('article', null, null,
         'id', '1');
       ie_open('h2');
-        itext('The Asset Model');
+        itext('The Field Mapping Model');
       ie_close('h2');
       ie_open('p');
-        itext('Assets contain information about documents, pages, forms or any content that the individual interacts with.');
+        itext('Field Mappings allow us to map the fields from the different ');
+        ie_open('a', null, null,
+            'href', '/docs/datasources');
+          itext('datasources');
+        ie_close('a');
+        itext(' to the');
+        ie_open('a', null, null,
+            'href', '/docs/fields');
+          itext('fields');
+        ie_close('a');
+        itext(' in our entities (');
+        ie_open('a', null, null,
+            'href', '/docs/individuals');
+          itext('individuals');
+        ie_close('a');
+        itext(', Accounts... etc)');
       ie_close('p');
       ie_open('p');
-        itext('The entity asset contains the following fields:');
+        itext('The following fields are currently supported in a field mapping:');
       ie_close('p');
       ie_open('ul');
         ie_open('li');
-          ie_open('em');
-            itext('identifier');
-          ie_close('em');
+          ie_open('p');
+            ie_open('em');
+              itext('context');
+            ie_close('em');
+            itext(' - the context of the field (demographics, sentiment... etc)');
+          ie_close('p');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('assetType');
-          ie_close('em');
-          itext(' - e.g. forms, DocumentLibrary, Layout...');
+          ie_open('p');
+            ie_open('em');
+              itext('dataSourceFieldNames');
+            ie_close('em');
+            itext(' - a map with the name of the original field for each Data Source.');
+          ie_close('p');
+          $templateAlias2({code: 'e.g. \n     liferay --> phone\n     salesforce --> tel', mode: 'text'}, null, opt_ijData);
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('dataSourceAssetPK');
-          ie_close('em');
-          itext(' - The primary key of this asset in its original data source');
+          ie_open('p');
+            ie_open('em');
+              itext('dateCreated');
+            ie_close('em');
+          ie_close('p');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('dataSourceIdentifier');
-          ie_close('em');
-          itext(' - The identifier of the data source that sent this asset');
+          ie_open('p');
+            ie_open('em');
+              itext('dateModified');
+            ie_close('em');
+          ie_close('p');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('name');
-          ie_close('em');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldName');
+            ie_close('em');
+            itext(' - the name of the field on our model');
+          ie_close('p');
         ie_close('li');
         ie_open('li');
-          ie_open('em');
-            itext('description');
-          ie_close('em');
+          ie_open('p');
+            ie_open('em');
+              itext('fieldType');
+            ie_close('em');
+            itext(' - a property from schema.org associated to this field mapping. e.g. telephone (http://schema.org/telephone)');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('identifier');
+            ie_close('em');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('author');
+            ie_close('em');
+          ie_close('p');
+          ie_open('ul');
+            ie_open('li');
+              itext('identifier');
+            ie_close('li');
+            ie_open('li');
+              itext('name');
+            ie_close('li');
+          ie_close('ul');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('em');
+              itext('strategy');
+            ie_close('em');
+            itext(' - the strategy used to map fields. For example, we could decide to use always the most recent value of a field, or give preference to the value from a specific data source. See more details below.');
+          ie_close('p');
         ie_close('li');
       ie_close('ul');
     ie_close('article');
     ie_open('article', null, null,
         'id', '2');
       ie_open('h2');
-        itext('Assets Collection');
+        itext('Field Mappings Collection');
       ie_close('h2');
       ie_open('p');
         itext('As described in ');
@@ -11787,9 +11849,9 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' section of the root resource will contain a template link labelled as ');
         ie_open('code');
-          itext('assets');
+          itext('field-mappings');
         ie_close('code');
-        itext(' pointing to the collection of Assets.');
+        itext(' pointing to the collection of Field Mappings.');
       ie_close('p');
       ie_open('p');
         itext('This API supports ');
@@ -11814,29 +11876,101 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('_embedded');
         ie_close('code');
-        itext(' section, a list of assets under the key ');
+        itext(' section, a list of fields under the key ');
         ie_open('code');
-          itext('assets');
+          itext('field-mappings');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('This is an example of a response to this url: http://localhost:8084/my-project/assets?page=0&size=1');
+        itext('This is an example of a response to this url: http://localhost:8084/my-project/field-mappings?page=0&size=1');
       ie_close('p');
-      $templateAlias2({code: '{\n    "_embedded": {\n        "assets": [\n            {\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/assets/AWNoD0uDeO0_hdUWjxo_"\n                    },\n                    "assets": {\n                        "href": "http://localhost:8084/my-project/assets{?filter,page,size,sort*}"\n                    }\n                },\n                "name": "Liferay: Digital experience software tailored to your needs",\n                "dataSourceAssetPK": "https://www.liferay.com/",\n                "identifier": "AWNoD0uDeO0_hdUWjxo_",\n                "dataSourceIdentifier": "AWNoD0HTeO0_hdUWjxoo",\n                "assetType": "Layout"\n            }\n        ]\n    },\n    "_links": {\n        "first": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "self": {\n            "href": "http://localhost:8084/my-project/assets?page=0&size=1"\n        },\n        "next": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        },\n        "last": {\n            "href": "http://localhost:8084/my-project/assets?page=1&size=1"\n        }\n    },\n    "page": {\n        "size": 1,\n        "totalElements": 2,\n        "totalPages": 2,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "_embedded": {\n        "field-mappings": [\n            {\n                "context": "demographics",\n                "dataSourceFieldNames": {\n                    "liferay_AV-0-c1_4MMBozrmZ0T_": "age",\n                    "salesforce_AV-0-c4v4MMBozrmZ0UA": "years"\n                },\n                "dateCreated": "2017-11-13T10:43:11Z",\n                "dateModified": "2017-11-13T10:43:11Z",\n                "fieldName": "age",\n                "fieldType": "http://schema.org/age",\n                "identifier": "AV-0-dAM4MMBozrmZ0UD",\n                "_links": {\n                    "self": {\n                        "href": "http://localhost:8084/my-project/field-mappings/AV-0-dAM4MMBozrmZ0UD"\n                    },\n                    "field-mappings": {\n                        "href": "http://localhost:8084/my-project/field-mappings{?filter}",\n                        "templated": true\n                    }\n                }\n            }\n        ]\n    },\n    "_links": {\n        "self": {\n            "href": "http://localhost:8084/my-project/field-mappings?page=0&size=20"\n        }\n    },\n    "page": {\n        "size": 20,\n        "totalElements": 1,\n        "totalPages": 1,\n        "number": 0\n    }\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Creation of new Assets or Update of Assets manually is not supported. Assets are automatically generated and updated from the Activity Chunks sent by the different Connectors.');
+        itext('Creation of new Field Mappings is supported making a ');
+        ie_open('code');
+          itext('POST');
+        ie_close('code');
+        itext(' to the Collection URL. This is an example of the body passed to this POST request:');
       ie_close('p');
+      $templateAlias2({code: '{\n    "context": "demographics",\n    "dataSourceFieldNames": {\n        "AV-0-c1_4MMBozrmZ0T_": "age",\n        "AV-0-c4v4MMBozrmZ0UA": "years"\n    },\n    "fieldName": "age",\n    "fieldType": "http://schema.org/age"\n}', mode: 'json'}, null, opt_ijData);
       ie_open('p');
-        itext('Deletion of existing Assets is not allowed for now either.');
-      ie_close('p');
-      ie_open('p');
-        itext('Navigating through the list of assets, the link to each asset can be found with the rel ');
+        itext('Navigating through the list of entities, the link to each entity can be found with the rel ');
         ie_open('code');
           itext('self');
         ie_close('code');
-        itext('.');
+        itext('. That same url can be also used for delete (');
+        ie_open('code');
+          itext('DELETE');
+        ie_close('code');
+        itext(' method) and update (');
+        ie_open('code');
+          itext('PUT');
+        ie_close('code');
+        itext(' method).');
       ie_close('p');
+      ie_open('p');
+        itext('Adding new data Source Field Names without having to update the full field mapping is also supported using the ');
+        ie_open('code');
+          itext('PATCH');
+        ie_close('code');
+        itext(' method to an entity link. The body must contain a Data Source Field Name object, wich contains the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('dataSourceIdentifier - the identifier of an existing datasource.');
+        ie_close('li');
+        ie_open('li');
+          itext('fieldName - the name of this field in the existing data source');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('This is an example of the body to patch an existing Field Mapping in order to add another data source field name:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "dataSourceIdentifier" : "AV-0-c1_4MMBozrmZ0B",\n    "fieldName" : "years-old"   \n}', mode: 'json'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', '2');
+      ie_open('h2');
+        itext('Field Mappings Strategies');
+      ie_close('h2');
+      ie_open('p');
+        itext('Field Mapping Strategies have the following fields:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('em');
+            itext('key');
+          ie_close('em');
+          itext(' - the stratey key. Supported values are: "MOST_RECENT" and "PRIORITY_DATASOURCE"');
+        ie_close('li');
+        ie_open('li');
+          ie_open('em');
+            itext('configuration');
+          ie_close('em');
+          itext(' - A map with the specific configuration for the strategy. e.g. Most Recent doesn\'t need any configuration. However, Priority DataSource requires the value dataSourceIdentifier.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('h4');
+        itext('Most Recent Strategy');
+      ie_close('h4');
+      ie_open('p');
+        itext('This strategy will add to the user fields the most recent field coming from any data source. For example, if we have two data sources set up and a field mapping configured to obtain the email address from both. If we only receive the email from one of them, that is the field that will be added to the individual profile. However, if we receive both, then the one which we received the latest will be the one added to the individual profile.');
+      ie_close('p');
+      ie_open('p');
+        itext('This is an example of a valid strategy passed in JSON when creating or updating a field mapping to use the most recent field:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "key": "MOST_RECENT"\n}', mode: 'json'}, null, opt_ijData);
+      ie_open('h4');
+        itext('Priority Data Source Strategy');
+      ie_close('h4');
+      ie_open('p');
+        itext('This strategy will give preference to the information coming from a particular data source. In order to be configured, the configuration must include the dataSourceIdentifier. For example, if we have three data sources set up (A, B and C), and a field mapping configured to obtain the telephone from all of them. When we set A as the priority data source, if we receive a telephone field from A, then that will be the field added to the inidividual profile. In case we don\'t receive any telephone from A, but we do receive it from B and C, then the most recent strategy applies.');
+      ie_close('p');
+      ie_open('p');
+        itext('And this is an example setting the data source with identifier ABCEDFG as the priority data source.');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "key": "PRIORITY_DATASOURCE",\n    "configuration": {\n        "dataSourceIdentifier": "ABCDEFG"\n    }\n}', mode: 'json'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -11847,11 +11981,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param235}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param298}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'GpfaY.render';
+  $render.soyTemplateName = 'pFLuN.render';
 }
 
 exports.render.params = ["page","site"];
@@ -11861,17 +11995,14 @@ return exports;
 
 });
 
-class GpfaY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GpfaY, templates);
+class pFLuN extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pFLuN, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -11921,7 +12052,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GpfaY, templates);
 /* 148 */,
 /* 149 */,
 /* 150 */,
-/* 151 */
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11949,7 +12083,7 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(98);
+var _indexSoy = __webpack_require__(101);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -11961,23 +12095,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var GpfaY = function (_Component) {
-  _inherits(GpfaY, _Component);
+var pFLuN = function (_Component) {
+  _inherits(pFLuN, _Component);
 
-  function GpfaY() {
-    _classCallCheck(this, GpfaY);
+  function pFLuN() {
+    _classCallCheck(this, pFLuN);
 
-    return _possibleConstructorReturn(this, (GpfaY.__proto__ || Object.getPrototypeOf(GpfaY)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (pFLuN.__proto__ || Object.getPrototypeOf(pFLuN)).apply(this, arguments));
   }
 
-  return GpfaY;
+  return pFLuN;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(GpfaY, _indexSoy2.default);
+_metalSoy2.default.register(pFLuN, _indexSoy2.default);
 
-exports.default = GpfaY;
+exports.default = pFLuN;
 
 /***/ })
-],[151]);
+],[154]);
