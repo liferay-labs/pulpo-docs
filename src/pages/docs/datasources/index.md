@@ -40,7 +40,7 @@ The following fields are currently supported:
   * location
   * sameAs - the URL of the Event
 * *state* - defines the current state of the datasource as a result of certain operations. The accepted values are `CONFIGURING`, `DELETE_ERROR`,`IN_DELETION`, `READY`
-* *status* - defines if the DataSource is working or not. The accepted values are `ACTIVE` and `INACTIVE`
+* *status* - defines if the DataSource is active or not. The accepted values are `ACTIVE` and `INACTIVE`
 
 </article>
 
@@ -128,6 +128,31 @@ an example of the body passed to this POST request:
 
 Navigating through the list of entities, the link to each entity can be found with the rel `self`. 
 That same url can be also used for delete (`DELETE` method) and update (`PUT` method).
+
+</article>
+
+<article id="patch-datasource">
+
+## Changing the status of the Data Source
+
+By default, data sources are created with status `ACTIVE`. In the case of Liferay data sources, 
+this means that:
+* Any changes in the data source configuration are sent to the Liferay connector
+* Incoming users sent by the Liferay connector are processed into individuals
+
+Sometimes you may want to temporarily interrupt these actions without removing the data source
+or changing its configuration. For instance, if you want to perform multiple changes in the 
+field mappings of the data source before starting adding individuals sent by the connector. 
+In this case, it is recommended to create the data source with status `INACTIVE`, and once
+the field mappings are ready, set it to `ACTIVE`. This is supported through the `PATCH` method
+to an entity link without having to update the full data source. For example, to set the
+status to `INACTIVE`, the body of the request should be:
+
+```json
+{
+    "status" : "INACTIVE"
+}
+```
 
 </article>
 
